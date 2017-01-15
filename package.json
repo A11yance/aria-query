@@ -1,0 +1,23 @@
+{
+  "name": "aria-query",
+  "version": "0.0.0",
+  "description": "Programmatic access to the ARIA specification",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A11yance/aria-query.git"
+  },
+  "keywords": [
+    "accessibility",
+    "ARIA"
+  ],
+  "author": "Jesse Beach <splendidnoise@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/A11yance/aria-query/issues"
+  },
+  "homepage": "https://github.com/A11yance/aria-query#readme"
+}
