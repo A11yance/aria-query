@@ -26,7 +26,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "XForms",
-      "concept": "alert"
+      "concept": {
+        "name": "alert"
+      }
     }]
   },
   "alertdialog": {
@@ -56,7 +58,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "XForms",
-      "concept": "alert"
+      "concept": {
+        "name": "alert"
+      }
     }]
   },
   "application": {
@@ -84,8 +88,11 @@
     "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [{
-      "concept": "Device Independence Delivery Unit"
-    }]
+      "concept": {
+        "name": "Device Independence Delivery Unit"
+      }
+    }],
+    "relatedConcepts": []
   },
   "article": {
     "requiredProps": [],
@@ -114,7 +121,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "article"
+      "concept": {
+        "name": "article"
+      }
     }]
   },
   "banner": {
@@ -171,14 +180,20 @@
     "childrenPresentational": true,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "button"
+      "concept": {
+        "name": "button"
+      }
     }],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "link"
+      "concept": {
+        "name": "link"
+      }
     }, {
       "module": "XForms",
-      "concept": "trigger"
+      "concept": {
+        "name": "trigger"
+      }
     }]
   },
   "cell": {
@@ -215,8 +230,11 @@
     "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "td"
-    }]
+      "concept": {
+        "name": "td"
+      }
+    }],
+    "relatedConcepts": []
   },
   "checkbox": {
     "requiredProps": [
@@ -247,10 +265,18 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "option"
+      "concept": {
+        "name": "option"
+      }
     }, {
       "module": "HTML",
-      "concept": "input[type=\"checkbox\"]"
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "checkbox"
+        }]
+      }
     }]
   },
   "columnheader": {
@@ -284,7 +310,13 @@
     "interactive": true,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "th[scope=\"col\"]"
+      "concept": {
+        "name": "th",
+        "attributes": [{
+          "name": "scope",
+          "value": "col"
+        }]
+      }
     }],
     "relatedConcepts": []
   },
@@ -315,15 +347,19 @@
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": false,
+    "interactive": true,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "XForms",
-      "concept": "select"
+      "concept": {
+        "name": "select"
+      }
     }, {
       "module": "HTML",
-      "concept": "select"
+      "concept": {
+        "name": "select"
+      }
     }]
   },
   "command": {
@@ -352,7 +388,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "menuitem"
+      "concept": {
+        "name": "menuitem"
+      }
     }]
   },
   "complementary": {
@@ -463,10 +501,14 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "dd"
+      "concept": {
+        "name": "dd"
+      }
     }, {
       "module": "HTML",
-      "concept": "dfn"
+      "concept": {
+        "name": "dfn"
+      }
     }]
   },
   "dialog": {
@@ -1649,7 +1691,9 @@
     "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
-      "concept": "Device Independence Delivery Unit"
+      "concept": {
+        "name": "Device Independence Delivery Unit"
+      }
     }],
     "props": [
       "aria-expanded",
@@ -1736,7 +1780,9 @@
     "baseConcepts": [],
     "relatedConcepts":[{
       "module": "HTML",
-      "concept": "figure"
+      "concept": {
+        "name": "figure"
+      }
     }]
   },
   "form": {
@@ -1746,7 +1792,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "form"
+      "concept": {
+        "name": "form"
+      }
     }],
     "props": [
       "aria-expanded",
@@ -1775,7 +1823,9 @@
     "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "table"
+      "concept": {
+        "name": "table"
+      }
     }],
     "relatedConcepts": [],
     "props": [
@@ -1809,7 +1859,9 @@
     "interactive": true,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "td"
+      "concept": {
+        "name": "td"
+      }
     }],
     "relatedConcepts": [],
     "props": [
@@ -1843,7 +1895,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "fieldset"
+      "concept": {
+        "name": "fieldset"
+      }
     }],
     "props": [
       "aria-activedescendant",
@@ -1874,22 +1928,34 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "h1"
+      "concept": {
+        "name": "h1"
+      }
     }, {
       "module": "HTML",
-      "concept": "h2"
+      "concept": {
+        "name": "h2"
+      }
     }, {
       "module": "HTML",
-      "concept": "h3"
+      "concept": {
+        "name": "h3"
+      }
     }, {
       "module": "HTML",
-      "concept": "h4"
+      "concept": {
+        "name": "h4"
+      }
     }, {
       "module": "HTML",
-      "concept": "h5"
+      "concept": {
+        "name": "h5"
+      }
     }, {
       "module": "HTML",
-      "concept": "h6"
+      "concept": {
+        "name": "h6"
+      }
     }],
     "props": [
       "aria-level",
@@ -1920,10 +1986,14 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "img"
+      "concept": {
+        "name": "img"
+      }
     }, {
       "module": "DTB",
-      "concept": "imggroup"
+      "concept": {
+        "name": "imggroup"
+      }
     }],
     "props": [
       "aria-expanded",
@@ -1972,7 +2042,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "XForms",
-      "concept": "input"
+      "concept": {
+        "name": "input"
+      }
     }]
   },
   "landmark": {
@@ -2009,10 +2081,14 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "a"
+      "concept": {
+        "name": "a"
+      }
     }, {
       "module": "HTML",
-      "concept": "link"
+      "concept": {
+        "name": "link"
+      }
     }],
     "props": [
       "aria-expanded",
@@ -2041,10 +2117,14 @@
     "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "ol"
+      "concept": {
+        "name": "ol"
+      }
     }, {
       "module": "HTML",
-      "concept": "ul"
+      "concept": {
+        "name": "ul"
+      }
     }],
     "relatedConcepts": [],
     "props": [
@@ -2075,13 +2155,19 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "list"
+      "concept": {
+        "name": "list"
+      }
     }, {
       "module": "HTML",
-      "concept": "select"
+      "concept": {
+        "name": "select"
+      }
     }, {
       "module": "XForms",
-      "concept": "select"
+      "concept": {
+        "name": "select"
+      }
     }],
     "props": [
       "aria-multiselectable",
@@ -2113,11 +2199,15 @@
     "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "li"
+      "concept": {
+        "name": "li"
+      }
     }],
     "relatedConcepts": [{
       "module": "XForms",
-      "concept": "item"
+      "concept": {
+        "name": "item"
+      }
     }],
     "props": [
       "aria-level",
@@ -2258,16 +2348,24 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "list"
+      "concept": {
+        "name": "list"
+      }
     }, {
       "module": "DTB",
-      "concept": "sidebar"
+      "concept": {
+        "name": "sidebar"
+      }
     }, {
       "module": "XForms",
-      "concept": "select"
+      "concept": {
+        "name": "select"
+      }
     }, {
       "module": "JAPI",
-      "concept": "MENU"
+      "concept": {
+        "name": "MENU"
+      }
     }],
     "props": [
       "aria-expanded",
@@ -2298,7 +2396,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "toolbar"
+      "concept": {
+        "name": "toolbar"
+      }
     }],
     "props": [
       "aria-expanded",
@@ -2329,16 +2429,24 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "option"
+      "concept": {
+        "name": "option"
+      }
     }, {
       "module": "ARIA",
-      "concept": "listitem"
+      "concept": {
+        "name": "listitem"
+      }
     }, {
       "module": "HTML",
-      "concept": "menuitem"
+      "concept": {
+        "name": "menuitem"
+      }
     }, {
       "module": "JAPI",
-      "concept": "MENU_ITEM"
+      "concept": {
+        "name": "MENU_ITEM"
+      }
     }],
     "props": [
       "aria-atomic",
@@ -2369,7 +2477,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "menuitem"
+      "concept": {
+        "name": "menuitem"
+      }
     }],
     "props": [
       "aria-checked",
@@ -2401,7 +2511,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "menuitem"
+      "concept": {
+        "name": "menuitem"
+      }
     }],
     "props": [
       "aria-checked",
@@ -2434,7 +2546,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "nav"
+      "concept": {
+        "name": "nav"
+      }
     }],
     "props": [
       "aria-expanded",
@@ -2490,14 +2604,20 @@
     "interactive": true,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "option"
+      "concept": {
+        "name": "option"
+      }
     }],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "listitem"
+      "concept": {
+        "name": "listitem"
+      }
     }, {
       "module": "XForms",
-      "concept": "item"
+      "concept": {
+        "name": "item"
+      }
     }],
     "props": [
       "aria-checked",
@@ -2556,7 +2676,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "status"
+      "concept": {
+        "name": "status"
+      }
     }],
     "props": [
       "aria-valuemax",
@@ -2591,7 +2713,13 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "input[type=\"radio\"]"
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "radio"
+        }]
+      }
     }],
     "props": [
       "aria-checked",
@@ -2624,7 +2752,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "list"
+      "concept": {
+        "name": "list"
+      }
     }],
     "props": [
       "aria-required",
@@ -2686,12 +2816,18 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "frame"
+      "concept": {
+        "name": "frame"
+      }
     }, {
-      "concept": "Device Independence Glossart perceivable unit"
+      "concept": {
+        "name": "Device Independence Glossart perceivable unit"
+      }
     }, {
       "module": "ARIA",
-      "concept": "section"
+      "concept": {
+        "name": "section"
+      }
     }],
     "props": [
       "aria-expanded",
@@ -2740,13 +2876,19 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "XHTML",
-      "concept": "role"
+      "concept": {
+        "name": "role"
+      }
     }, {
       "module": "HTML",
-      "concept": "rel"
+      "concept": {
+        "name": "rel"
+      }
     }, {
       "module": "Dublin Core",
-      "concept": "type"
+      "concept": {
+        "name": "type"
+      }
     }]
   },
   "row": {
@@ -2755,7 +2897,9 @@
     "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "tr"
+      "concept": {
+        "name": "tr"
+      }
     }],
     "relatedConcepts": [],
     "props": [
@@ -2788,13 +2932,19 @@
     "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "tbody"
+      "concept": {
+        "name": "tbody"
+      }
     }, {
       "module": "HTML",
-      "concept": "tfoot"
+      "concept": {
+        "name": "tfoot"
+      }
     }, {
       "module": "HTML",
-      "concept": "thead"
+      "concept": {
+        "name": "thead"
+      }
     }],
     "relatedConcepts": [],
     "props": [
@@ -2825,7 +2975,13 @@
     "interactive": true,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "th[scope=\"row\"]"
+      "concept": {
+        "name": "th",
+        "attributes": [{
+          "name": "scope",
+          "value": "row"
+        }]
+      }
     }],
     "relatedConcepts": [],
     "props": [
@@ -2916,7 +3072,13 @@
     "childrenPresentational": false,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "input[type=\"search]\""
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "search"
+        }]
+      }
     }],
     "relatedConcepts": []
   },
@@ -2947,13 +3109,19 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "DTB",
-      "concept": "frontmatter"
+      "concept": {
+        "name": "frontmatter"
+      }
     }, {
       "module": "DTB",
-      "concept": "level"
+      "concept": {
+        "name": "level"
+      }
     }, {
       "module": "SMIL",
-      "concept": "level"
+      "concept": {
+        "name": "level"
+      }
     }]
   },
   "sectionhead": {
@@ -3018,7 +3186,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "hr"
+      "concept": {
+        "name": "hr"
+      }
     }],
     "props": [
       "aria-expanded",
@@ -3231,7 +3401,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "button"
+      "concept": {
+        "name": "button"
+      }
     }]
   },
   "tab": {
@@ -3268,7 +3440,9 @@
     "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
-      "concept": "table"
+      "concept": {
+        "name": "table"
+      }
     }],
     "relatedConcepts": [],
     "props": [
@@ -3304,7 +3478,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "DAISY",
-      "concept": "guide"
+      "concept": {
+        "name": "guide"
+      }
     }],
     "props": [
       "aria-level",
@@ -3364,7 +3540,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
-      "concept": "dt"
+      "concept": {
+        "name": "dt"
+      }
     }],
     "props": [
       "aria-atomic",
@@ -3399,13 +3577,23 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "XForms",
-      "concept": "input"
+      "concept": {
+        "name": "input"
+      }
     }, {
       "module": "HTML",
-      "concept": "textarea"
+      "concept": {
+        "name": "textarea"
+      }
     }, {
       "module": "HTML",
-      "concept": "input[type=\"text\"]"
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "text"
+        }]
+      }
     }],
     "props": [
       "aria-activedescendant",
@@ -3466,7 +3654,9 @@
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
-      "concept": "menubar"
+      "concept": {
+        "name": "menubar"
+      }
     }],
     "props": [
       "aria-activedescendant",
