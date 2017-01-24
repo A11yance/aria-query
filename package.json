@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Programmatic access to the ARIA specification",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "rimraf lib && babel src --out-dir lib && cp -R src/etc/ lib/etc",
     "prepublish": "npm run lint && npm run flow && npm run test && npm run build",
