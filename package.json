@@ -1,6 +1,6 @@
 {
   "name": "aria-query",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Programmatic access to the ARIA specification",
   "main": "lib/index.js",
   "files": [
