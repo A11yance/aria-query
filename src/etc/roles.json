@@ -1124,7 +1124,7 @@
     "baseConcepts": [],
     "relatedConcepts": []
   },
-  "doc-ERRATA": {
+  "doc-errata": {
     "props": [
       "aria-atomic",
       "aria-busy",
