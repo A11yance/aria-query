@@ -52,7 +52,9 @@
   "figure": {},
   "font": {},
   "footer": {},
-  "form": {},
+  "form": {
+    "interactive": true
+  },
   "frame": {},
   "frameset": {},
   "h1": {},

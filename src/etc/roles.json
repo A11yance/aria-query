@@ -1788,7 +1788,7 @@
   "form": {
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
+    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -2265,7 +2265,12 @@
     "abstract": false,
     "interactive": false,
     "baseConcepts": [],
-    "relatedConcepts": [],
+    "relatedConcepts": [{
+      "module": "HTML",
+      "concept": {
+        "name": "main"
+      }
+    }],
     "props": [
       "aria-expanded",
       "aria-atomic",
@@ -3584,6 +3589,11 @@
       "module": "HTML",
       "concept": {
         "name": "textarea"
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input"
       }
     }, {
       "module": "HTML",
