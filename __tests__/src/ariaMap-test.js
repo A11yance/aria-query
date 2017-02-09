@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 import expect from 'expect';
-import rolesMap from '../../src/ariaMap';
+import ariaMap from '../../src/ariaMap';
 
 describe('ariaMap', function () {
   it('should be a Map', function () {
