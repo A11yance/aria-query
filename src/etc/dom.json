@@ -19,9 +19,7 @@
   "blockquote": {},
   "body": {},
   "br": {},
-  "button": {
-    "interactive": true
-  },
+  "button": {},
   "canvas": {},
   "caption": {},
   "center": {},
@@ -52,9 +50,7 @@
   "figure": {},
   "font": {},
   "footer": {},
-  "form": {
-    "interactive": true
-  },
+  "form": {},
   "frame": {},
   "frameset": {},
   "h1": {},
@@ -105,9 +101,7 @@
   "object": {},
   "ol": {},
   "optgroup": {},
-  "option": {
-    "interactive": true
-  },
+  "option": {},
   "output": {},
   "p": {},
   "param": {
@@ -129,9 +123,7 @@
     "reserved": true
   },
   "section": {},
-  "select": {
-    "interactive": true
-  },
+  "select": {},
   "small": {},
   "source": {
     "reserved": true
@@ -149,9 +141,7 @@
   "table": {},
   "tbody": {},
   "td": {},
-  "textarea": {
-    "interactive": true
-  },
+  "textarea": {},
   "tfoot": {},
   "th": {},
   "thead": {},
