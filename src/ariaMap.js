@@ -4,7 +4,7 @@
 
 import ariaJSON from './etc/aria.json';
 
-type MapOfRoleDefinitions = Map<string, RoleDefinition>;
+type MapOfRoleDefinitions = Map<RelationConcept, RoleDefinition>;
 
 const ariaMap: MapOfRoleDefinitions = new Map([]);
 

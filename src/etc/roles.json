@@ -264,7 +264,8 @@
         "name": "td"
       }
     }],
-    "relatedConcepts": []
+    "relatedConcepts": [],
+    "childrenPresentational": false
   },
   "checkbox": {
     "superClass": ["input"],
@@ -3163,7 +3164,12 @@
   },
   "none": {
     "superClass": [],
-    "props": []
+    "props": [],
+    "requiredProps": [],
+    "baseConcepts": [],
+    "relatedConcepts": [],
+    "childrenPresentational": false,
+    "abstract": false
   },
   "note": {
     "superClass": ["section"],
@@ -4687,6 +4693,7 @@
     "requiredProps": [],
     "abstract": true,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [],
+    "childrenPresentational": false
   }
 }

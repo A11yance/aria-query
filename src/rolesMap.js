@@ -2,17 +2,24 @@
  * @flow
  */
 
-import rolesJSON from './etc/roles.json';
+import ariaAbstractRoles from './etc/aria/ariaAbstractRoles';
+import ariaLiteralRoles from './etc/aria/ariaLiteralRoles';
+import ariaDpubRoles from './etc/aria/ariaDpubRoles';
 
 type MapOfRoleDefinitions = Map<string, RoleDefinition>;
 
 const rolesMap: MapOfRoleDefinitions = new Map([]);
-
-Object
-  .keys(rolesJSON)
-  .reduce(
-    (map, key) => map.set(key, (rolesJSON[key]: RoleDefinition)),
-    rolesMap,
+[
+  ariaAbstractRoles,
+  ariaLiteralRoles,
+  ariaDpubRoles,
+].forEach(roleSet  => {
+  roleSet.forEach(
+    (
+      value: RoleDefinition,
+      key: string
+    ) => rolesMap.set(key, value)
   );
+});
 
 export default rolesMap;

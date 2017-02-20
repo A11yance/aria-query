@@ -6,15 +6,14 @@ type RoleDefinition = {
   abstract: boolean,
   baseConcepts: Array<RoleRelation>,
   childrenPresentational: boolean,
-  interactive: boolean,
-  props: Array<string>,
+  props: {[key: string]: mixed},
   relatedConcepts: Array<RoleRelation>,
-  requiredProps: Array<string>,
+  requiredProps: {[key: string]: mixed},
 };
 
 type RoleRelation = {
   module?: string,
-  concept: RelationConcept,
+  concept?: RelationConcept,
 };
 
 type RelationConcept = {

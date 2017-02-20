@@ -7,7 +7,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "rimraf lib && babel src --out-dir lib && cp -R src/etc/ lib/etc",
+    "build": "rimraf lib && babel src --out-dir lib && cp -R src/etc/{dom,aria}.json lib/etc",
     "prepublish": "npm run lint && npm run flow && npm run test && npm run build",
     "coveralls": "cat ./reports/lcov.info | coveralls",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",

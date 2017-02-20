@@ -1,0 +1,44 @@
+/**
+ * @flow
+ */
+const sectionRole: RoleDefinition = {
+  abstract: true,
+  accessibleNameRequired: false,
+  baseConcepts: [],
+  childrenPresentational: false,
+  nameFrom: [],
+  props: {
+    'aria-expanded': null,
+  },
+  relatedConcepts: [
+    {
+      module: 'DTB',
+      concept: {
+        name: 'frontmatter',
+      },
+    },
+    {
+      module: 'DTB',
+      concept: {
+        name: 'level',
+      },
+    },
+    {
+      module: 'SMIL',
+      concept: {
+        name: 'level',
+      },
+    },
+  ],
+  requireContextRole: [],
+  requiredOwnedElements: [],
+  requiredProps: {},
+  superClass: [
+    [
+      'roletype',
+      'structure',
+    ],
+  ],
+};
+
+export default sectionRole;
