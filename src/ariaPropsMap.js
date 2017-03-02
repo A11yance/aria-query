@@ -1,11 +1,17 @@
-{
-  "aria-activedescendant": {
+/**
+ * @flow
+ */
+
+type MapOfPropDefinitions = Map<string, PropDefinition>;
+
+const ariaPropsMap: MapOfPropDefinitions = new Map([
+  ["aria-activedescendant", {
     "type": "string"
-  },
-  "aria-atomic": {
+  }],
+  ["aria-atomic", {
     "type": "boolean"
-  },
-  "aria-autocomplete": {
+  }],
+  ["aria-autocomplete", {
     "type": "token",
     "values": [
       "inline",
@@ -13,23 +19,23 @@
       "both",
       "none"
     ]
-  },
-  "aria-busy": {
+  }],
+  ["aria-busy", {
     "type": "boolean"
-  },
-  "aria-checked": {
+  }],
+  ["aria-checked", {
     "type": "tristate"
-  },
-  "aria-controls": {
+  }],
+  ["aria-controls", {
     "type": "string"
-  },
-  "aria-describedby": {
+  }],
+  ["aria-describedby", {
     "type": "string"
-  },
-  "aria-disabled": {
+  }],
+  ["aria-disabled", {
     "type": "boolean"
-  },
-  "aria-dropeffect": {
+  }],
+  ["aria-dropeffect", {
     "type": "tokenlist",
     "values": [
       "copy",
@@ -39,25 +45,25 @@
       "popup",
       "none"
     ]
-  },
-  "aria-expanded": {
+  }],
+  ["aria-expanded", {
     "type": "boolean",
     "allowundefined": true
-  },
-  "aria-flowto": {
+  }],
+  ["aria-flowto", {
     "type": "string"
-  },
-  "aria-grabbed": {
+  }],
+  ["aria-grabbed", {
     "type": "boolean",
     "allowundefined": true
-  },
-  "aria-haspopup": {
+  }],
+  ["aria-haspopup", {
     "type": "boolean"
-  },
-  "aria-hidden": {
+  }],
+  ["aria-hidden", {
     "type": "boolean"
-  },
-  "aria-invalid": {
+  }],
+  ["aria-invalid", {
     "type": "token",
     "values": [
       "grammar",
@@ -65,50 +71,50 @@
       "spelling",
       true
     ]
-  },
-  "aria-label": {
+  }],
+  ["aria-label", {
     "type": "string"
-  },
-  "aria-labelledby": {
+  }],
+  ["aria-labelledby", {
     "type": "string"
-  },
-  "aria-level": {
+  }],
+  ["aria-level", {
     "type": "integer"
-  },
-  "aria-live": {
+  }],
+  ["aria-live", {
     "type": "token",
     "values": [
       "off",
       "polite",
       "assertive"
     ]
-  },
-  "aria-multiline": {
+  }],
+  ["aria-multiline", {
     "type": "boolean"
-  },
-  "aria-multiselectable": {
+  }],
+  ["aria-multiselectable", {
     "type": "boolean"
-  },
-  "aria-orientation": {
+  }],
+  ["aria-orientation", {
     "type": "token",
     "values": [
       "vertical",
       "horizontal"
     ]
-  },
-  "aria-owns": {
+  }],
+  ["aria-owns", {
     "type": "string"
-  },
-  "aria-posinset": {
+  }],
+  ["aria-posinset", {
     "type": "integer"
-  },
-  "aria-pressed": {
+  }],
+  ["aria-pressed", {
     "type": "tristate"
-  },
-  "aria-readonly": {
+  }],
+  ["aria-readonly", {
     "type": "boolean"
-  },
-  "aria-relevant": {
+  }],
+  ["aria-relevant", {
     "type": "tokenlist",
     "values": [
       "additions",
@@ -116,18 +122,18 @@
       "text",
       "all"
     ]
-  },
-  "aria-required": {
+  }],
+  ["aria-required", {
     "type": "boolean"
-  },
-  "aria-selected": {
+  }],
+  ["aria-selected", {
     "type": "boolean",
     "allowundefined": true
-  },
-  "aria-setsize": {
+  }],
+  ["aria-setsize", {
     "type": "integer"
-  },
-  "aria-sort": {
+  }],
+  ["aria-sort", {
     "type": "token",
     "values": [
       "ascending",
@@ -135,17 +141,19 @@
       "none",
       "other"
     ]
-  },
-  "aria-valuemax": {
+  }],
+  ["aria-valuemax", {
     "type": "number"
-  },
-  "aria-valuemin": {
+  }],
+  ["aria-valuemin", {
     "type": "number"
-  },
-  "aria-valuenow": {
+  }],
+  ["aria-valuenow", {
     "type": "number"
-  },
-  "aria-valuetext": {
+  }],
+  ["aria-valuetext", {
     "type": "string"
-  }
-}
+  }],
+]);
+
+export default ariaPropsMap;

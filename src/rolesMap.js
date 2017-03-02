@@ -2,9 +2,9 @@
  * @flow
  */
 
-import ariaAbstractRoles from './etc/aria/ariaAbstractRoles';
-import ariaLiteralRoles from './etc/aria/ariaLiteralRoles';
-import ariaDpubRoles from './etc/aria/ariaDpubRoles';
+import ariaAbstractRoles from './etc/roles/ariaAbstractRoles';
+import ariaLiteralRoles from './etc/roles/ariaLiteralRoles';
+import ariaDpubRoles from './etc/roles/ariaDpubRoles';
 
 type MapOfRoleDefinitions = Map<string, RoleDefinition>;
 

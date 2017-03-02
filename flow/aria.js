@@ -25,3 +25,15 @@ type RelationConceptAttribute = {
   name: string,
   value: string,
 };
+
+type PropDefinition = {
+  type: 'string'
+  | 'integer'
+  | 'number'
+  | 'boolean'
+  | 'token'
+  | 'tokenlist'
+  | 'tristate',
+  value? : Array<string>,
+  allowundefined?: boolean,
+};
