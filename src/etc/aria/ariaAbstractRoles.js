@@ -14,7 +14,7 @@ import structureRole from './abstract/structureRole';
 import widgetRole from './abstract/widgetRole';
 import windowRole from './abstract/windowRole';
 
-const ariaLiteralRoles = new Map([
+const ariaAbstractRoles = new Map([
   ['command', commandRole],
   ['composite', compositeRole],
   ['input', inputRole],
@@ -29,4 +29,4 @@ const ariaLiteralRoles = new Map([
   ['window', windowRole]
 ]);
 
-export default ariaLiteralRoles;
+export default ariaAbstractRoles;

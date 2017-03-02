@@ -41,7 +41,7 @@ import docSubtitleRole from './dpub/docSubtitleRole';
 import docTipRole from './dpub/docTipRole';
 import docTocRole from './dpub/docTocRole';
 
-const ariaLiteralRoles = new Map([
+const ariaDpubRoles = new Map([
   ['doc-abstract', docAbstractRole],
   ['doc-acknowledgments', docAcknowledgmentsRole],
   ['doc-afterword', docAfterwordRole],
@@ -83,4 +83,4 @@ const ariaLiteralRoles = new Map([
   ['doc-toc', docTocRole]
 ]);
 
-export default ariaLiteralRoles;
+export default ariaDpubRoles;

@@ -294,11 +294,11 @@ fs.readFile(path.join('src/etc/roles.json'), {
         + ' */\n'
         + `${requiresMapper(requires[0], path.join(requires[2]), 0)}\n`
         + `\n`
-        + `const ariaLiteralRoles = new Map([\n`
+        + `const ${requires[1]} = new Map([\n`
         + `${requiresCombiner(requires[0], 1)}\n`
         + `]);\n`
         + `\n`
-        + `export default ariaLiteralRoles;`,
+        + `export default ${requires[1]};`,
         {
           encoding: 'ascii'
         },
