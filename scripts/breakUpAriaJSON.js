@@ -100,7 +100,7 @@ function triageValue(value, depth = 0) {
   return output;
 }
 
-fs.readFile(path.join('src/etc/roles.json'), {
+fs.readFile(path.join('./roles.json'), {
   encoding: 'utf8'
 }, (error, data) => {
   if (error) {
@@ -253,7 +253,7 @@ function requiresCombiner(roles, depth) {
 
 const srcDir = 'src';
 
-fs.readFile(path.join('src/etc/roles.json'), {
+fs.readFile(path.join('./roles.json'), {
   encoding: 'utf8'
 }, (error, data) => {
   if (error) {
