@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseDir = 'src/etc/aria';
+const baseDir = 'src/etc/roles';
 
 const literalRequires = [];
 const abstractRequires = [];
@@ -100,7 +100,7 @@ function triageValue(value, depth = 0) {
   return output;
 }
 
-fs.readFile(path.join('./roles.json'), {
+fs.readFile(path.join('scripts/roles.json'), {
   encoding: 'utf8'
 }, (error, data) => {
   if (error) {
@@ -133,7 +133,9 @@ fs.readFile(path.join('./roles.json'), {
       // Create a set of all the props of the super classes.
       let superClasses = aria[name]['superClass'];
       const accumulation = superClassWalker(superClasses);
-      return accumulatedSuperClasses.set(name, accumulation);
+      const output = accumulatedSuperClasses.set(name, accumulation);
+      // console.log(`${name} => ${accumulatedSuperClasses.get(name).map(group => `[${group}]`).join('\n')}`);
+      return output;
     });
 
   Object.keys(aria)
@@ -253,7 +255,7 @@ function requiresCombiner(roles, depth) {
 
 const srcDir = 'src';
 
-fs.readFile(path.join('./roles.json'), {
+fs.readFile(path.join('scripts/roles.json'), {
   encoding: 'utf8'
 }, (error, data) => {
   if (error) {
