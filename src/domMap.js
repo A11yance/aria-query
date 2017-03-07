@@ -319,7 +319,7 @@ const domMap: MapOfDOMDefinitions = new Map([
   ['source', {
     reserved: true
   }],
-  ['spacer': {
+  ['spacer', {
     reserved: false,
   }],
   ['span', {
