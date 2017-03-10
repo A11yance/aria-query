@@ -9,6 +9,7 @@ type RoleDefinition = {
   props: {[key: string]: mixed},
   relatedConcepts: Array<RoleRelation>,
   requiredProps: {[key: string]: mixed},
+  superClass: Array<Array<string>>,
 };
 
 type RoleRelation = {

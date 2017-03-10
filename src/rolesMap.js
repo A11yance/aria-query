@@ -16,10 +16,31 @@ const rolesMap: MapOfRoleDefinitions = new Map([]);
 ].forEach(roleSet  => {
   roleSet.forEach(
     (
-      value: RoleDefinition,
-      key: string
-    ) => rolesMap.set(key, value)
+      roleDefinition: RoleDefinition,
+      name: string
+    ) => rolesMap.set(name, roleDefinition)
   );
+});
+
+rolesMap.forEach((roleDefinition: RoleDefinition, name: string) => {
+  // Conglomerate the properties
+  for (let superClassIter of roleDefinition.superClass) {
+    for (let superClassName of superClassIter) {
+      const superClassDefinition = rolesMap.get(superClassName);
+      if (superClassDefinition) {
+        for (let prop of Object.keys(superClassDefinition.props)) {
+          if (
+            !Object.prototype.hasOwnProperty.call(roleDefinition.props, prop)
+          ) {
+            Object.assign(
+              roleDefinition.props,
+              {[prop]: superClassDefinition.props[prop]},
+            );
+          }
+        }
+      }
+    }
+  }
 });
 
 export default rolesMap;
