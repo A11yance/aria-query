@@ -3949,7 +3949,7 @@
     "requireContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [
-      "ARIA-CONTROLS",
+      "aria-controls",
       "aria-orientation",
       "aria-valuemax",
       "aria-valuemin",

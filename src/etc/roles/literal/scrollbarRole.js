@@ -36,7 +36,7 @@ const scrollbarRole: RoleDefinition = {
   requireContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
-    'ARIA-CONTROLS': null,
+    'aria-controls': null,
     'aria-orientation': null,
     'aria-valuemax': null,
     'aria-valuemin': null,
