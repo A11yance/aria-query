@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const docAppendixRole: RoleDefinition = {
+const docAppendixRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

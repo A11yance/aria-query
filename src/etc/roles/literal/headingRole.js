@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const headingRole: RoleDefinition = {
+const headingRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

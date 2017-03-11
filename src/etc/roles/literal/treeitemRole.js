@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const treeitemRole: RoleDefinition = {
+const treeitemRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

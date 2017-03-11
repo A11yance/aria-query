@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const separatorRole: RoleDefinition = {
+const separatorRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

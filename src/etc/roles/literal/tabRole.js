@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const tabRole: RoleDefinition = {
+const tabRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

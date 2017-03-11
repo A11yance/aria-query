@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const scrollbarRole: RoleDefinition = {
+const scrollbarRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

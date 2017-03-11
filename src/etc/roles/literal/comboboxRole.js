@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const comboboxRole: RoleDefinition = {
+const comboboxRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

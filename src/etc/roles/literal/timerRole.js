@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const timerRole: RoleDefinition = {
+const timerRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

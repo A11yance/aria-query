@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const tooltipRole: RoleDefinition = {
+const tooltipRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

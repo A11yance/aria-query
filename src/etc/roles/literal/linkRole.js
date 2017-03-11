@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const linkRole: RoleDefinition = {
+const linkRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

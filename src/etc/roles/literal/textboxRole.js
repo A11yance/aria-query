@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const textboxRole: RoleDefinition = {
+const textboxRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

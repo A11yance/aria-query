@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const radioRole: RoleDefinition = {
+const radioRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const sliderRole: RoleDefinition = {
+const sliderRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

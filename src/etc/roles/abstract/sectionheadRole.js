@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const sectionheadRole: RoleDefinition = {
+const sectionheadRole: ARIARoleDefinition = {
   abstract: true,
   accessibleNameRequired: false,
   baseConcepts: [],

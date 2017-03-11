@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const rowheaderRole: RoleDefinition = {
+const rowheaderRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [

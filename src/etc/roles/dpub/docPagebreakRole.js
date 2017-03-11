@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const docPagebreakRole: RoleDefinition = {
+const docPagebreakRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

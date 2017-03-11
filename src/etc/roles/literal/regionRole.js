@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const regionRole: RoleDefinition = {
+const regionRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

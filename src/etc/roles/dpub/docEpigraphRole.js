@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const docEpigraphRole: RoleDefinition = {
+const docEpigraphRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

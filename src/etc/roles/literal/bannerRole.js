@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const bannerRole: RoleDefinition = {
+const bannerRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

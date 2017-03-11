@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const docQnaRole: RoleDefinition = {
+const docQnaRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

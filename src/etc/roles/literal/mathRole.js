@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const mathRole: RoleDefinition = {
+const mathRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const inputRole: RoleDefinition = {
+const inputRole: ARIARoleDefinition = {
   abstract: true,
   accessibleNameRequired: false,
   baseConcepts: [],

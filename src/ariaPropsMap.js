@@ -2,157 +2,157 @@
  * @flow
  */
 
-type MapOfPropDefinitions = Map<string, PropDefinition>;
+type MapOfARIAPropertyDefinitions = Map<ARIAProperty, ARIAPropertyDefinition>;
 
-const ariaPropsMap: MapOfPropDefinitions = new Map([
-  ["aria-activedescendant", {
-    "type": "string"
+const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
+  ['aria-activedescendant', {
+    'type': 'string'
   }],
-  ["aria-atomic", {
-    "type": "boolean"
+  ['aria-atomic', {
+    'type': 'boolean'
   }],
-  ["aria-autocomplete", {
-    "type": "token",
-    "values": [
-      "inline",
-      "list",
-      "both",
-      "none"
+  ['aria-autocomplete', {
+    'type': 'token',
+    'values': [
+      'inline',
+      'list',
+      'both',
+      'none'
     ]
   }],
-  ["aria-busy", {
-    "type": "boolean"
+  ['aria-busy', {
+    'type': 'boolean'
   }],
-  ["aria-checked", {
-    "type": "tristate"
+  ['aria-checked', {
+    'type': 'tristate'
   }],
-  ["aria-controls", {
-    "type": "string"
+  ['aria-controls', {
+    'type': 'string'
   }],
-  ["aria-describedby", {
-    "type": "string"
+  ['aria-describedby', {
+    'type': 'string'
   }],
-  ["aria-disabled", {
-    "type": "boolean"
+  ['aria-disabled', {
+    'type': 'boolean'
   }],
-  ["aria-dropeffect", {
-    "type": "tokenlist",
-    "values": [
-      "copy",
-      "move",
-      "link",
-      "execute",
-      "popup",
-      "none"
+  ['aria-dropeffect', {
+    'type': 'tokenlist',
+    'values': [
+      'copy',
+      'move',
+      'link',
+      'execute',
+      'popup',
+      'none'
     ]
   }],
-  ["aria-expanded", {
-    "type": "boolean",
-    "allowundefined": true
+  ['aria-expanded', {
+    'type': 'boolean',
+    'allowundefined': true
   }],
-  ["aria-flowto", {
-    "type": "string"
+  ['aria-flowto', {
+    'type': 'string'
   }],
-  ["aria-grabbed", {
-    "type": "boolean",
-    "allowundefined": true
+  ['aria-grabbed', {
+    'type': 'boolean',
+    'allowundefined': true
   }],
-  ["aria-haspopup", {
-    "type": "boolean"
+  ['aria-haspopup', {
+    'type': 'boolean'
   }],
-  ["aria-hidden", {
-    "type": "boolean"
+  ['aria-hidden', {
+    'type': 'boolean'
   }],
-  ["aria-invalid", {
-    "type": "token",
-    "values": [
-      "grammar",
+  ['aria-invalid', {
+    'type': 'token',
+    'values': [
+      'grammar',
       false,
-      "spelling",
+      'spelling',
       true
     ]
   }],
-  ["aria-label", {
-    "type": "string"
+  ['aria-label', {
+    'type': 'string'
   }],
-  ["aria-labelledby", {
-    "type": "string"
+  ['aria-labelledby', {
+    'type': 'string'
   }],
-  ["aria-level", {
-    "type": "integer"
+  ['aria-level', {
+    'type': 'integer'
   }],
-  ["aria-live", {
-    "type": "token",
-    "values": [
-      "off",
-      "polite",
-      "assertive"
+  ['aria-live', {
+    'type': 'token',
+    'values': [
+      'off',
+      'polite',
+      'assertive'
     ]
   }],
-  ["aria-multiline", {
-    "type": "boolean"
+  ['aria-multiline', {
+    'type': 'boolean'
   }],
-  ["aria-multiselectable", {
-    "type": "boolean"
+  ['aria-multiselectable', {
+    'type': 'boolean'
   }],
-  ["aria-orientation", {
-    "type": "token",
-    "values": [
-      "vertical",
-      "horizontal"
+  ['aria-orientation', {
+    'type': 'token',
+    'values': [
+      'vertical',
+      'horizontal'
     ]
   }],
-  ["aria-owns", {
-    "type": "string"
+  ['aria-owns', {
+    'type': 'string'
   }],
-  ["aria-posinset", {
-    "type": "integer"
+  ['aria-posinset', {
+    'type': 'integer'
   }],
-  ["aria-pressed", {
-    "type": "tristate"
+  ['aria-pressed', {
+    'type': 'tristate'
   }],
-  ["aria-readonly", {
-    "type": "boolean"
+  ['aria-readonly', {
+    'type': 'boolean'
   }],
-  ["aria-relevant", {
-    "type": "tokenlist",
-    "values": [
-      "additions",
-      "removals",
-      "text",
-      "all"
+  ['aria-relevant', {
+    'type': 'tokenlist',
+    'values': [
+      'additions',
+      'removals',
+      'text',
+      'all'
     ]
   }],
-  ["aria-required", {
-    "type": "boolean"
+  ['aria-required', {
+    'type': 'boolean'
   }],
-  ["aria-selected", {
-    "type": "boolean",
-    "allowundefined": true
+  ['aria-selected', {
+    'type': 'boolean',
+    'allowundefined': true
   }],
-  ["aria-setsize", {
-    "type": "integer"
+  ['aria-setsize', {
+    'type': 'integer'
   }],
-  ["aria-sort", {
-    "type": "token",
-    "values": [
-      "ascending",
-      "descending",
-      "none",
-      "other"
+  ['aria-sort', {
+    'type': 'token',
+    'values': [
+      'ascending',
+      'descending',
+      'none',
+      'other'
     ]
   }],
-  ["aria-valuemax", {
-    "type": "number"
+  ['aria-valuemax', {
+    'type': 'number'
   }],
-  ["aria-valuemin", {
-    "type": "number"
+  ['aria-valuemin', {
+    'type': 'number'
   }],
-  ["aria-valuenow", {
-    "type": "number"
+  ['aria-valuenow', {
+    'type': 'number'
   }],
-  ["aria-valuetext", {
-    "type": "string"
+  ['aria-valuetext', {
+    'type': 'string'
   }],
 ]);
 

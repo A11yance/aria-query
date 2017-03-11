@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const docPrefaceRole: RoleDefinition = {
+const docPrefaceRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

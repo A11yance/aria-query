@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const checkboxRole: RoleDefinition = {
+const checkboxRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

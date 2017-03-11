@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const docBacklinkRole: RoleDefinition = {
+const docBacklinkRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

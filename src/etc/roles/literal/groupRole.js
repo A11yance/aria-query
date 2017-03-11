@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const groupRole: RoleDefinition = {
+const groupRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const radiogroupRole: RoleDefinition = {
+const radiogroupRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

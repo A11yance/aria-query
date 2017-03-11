@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const tablistRole: RoleDefinition = {
+const tablistRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const complementaryRole: RoleDefinition = {
+const complementaryRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

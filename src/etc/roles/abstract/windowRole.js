@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const windowRole: RoleDefinition = {
+const windowRole: ARIARoleDefinition = {
   abstract: true,
   accessibleNameRequired: false,
   baseConcepts: [],

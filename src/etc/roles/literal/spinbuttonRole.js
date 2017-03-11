@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const spinbuttonRole: RoleDefinition = {
+const spinbuttonRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

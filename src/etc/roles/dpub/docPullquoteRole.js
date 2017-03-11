@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const docPullquoteRole: RoleDefinition = {
+const docPullquoteRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const tableRole: RoleDefinition = {
+const tableRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [

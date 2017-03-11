@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const noneRole: RoleDefinition = {
+const noneRole: ARIARoleDefinition = {
   abstract: false,
   baseConcepts: [],
   childrenPresentational: false,

@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const logRole: RoleDefinition = {
+const logRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

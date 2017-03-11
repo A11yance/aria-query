@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const marqueeRole: RoleDefinition = {
+const marqueeRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

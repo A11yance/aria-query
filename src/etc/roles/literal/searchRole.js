@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const searchRole: RoleDefinition = {
+const searchRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

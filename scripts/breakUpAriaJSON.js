@@ -146,7 +146,7 @@ fs.readFile(path.join('scripts/roles.json'), {
         '/**',
         ' * @flow',
         ' */',
-        `const ${camelName}: RoleDefinition = {`,
+        `const ${camelName}: ARIARoleDefinition = {`,
         Object.keys(aria[name])
           .sort()
           .filter((prop) => !['interactive'].includes(prop))

@@ -3,16 +3,17 @@
  */
 
 import rolesMap from './rolesMap';
+import type { ARIARoleDefintionKey } from './index';
 
-type RoleSet = Set<string>;
+type RoleSet = Set<ARIARoleDefintionKey>;
 
-type ElementRoleRelationMap = Map<RelationConcept, RoleSet>;
+type ElementARIARoleRelationMap = Map<ARIARelationConcept, RoleSet>;
 
-const elementRoleMap: ElementRoleRelationMap = new Map([]);
+const elementRoleMap: ElementARIARoleRelationMap = new Map([]);
 
 [...rolesMap.keys()]
   .forEach((
-    key: string,
+    key: ARIARoleDefintionKey,
   ): void => {
     const role = rolesMap.get(key);
     if (role) {
@@ -21,7 +22,7 @@ const elementRoleMap: ElementRoleRelationMap = new Map([]);
         ...role.relatedConcepts,
       ]
       .forEach((
-        relation: RoleRelation,
+        relation: ARIARoleRelation,
       ): void => {
         if (relation.module === 'HTML') {
           const concept = relation.concept;
@@ -29,8 +30,9 @@ const elementRoleMap: ElementRoleRelationMap = new Map([]);
             const conceptStr = JSON.stringify(concept);
 
             let roles: ?RoleSet = ([...elementRoleMap.entries()]
-              .find(([key, value]) => JSON.stringify(key) === conceptStr)
-              || [])[1];
+              .find(
+                ([key, value]) => JSON.stringify(key) === conceptStr)|| []
+              )[1];
 
             if (!roles) {
               roles = new Set([]);

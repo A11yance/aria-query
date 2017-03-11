@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const docGlossrefRole: RoleDefinition = {
+const docGlossrefRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

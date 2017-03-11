@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const docColophonRole: RoleDefinition = {
+const docColophonRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

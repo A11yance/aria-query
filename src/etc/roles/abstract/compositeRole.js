@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const compositeRole: RoleDefinition = {
+const compositeRole: ARIARoleDefinition = {
   abstract: true,
   accessibleNameRequired: false,
   baseConcepts: [],

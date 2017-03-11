@@ -3,16 +3,17 @@
  */
 
 import rolesMap from './rolesMap';
+import type { ARIARoleDefintionKey } from './index';
 
-type RelationConceptSet = Set<RelationConcept>;
+type ARIARelationConceptSet = Set<ARIARelationConcept>;
 
-type RoleElementRelationMap = Map<string, RelationConceptSet>;
+type RoleElementRelationMap = Map<ARIARoleDefintionKey, ARIARelationConceptSet>;
 
 const roleElementMap: RoleElementRelationMap = new Map([]);
 
 [...rolesMap.keys()]
   .forEach((
-    key: string,
+    key: ARIARoleDefintionKey,
   ): void => {
     const role = rolesMap.get(key);
     if (role) {
@@ -21,7 +22,7 @@ const roleElementMap: RoleElementRelationMap = new Map([]);
         ...role.relatedConcepts,
       ]
       .forEach((
-        relation: RoleRelation,
+        relation: ARIARoleRelation,
       ): void => {
         if (relation.module === 'HTML') {
           const concept = relation.concept;

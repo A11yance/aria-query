@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const widgetRole: RoleDefinition = {
+const widgetRole: ARIARoleDefinition = {
   abstract: true,
   accessibleNameRequired: false,
   baseConcepts: [],

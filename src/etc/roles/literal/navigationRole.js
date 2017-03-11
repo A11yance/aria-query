@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const navigationRole: RoleDefinition = {
+const navigationRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

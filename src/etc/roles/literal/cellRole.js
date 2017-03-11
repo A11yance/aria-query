@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const cellRole: RoleDefinition = {
+const cellRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [

@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const directoryRole: RoleDefinition = {
+const directoryRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const landmarkRole: RoleDefinition = {
+const landmarkRole: ARIARoleDefinition = {
   abstract: true,
   accessibleNameRequired: false,
   baseConcepts: [],

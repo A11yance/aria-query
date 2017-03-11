@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const gridcellRole: RoleDefinition = {
+const gridcellRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [

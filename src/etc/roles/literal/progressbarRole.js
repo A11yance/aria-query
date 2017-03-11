@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const progressbarRole: RoleDefinition = {
+const progressbarRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],

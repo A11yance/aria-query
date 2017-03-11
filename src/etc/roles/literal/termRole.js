@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const termRole: RoleDefinition = {
+const termRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

@@ -5,8 +5,9 @@
 import ariaAbstractRoles from './etc/roles/ariaAbstractRoles';
 import ariaLiteralRoles from './etc/roles/ariaLiteralRoles';
 import ariaDpubRoles from './etc/roles/ariaDpubRoles';
+import type { ARIARoleDefintionKey } from './index';
 
-type MapOfRoleDefinitions = Map<string, RoleDefinition>;
+type MapOfRoleDefinitions = Map<ARIARoleDefintionKey, ARIARoleDefinition>;
 
 const rolesMap: MapOfRoleDefinitions = new Map([]);
 [
@@ -16,13 +17,16 @@ const rolesMap: MapOfRoleDefinitions = new Map([]);
 ].forEach(roleSet  => {
   roleSet.forEach(
     (
-      roleDefinition: RoleDefinition,
-      name: string
+      roleDefinition: ARIARoleDefinition,
+      name: ARIARoleDefintionKey,
     ) => rolesMap.set(name, roleDefinition)
   );
 });
 
-rolesMap.forEach((roleDefinition: RoleDefinition, name: string) => {
+rolesMap.forEach((
+  roleDefinition: ARIARoleDefinition,
+  name: ARIARoleDefintionKey,
+) => {
   // Conglomerate the properties
   for (let superClassIter of roleDefinition.superClass) {
     for (let superClassName of superClassIter) {

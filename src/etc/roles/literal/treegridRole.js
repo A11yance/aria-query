@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const treegridRole: RoleDefinition = {
+const treegridRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

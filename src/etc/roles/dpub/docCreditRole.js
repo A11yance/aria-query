@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const docCreditRole: RoleDefinition = {
+const docCreditRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],

@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const feedRole: RoleDefinition = {
+const feedRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],
