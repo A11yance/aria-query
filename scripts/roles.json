@@ -1,9 +1,14 @@
 {
   "alert": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
       "aria-expanded",
-      "aria-atomic",
+      ["aria-atomic", "true"],
       "aria-busy",
       "aria-controls",
       "aria-describedby",
@@ -16,12 +21,11 @@
       "aria-invalid",
       "aria-label",
       "aria-labelledby",
-      "aria-live",
+      ["aria-live", "assertive"],
       "aria-owns",
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": [{
@@ -32,6 +36,11 @@
     }]
   },
   "alertdialog": {
+    "superClass": ["alert", "dialog"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
       "aria-expanded",
@@ -53,7 +62,6 @@
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": [{
@@ -64,9 +72,14 @@
     }]
   },
   "application": {
+    "superClass": ["structure"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
-      "aria-expanded",
+      "aria-activedescendant",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -85,7 +98,6 @@
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [{
       "concept": {
@@ -95,6 +107,11 @@
     "relatedConcepts": []
   },
   "article": {
+    "superClass": ["document"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
       "aria-expanded",
@@ -113,10 +130,11 @@
       "aria-labelledby",
       "aria-live",
       "aria-owns",
+      "aria-posinset",
+      "aria-setsize",
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": [{
@@ -127,6 +145,11 @@
     }]
   },
   "banner": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
       "aria-expanded",
@@ -148,12 +171,16 @@
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "button": {
+    "superClass": ["command"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
       "aria-expanded",
@@ -176,7 +203,6 @@
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": true,
     "childrenPresentational": true,
     "baseConcepts": [{
       "module": "HTML",
@@ -197,6 +223,11 @@
     }]
   },
   "cell": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": ["row"],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
       "aria-colindex",
@@ -227,21 +258,26 @@
       "aria-roledescription"
     ],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
         "name": "td"
       }
     }],
-    "relatedConcepts": []
+    "relatedConcepts": [],
+    "childrenPresentational": false
   },
   "checkbox": {
+    "superClass": ["input"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [
       "aria-checked"
     ],
     "props": [
-      "aria-checked",
+      ["aria-checked", "false"],
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -257,10 +293,10 @@
       "aria-labelledby",
       "aria-live",
       "aria-owns",
+      "aria-readonly",
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": true,
     "childrenPresentational": true,
     "baseConcepts": [],
     "relatedConcepts": [{
@@ -280,6 +316,11 @@
     }]
   },
   "columnheader": {
+    "superClass": ["cell", "gridcell", "sectionhead"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": ["row"],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
       "aria-sort",
@@ -305,9 +346,7 @@
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
-    "interactive": true,
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
@@ -321,11 +360,23 @@
     "relatedConcepts": []
   },
   "combobox": {
+    "superClass": ["select"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["textbox"],
+      ["listbox"],
+      ["tree"],
+      ["grid"],
+      ["dialog"]
+    ],
     "requiredProps": [
-      "aria-expanded"
+      "aria-controls",
+      ["aria-expanded", "false"]
     ],
     "props": [
-      "aria-expanded",
+      ["aria-expanded", "false"],
       "aria-autocomplete",
       "aria-required",
       "aria-activedescendant",
@@ -337,17 +388,18 @@
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
+      ["aria-haspopup", "listbox"],
       "aria-hidden",
       "aria-invalid",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-readonly",
+      "aria-relevant",
+      "aria-required"
     ],
     "abstract": false,
-    "interactive": true,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": [{
@@ -363,27 +415,36 @@
     }]
   },
   "command": {
+    "superClass": ["widget"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": [{
@@ -394,6 +455,11 @@
     }]
   },
   "complementary": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
       "aria-expanded",
@@ -415,39 +481,52 @@
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "composite": {
+    "superClass": ["widget"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-activedescendant",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "contentinfo": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
       "aria-expanded",
@@ -469,12 +548,16 @@
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "definition": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
       "aria-expanded",
@@ -496,7 +579,6 @@
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": [{
@@ -512,6 +594,11 @@
     }]
   },
   "dialog": {
+    "superClass": ["window"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
       "aria-expanded",
@@ -533,15 +620,18 @@
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "directory": {
+    "superClass": ["list"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "DAISY Guide"
@@ -568,6 +658,11 @@
     "childrenPresentational": false
   },
   "doc-abstract": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -591,12 +686,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "abstract [EPUB-SSV]"
+      }
+    }]
   },
   "doc-acknowledgments": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -620,12 +724,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "acknowledgments [EPUB-SSV]"
+      }
+    }]
   },
   "doc-afterword": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -649,12 +762,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "afterword [EPUB-SSV]"
+      }
+    }]
   },
   "doc-appendix": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -678,12 +800,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "appendix [EPUB-SSV]"
+      }
+    }]
   },
   "doc-backlink": {
+    "superClass": ["link"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "content"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -707,12 +838,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "referrer [EPUB-SSV]"
+      }
+    }]
   },
   "doc-biblioentry": {
+    "superClass": ["listitem"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": ["doc-bibliography"],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -739,12 +879,23 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "EPUB biblioentry [EPUB-SSV]"
+      }
+    }]
   },
   "doc-bibliography": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["doc-biblioentry"]
+    ],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -768,12 +919,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "bibliography [EPUB-SSV]"
+      }
+    }]
   },
   "doc-biblioref": {
+    "superClass": ["link"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -797,12 +957,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "biblioref [EPUB-SSV]"
+      }
+    }]
   },
   "doc-chapter": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -826,12 +995,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "chapter [EPUB-SSV]"
+      }
+    }]
   },
   "doc-colophon": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -855,12 +1033,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "colophon [EPUB-SSV]"
+      }
+    }]
   },
   "doc-conclusion": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -884,12 +1071,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "conclusion [EPUB-SSV]"
+      }
+    }]
   },
   "doc-cover": {
+    "superClass": ["img"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -913,12 +1109,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "cover [EPUB-SSV]"
+      }
+    }]
   },
   "doc-credit": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -942,12 +1147,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "credit [EPUB-SSV]"
+      }
+    }]
   },
   "doc-credits": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -971,12 +1185,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "credits [EPUB-SSV]"
+      }
+    }]
   },
   "doc-dedication": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1000,12 +1223,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "dedication [EPUB-SSV]"
+      }
+    }]
   },
   "doc-endnote": {
+    "superClass": ["listitem"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": ["doc-endnotes"],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1032,12 +1264,23 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "rearnote [EPUB-SSV]"
+      }
+    }]
   },
   "doc-endnotes": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["doc-endnote"]
+    ],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1061,12 +1304,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "rearnotes [EPUB-SSV]"
+      }
+    }]
   },
   "doc-epigraph": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1090,12 +1342,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "epigraph [EPUB-SSV]"
+      }
+    }]
   },
   "doc-epilogue": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1119,12 +1380,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "epilogue [EPUB-SSV]"
+      }
+    }]
   },
   "doc-errata": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1148,12 +1418,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "errata [EPUB-SSV]"
+      }
+    }]
   },
   "doc-example": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1177,12 +1456,16 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "doc-footnote": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1206,12 +1489,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "footnote [EPUB-SSV]"
+      }
+    }]
   },
   "doc-foreword": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1235,12 +1527,24 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "foreword [EPUB-SSV]"
+      }
+    }]
   },
   "doc-glossary": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["term"],
+      ["definition"]
+    ],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1264,12 +1568,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "glossary [EPUB-SSV]"
+      }
+    }]
   },
   "doc-glossref": {
+    "superClass": ["link"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1293,12 +1606,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "glossref [EPUB-SSV]"
+      }
+    }]
   },
   "doc-index": {
+    "superClass": ["navigation"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1322,12 +1644,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "index [EPUB-SSV]"
+      }
+    }]
   },
   "doc-introduction": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1351,12 +1682,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "introduction [EPUB-SSV]"
+      }
+    }]
   },
   "doc-noteref": {
+    "superClass": ["link"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1380,12 +1720,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "noteref [EPUB-SSV]"
+      }
+    }]
   },
   "doc-notice": {
+    "superClass": ["note"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1409,12 +1758,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "notice [EPUB-SSV]"
+      }
+    }]
   },
   "doc-pagebreak": {
+    "superClass": ["separator"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1439,12 +1797,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
-    "childrenPresentational": false,
+    "childrenPresentational": true,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "pagebreak [EPUB-SSV]"
+      }
+    }]
   },
   "doc-pagelist": {
+    "superClass": ["navigation"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1468,12 +1835,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "page-list [EPUB-SSV]"
+      }
+    }]
   },
   "doc-part": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1497,12 +1873,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "part [EPUB-SSV]"
+      }
+    }]
   },
   "doc-preface": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1526,12 +1911,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "preface [EPUB-SSV]"
+      }
+    }]
   },
   "doc-prologue": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1555,21 +1949,39 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "prologue [EPUB-SSV]"
+      }
+    }]
   },
   "doc-pullquote": {
+    "superClass": ["none"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "pullquote [EPUB-SSV]"
+      }
+    }]
   },
   "doc-qna": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1593,12 +2005,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "qna [EPUB-SSV]"
+      }
+    }]
   },
   "doc-subtitle": {
+    "superClass": ["sectionhead"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1622,12 +2043,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "subtitle [EPUB-SSV]"
+      }
+    }]
   },
   "doc-tip": {
+    "superClass": ["note"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1651,12 +2081,21 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "help [EPUB-SSV]"
+      }
+    }]
   },
   "doc-toc": {
+    "superClass": ["navigation"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1680,15 +2119,23 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "EPUB",
+      "concept": {
+        "name": "toc [EPUB-SSV]"
+      }
+    }]
   },
   "document": {
+    "superClass": ["structure"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "concept": {
@@ -1717,9 +2164,15 @@
     "childrenPresentational": false
   },
   "feed": {
+    "superClass": ["list"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["article"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "props": [
       "aria-atomic",
@@ -1749,8 +2202,12 @@
     "relatedConcepts": []
   },
   "figure": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "abstract": false,
-    "interactive": false,
     "childrenPresentational": false,
     "props": [
       "aria-atomic",
@@ -1786,9 +2243,13 @@
     }]
   },
   "form": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -1818,9 +2279,19 @@
     "childrenPresentational": false
   },
   "grid": {
+    "superClass": [
+      "composite",
+      "table"
+    ],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["rowgroup", "row"],
+      ["row"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
@@ -1854,9 +2325,13 @@
     "childrenPresentational": false
   },
   "gridcell": {
+    "superClass": ["cell", "widget"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": ["row"],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
@@ -1889,9 +2364,13 @@
     "childrenPresentational": false
   },
   "group": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -1922,9 +2401,13 @@
     "childrenPresentational": false
   },
   "heading": {
+    "superClass": ["sectionhead"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -1958,7 +2441,7 @@
       }
     }],
     "props": [
-      "aria-level",
+      ["aria-level", "2"],
       "aria-expanded",
       "aria-atomic",
       "aria-busy",
@@ -1980,9 +2463,13 @@
     "childrenPresentational": false
   },
   "img": {
+    "superClass": ["section"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -2017,6 +2504,11 @@
     "childrenPresentational": true
   },
   "input": {
+    "superClass": ["widget"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2037,7 +2529,6 @@
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": [{
@@ -2048,6 +2539,11 @@
     }]
   },
   "landmark": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-expanded",
       "aria-atomic",
@@ -2069,15 +2565,18 @@
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "link": {
+    "superClass": ["command"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -2112,9 +2611,16 @@
     "childrenPresentational": false
   },
   "list": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["group", "listitem"],
+      ["listitem"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
@@ -2149,9 +2655,15 @@
     "childrenPresentational": false
   },
   "listbox": {
+    "superClass": ["select"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["option"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
@@ -2171,6 +2683,7 @@
     }],
     "props": [
       "aria-multiselectable",
+      "aria-readonly",
       "aria-required",
       "aria-expanded",
       "aria-atomic",
@@ -2187,6 +2700,7 @@
       "aria-label",
       "aria-labelledby",
       "aria-live",
+      ["aria-orientation", "vertical"],
       "aria-owns",
       "aria-relevant",
       "aria-activedescendant"
@@ -2194,9 +2708,16 @@
     "childrenPresentational": false
   },
   "listitem": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [
+      "group",
+      "list"
+    ],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
@@ -2234,9 +2755,13 @@
     "childrenPresentational": false
   },
   "log": {
+    "superClass": ["section"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -2254,16 +2779,20 @@
       "aria-invalid",
       "aria-label",
       "aria-labelledby",
-      "aria-live",
+      ["aria-live", "polite"],
       "aria-owns",
       "aria-relevant"
     ],
     "childrenPresentational": false
   },
   "main": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -2293,9 +2822,13 @@
     "childrenPresentational": false
   },
   "marquee": {
+    "superClass": ["section"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -2320,9 +2853,13 @@
     "childrenPresentational": false
   },
   "math": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -2347,9 +2884,18 @@
     "childrenPresentational": true
   },
   "menu": {
+    "superClass": ["select"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["group", "menuitemradio"],
+      ["menuitem"],
+      ["menuitemcheckbox"],
+      ["menuitemradio"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
@@ -2388,6 +2934,7 @@
       "aria-label",
       "aria-labelledby",
       "aria-live",
+      ["aria-orientation", "vertical"],
       "aria-owns",
       "aria-relevant",
       "aria-activedescendant"
@@ -2395,9 +2942,18 @@
     "childrenPresentational": false
   },
   "menubar": {
+    "superClass": ["menu"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["group", "menuitemradio"],
+      ["menuitem"],
+      ["menuitemcheckbox"],
+      ["menuitemradio"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
@@ -2421,6 +2977,7 @@
       "aria-label",
       "aria-labelledby",
       "aria-live",
+      ["aria-orientation", "vertical"],
       "aria-owns",
       "aria-relevant",
       "aria-activedescendant"
@@ -2428,9 +2985,17 @@
     "childrenPresentational": false
   },
   "menuitem": {
+    "superClass": ["command"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [
+      "group",
+      "menu",
+      "menubar"
+    ],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
@@ -2454,6 +3019,8 @@
       }
     }],
     "props": [
+      "aria-posinset",
+      "aria-setsize",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -2474,11 +3041,18 @@
     "childrenPresentational": false
   },
   "menuitemcheckbox": {
+    "superClass": ["menuitem", "checkbox"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [
+      "menu",
+      "menubar"
+    ],
+    "requiredOwnedElements": [],
     "requiredProps": [
       "aria-checked"
     ],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
@@ -2487,7 +3061,7 @@
       }
     }],
     "props": [
-      "aria-checked",
+      ["aria-checked", "false"],
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -2508,11 +3082,19 @@
     "childrenPresentational": true
   },
   "menuitemradio": {
+    "superClass": ["menuitemcheckbox", "radio"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [
+      "group",
+      "menu",
+      "menubar"
+    ],
+    "requiredOwnedElements": [],
     "requiredProps": [
       "aria-checked"
     ],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
@@ -2521,7 +3103,7 @@
       }
     }],
     "props": [
-      "aria-checked",
+      ["aria-checked", "false"],
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -2545,9 +3127,13 @@
     "childrenPresentational": true
   },
   "navigation": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -2576,10 +3162,23 @@
     ],
     "childrenPresentational": false
   },
+  "none": {
+    "superClass": [],
+    "props": [],
+    "requiredProps": [],
+    "baseConcepts": [],
+    "relatedConcepts": [],
+    "childrenPresentational": false,
+    "abstract": false
+  },
   "note": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -2604,9 +3203,17 @@
     "childrenPresentational": false
   },
   "option": {
-    "requiredProps": [],
+    "superClass": ["input"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [
+      "listbox"
+    ],
+    "requiredOwnedElements": [],
+    "requiredProps": [
+      ["aria-selected", "false"]
+    ],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
@@ -2627,7 +3234,7 @@
     "props": [
       "aria-checked",
       "aria-posinset",
-      "aria-selected",
+      ["aria-selected", "false"],
       "aria-setsize",
       "aria-atomic",
       "aria-busy",
@@ -2649,9 +3256,13 @@
     "childrenPresentational": true
   },
   "presentation": {
+    "superClass": ["structure"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -2675,9 +3286,13 @@
     "childrenPresentational": false
   },
   "progressbar": {
+    "superClass": ["range"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
@@ -2710,11 +3325,15 @@
     "childrenPresentational": true
   },
   "radio": {
+    "superClass": ["input"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [
-      "aria-checked"
+      ["aria-checked", "false"]
     ],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -2727,7 +3346,7 @@
       }
     }],
     "props": [
-      "aria-checked",
+      ["aria-checked", "false"],
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -2751,9 +3370,15 @@
     "childrenPresentational": true
   },
   "radiogroup": {
+    "superClass": ["select"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["radio"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
@@ -2762,6 +3387,7 @@
       }
     }],
     "props": [
+      "aria-readonly",
       "aria-required",
       "aria-activedescendant",
       "aria-atomic",
@@ -2785,6 +3411,11 @@
     "childrenPresentational": false
   },
   "range": {
+    "superClass": ["widget"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-valuemax",
       "aria-valuemin",
@@ -2793,31 +3424,39 @@
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "region": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -2856,27 +3495,36 @@
     "childrenPresentational": false
   },
   "roletype": {
+    "superClass": [],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": [{
@@ -2897,9 +3545,23 @@
     }]
   },
   "row": {
+    "superClass": ["group", "widget"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [
+      "grid",
+      "rowgroup",
+      "table",
+      "treegrid"
+    ],
+    "requiredOwnedElements": [
+      ["cell"],
+      ["columnheader"],
+      ["gridcell"],
+      ["rowheader"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
@@ -2908,7 +3570,9 @@
     }],
     "relatedConcepts": [],
     "props": [
+      "aria-colindex",
       "aria-level",
+      "aria-rowindex",
       "aria-selected",
       "aria-activedescendant",
       "aria-expanded",
@@ -2932,9 +3596,19 @@
     "childrenPresentational": false
   },
   "rowgroup": {
+    "superClass": ["structure"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [
+      "grid",
+      "table",
+      "treegrid"
+    ],
+    "requiredOwnedElements": [
+      ["row"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
@@ -2975,9 +3649,15 @@
     "childrenPresentational": false
   },
   "rowheader": {
+    "superClass": ["cell", "gridcell", "sectionhead"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [
+      "row"
+    ],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
@@ -3014,10 +3694,33 @@
     ],
     "childrenPresentational": false
   },
-  "search": {
+  "scrollbar": {
+    "superClass": ["range"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
+    "baseConcepts": [],
+    "relatedConcepts": [],
+    "props": [
+      "aria-controls",
+      ["aria-orientation", "vertical"],
+      ["aria-valuemax", "100"],
+      ["aria-valuemin", "0"],
+      ["aria-valuenow", "50"]
+    ],
+    "childrenPresentational": true
+  },
+  "search": {
+    "superClass": ["landmark"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "abstract": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -3042,6 +3745,11 @@
     "childrenPresentational": false
   },
   "searchbox": {
+    "superClass": ["textbox"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-activedescendant",
       "aria-atomic",
@@ -3073,7 +3781,6 @@
     ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": true,
     "childrenPresentational": false,
     "baseConcepts": [{
       "module": "HTML",
@@ -3088,6 +3795,11 @@
     "relatedConcepts": []
   },
   "section": {
+    "superClass": ["structure"],
+    "accessibleNameRequired": false,
+    "nameFrom": [],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-expanded",
       "aria-atomic",
@@ -3109,7 +3821,6 @@
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": [{
@@ -3130,6 +3841,11 @@
     }]
   },
   "sectionhead": {
+    "superClass": ["structure"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-expanded",
       "aria-atomic",
@@ -3151,13 +3867,18 @@
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "select": {
+    "superClass": ["composite", "group"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
+      ["aria-orientation", "vertical"],
       "aria-activedescendant",
       "aria-atomic",
       "aria-busy",
@@ -3173,21 +3894,25 @@
       "aria-label",
       "aria-labelledby",
       "aria-live",
+      "aria-orientation",
       "aria-owns",
       "aria-relevant",
       "aria-expanded"
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "separator": {
+    "superClass": ["structure"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -3197,7 +3922,7 @@
     }],
     "props": [
       "aria-expanded",
-      "aria-orientation",
+      ["aria-orientation", "horizontal"],
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -3218,15 +3943,19 @@
     "childrenPresentational": true
   },
   "scrollbar": {
+    "superClass": [],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [
-      "ARIA-CONTROLS",
+      "aria-controls",
       "aria-orientation",
       "aria-valuemax",
       "aria-valuemin",
       "aria-valuenow"
     ],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -3255,55 +3984,48 @@
     "childrenPresentational": true
   },
   "slider": {
+    "superClass": ["input", "range"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [
-      "aria-valuemax",
-      "aria-valuemin",
-      "aria-valuenow"
+      ["aria-valuemax", "100"],
+      ["aria-valuemin", "0"],
+      ["aria-valuenow", "50"]
     ],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
-      "aria-valuemax",
-      "aria-valuemin",
-      "aria-valuenow",
-      "aria-orientation",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant",
-      "aria-valuetext"
+      ["aria-orientation", "horizontal"],
+      "aria-readonly",
+      ["aria-valuemax", "100"],
+      ["aria-valuemin", "0"],
+      ["aria-valuenow", "50"]
     ],
     "childrenPresentational": true
   },
   "spinbutton": {
+    "superClass": ["composite", "input", "range"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [
       "aria-valuemax",
       "aria-valuemin",
-      "aria-valuenow"
+      ["aria-valuenow", "0"]
     ],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
       "aria-valuemax",
       "aria-valuemin",
-      "aria-valuenow",
+      ["aria-valuenow", "0"],
       "aria-required",
+      "aria-readonly",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -3325,14 +4047,18 @@
     "childrenPresentational": false
   },
   "status": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
       "aria-expanded",
-      "aria-atomic",
+      ["aria-atomic", "true"],
       "aria-busy",
       "aria-controls",
       "aria-describedby",
@@ -3345,44 +4071,58 @@
       "aria-invalid",
       "aria-label",
       "aria-labelledby",
-      "aria-live",
+      ["aria-live", "polite"],
       "aria-owns",
       "aria-relevant"
     ],
     "childrenPresentational": false
   },
   "structure": {
+    "superClass": ["roletype"],
+    "accessibleNameRequired": false,
+    "nameFrom": [],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "switch": {
+    "superClass": ["checkbox"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [
-      "aria-checked"
+      ["aria-checked", "false"]
     ],
     "props": [
-      "aria-checked",
+      ["aria-checked", "false"],
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -3401,7 +4141,6 @@
       "aria-relevant"
     ],
     "abstract": false,
-    "interactive": true,
     "childrenPresentational": true,
     "baseConcepts": [],
     "relatedConcepts": [{
@@ -3412,13 +4151,21 @@
     }]
   },
   "tab": {
+    "superClass": ["sectionhead", "widget"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [
+      "tablist"
+    ],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
-      "aria-selected",
+      "aria-posinset",
+      ["aria-selected", "false"],
+      "aria-setsize",
       "aria-expanded",
       "aria-atomic",
       "aria-busy",
@@ -3440,9 +4187,16 @@
     "childrenPresentational": true
   },
   "table": {
+    "superClass": ["section"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["row"],
+      ["rowgroup", "row"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
@@ -3451,6 +4205,8 @@
     }],
     "relatedConcepts": [],
     "props": [
+      "aria-colcount",
+      "aria-rowcount",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -3477,9 +4233,15 @@
     "childrenPresentational": false
   },
   "tablist": {
+    "superClass": ["composite"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["tab"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "DAISY",
@@ -3490,6 +4252,7 @@
     "props": [
       "aria-level",
       "aria-multiselectable",
+      ["aria-orientation", "horizontal"],
       "aria-activedescendant",
       "aria-atomic",
       "aria-busy",
@@ -3512,9 +4275,13 @@
     "childrenPresentational": false
   },
   "tabpanel": {
+    "superClass": ["section"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -3539,9 +4306,13 @@
     "childrenPresentational": false
   },
   "term": {
+    "superClass": ["section"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "HTML",
@@ -3576,9 +4347,13 @@
     "childrenPresentational": false
   },
   "textbox": {
+    "superClass": ["input"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "XForms",
@@ -3609,6 +4384,7 @@
       "aria-activedescendant",
       "aria-autocomplete",
       "aria-multiline",
+      "aria-placeholder",
       "aria-readonly",
       "aria-required",
       "aria-atomic",
@@ -3631,9 +4407,13 @@
     "childrenPresentational": false
   },
   "timer": {
+    "superClass": ["status"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -3658,9 +4438,13 @@
     "childrenPresentational": false
   },
   "toolbar": {
+    "superClass": ["group"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [{
       "module": "ARIA",
@@ -3669,6 +4453,7 @@
       }
     }],
     "props": [
+      ["aria-orientation", "horizontal"],
       "aria-activedescendant",
       "aria-expanded",
       "aria-atomic",
@@ -3691,9 +4476,13 @@
     "childrenPresentational": false
   },
   "tooltip": {
+    "superClass": ["section"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -3718,9 +4507,16 @@
     "childrenPresentational": false
   },
   "tree": {
+    "superClass": ["select"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["group", "treeitem"],
+      ["treeitem"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -3743,14 +4539,22 @@
       "aria-live",
       "aria-owns",
       "aria-relevant",
-      "aria-expanded"
+      "aria-expanded",
+      ["aria-orientation", "vertical"]
     ],
     "childrenPresentational": false
   },
   "treegrid": {
+    "superClass": ["grid", "tree"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [
+      ["rowgroup", "row"],
+      ["row"]
+    ],
     "requiredProps": [],
     "abstract": false,
-    "interactive": false,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -3780,9 +4584,16 @@
     "childrenPresentational": false
   },
   "treeitem": {
+    "superClass": ["listitem", "option"],
+    "accessibleNameRequired": true,
+    "nameFrom": ["author", "contents"],
+    "requireContextRole": [
+      "group",
+      "tree"
+    ],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "interactive": true,
     "baseConcepts": [],
     "relatedConcepts": [],
     "props": [
@@ -3812,55 +4623,77 @@
     "childrenPresentational": false
   },
   "widget": {
+    "superClass": ["roletype"],
+    "accessibleNameRequired": false,
+    "nameFrom": [],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "childrenPresentational": false,
     "baseConcepts": [],
     "relatedConcepts": []
   },
   "window": {
+    "superClass": ["roletype"],
+    "accessibleNameRequired": false,
+    "nameFrom": ["author"],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "props": [
       "aria-expanded",
+      "aria-modal",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
+      "aria-modal",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
     "requiredProps": [],
     "abstract": true,
-    "interactive": false,
     "baseConcepts": [],
-    "relatedConcepts": []
+    "relatedConcepts": [],
+    "childrenPresentational": false
   }
 }

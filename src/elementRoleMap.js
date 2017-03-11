@@ -3,35 +3,46 @@
  */
 
 import rolesMap from './rolesMap';
+import type { ARIARoleDefintionKey } from './index';
 
-type RoleSet = Set<string>;
+type RoleSet = Set<ARIARoleDefintionKey>;
 
-type ElementRoleRelationMap = Map<string, RoleSet>;
+type ElementARIARoleRelationMap = Map<ARIARelationConcept, RoleSet>;
 
-// $FlowFixMe: spread operand is valid on $Iterable
-const elementRoleMap: ElementRoleRelationMap = [...rolesMap.keys()]
-  .reduce((
-      accumulator: ElementRoleRelationMap,
-      key: string,
-    ): ElementRoleRelationMap => {
-      const role = rolesMap.get(key);
-      if (role) {
-        [
-          ...role.baseConcepts,
-          ...role.relatedConcepts,
-        ]
-        .forEach((
-          relation: RoleRelation,
-        ): void => {
-          if (relation.module === 'HTML') {
-            const concept = JSON.stringify(relation.concept);
-            const roles: RoleSet = accumulator.get(concept) || new Set([]);
+const elementRoleMap: ElementARIARoleRelationMap = new Map([]);
+
+[...rolesMap.keys()]
+  .forEach((
+    key: ARIARoleDefintionKey,
+  ): void => {
+    const role = rolesMap.get(key);
+    if (role) {
+      [
+        ...role.baseConcepts,
+        ...role.relatedConcepts,
+      ]
+      .forEach((
+        relation: ARIARoleRelation,
+      ): void => {
+        if (relation.module === 'HTML') {
+          const concept = relation.concept;
+          if (concept) {
+            const conceptStr = JSON.stringify(concept);
+
+            let roles: ?RoleSet = ([...elementRoleMap.entries()]
+              .find(
+                ([key, value]) => JSON.stringify(key) === conceptStr)|| []
+              )[1];
+
+            if (!roles) {
+              roles = new Set([]);
+            }
             roles.add(key);
-            accumulator.set(concept, roles);
+            elementRoleMap.set(concept, roles);
           }
-        });
-      }
-      return accumulator;
-    }, new Map([]));
+        }
+      });
+    }
+  });
 
 export default elementRoleMap;
