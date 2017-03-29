@@ -1,8 +1,8 @@
 [ignore]
-<PROJECT_ROOT>/lib/.*
-<PROJECT_ROOT>/docs/.*
-<PROJECT_ROOT>/reports/.*
-<PROJECT_ROOT>/node_modules/.*
+./lib/.*
+./docs/.*
+./reports/.*
+./node_modules/.*
 
 [libs]
 flow
