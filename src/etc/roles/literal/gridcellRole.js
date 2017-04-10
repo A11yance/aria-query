@@ -9,6 +9,12 @@ const gridcellRole: ARIARoleDefinition = {
       module: 'HTML',
       concept: {
         name: 'td',
+        attributes: [
+          {
+            name: 'role',
+            value: 'gridcell',
+          },
+        ],
       },
     },
   ],

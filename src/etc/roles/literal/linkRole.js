@@ -18,6 +18,22 @@ const linkRole: ARIARoleDefinition = {
       module: 'HTML',
       concept: {
         name: 'a',
+        attributes: [
+          {
+            name: 'href',
+          },
+        ],
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'area',
+        attributes: [
+          {
+            name: 'href',
+          },
+        ],
       },
     },
     {

@@ -2291,7 +2291,11 @@
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
-        "name": "table"
+        "name": "table",
+        "attributes": [{
+          "name": "role",
+          "value": "grid"
+        }]
       }
     }],
     "relatedConcepts": [],
@@ -2331,7 +2335,11 @@
     "baseConcepts": [{
       "module": "HTML",
       "concept": {
-        "name": "td"
+        "name": "td",
+        "attributes": [{
+          "name": "role",
+          "value": "gridcell"
+        }]
       }
     }],
     "relatedConcepts": [],
@@ -2577,7 +2585,18 @@
     "relatedConcepts": [{
       "module": "HTML",
       "concept": {
-        "name": "a"
+        "name": "a",
+        "attributes": [{
+          "name": "href"
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "area",
+        "attributes": [{
+          "name": "href"
+        }]
       }
     }, {
       "module": "HTML",
