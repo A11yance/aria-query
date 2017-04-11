@@ -305,5 +305,5 @@ type ARIARelationConcept = {
 
 type ARIARelationConceptAttribute = {
   name: string,
-  value: string,
+  value?: string,
 };
