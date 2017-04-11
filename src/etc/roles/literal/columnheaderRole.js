@@ -9,12 +9,6 @@ const columnheaderRole: ARIARoleDefinition = {
       module: 'HTML',
       concept: {
         name: 'th',
-        attributes: [
-          {
-            name: 'scope',
-            value: 'col',
-          },
-        ],
       },
     },
   ],

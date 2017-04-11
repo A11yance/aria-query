@@ -7,7 +7,7 @@ import type { ARIARoleDefintionKey } from './index';
 
 type RoleSet = Set<ARIARoleDefintionKey>;
 
-type ElementARIARoleRelationMap = Map<ARIARelationConcept, RoleSet>;
+type ElementARIARoleRelationMap = Map<ARIARoleRelationConcept, RoleSet>;
 
 const elementRoleMap: ElementARIARoleRelationMap = new Map([]);
 
