@@ -292,18 +292,18 @@ type ARIAPropertyCurrent =
 
 type ARIARoleRelation = {
   module?: string,
-  concept?: ARIARelationConcept,
+  concept?: ARIARoleRelationConcept,
 };
 
 /* The concept in a related domain that informs behavior mappings.
  * Related domains include: HTML, "Device Independence Delivery Unit", XForms,
  * and ARIA to name a few. */
-type ARIARelationConcept = {
+type ARIARoleRelationConcept = {
   name: string,
-  attributes?: Array<ARIARelationConceptAttribute>,
+  attributes?: Array<ARIARoleRelationConceptAttribute>,
 };
 
-type ARIARelationConceptAttribute = {
+type ARIARoleRelationConceptAttribute = {
   name: string,
   value?: string,
 };

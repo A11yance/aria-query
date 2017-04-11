@@ -5,9 +5,9 @@
 import rolesMap from './rolesMap';
 import type { ARIARoleDefintionKey } from './index';
 
-type ARIARelationConceptSet = Set<ARIARelationConcept>;
+type ARIARoleRelationConceptSet = Set<ARIARoleRelationConcept>;
 
-type RoleElementRelationMap = Map<ARIARoleDefintionKey, ARIARelationConceptSet>;
+type RoleElementRelationMap = Map<ARIARoleDefintionKey, ARIARoleRelationConceptSet>;
 
 const roleElementMap: RoleElementRelationMap = new Map([]);
 
