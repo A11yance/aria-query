@@ -1,3 +1,7 @@
+/**
+ * @flow
+ */
+
 import ariaPropsMap from './ariaPropsMap';
 import domMap from './domMap';
 import rolesMap from './rolesMap';
