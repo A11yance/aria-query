@@ -26,8 +26,29 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
   ['aria-checked', {
     'type': 'tristate'
   }],
+  ['aria-colcount', {
+    type: 'integer',
+  }],
+  ['aria-colindex', {
+    type: 'integer',
+  }],
+  ['aria-colspan', {
+    type: 'integer',
+  }],
   ['aria-controls', {
     'type': 'string'
+  }],
+  ['aria-current', {
+    type: 'token',
+    values: [
+      'page',
+      'step',
+      'location',
+      'date',
+      'time',
+      true,
+      false,
+    ],
   }],
   ['aria-describedby', {
     'type': 'string'
@@ -72,6 +93,9 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
       true
     ]
   }],
+  ['aria-keyshortcuts', {
+    type: 'string',
+  }],
   ['aria-label', {
     'type': 'string'
   }],
@@ -89,6 +113,9 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
       'assertive'
     ]
   }],
+  ['aria-modal', {
+    type: 'boolean',
+  }],
   ['aria-multiline', {
     'type': 'boolean'
   }],
@@ -104,6 +131,9 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
   }],
   ['aria-owns', {
     'type': 'string'
+  }],
+  ['aria-placeholder', {
+    type: 'string',
   }],
   ['aria-posinset', {
     'type': 'integer'
@@ -125,6 +155,18 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
   }],
   ['aria-required', {
     'type': 'boolean'
+  }],
+  ['aria-roledescription', {
+    type: 'string',
+  }],
+  ['aria-rowcount', {
+    type: 'integer',
+  }],
+  ['aria-rowindex', {
+    type: 'integer',
+  }],
+  ['aria-rowspan', {
+    type: 'integer',
   }],
   ['aria-selected', {
     'type': 'boolean',
