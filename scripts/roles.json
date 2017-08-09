@@ -58,6 +58,7 @@
       "aria-label",
       "aria-labelledby",
       "aria-live",
+      "aria-modal",
       "aria-owns",
       "aria-relevant"
     ],
@@ -612,6 +613,7 @@
       "aria-label",
       "aria-labelledby",
       "aria-live",
+      "aria-modal",
       "aria-owns",
       "aria-relevant"
     ],
