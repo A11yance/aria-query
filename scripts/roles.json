@@ -3178,8 +3178,12 @@
     "childrenPresentational": false
   },
   "none": {
+    "accessibleNameRequired": false,
+    "nameFrom": [],
     "superClass": [],
     "props": [],
+    "requireContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
     "baseConcepts": [],
     "relatedConcepts": [],
