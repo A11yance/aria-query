@@ -4682,7 +4682,6 @@
     "requiredOwnedElements": [],
     "props": [
       "aria-expanded",
-      "aria-modal",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
