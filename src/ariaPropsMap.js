@@ -79,7 +79,16 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
     'allowundefined': true
   }],
   ['aria-haspopup', {
-    'type': 'boolean'
+    'type': 'token',
+    'values': [
+      false,
+      true,
+      'menu',
+      'listbox',
+      'tree',
+      'grid',
+      'dialog'
+    ]
   }],
   ['aria-hidden', {
     'type': 'boolean'
