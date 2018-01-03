@@ -14,7 +14,8 @@
     "lint": "eslint  --config .eslintrc src __tests__",
     "lint:fix": "npm run lint -- --fix",
     "pretest": "npm run lint:fix && npm run flow",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "output_as_hack": "babel-node ./scripts/output_as_hack.js"
   },
   "repository": {
     "type": "git",
@@ -50,7 +51,8 @@
     "rimraf": "^2.5.4"
   },
   "dependencies": {
-    "ast-types-flow": "0.0.7"
+    "ast-types-flow": "0.0.7",
+    "commander": "^2.11.0"
   },
   "jest": {
     "coverageReporters": [
