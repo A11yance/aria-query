@@ -269,8 +269,8 @@ type ARIAPropertyMap = {
 
 type ARIAPropertyDefinition = {
   type: 'string'
-  | 'id',
-  | 'idlist',
+  | 'id'
+  | 'idlist'
   | 'integer'
   | 'number'
   | 'boolean'
