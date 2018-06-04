@@ -1,7 +1,5 @@
 [![Build Status](https://travis-ci.org/A11yance/aria-query.svg?branch=master)](https://travis-ci.org/A11yance/aria-query)
 
-**NOTICE: The API for ARIA Query is very much under development until a major version release. Please be aware that data structures might change in minor version releases before 1.0.0 is released.**
-
 CDN URL: https://npm-cdn.com/pkg/aria-query/
 
 # ARIA Query
