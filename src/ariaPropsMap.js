@@ -67,6 +67,9 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
       'none'
     ]
   }],
+  ['aria-errormessage', {
+    'type': 'string'
+  }],
   ['aria-expanded', {
     'type': 'boolean',
     'allowundefined': true

@@ -9,3 +9,7 @@
 
 - Remove package-lock file.
 - Add Watchman config file.
+
+## 2.0.1
+
+- Added aria-errormessage to the ARIA Props Map.
