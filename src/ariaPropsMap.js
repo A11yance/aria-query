@@ -6,7 +6,7 @@ type MapOfARIAPropertyDefinitions = Map<ARIAProperty, ARIAPropertyDefinition>;
 
 const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
   ['aria-activedescendant', {
-    'type': 'string'
+    'type': 'id'
   }],
   ['aria-atomic', {
     'type': 'boolean'
@@ -36,7 +36,7 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
     type: 'integer',
   }],
   ['aria-controls', {
-    'type': 'string'
+    'type': 'idlist'
   }],
   ['aria-current', {
     type: 'token',
@@ -51,7 +51,7 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
     ],
   }],
   ['aria-describedby', {
-    'type': 'string'
+    'type': 'idlist'
   }],
   ['aria-disabled', {
     'type': 'boolean'
@@ -75,7 +75,7 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
     'allowundefined': true
   }],
   ['aria-flowto', {
-    'type': 'string'
+    'type': 'idlist'
   }],
   ['aria-grabbed', {
     'type': 'boolean',
@@ -112,7 +112,7 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
     'type': 'string'
   }],
   ['aria-labelledby', {
-    'type': 'string'
+    'type': 'idlist'
   }],
   ['aria-level', {
     'type': 'integer'
@@ -142,7 +142,7 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
     ]
   }],
   ['aria-owns', {
-    'type': 'string'
+    'type': 'idlist'
   }],
   ['aria-placeholder', {
     type: 'string',
