@@ -13,3 +13,7 @@
 ## 2.0.1
 
 - Added aria-errormessage to the ARIA Props Map.
+
+## 3.0.0
+
+- Bumping to a major version because of a previous breaking change.
