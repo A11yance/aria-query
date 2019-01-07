@@ -10,9 +10,7 @@ const docBibliorefRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
-  props: {
-    'aria-describedat': null,
-  },
+  props: {},
   relatedConcepts: [
     {
       module: 'EPUB',
