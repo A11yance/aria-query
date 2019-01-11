@@ -11,17 +11,10 @@ const regionRole: ARIARoleDefinition = {
   ],
   props: {},
   relatedConcepts: [
-    // frame tag on html5 is deprecated
     {
       module: 'HTML',
       concept: {
         name: 'frame',
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'section',
       },
     },
     {
