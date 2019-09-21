@@ -35,28 +35,32 @@ let alertRole = roles.get('alert');
 /**
  * Value of alertRole
  * {
- *   "requiredProps": [],
- *   "props": [
- *     "aria-expanded",
- *     "aria-atomic",
- *     "aria-busy",
- *     "aria-controls",
- *     "aria-describedby",
- *     "aria-disabled",
- *     "aria-dropeffect",
- *     "aria-flowto",
- *     "aria-grabbed",
- *     "aria-haspopup",
- *     "aria-hidden",
- *     "aria-invalid",
- *     "aria-label",
- *     "aria-labelledby",
- *     "aria-live",
- *     "aria-owns",
- *     "aria-relevant"
- *   ],
+ *   "requiredProps": {},
+ *   "props": {
+ *     "aria-atomic": "true",
+ *     "aria-busy": null,
+ *     "aria-controls": null,
+ *     "aria-current": null,
+ *     "aria-describedby": null,
+ *     "aria-details": null,
+ *     "aria-disabled": null,
+ *     "aria-dropeffect": null,
+ *     "aria-errormessage": null,
+ *     "aria-expanded": null,
+ *     "aria-flowto": null,
+ *     "aria-grabbed": null,
+ *     "aria-haspopup": null,
+ *     "aria-hidden": null,
+ *     "aria-invalid": null,
+ *     "aria-keyshortcuts": null,
+ *     "aria-label": null,
+ *     "aria-labelledby": null,
+ *     "aria-live": "assertive",
+ *     "aria-owns": null,
+ *     "aria-relevant": null,
+ *     "aria-roledescription": null
+ *   },
  *   "abstract": false,
- *   "interactive": false,
  *   "childrenPresentational": false,
  *   "baseConcepts": [],
  *   "relatedConcepts": [ {
@@ -64,7 +68,8 @@ let alertRole = roles.get('alert');
  *     "concept": {
  *       "name": "alert"
  *     }
- *   }]
+ *   }],
+ *   "superClass": [["roletype", "structure", "section"]]
  * }
 ```
 
