@@ -3,6 +3,14 @@
     "plugin:flowtype/recommended"
   ],
   parser: "babel-eslint",
+  // https://github.com/eslint/eslint/issues/4344#issuecomment-197344872
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: "module",
+    ecmaFeatures: {
+      modules: true
+    }
+  },
   plugins: [
     "flowtype"
   ],

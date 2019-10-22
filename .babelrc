@@ -1,7 +1,7 @@
 {
-  "presets": ["es2015"],
-  "plugins": [
-    "transform-object-rest-spread",
-    "transform-flow-strip-types",
-  ]
+  "presets": [
+    ["@babel/preset-env", { "useBuiltIns": false }],
+    "@babel/preset-flow"
+  ],
+  "plugins": [["@babel/plugin-transform-runtime", { "corejs": 3 }]]
 }
