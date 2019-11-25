@@ -140,6 +140,11 @@ type ARIARole =
   | ARIADocumentStructureRole
   | ARIALandmarkRole;
 
+type ARIARoleDefintionKey =
+  ARIAAbstractRole
+  | ARIARole
+  | ARIADPubRole;
+
 type ARIARoleDefinition = {
   /* Abstract roles may not be used in HTML. */
   abstract: boolean,
@@ -160,6 +165,8 @@ type ARIARoleDefinition = {
   * this property is an array of arrays and not a single array. */
   superClass: Array<Array<ARIAAbstractRole | ARIARole | ARIADPubRole>>,
 };
+
+type MapOfRoleDefinitions = Map<ARIARoleDefintionKey, ARIARoleDefinition>;
 
 type ARIAState =
   'aria-busy'

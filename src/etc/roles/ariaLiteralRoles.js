@@ -71,7 +71,7 @@ import treeRole from './literal/treeRole';
 import treegridRole from './literal/treegridRole';
 import treeitemRole from './literal/treeitemRole';
 
-const ariaLiteralRoles = new Map([
+const ariaLiteralRoles: MapOfRoleDefinitions = new Map([
   ['alert', alertRole],
   ['alertdialog', alertdialogRole],
   ['application', applicationRole],
