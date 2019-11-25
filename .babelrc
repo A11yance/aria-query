@@ -1,7 +1,13 @@
 {
-  "presets": ["@babel/preset-env"],
-  "plugins": [
-    "@babel/plugin-proposal-object-rest-spread",
-    "@babel/plugin-transform-flow-strip-types",
-  ]
+  "presets": [
+    [
+      "airbnb",
+      {
+        "targets": {
+          "node": 4
+        }
+      }
+    ]
+  ],
+  "plugins": ["@babel/plugin-transform-flow-strip-types"]
 }
