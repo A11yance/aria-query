@@ -3,7 +3,6 @@
  */
 
 import rolesMap from './rolesMap';
-import type { ARIARoleDefintionKey } from './index';
 
 type RoleSet = Set<ARIARoleDefintionKey>;
 
