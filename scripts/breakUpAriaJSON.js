@@ -94,6 +94,9 @@ function triageValue(value, depth = 0) {
     case 'string':
       output = output.concat(`\'${value}\'`);
       break;
+    case 'number':
+      output = output.concat(`${value}`);
+      break;
     default:
       output.push('null');
   }
