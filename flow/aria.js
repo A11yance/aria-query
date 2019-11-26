@@ -315,5 +315,5 @@ type ARIARoleRelationConceptAttribute = {
   value?: string | number,
   // Make these explicit. These values represent quirks of the mapping betweent
   // ARIA and other semantic ontological systems.
-  constraints?: Array<'unset' | '>1'>,
+  constraints?: Array<'unset' | 'isset' | '>1'>,
 };

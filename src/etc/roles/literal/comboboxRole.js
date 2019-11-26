@@ -56,6 +56,114 @@ const comboboxRole: ARIARoleDefinition = {
       },
     },
     {
+      module: 'HTML',
+      concept: {
+        name: 'input',
+        attributes: [
+          {
+            name: 'type',
+            value: 'text',
+          },
+          {
+            name: 'list',
+            constraints: [
+              'isset',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'input',
+        attributes: [
+          {
+            name: 'type',
+            value: 'search',
+          },
+          {
+            name: 'list',
+            constraints: [
+              'isset',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'input',
+        attributes: [
+          {
+            name: 'type',
+            value: 'url',
+          },
+          {
+            name: 'list',
+            constraints: [
+              'isset',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'input',
+        attributes: [
+          {
+            name: 'type',
+            value: 'tel',
+          },
+          {
+            name: 'list',
+            constraints: [
+              'isset',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'input',
+        attributes: [
+          {
+            name: 'type',
+            value: 'url',
+          },
+          {
+            name: 'list',
+            constraints: [
+              'isset',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'input',
+        attributes: [
+          {
+            name: 'type',
+            value: 'email',
+          },
+          {
+            name: 'list',
+            constraints: [
+              'isset',
+            ],
+          },
+        ],
+      },
+    },
+    {
       module: 'XForms',
       concept: {
         name: 'select',
