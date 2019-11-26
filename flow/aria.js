@@ -188,7 +188,6 @@ type ARIAProperty =
   | 'aria-colspan'
   | 'aria-controls'
   | 'aria-current'
-  | 'aria-describedat'
   | 'aria-describedby'
   | 'aria-details'
   | 'aria-dropeffect'
@@ -240,7 +239,6 @@ type ARIAPropertyMap = {
   'aria-colspan'?: mixed,
   'aria-controls'?: mixed,
   'aria-current'?: ?ARIAPropertyCurrent,
-  'aria-describedat'?: mixed,
   'aria-describedby'?: mixed,
   'aria-details'?: mixed,
   'aria-dropeffect'?: mixed,
