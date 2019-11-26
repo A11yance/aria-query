@@ -4,14 +4,7 @@
 const listitemRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
-  baseConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'li',
-      },
-    },
-  ],
+  baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
     'author',
@@ -22,6 +15,12 @@ const listitemRole: ARIARoleDefinition = {
     'aria-setsize': null,
   },
   relatedConcepts: [
+    {
+      module: 'HTML',
+      concept: {
+        name: 'li',
+      },
+    },
     {
       module: 'XForms',
       concept: {

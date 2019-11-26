@@ -4,14 +4,7 @@
 const tableRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
-  baseConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'table',
-      },
-    },
-  ],
+  baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
     'author',
@@ -20,7 +13,14 @@ const tableRole: ARIARoleDefinition = {
     'aria-colcount': null,
     'aria-rowcount': null,
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      module: 'HTML',
+      concept: {
+        name: 'table',
+      },
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [

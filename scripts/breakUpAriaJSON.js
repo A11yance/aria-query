@@ -146,6 +146,9 @@ fs.readFile(path.join('scripts/roles.json'), {
       // Deprecate requireContextRole prop. Replace with requiredContextRole.
       // requireContextRole will be removed in a future version.
       aria[name]['requireContextRole'] = aria[name]['requiredContextRole'];
+      // Deprecate baseConcepts prop.
+      // baseConcepts will be removed in a future version.
+      aria[name]['baseConcepts'] = [];
 
       const file = [
         '/**',

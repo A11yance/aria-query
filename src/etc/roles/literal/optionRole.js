@@ -4,14 +4,7 @@
 const optionRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
-  baseConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'option',
-      },
-    },
-  ],
+  baseConcepts: [],
   childrenPresentational: true,
   nameFrom: [
     'author',
@@ -24,6 +17,12 @@ const optionRole: ARIARoleDefinition = {
     'aria-setsize': null,
   },
   relatedConcepts: [
+    {
+      module: 'HTML',
+      concept: {
+        name: 'option',
+      },
+    },
     {
       module: 'ARIA',
       concept: {

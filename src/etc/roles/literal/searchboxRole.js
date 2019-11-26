@@ -4,7 +4,13 @@
 const searchboxRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
-  baseConcepts: [
+  baseConcepts: [],
+  childrenPresentational: false,
+  nameFrom: [
+    'author',
+  ],
+  props: {},
+  relatedConcepts: [
     {
       module: 'HTML',
       concept: {
@@ -18,12 +24,6 @@ const searchboxRole: ARIARoleDefinition = {
       },
     },
   ],
-  childrenPresentational: false,
-  nameFrom: [
-    'author',
-  ],
-  props: {},
-  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

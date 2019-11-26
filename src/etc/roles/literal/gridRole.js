@@ -4,7 +4,17 @@
 const gridRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
-  baseConcepts: [
+  baseConcepts: [],
+  childrenPresentational: false,
+  nameFrom: [
+    'author',
+  ],
+  props: {
+    'aria-level': null,
+    'aria-multiselectable': null,
+    'aria-readonly': null,
+  },
+  relatedConcepts: [
     {
       module: 'HTML',
       concept: {
@@ -18,16 +28,6 @@ const gridRole: ARIARoleDefinition = {
       },
     },
   ],
-  childrenPresentational: false,
-  nameFrom: [
-    'author',
-  ],
-  props: {
-    'aria-level': null,
-    'aria-multiselectable': null,
-    'aria-readonly': null,
-  },
-  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [

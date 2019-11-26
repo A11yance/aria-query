@@ -4,7 +4,16 @@
 const rowheaderRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
-  baseConcepts: [
+  baseConcepts: [],
+  childrenPresentational: false,
+  nameFrom: [
+    'author',
+    'contents',
+  ],
+  props: {
+    'aria-sort': null,
+  },
+  relatedConcepts: [
     {
       module: 'HTML',
       concept: {
@@ -18,15 +27,6 @@ const rowheaderRole: ARIARoleDefinition = {
       },
     },
   ],
-  childrenPresentational: false,
-  nameFrom: [
-    'author',
-    'contents',
-  ],
-  props: {
-    'aria-sort': null,
-  },
-  relatedConcepts: [],
   requireContextRole: [
     'row',
   ],

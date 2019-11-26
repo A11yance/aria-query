@@ -4,14 +4,7 @@
 const rowRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
-  baseConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'tr',
-      },
-    },
-  ],
+  baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
     'author',
@@ -23,7 +16,14 @@ const rowRole: ARIARoleDefinition = {
     'aria-rowindex': null,
     'aria-selected': null,
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      module: 'HTML',
+      concept: {
+        name: 'tr',
+      },
+    },
+  ],
   requireContextRole: [
     'grid',
     'rowgroup',

@@ -4,14 +4,7 @@
 const columnheaderRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
-  baseConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'th',
-      },
-    },
-  ],
+  baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
     'author',
@@ -20,7 +13,14 @@ const columnheaderRole: ARIARoleDefinition = {
   props: {
     'aria-sort': null,
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      module: 'HTML',
+      concept: {
+        name: 'th',
+      },
+    },
+  ],
   requireContextRole: [
     'row',
   ],
