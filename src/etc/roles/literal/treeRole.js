@@ -16,6 +16,7 @@ const treeRole: ARIARoleDefinition = {
   },
   relatedConcepts: [],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [
     [
       'group',

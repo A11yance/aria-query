@@ -26,6 +26,11 @@ const menuitemradioRole: ARIARoleDefinition = {
     'menu',
     'menubar',
   ],
+  requiredContextRole: [
+    'group',
+    'menu',
+    'menubar',
+  ],
   requiredOwnedElements: [],
   requiredProps: {
     'aria-checked': null,

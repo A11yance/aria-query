@@ -30,6 +30,9 @@ const rowheaderRole: ARIARoleDefinition = {
   requireContextRole: [
     'row',
   ],
+  requiredContextRole: [
+    'row',
+  ],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

@@ -39,6 +39,11 @@ const rowgroupRole: ARIARoleDefinition = {
     'table',
     'treegrid',
   ],
+  requiredContextRole: [
+    'grid',
+    'table',
+    'treegrid',
+  ],
   requiredOwnedElements: [
     [
       'row',

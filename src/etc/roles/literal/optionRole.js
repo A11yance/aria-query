@@ -40,6 +40,9 @@ const optionRole: ARIARoleDefinition = {
   requireContextRole: [
     'listbox',
   ],
+  requiredContextRole: [
+    'listbox',
+  ],
   requiredOwnedElements: [],
   requiredProps: {
     'aria-selected': 'false',

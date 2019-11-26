@@ -45,6 +45,11 @@ const menuitemRole: ARIARoleDefinition = {
     'menu',
     'menubar',
   ],
+  requiredContextRole: [
+    'group',
+    'menu',
+    'menubar',
+  ],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [
