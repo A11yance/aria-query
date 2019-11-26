@@ -1,6 +1,7 @@
 /* eslint-env mocha */
 import expect from 'expect';
 import rolesMap from '../../src/rolesMap';
+import ariaPropsMap from '../../src/ariaPropsMap';
 
 describe('rolesMap', function () {
   it('should be a Map', function () {
@@ -9,6 +10,18 @@ describe('rolesMap', function () {
   it('should have size', function () {
     expect(rolesMap.size).toBeGreaterThan(0);
   });
+
+  test.each(
+    [...rolesMap.entries()])(
+    'The definition for role %s has only props defined in ariaPropsMap',
+    (role, definition) => {
+
+      const unknownProps = Object.keys(definition.props).filter((prop) => {
+        return !ariaPropsMap.has(prop);
+      });
+      expect(unknownProps.length).toEqual(0);
+    }
+  );
 
   // dpub-aria
   describe('doc-abstract role', function () {
