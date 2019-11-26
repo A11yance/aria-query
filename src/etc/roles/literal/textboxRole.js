@@ -34,6 +34,18 @@ const textboxRole: ARIARoleDefinition = {
       module: 'HTML',
       concept: {
         name: 'input',
+        attributes: [
+          {
+            name: 'type',
+            value: 'text',
+          },
+          {
+            name: 'list',
+            constraints: [
+              'unset',
+            ],
+          },
+        ],
       },
     },
     {
@@ -43,7 +55,49 @@ const textboxRole: ARIARoleDefinition = {
         attributes: [
           {
             name: 'type',
-            value: 'text',
+            value: 'email',
+          },
+          {
+            name: 'list',
+            constraints: [
+              'unset',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'input',
+        attributes: [
+          {
+            name: 'type',
+            value: 'tel',
+          },
+          {
+            name: 'list',
+            constraints: [
+              'unset',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'input',
+        attributes: [
+          {
+            name: 'type',
+            value: 'url',
+          },
+          {
+            name: 'list',
+            constraints: [
+              'unset',
+            ],
           },
         ],
       },

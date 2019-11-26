@@ -409,6 +409,78 @@
         }]
       }
     }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "text"
+        }, {
+          "name": "list",
+          "constraints": ["isset"]
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "search"
+        }, {
+          "name": "list",
+          "constraints": ["isset"]
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "url"
+        }, {
+          "name": "list",
+          "constraints": ["isset"]
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "tel"
+        }, {
+          "name": "list",
+          "constraints": ["isset"]
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "url"
+        }, {
+          "name": "list",
+          "constraints": ["isset"]
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "email"
+        }, {
+          "name": "list",
+          "constraints": ["isset"]
+        }]
+      }
+    }, {
       "module": "XForms",
       "concept": {
         "name": "select"
@@ -4432,7 +4504,14 @@
     }, {
       "module": "HTML",
       "concept": {
-        "name": "input"
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "text"
+        }, {
+          "name": "list",
+          "constraints": ["unset"]
+        }]
       }
     }, {
       "module": "HTML",
@@ -4440,7 +4519,34 @@
         "name": "input",
         "attributes": [{
           "name": "type",
-          "value": "text"
+          "value": "email"
+        }, {
+          "name": "list",
+          "constraints": ["unset"]
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "tel"
+        }, {
+          "name": "list",
+          "constraints": ["unset"]
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "url"
+        }, {
+          "name": "list",
+          "constraints": ["unset"]
         }]
       }
     }],
