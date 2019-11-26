@@ -21,6 +21,9 @@ const cellRole: ARIARoleDefinition = {
       module: 'HTML',
       concept: {
         name: 'td',
+        constraints: [
+          'descendant of table',
+        ],
       },
     },
   ],

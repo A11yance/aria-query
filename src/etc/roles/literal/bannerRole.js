@@ -10,7 +10,17 @@ const bannerRole: ARIARoleDefinition = {
     'author',
   ],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      module: 'HTML',
+      concept: {
+        name: 'banner',
+        constraints: [
+          'direct descendant of document',
+        ],
+      },
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

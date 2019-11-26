@@ -19,6 +19,9 @@ const listitemRole: ARIARoleDefinition = {
       module: 'HTML',
       concept: {
         name: 'li',
+        constraints: [
+          'direct descendant of ol, ul or menu',
+        ],
       },
     },
     {

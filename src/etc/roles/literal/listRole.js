@@ -23,6 +23,12 @@ const listRole: ARIARoleDefinition = {
         name: 'ul',
       },
     },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'menu',
+      },
+    },
   ],
   requireContextRole: [],
   requiredContextRole: [],

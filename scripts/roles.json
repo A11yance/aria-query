@@ -169,7 +169,13 @@
     ],
     "abstract": false,
     "childrenPresentational": false,
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "HTML",
+      "concept": {
+        "name": "banner",
+        "constraints": ["direct descendant of document"]
+      }
+    }]
   },
   "button": {
     "superClass": ["command"],
@@ -204,6 +210,73 @@
       "module": "HTML",
       "concept": {
         "name": "button"
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "button"
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "image"
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "reset"
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "submit"
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "checkbox"
+        }, {
+          "name": "aria-pressed",
+          "constraints": ["set"]
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "summary",
+        "constraints": ["direct descendant of details element with the open attribute defined"],
+        "attributes": [{
+          "name": "aria-expanded",
+          "value": "true"
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "summary",
+        "attributes": [{
+          "name": "aria-expanded",
+          "value": "false"
+        }]
       }
     }, {
       "module": "XForms",
@@ -251,7 +324,8 @@
     "relatedConcepts": [{
       "module": "HTML",
       "concept": {
-        "name": "td"
+        "name": "td",
+        "constraints": ["descendant of table"]
       }
     }],
     "childrenPresentational": false
@@ -390,10 +464,10 @@
         "name": "select",
         "attributes": [{
           "name": "multiple",
-          "constraints": ["unset"]
+          "constraints": ["undefined"]
         }, {
           "name": "size",
-          "constraints": ["unset"]
+          "constraints": ["undefined"]
         }]
       }
     }, {
@@ -402,7 +476,7 @@
         "name": "select",
         "attributes": [{
           "name": "multiple",
-          "constraints": ["unset"]
+          "constraints": ["undefined"]
         }, {
           "name": "size",
           "value": 1
@@ -417,7 +491,7 @@
           "value": "text"
         }, {
           "name": "list",
-          "constraints": ["isset"]
+          "constraints": ["set"]
         }]
       }
     }, {
@@ -429,7 +503,7 @@
           "value": "search"
         }, {
           "name": "list",
-          "constraints": ["isset"]
+          "constraints": ["set"]
         }]
       }
     }, {
@@ -441,7 +515,7 @@
           "value": "url"
         }, {
           "name": "list",
-          "constraints": ["isset"]
+          "constraints": ["set"]
         }]
       }
     }, {
@@ -453,7 +527,7 @@
           "value": "tel"
         }, {
           "name": "list",
-          "constraints": ["isset"]
+          "constraints": ["set"]
         }]
       }
     }, {
@@ -465,7 +539,7 @@
           "value": "url"
         }, {
           "name": "list",
-          "constraints": ["isset"]
+          "constraints": ["set"]
         }]
       }
     }, {
@@ -477,7 +551,7 @@
           "value": "email"
         }, {
           "name": "list",
-          "constraints": ["isset"]
+          "constraints": ["set"]
         }]
       }
     }, {
@@ -554,7 +628,12 @@
     ],
     "abstract": false,
     "childrenPresentational": false,
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "HTML",
+      "concept": {
+        "name": "aside"
+      }
+    }]
   },
   "composite": {
     "superClass": ["widget"],
@@ -619,7 +698,13 @@
     ],
     "abstract": false,
     "childrenPresentational": false,
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "HTML",
+      "concept": {
+        "name": "footer",
+        "constraints": ["direct descendant of document"]
+      }
+    }]
   },
   "definition": {
     "superClass": ["section"],
@@ -654,11 +739,6 @@
       "concept": {
         "name": "dd"
       }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "dfn"
-      }
     }]
   },
   "dialog": {
@@ -690,7 +770,12 @@
     ],
     "abstract": false,
     "childrenPresentational": false,
-    "relatedConcepts": []
+    "relatedConcepts": [{
+      "module": "HTML",
+      "concept": {
+        "name": "dialog"
+      }
+    }]
   },
   "directory": {
     "superClass": ["list"],
@@ -2282,6 +2367,11 @@
       "concept": {
         "name": "Device Independence Delivery Unit"
       }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "body"
+      }
     }],
     "props": [
       "aria-expanded",
@@ -2392,7 +2482,29 @@
     "relatedConcepts": [{
       "module": "HTML",
       "concept": {
-        "name": "form"
+        "name": "form",
+        "attributes": [{
+          "name": "name",
+          "constraints": ["set"]
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "form",
+        "attributes": [{
+          "name": "aria-label",
+          "constraints": ["set"]
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "form",
+        "attributes": [{
+          "name": "aria-labelledby",
+          "constraints": ["set"]
+        }]
       }
     }],
     "props": [
@@ -2520,6 +2632,16 @@
       "concept": {
         "name": "fieldset"
       }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "details"
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "optgroup"
+      }
     }],
     "props": [
       "aria-activedescendant",
@@ -2615,7 +2737,20 @@
     "relatedConcepts": [{
       "module": "HTML",
       "concept": {
-        "name": "img"
+        "name": "img",
+        "attributes": [{
+          "name": "alt",
+          "constraints": ["set"]
+        }]
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "img",
+        "attributes": [{
+          "name": "alt",
+          "constraints": ["undefined"]
+        }]
       }
     }, {
       "module": "DTB",
@@ -2735,7 +2870,10 @@
     }, {
       "module": "HTML",
       "concept": {
-        "name": "link"
+        "name": "link",
+        "attributes": [{
+          "name": "href"
+        }]
       }
     }],
     "props": [
@@ -2779,6 +2917,11 @@
       "module": "HTML",
       "concept": {
         "name": "ul"
+      }
+    }, {
+      "module": "HTML",
+      "concept": {
+        "name": "menu"
       }
     }],
     "props": [
@@ -2896,7 +3039,8 @@
     "relatedConcepts": [{
       "module": "HTML",
       "concept": {
-        "name": "li"
+        "name": "li",
+        "constraints": ["direct descendant of ol, ul or menu"]
       }
     }, {
       "module": "XForms",
@@ -3031,7 +3175,12 @@
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [],
+    "relatedConcepts": [{
+      "module": "HTML",
+      "concept": {
+        "name": "math"
+      }
+    }],
     "props": [
       "aria-expanded",
       "aria-atomic",
@@ -3458,6 +3607,11 @@
     "requiredProps": [],
     "abstract": false,
     "relatedConcepts": [{
+      "module": "HTML",
+      "concept": {
+        "name": "progress"
+      }
+    }, {
       "module": "ARIA",
       "concept": {
         "name": "status"
@@ -3629,7 +3783,20 @@
     }, {
       "module": "ARIA",
       "concept": {
-        "name": "section"
+        "name": "section",
+        "attributes": [{
+          "name": "aria-label",
+          "constraints": ["set"]
+        }]
+      }
+    }, {
+      "module": "ARIA",
+      "concept": {
+        "name": "section",
+        "attributes": [{
+          "name": "aria-labelledby",
+          "constraints": ["set"]
+        }]
       }
     }],
     "props": [
@@ -3942,6 +4109,9 @@
         "attributes": [{
           "name": "type",
           "value": "search"
+        }, {
+          "name": "list",
+          "constraints": ["undefined"]
         }]
       }
     }]
@@ -4142,7 +4312,16 @@
       ["aria-valuenow", "50"]
     ],
     "abstract": false,
-    "relatedConcepts": [],
+    "relatedConcepts": [{
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "range"
+        }]
+      }
+    }],
     "props": [
       ["aria-orientation", "horizontal"],
       "aria-readonly",
@@ -4164,7 +4343,16 @@
       ["aria-valuenow", "0"]
     ],
     "abstract": false,
-    "relatedConcepts": [],
+    "relatedConcepts": [{
+      "module": "HTML",
+      "concept": {
+        "name": "input",
+        "attributes": [{
+          "name": "type",
+          "value": "number"
+        }]
+      }
+    }],
     "props": [
       "aria-valuemax",
       "aria-valuemin",
@@ -4199,7 +4387,12 @@
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [],
+    "relatedConcepts": [{
+      "module": "HTML",
+      "concept": {
+        "name": "output"
+      }
+    }],
     "props": [
       "aria-expanded",
       ["aria-atomic", "true"],
@@ -4510,7 +4703,7 @@
           "value": "text"
         }, {
           "name": "list",
-          "constraints": ["unset"]
+          "constraints": ["undefined"]
         }]
       }
     }, {
@@ -4522,7 +4715,7 @@
           "value": "email"
         }, {
           "name": "list",
-          "constraints": ["unset"]
+          "constraints": ["undefined"]
         }]
       }
     }, {
@@ -4534,7 +4727,7 @@
           "value": "tel"
         }, {
           "name": "list",
-          "constraints": ["unset"]
+          "constraints": ["undefined"]
         }]
       }
     }, {
@@ -4546,7 +4739,7 @@
           "value": "url"
         }, {
           "name": "list",
-          "constraints": ["unset"]
+          "constraints": ["undefined"]
         }]
       }
     }],

@@ -10,7 +10,17 @@ const contentinfoRole: ARIARoleDefinition = {
     'author',
   ],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      module: 'HTML',
+      concept: {
+        name: 'footer',
+        constraints: [
+          'direct descendant of document',
+        ],
+      },
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

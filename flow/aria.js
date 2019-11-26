@@ -308,6 +308,14 @@ type ARIARoleRelation = {
 type ARIARoleRelationConcept = {
   name: string,
   attributes?: Array<ARIARoleRelationConceptAttribute>,
+  // Make these explicit. These values represent quirks of the mapping betweent
+  // ARIA and other semantic ontological systems.
+  constraints?: Array<
+    'direct descendant of document'
+    | 'direct descendant of ol, ul or menu'
+    | 'direct descendant of details element with the open attribute defined'
+    | 'descendant of table'
+  >,
 };
 
 type ARIARoleRelationConceptAttribute = {
@@ -315,5 +323,9 @@ type ARIARoleRelationConceptAttribute = {
   value?: string | number,
   // Make these explicit. These values represent quirks of the mapping betweent
   // ARIA and other semantic ontological systems.
-  constraints?: Array<'unset' | 'isset' | '>1'>,
+  constraints?: Array<
+    'undefined' // The attribute does not exist on the node: <a>
+    | 'set' // The attribute has a value: <a b="c">
+    | '>1'
+  >,
 };
