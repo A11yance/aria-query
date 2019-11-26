@@ -19,6 +19,18 @@ const groupRole: ARIARoleDefinition = {
         name: 'fieldset',
       },
     },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'details',
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'optgroup',
+      },
+    },
   ],
   requireContextRole: [],
   requiredContextRole: [],

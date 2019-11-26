@@ -26,6 +26,28 @@ const regionRole: ARIARoleDefinition = {
       module: 'ARIA',
       concept: {
         name: 'section',
+        attributes: [
+          {
+            name: 'aria-label',
+            constraints: [
+              'set',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      module: 'ARIA',
+      concept: {
+        name: 'section',
+        attributes: [
+          {
+            name: 'aria-labelledby',
+            constraints: [
+              'set',
+            ],
+          },
+        ],
       },
     },
   ],

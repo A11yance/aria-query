@@ -10,7 +10,14 @@ const mathRole: ARIARoleDefinition = {
     'author',
   ],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      module: 'HTML',
+      concept: {
+        name: 'math',
+      },
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

@@ -10,7 +10,14 @@ const complementaryRole: ARIARoleDefinition = {
     'author',
   ],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      module: 'HTML',
+      concept: {
+        name: 'aside',
+      },
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

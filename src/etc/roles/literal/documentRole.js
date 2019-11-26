@@ -18,6 +18,12 @@ const documentRole: ARIARoleDefinition = {
         name: 'Device Independence Delivery Unit',
       },
     },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'body',
+      },
+    },
   ],
   requireContextRole: [],
   requiredContextRole: [],

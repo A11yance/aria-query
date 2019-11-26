@@ -42,7 +42,7 @@ const textboxRole: ARIARoleDefinition = {
           {
             name: 'list',
             constraints: [
-              'unset',
+              'undefined',
             ],
           },
         ],
@@ -60,7 +60,7 @@ const textboxRole: ARIARoleDefinition = {
           {
             name: 'list',
             constraints: [
-              'unset',
+              'undefined',
             ],
           },
         ],
@@ -78,7 +78,7 @@ const textboxRole: ARIARoleDefinition = {
           {
             name: 'list',
             constraints: [
-              'unset',
+              'undefined',
             ],
           },
         ],
@@ -96,7 +96,7 @@ const textboxRole: ARIARoleDefinition = {
           {
             name: 'list',
             constraints: [
-              'unset',
+              'undefined',
             ],
           },
         ],

@@ -20,6 +20,12 @@ const searchboxRole: ARIARoleDefinition = {
             name: 'type',
             value: 'search',
           },
+          {
+            name: 'list',
+            constraints: [
+              'undefined',
+            ],
+          },
         ],
       },
     },

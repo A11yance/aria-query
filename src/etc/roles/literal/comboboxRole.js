@@ -25,13 +25,13 @@ const comboboxRole: ARIARoleDefinition = {
           {
             name: 'multiple',
             constraints: [
-              'unset',
+              'undefined',
             ],
           },
           {
             name: 'size',
             constraints: [
-              'unset',
+              'undefined',
             ],
           },
         ],
@@ -45,7 +45,7 @@ const comboboxRole: ARIARoleDefinition = {
           {
             name: 'multiple',
             constraints: [
-              'unset',
+              'undefined',
             ],
           },
           {
@@ -67,7 +67,7 @@ const comboboxRole: ARIARoleDefinition = {
           {
             name: 'list',
             constraints: [
-              'isset',
+              'set',
             ],
           },
         ],
@@ -85,7 +85,7 @@ const comboboxRole: ARIARoleDefinition = {
           {
             name: 'list',
             constraints: [
-              'isset',
+              'set',
             ],
           },
         ],
@@ -103,7 +103,7 @@ const comboboxRole: ARIARoleDefinition = {
           {
             name: 'list',
             constraints: [
-              'isset',
+              'set',
             ],
           },
         ],
@@ -121,7 +121,7 @@ const comboboxRole: ARIARoleDefinition = {
           {
             name: 'list',
             constraints: [
-              'isset',
+              'set',
             ],
           },
         ],
@@ -139,7 +139,7 @@ const comboboxRole: ARIARoleDefinition = {
           {
             name: 'list',
             constraints: [
-              'isset',
+              'set',
             ],
           },
         ],
@@ -157,7 +157,7 @@ const comboboxRole: ARIARoleDefinition = {
           {
             name: 'list',
             constraints: [
-              'isset',
+              'set',
             ],
           },
         ],

@@ -17,12 +17,6 @@ const definitionRole: ARIARoleDefinition = {
         name: 'dd',
       },
     },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'dfn',
-      },
-    },
   ],
   requireContextRole: [],
   requiredContextRole: [],
