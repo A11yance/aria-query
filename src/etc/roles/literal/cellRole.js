@@ -4,14 +4,7 @@
 const cellRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
-  baseConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'td',
-      },
-    },
-  ],
+  baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
     'author',
@@ -23,7 +16,14 @@ const cellRole: ARIARoleDefinition = {
     'aria-rowindex': null,
     'aria-rowspan': null,
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      module: 'HTML',
+      concept: {
+        name: 'td',
+      },
+    },
+  ],
   requireContextRole: [
     'row',
   ],

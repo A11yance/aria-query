@@ -18,13 +18,45 @@ const comboboxRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'XForms',
+      module: 'HTML',
       concept: {
         name: 'select',
+        attributes: [
+          {
+            name: 'multiple',
+            constraints: [
+              'unset',
+            ],
+          },
+          {
+            name: 'size',
+            constraints: [
+              'unset',
+            ],
+          },
+        ],
       },
     },
     {
       module: 'HTML',
+      concept: {
+        name: 'select',
+        attributes: [
+          {
+            name: 'multiple',
+            constraints: [
+              'unset',
+            ],
+          },
+          {
+            name: 'size',
+            value: 1,
+          },
+        ],
+      },
+    },
+    {
+      module: 'XForms',
       concept: {
         name: 'select',
       },

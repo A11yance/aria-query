@@ -17,15 +17,57 @@ const listboxRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
+      module: 'HTML',
       concept: {
-        name: 'list',
+        name: 'datalist',
       },
     },
     {
       module: 'HTML',
       concept: {
         name: 'select',
+        attributes: [
+          {
+            name: 'multiple',
+          },
+        ],
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'select',
+        attributes: [
+          {
+            name: 'multiple',
+          },
+          {
+            name: 'size',
+            constraints: [
+              '>1',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'select',
+        attributes: [
+          {
+            name: 'size',
+            constraints: [
+              '>1',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      module: 'ARIA',
+      concept: {
+        name: 'list',
       },
     },
     {

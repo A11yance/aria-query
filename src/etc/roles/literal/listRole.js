@@ -4,7 +4,13 @@
 const listRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
-  baseConcepts: [
+  baseConcepts: [],
+  childrenPresentational: false,
+  nameFrom: [
+    'author',
+  ],
+  props: {},
+  relatedConcepts: [
     {
       module: 'HTML',
       concept: {
@@ -18,12 +24,6 @@ const listRole: ARIARoleDefinition = {
       },
     },
   ],
-  childrenPresentational: false,
-  nameFrom: [
-    'author',
-  ],
-  props: {},
-  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [

@@ -4,14 +4,7 @@
 const buttonRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
-  baseConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'button',
-      },
-    },
-  ],
+  baseConcepts: [],
   childrenPresentational: true,
   nameFrom: [
     'author',
@@ -23,9 +16,9 @@ const buttonRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
+      module: 'HTML',
       concept: {
-        name: 'link',
+        name: 'button',
       },
     },
     {

@@ -4,13 +4,7 @@
 const applicationRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
-  baseConcepts: [
-    {
-      concept: {
-        name: 'Device Independence Delivery Unit',
-      },
-    },
-  ],
+  baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
     'author',
@@ -18,7 +12,13 @@ const applicationRole: ARIARoleDefinition = {
   props: {
     'aria-activedescendant': null,
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'Device Independence Delivery Unit',
+      },
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

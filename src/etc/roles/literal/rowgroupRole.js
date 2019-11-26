@@ -4,7 +4,17 @@
 const rowgroupRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
-  baseConcepts: [
+  baseConcepts: [],
+  childrenPresentational: false,
+  nameFrom: [
+    'author',
+    'contents',
+  ],
+  props: {
+    'aria-activedescendant': null,
+    'aria-expanded': null,
+  },
+  relatedConcepts: [
     {
       module: 'HTML',
       concept: {
@@ -24,16 +34,6 @@ const rowgroupRole: ARIARoleDefinition = {
       },
     },
   ],
-  childrenPresentational: false,
-  nameFrom: [
-    'author',
-    'contents',
-  ],
-  props: {
-    'aria-activedescendant': null,
-    'aria-expanded': null,
-  },
-  relatedConcepts: [],
   requireContextRole: [
     'grid',
     'table',
