@@ -53,6 +53,9 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
   ['aria-describedby', {
     'type': 'idlist'
   }],
+  ['aria-details', {
+    'type': 'id'
+  }],
   ['aria-disabled', {
     'type': 'boolean'
   }],
@@ -60,15 +63,15 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
     'type': 'tokenlist',
     'values': [
       'copy',
-      'move',
-      'link',
       'execute',
-      'popup',
-      'none'
+      'link',
+      'move',
+      'none',
+      'popup'
     ]
   }],
   ['aria-errormessage', {
-    'type': 'string'
+    'type': 'id'
   }],
   ['aria-expanded', {
     'type': 'boolean',
@@ -94,7 +97,8 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
     ]
   }],
   ['aria-hidden', {
-    'type': 'boolean'
+    'type': 'boolean',
+    'allowundefined': true
   }],
   ['aria-invalid', {
     'type': 'token',
@@ -120,9 +124,9 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
   ['aria-live', {
     'type': 'token',
     'values': [
+      'assertive',
       'off',
-      'polite',
-      'assertive'
+      'polite'
     ]
   }],
   ['aria-modal', {
@@ -138,6 +142,7 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
     'type': 'token',
     'values': [
       'vertical',
+      'undefined',
       'horizontal'
     ]
   }],
@@ -160,9 +165,9 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
     'type': 'tokenlist',
     'values': [
       'additions',
+      'all',
       'removals',
       'text',
-      'all'
     ]
   }],
   ['aria-required', {
