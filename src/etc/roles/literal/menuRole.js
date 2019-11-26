@@ -39,6 +39,7 @@ const menuRole: ARIARoleDefinition = {
     },
   ],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [
     [
       'group',

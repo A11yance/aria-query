@@ -14,6 +14,7 @@ const compositeRole: ARIARoleDefinition = {
   },
   relatedConcepts: [],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

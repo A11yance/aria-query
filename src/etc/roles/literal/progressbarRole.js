@@ -19,6 +19,7 @@ const progressbarRole: ARIARoleDefinition = {
     },
   ],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

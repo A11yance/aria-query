@@ -19,6 +19,7 @@ const docDedicationRole: ARIARoleDefinition = {
     },
   ],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

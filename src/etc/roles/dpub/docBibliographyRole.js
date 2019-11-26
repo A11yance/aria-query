@@ -19,6 +19,7 @@ const docBibliographyRole: ARIARoleDefinition = {
     },
   ],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [
     [
       'doc-biblioentry',

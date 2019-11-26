@@ -18,6 +18,7 @@ const sliderRole: ARIARoleDefinition = {
   },
   relatedConcepts: [],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
     'aria-valuemax': '100',

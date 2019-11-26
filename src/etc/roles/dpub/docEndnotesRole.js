@@ -19,6 +19,7 @@ const docEndnotesRole: ARIARoleDefinition = {
     },
   ],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [
     [
       'doc-endnote',

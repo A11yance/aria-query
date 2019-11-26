@@ -12,6 +12,7 @@ const dialogRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

@@ -15,6 +15,7 @@ const windowRole: ARIARoleDefinition = {
   },
   relatedConcepts: [],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

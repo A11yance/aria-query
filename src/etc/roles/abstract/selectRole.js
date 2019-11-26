@@ -14,6 +14,7 @@ const selectRole: ARIARoleDefinition = {
   },
   relatedConcepts: [],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

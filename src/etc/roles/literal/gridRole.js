@@ -29,6 +29,7 @@ const gridRole: ARIARoleDefinition = {
   },
   relatedConcepts: [],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [
     [
       'rowgroup',

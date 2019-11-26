@@ -27,6 +27,9 @@ const cellRole: ARIARoleDefinition = {
   requireContextRole: [
     'row',
   ],
+  requiredContextRole: [
+    'row',
+  ],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

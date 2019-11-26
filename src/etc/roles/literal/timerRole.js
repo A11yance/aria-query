@@ -12,6 +12,7 @@ const timerRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

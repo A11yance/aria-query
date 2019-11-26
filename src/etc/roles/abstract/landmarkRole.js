@@ -12,6 +12,7 @@ const landmarkRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

@@ -12,6 +12,7 @@ const treegridRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [
     [
       'rowgroup',

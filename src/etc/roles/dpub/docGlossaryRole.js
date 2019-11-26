@@ -19,6 +19,7 @@ const docGlossaryRole: ARIARoleDefinition = {
     },
   ],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [
     [
       'term',

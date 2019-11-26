@@ -12,6 +12,7 @@ const contentinfoRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

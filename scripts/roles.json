@@ -3,7 +3,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -39,7 +39,7 @@
     "superClass": ["alert", "dialog"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -76,7 +76,7 @@
     "superClass": ["structure"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -111,7 +111,7 @@
     "superClass": ["document"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -149,7 +149,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -180,7 +180,7 @@
     "superClass": ["command"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -227,7 +227,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": ["row"],
+    "requiredContextRole": ["row"],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -272,7 +272,7 @@
     "superClass": ["input"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [
       "aria-checked"
@@ -320,7 +320,7 @@
     "superClass": ["cell", "gridcell", "sectionhead"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": ["row"],
+    "requiredContextRole": ["row"],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -360,7 +360,7 @@
     "superClass": ["select"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["textbox"],
       ["listbox"],
@@ -415,7 +415,7 @@
     "superClass": ["widget"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -455,7 +455,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -486,7 +486,7 @@
     "superClass": ["widget"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-activedescendant",
@@ -522,7 +522,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -553,7 +553,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -594,7 +594,7 @@
     "superClass": ["window"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "props": [
@@ -626,7 +626,7 @@
     "superClass": ["list"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -659,7 +659,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -700,7 +700,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -741,7 +741,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -782,7 +782,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -823,7 +823,7 @@
     "superClass": ["link"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "content"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -864,7 +864,7 @@
     "superClass": ["listitem"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": ["doc-bibliography"],
+    "requiredContextRole": ["doc-bibliography"],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -908,7 +908,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["doc-biblioentry"]
     ],
@@ -951,7 +951,7 @@
     "superClass": ["link"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -992,7 +992,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1033,7 +1033,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1074,7 +1074,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1115,7 +1115,7 @@
     "superClass": ["img"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1156,7 +1156,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1197,7 +1197,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1238,7 +1238,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1279,7 +1279,7 @@
     "superClass": ["listitem"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": ["doc-endnotes"],
+    "requiredContextRole": ["doc-endnotes"],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1323,7 +1323,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["doc-endnote"]
     ],
@@ -1366,7 +1366,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1407,7 +1407,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1448,7 +1448,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1489,7 +1489,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1525,7 +1525,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1566,7 +1566,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1607,7 +1607,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["term"],
       ["definition"]
@@ -1651,7 +1651,7 @@
     "superClass": ["link"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1692,7 +1692,7 @@
     "superClass": ["navigation"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1733,7 +1733,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1774,7 +1774,7 @@
     "superClass": ["link"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1815,7 +1815,7 @@
     "superClass": ["note"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1856,7 +1856,7 @@
     "superClass": ["separator"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1898,7 +1898,7 @@
     "superClass": ["navigation"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1939,7 +1939,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -1980,7 +1980,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -2021,7 +2021,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -2062,7 +2062,7 @@
     "superClass": ["none"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [],
     "requiredProps": [],
@@ -2080,7 +2080,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -2121,7 +2121,7 @@
     "superClass": ["sectionhead"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -2162,7 +2162,7 @@
     "superClass": ["note"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -2203,7 +2203,7 @@
     "superClass": ["navigation"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -2244,7 +2244,7 @@
     "superClass": ["structure"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -2279,7 +2279,7 @@
     "superClass": ["list"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["article"]
     ],
@@ -2317,7 +2317,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "abstract": false,
     "childrenPresentational": false,
@@ -2358,7 +2358,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -2397,7 +2397,7 @@
     ],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["rowgroup", "row"],
       ["row"]
@@ -2444,7 +2444,7 @@
     "superClass": ["cell", "widget"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": ["row"],
+    "requiredContextRole": ["row"],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -2487,7 +2487,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -2524,7 +2524,7 @@
     "superClass": ["sectionhead"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -2586,7 +2586,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -2627,7 +2627,7 @@
     "superClass": ["widget"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -2662,7 +2662,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-expanded",
@@ -2693,7 +2693,7 @@
     "superClass": ["command"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -2745,7 +2745,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["group", "listitem"],
       ["listitem"]
@@ -2789,7 +2789,7 @@
     "superClass": ["select"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["option"]
     ],
@@ -2842,7 +2842,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [
+    "requiredContextRole": [
       "group",
       "list"
     ],
@@ -2889,7 +2889,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -2920,7 +2920,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -2956,7 +2956,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -2987,7 +2987,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -3018,7 +3018,7 @@
     "superClass": ["select"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["group", "menuitemradio"],
       ["menuitem"],
@@ -3076,7 +3076,7 @@
     "superClass": ["menu"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["group", "menuitemradio"],
       ["menuitem"],
@@ -3119,7 +3119,7 @@
     "superClass": ["command"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [
+    "requiredContextRole": [
       "group",
       "menu",
       "menubar"
@@ -3175,7 +3175,7 @@
     "superClass": ["menuitem", "checkbox"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [
+    "requiredContextRole": [
       "menu",
       "menubar"
     ],
@@ -3216,7 +3216,7 @@
     "superClass": ["menuitemcheckbox", "radio"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [
+    "requiredContextRole": [
       "group",
       "menu",
       "menubar"
@@ -3261,7 +3261,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -3298,7 +3298,7 @@
     "nameFrom": [],
     "superClass": [],
     "props": [],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "baseConcepts": [],
@@ -3310,7 +3310,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -3341,7 +3341,7 @@
     "superClass": ["input"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [
+    "requiredContextRole": [
       "listbox"
     ],
     "requiredOwnedElements": [],
@@ -3394,7 +3394,7 @@
     "superClass": ["structure"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -3424,7 +3424,7 @@
     "superClass": ["range"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -3463,7 +3463,7 @@
     "superClass": ["input"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [
       ["aria-checked", "false"]
@@ -3508,7 +3508,7 @@
     "superClass": ["select"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["radio"]
     ],
@@ -3549,7 +3549,7 @@
     "superClass": ["widget"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-valuemax",
@@ -3588,7 +3588,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -3633,7 +3633,7 @@
     "superClass": [],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -3683,7 +3683,7 @@
     "superClass": ["group", "widget"],
     "accessibleNameRequired": false,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [
+    "requiredContextRole": [
       "grid",
       "rowgroup",
       "table",
@@ -3734,7 +3734,7 @@
     "superClass": ["structure"],
     "accessibleNameRequired": false,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [
+    "requiredContextRole": [
       "grid",
       "table",
       "treegrid"
@@ -3787,7 +3787,7 @@
     "superClass": ["cell", "gridcell", "sectionhead"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [
+    "requiredContextRole": [
       "row"
     ],
     "requiredOwnedElements": [],
@@ -3833,7 +3833,7 @@
     "superClass": ["range"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -3852,7 +3852,7 @@
     "superClass": ["landmark"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -3883,7 +3883,7 @@
     "superClass": ["textbox"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-activedescendant",
@@ -3933,7 +3933,7 @@
     "superClass": ["structure"],
     "accessibleNameRequired": false,
     "nameFrom": [],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-expanded",
@@ -3979,7 +3979,7 @@
     "superClass": ["structure"],
     "accessibleNameRequired": false,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-expanded",
@@ -4010,7 +4010,7 @@
     "superClass": ["composite", "group"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       ["aria-orientation", "vertical"],
@@ -4044,7 +4044,7 @@
     "superClass": ["structure"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -4081,7 +4081,7 @@
     "superClass": [],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [
       "aria-controls",
@@ -4122,7 +4122,7 @@
     "superClass": ["input", "range"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [
       ["aria-valuemax", "100"],
@@ -4145,7 +4145,7 @@
     "superClass": ["composite", "input", "range"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [
       "aria-valuemax",
@@ -4185,7 +4185,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -4216,7 +4216,7 @@
     "superClass": ["roletype"],
     "accessibleNameRequired": false,
     "nameFrom": [],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -4251,7 +4251,7 @@
     "superClass": ["checkbox"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [
       ["aria-checked", "false"]
@@ -4289,7 +4289,7 @@
     "superClass": ["sectionhead", "widget"],
     "accessibleNameRequired": false,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [
+    "requiredContextRole": [
       "tablist"
     ],
     "requiredOwnedElements": [],
@@ -4325,7 +4325,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["row"],
       ["rowgroup", "row"]
@@ -4371,7 +4371,7 @@
     "superClass": ["composite"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["tab"]
     ],
@@ -4413,7 +4413,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -4444,7 +4444,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -4485,7 +4485,7 @@
     "superClass": ["input"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -4545,7 +4545,7 @@
     "superClass": ["status"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -4576,7 +4576,7 @@
     "superClass": ["group"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -4614,7 +4614,7 @@
     "superClass": ["section"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "abstract": false,
@@ -4645,7 +4645,7 @@
     "superClass": ["select"],
     "accessibleNameRequired": true,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["group", "treeitem"],
       ["treeitem"]
@@ -4683,7 +4683,7 @@
     "superClass": ["grid", "tree"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [
       ["rowgroup", "row"],
       ["row"]
@@ -4722,7 +4722,7 @@
     "superClass": ["listitem", "option"],
     "accessibleNameRequired": true,
     "nameFrom": ["author", "contents"],
-    "requireContextRole": [
+    "requiredContextRole": [
       "group",
       "tree"
     ],
@@ -4761,7 +4761,7 @@
     "superClass": ["roletype"],
     "accessibleNameRequired": false,
     "nameFrom": [],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-atomic",
@@ -4796,7 +4796,7 @@
     "superClass": ["roletype"],
     "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requireContextRole": [],
+    "requiredContextRole": [],
     "requiredOwnedElements": [],
     "props": [
       "aria-expanded",

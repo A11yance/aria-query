@@ -22,6 +22,7 @@ const switchRole: ARIARoleDefinition = {
     },
   ],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
     'aria-checked': 'false',

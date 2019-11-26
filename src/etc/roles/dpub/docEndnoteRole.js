@@ -21,6 +21,9 @@ const docEndnoteRole: ARIARoleDefinition = {
   requireContextRole: [
     'doc-endnotes',
   ],
+  requiredContextRole: [
+    'doc-endnotes',
+  ],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

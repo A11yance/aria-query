@@ -25,6 +25,10 @@ const menuitemcheckboxRole: ARIARoleDefinition = {
     'menu',
     'menubar',
   ],
+  requiredContextRole: [
+    'menu',
+    'menubar',
+  ],
   requiredOwnedElements: [],
   requiredProps: {
     'aria-checked': null,

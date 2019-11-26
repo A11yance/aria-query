@@ -31,6 +31,7 @@ const radioRole: ARIARoleDefinition = {
     },
   ],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
     'aria-checked': 'false',

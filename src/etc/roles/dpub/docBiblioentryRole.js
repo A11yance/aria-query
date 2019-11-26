@@ -21,6 +21,9 @@ const docBiblioentryRole: ARIARoleDefinition = {
   requireContextRole: [
     'doc-bibliography',
   ],
+  requiredContextRole: [
+    'doc-bibliography',
+  ],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [

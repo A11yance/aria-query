@@ -135,12 +135,14 @@ fs.readFile(path.join('scripts/roles.json'), {
       const accumulation = superClassWalker(superClasses);
       const output = accumulatedSuperClasses.set(name, accumulation);
       // console.log(`${name} => ${accumulatedSuperClasses.get(name).map(group => `[${group}]`).join('\n')}`);
-      return output;
     });
 
   Object.keys(aria)
     .forEach((name) => {
       const camelName = createCamelName(name);
+      // Deprecate requireContextRole prop. Replace with requiredContextRole.
+      // requireContextRole will be removed in a future version.
+      aria[name]['requireContextRole'] = aria[name]['requiredContextRole'];
 
       const file = [
         '/**',
@@ -149,7 +151,6 @@ fs.readFile(path.join('scripts/roles.json'), {
         `const ${camelName}: ARIARoleDefinition = {`,
         Object.keys(aria[name])
           .sort()
-          .filter((prop) => !['interactive'].includes(prop))
           .filter((prop) => {
             // Create a set of all the props of the super classes.
             if (prop === 'props') {

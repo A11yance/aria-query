@@ -36,6 +36,7 @@ const listboxRole: ARIARoleDefinition = {
     },
   ],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [
     [
       'option',

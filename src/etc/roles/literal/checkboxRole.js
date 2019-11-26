@@ -35,6 +35,7 @@ const checkboxRole: ARIARoleDefinition = {
     },
   ],
   requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
     'aria-checked': null,
