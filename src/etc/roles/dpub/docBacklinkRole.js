@@ -10,9 +10,7 @@ const docBacklinkRole: ARIARoleDefinition = {
     'author',
     'content',
   ],
-  props: {
-    'aria-describedat': null,
-  },
+  props: {},
   relatedConcepts: [
     {
       module: 'EPUB',

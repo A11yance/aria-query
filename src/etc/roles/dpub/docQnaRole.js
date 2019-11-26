@@ -9,9 +9,7 @@ const docQnaRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
-  props: {
-    'aria-describedat': null,
-  },
+  props: {},
   relatedConcepts: [
     {
       module: 'EPUB',

@@ -9,9 +9,7 @@ const docExampleRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
-  props: {
-    'aria-describedat': null,
-  },
+  props: {},
   relatedConcepts: [],
   requireContextRole: [],
   requiredOwnedElements: [],

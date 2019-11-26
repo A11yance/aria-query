@@ -9,4 +9,18 @@ describe('rolesMap', function () {
   it('should have size', function () {
     expect(rolesMap.size).toBeGreaterThan(0);
   });
+
+  // dpub-aria
+  describe('doc-abstract role', function () {
+    const abstract = rolesMap.get('doc-abstract');
+    const { props } = abstract;
+
+    it('should not have aria-describedat property', function () {
+      expect(props).toExcludeKey('aria-describedat');
+    });
+
+    it('should have aria-details property', function () {
+      expect(props).toInclude({ 'aria-details': null });
+    });
+  });
 });
