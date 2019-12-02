@@ -23,7 +23,7 @@ const regionRole: ARIARoleDefinition = {
       },
     },
     {
-      module: 'ARIA',
+      module: 'HTML',
       concept: {
         name: 'section',
         attributes: [
@@ -37,7 +37,7 @@ const regionRole: ARIARoleDefinition = {
       },
     },
     {
-      module: 'ARIA',
+      module: 'HTML',
       concept: {
         name: 'section',
         attributes: [
