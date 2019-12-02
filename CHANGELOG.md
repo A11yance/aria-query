@@ -18,7 +18,7 @@
 
 - Bumping to a major version because of a previous breaking change.
 
-## 4.0.1
+## 4.0.0
 
 - 912e515 (origin/fix-travis, fix-travis) Move allowed failures to excludes in Travis. The current failures are simply version incompatibilities.
 - 17f4203 (origin/fixe-all-roles-html-mappings, fixe-all-roles-html-mappings) Fix all inherent ARIA role to HTML mappings
@@ -33,3 +33,7 @@
 - 8a661f2 Updating allowed failures for odd versions of node
 - 0c85fd6 Update Travis and eslint peer dependencies
 - 99df7da Bump eslint from 3.19.0 to 6.6.0
+
+## 4.0.1
+
+- Fix the incorrect ARIA designation of the region role to an HTML designation
