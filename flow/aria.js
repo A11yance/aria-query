@@ -308,8 +308,8 @@ type ARIARoleRelation = {
 type ARIARoleRelationConcept = {
   name: string,
   attributes?: Array<ARIARoleRelationConceptAttribute>,
-  // Make these explicit. These values represent quirks of the mapping betweent
-  // ARIA and other semantic ontological systems.
+  // These constraints are drawn from the mapping between ARIA and HTML:
+  // https://www.w3.org/TR/html-aria
   constraints?: Array<
     'direct descendant of document'
     | 'direct descendant of ol, ul or menu'
@@ -321,8 +321,8 @@ type ARIARoleRelationConcept = {
 type ARIARoleRelationConceptAttribute = {
   name: string,
   value?: string | number,
-  // Make these explicit. These values represent quirks of the mapping betweent
-  // ARIA and other semantic ontological systems.
+  // These constraints are drawn from the mapping between ARIA and HTML:
+  // https://www.w3.org/TR/html-aria
   constraints?: Array<
     'undefined' // The attribute does not exist on the node: <a>
     | 'set' // The attribute has a value: <a b="c">
