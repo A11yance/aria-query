@@ -177,3 +177,6 @@ Map {
 ```
 
 The HTML concept values are provided in a [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
+
+## License
+Copyright (c) 2020 Jesse Beach <splendidnoise@gmail.com>
