@@ -37,3 +37,9 @@
 ## 4.0.1
 
 - Fix the incorrect ARIA designation of the region role to an HTML designation
+
+## 4.0.2
+
+- a3e2f1e Added the Copyright year (2020) for A11yance
+- 3173a07 Remove Peer Dependency to ESLint
+
