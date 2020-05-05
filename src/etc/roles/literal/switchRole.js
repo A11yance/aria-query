@@ -12,7 +12,14 @@ const switchRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'button',
+      },
+      module: 'ARIA',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

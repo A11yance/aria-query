@@ -24,7 +24,14 @@
       ["aria-atomic", "true"],
       ["aria-live", "assertive"]
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "alert"
+        },
+        "module": "XForms"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -56,7 +63,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "alert"
+        },
+        "module": "XForms"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -170,7 +184,15 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "constraints": ["direct descendant of document"],
+          "name": "banner"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -239,9 +261,106 @@
     "relatedConcepts": [
       {
         "concept": {
-          "name": "link"
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "aria-pressed"
+            },
+            {
+              "name": "type",
+              "value": "checkbox"
+            }
+          ],
+          "name": "input"
         },
         "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "aria-expanded",
+              "value": "false"
+            }
+          ],
+          "name": "summary"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "aria-expanded",
+              "value": "true"
+            }
+          ],
+          "constraints": [
+            "direct descendant of details element with the open attribute defined"
+          ],
+          "name": "summary"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "button"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "image"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "reset"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "submit"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "button"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "trigger"
+        },
+        "module": "XForms"
       }
     ],
     "requiredContextRole": [],
@@ -307,7 +426,15 @@
       "aria-rowindex",
       "aria-rowspan"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "constraints": ["descendant of table"],
+          "name": "td"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": ["row"],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -491,9 +618,137 @@
     "relatedConcepts": [
       {
         "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "email"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "search"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "tel"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "text"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "url"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "url"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "multiple"
+            },
+            {
+              "constraints": ["undefined"],
+              "name": "size"
+            }
+          ],
           "name": "select"
         },
         "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "multiple"
+            },
+            {
+              "name": "size",
+              "value": 1
+            }
+          ],
+          "name": "select"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "select"
+        },
+        "module": "XForms"
       }
     ],
     "requiredContextRole": [],
@@ -564,7 +819,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "aside"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -628,7 +890,15 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "constraints": ["direct descendant of document"],
+          "name": "footer"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -659,7 +929,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "dd"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -720,7 +997,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "dialog"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -2445,6 +2729,12 @@
         "concept": {
           "name": "Device Independence Delivery Unit"
         }
+      },
+      {
+        "concept": {
+          "name": "body"
+        },
+        "module": "HTML"
       }
     ],
     "requiredContextRole": [],
@@ -2578,6 +2868,36 @@
     "relatedConcepts": [
       {
         "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "aria-label"
+            }
+          ],
+          "name": "form"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "aria-labelledby"
+            }
+          ],
+          "name": "form"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "name"
+            }
+          ],
           "name": "form"
         },
         "module": "HTML"
@@ -2611,11 +2931,24 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "span"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "div"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
-    "superClass": ["structure"]
+    "superClass": ["landmark"]
   },
   "grid": {
     "abstract": false,
@@ -2651,6 +2984,12 @@
     "relatedConcepts": [
       {
         "concept": {
+          "attributes": [
+            {
+              "name": "role",
+              "value": "grid"
+            }
+          ],
           "name": "table"
         },
         "module": "HTML"
@@ -2701,6 +3040,12 @@
     "relatedConcepts": [
       {
         "concept": {
+          "attributes": [
+            {
+              "name": "role",
+              "value": "gridcell"
+            }
+          ],
           "name": "td"
         },
         "module": "HTML"
@@ -2741,7 +3086,19 @@
     "relatedConcepts": [
       {
         "concept": {
+          "name": "details"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
           "name": "fieldset"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "optgroup"
         },
         "module": "HTML"
       }
@@ -2847,9 +3204,33 @@
     "relatedConcepts": [
       {
         "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "alt"
+            }
+          ],
           "name": "img"
         },
         "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "alt"
+            }
+          ],
+          "name": "img"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "imggroup"
+        },
+        "module": "DTB"
       }
     ],
     "requiredContextRole": [],
@@ -2883,7 +3264,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "input"
+        },
+        "module": "XForms"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -2979,23 +3367,34 @@
     "relatedConcepts": [
       {
         "concept": {
-          "name": "a",
           "attributes": [
             {
               "name": "href"
             }
-          ]
+          ],
+          "name": "a"
         },
         "module": "HTML"
       },
       {
         "concept": {
-          "name": "link",
           "attributes": [
             {
               "name": "href"
             }
-          ]
+          ],
+          "name": "area"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "href"
+            }
+          ],
+          "name": "link"
         },
         "module": "HTML"
       }
@@ -3031,6 +3430,12 @@
       "aria-roledescription"
     ],
     "relatedConcepts": [
+      {
+        "concept": {
+          "name": "menu"
+        },
+        "module": "HTML"
+      },
       {
         "concept": {
           "name": "ol"
@@ -3086,7 +3491,45 @@
     "relatedConcepts": [
       {
         "concept": {
+          "attributes": [
+            {
+              "constraints": [">1"],
+              "name": "size"
+            },
+            {
+              "name": "multiple"
+            }
+          ],
           "name": "select"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": [">1"],
+              "name": "size"
+            }
+          ],
+          "name": "select"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "multiple"
+            }
+          ],
+          "name": "select"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "datalist"
         },
         "module": "HTML"
       },
@@ -3095,6 +3538,12 @@
           "name": "list"
         },
         "module": "ARIA"
+      },
+      {
+        "concept": {
+          "name": "select"
+        },
+        "module": "XForms"
       }
     ],
     "requiredContextRole": [],
@@ -3133,9 +3582,16 @@
     "relatedConcepts": [
       {
         "concept": {
+          "constraints": ["direct descendant of ol, ul or menu"],
           "name": "li"
         },
         "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "item"
+        },
+        "module": "XForms"
       }
     ],
     "requiredContextRole": ["directory", "list"],
@@ -3199,7 +3655,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "main"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -3261,7 +3724,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "math"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -3298,15 +3768,27 @@
     "relatedConcepts": [
       {
         "concept": {
+          "name": "MENU"
+        },
+        "module": "JAPI"
+      },
+      {
+        "concept": {
           "name": "list"
         },
         "module": "ARIA"
       },
       {
-        "module": "JAPI",
         "concept": {
-          "name": "MENU"
-        }
+          "name": "select"
+        },
+        "module": "XForms"
+      },
+      {
+        "concept": {
+          "name": "sidebar"
+        },
+        "module": "DTB"
       }
     ],
     "requiredContextRole": [],
@@ -3402,9 +3884,9 @@
     "relatedConcepts": [
       {
         "concept": {
-          "name": "option"
+          "name": "MENU_ITEM"
         },
-        "module": "ARIA"
+        "module": "JAPI"
       },
       {
         "concept": {
@@ -3419,10 +3901,10 @@
         "module": "HTML"
       },
       {
-        "module": "JAPI",
         "concept": {
-          "name": "MENU_ITEM"
-        }
+          "name": "option"
+        },
+        "module": "ARIA"
       }
     ],
     "requiredContextRole": ["group", "menu", "menubar"],
@@ -3673,9 +4155,21 @@
     "relatedConcepts": [
       {
         "concept": {
+          "name": "item"
+        },
+        "module": "XForms"
+      },
+      {
+        "concept": {
           "name": "listitem"
         },
         "module": "ARIA"
+      },
+      {
+        "concept": {
+          "name": "option"
+        },
+        "module": "HTML"
       }
     ],
     "requiredContextRole": [],
@@ -3771,6 +4265,12 @@
       "aria-valuetext"
     ],
     "relatedConcepts": [
+      {
+        "concept": {
+          "name": "progress"
+        },
+        "module": "HTML"
+      },
       {
         "concept": {
           "name": "status"
@@ -3937,9 +4437,38 @@
     "relatedConcepts": [
       {
         "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "aria-label"
+            }
+          ],
           "name": "section"
         },
-        "module": "ARIA"
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "aria-labelledby"
+            }
+          ],
+          "name": "section"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "Device Independence Glossart perceivable unit"
+        }
+      },
+      {
+        "concept": {
+          "name": "frame"
+        },
+        "module": "HTML"
       }
     ],
     "requiredContextRole": [],
@@ -3974,16 +4503,22 @@
     ],
     "relatedConcepts": [
       {
-        "module": "XHTML",
         "concept": {
-          "name": "role"
-        }
+          "name": "rel"
+        },
+        "module": "HTML"
       },
       {
-        "module": "Dublin Core",
+        "concept": {
+          "name": "role"
+        },
+        "module": "XHTML"
+      },
+      {
         "concept": {
           "name": "type"
-        }
+        },
+        "module": "Dublin Core"
       }
     ],
     "requiredContextRole": [],
@@ -4025,7 +4560,14 @@
       "aria-selected",
       "aria-setsize"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "tr"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": ["grid", "rowgroup", "table", "treegrid"],
     "requiredOwnedElements": ["cell", "columnheader", "gridcell", "rowheader"],
     "requiredProps": [],
@@ -4056,7 +4598,26 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "tbody"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "tfoot"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "thead"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": ["grid", "table", "treegrid"],
     "requiredOwnedElements": ["row"],
     "requiredProps": [],
@@ -4100,7 +4661,20 @@
       "aria-selected",
       "aria-sort"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "scope",
+              "value": "row"
+            }
+          ],
+          "name": "th"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": ["row"],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -4207,7 +4781,24 @@
       "aria-required",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "search"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -4238,7 +4829,26 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "frontmatter"
+        },
+        "module": "DTB"
+      },
+      {
+        "concept": {
+          "name": "level"
+        },
+        "module": "DTB"
+      },
+      {
+        "concept": {
+          "name": "level"
+        },
+        "module": "SMIL"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -4382,7 +4992,20 @@
       ["aria-valuemax", "100"],
       ["aria-orientation", "horizontal"]
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "range"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": ["aria-valuenow"],
@@ -4423,7 +5046,20 @@
       "aria-valuetext",
       ["aria-valuenow", "0"]
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "number"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -4454,7 +5090,14 @@
       ["aria-atomic", "true"],
       ["aria-live", "polite"]
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "output"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -4609,7 +5252,14 @@
       "aria-required",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "button"
+        },
+        "module": "ARIA"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": ["aria-checked"],
@@ -4679,7 +5329,14 @@
       "aria-roledescription",
       "aria-rowcount"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "table"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [["row", "rowgroup"], "row"],
     "requiredProps": [],
@@ -4835,20 +5492,79 @@
     "relatedConcepts": [
       {
         "concept": {
-          "name": "textarea"
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "email"
+            }
+          ],
+          "name": "input"
         },
         "module": "HTML"
       },
       {
         "concept": {
-          "name": "input",
           "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "tel"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
             {
               "name": "type",
               "value": "text"
             }
-          ]
-        }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "url"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "input"
+        },
+        "module": "XForms"
+      },
+      {
+        "concept": {
+          "name": "textarea"
+        },
+        "module": "HTML"
       }
     ],
     "requiredContextRole": [],

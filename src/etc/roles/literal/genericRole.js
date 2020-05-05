@@ -14,7 +14,20 @@ const genericRole: ARIARoleDefinition = {
     'aria-labelledby',
   ],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'span',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'div',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
@@ -23,6 +36,8 @@ const genericRole: ARIARoleDefinition = {
     [
       'roletype',
       'structure',
+      'section',
+      'landmark',
     ],
   ],
 };

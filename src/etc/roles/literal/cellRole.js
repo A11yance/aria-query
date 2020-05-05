@@ -17,7 +17,17 @@ const cellRole: ARIARoleDefinition = {
     'aria-rowindex': null,
     'aria-rowspan': null,
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        constraints: [
+          'descendant of table',
+        ],
+        name: 'td',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [
     'row',
   ],

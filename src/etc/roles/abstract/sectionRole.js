@@ -9,7 +9,26 @@ const sectionRole: ARIARoleDefinition = {
   nameFrom: [],
   prohibitedProps: [],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'frontmatter',
+      },
+      module: 'DTB',
+    },
+    {
+      concept: {
+        name: 'level',
+      },
+      module: 'DTB',
+    },
+    {
+      concept: {
+        name: 'level',
+      },
+      module: 'SMIL',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

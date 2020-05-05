@@ -14,6 +14,12 @@ const listRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        name: 'menu',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
         name: 'ol',
       },
       module: 'HTML',

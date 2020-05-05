@@ -14,7 +14,14 @@ const alertRole: ARIARoleDefinition = {
     'aria-atomic': 'true',
     'aria-live': 'assertive',
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'alert',
+      },
+      module: 'XForms',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

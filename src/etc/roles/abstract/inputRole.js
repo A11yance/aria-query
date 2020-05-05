@@ -13,7 +13,14 @@ const inputRole: ARIARoleDefinition = {
   props: {
     'aria-disabled': null,
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'input',
+      },
+      module: 'XForms',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

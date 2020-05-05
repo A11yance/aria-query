@@ -20,7 +20,14 @@ const rowRole: ARIARoleDefinition = {
     'aria-selected': null,
     'aria-setsize': null,
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'tr',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [
     'grid',
     'rowgroup',

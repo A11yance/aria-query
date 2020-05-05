@@ -14,9 +14,42 @@ const regionRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'aria-label',
+          },
+        ],
         name: 'section',
       },
-      module: 'ARIA',
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'aria-labelledby',
+          },
+        ],
+        name: 'section',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'Device Independence Glossart perceivable unit',
+      },
+    },
+    {
+      concept: {
+        name: 'frame',
+      },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

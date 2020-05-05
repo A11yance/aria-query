@@ -12,7 +12,26 @@ const rowgroupRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'tbody',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'tfoot',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'thead',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [
     'grid',
     'table',

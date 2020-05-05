@@ -24,20 +24,87 @@ const textboxRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
-        name: 'textarea',
+        attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'email',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'tel',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'text',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'url',
+          },
+        ],
+        name: 'input',
       },
       module: 'HTML',
     },
     {
       concept: {
         name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'text',
-          },
-        ],
       },
+      module: 'XForms',
+    },
+    {
+      concept: {
+        name: 'textarea',
+      },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

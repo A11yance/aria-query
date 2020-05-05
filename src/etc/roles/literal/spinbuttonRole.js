@@ -18,7 +18,20 @@ const spinbuttonRole: ARIARoleDefinition = {
     'aria-valuetext': null,
     'aria-valuenow': '0',
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'type',
+            value: 'number',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

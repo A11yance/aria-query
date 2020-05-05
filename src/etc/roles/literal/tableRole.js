@@ -14,7 +14,14 @@ const tableRole: ARIARoleDefinition = {
     'aria-colcount': null,
     'aria-rowcount': null,
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'table',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [

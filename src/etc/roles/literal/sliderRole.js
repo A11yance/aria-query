@@ -20,7 +20,20 @@ const sliderRole: ARIARoleDefinition = {
     'aria-valuemax': '100',
     'aria-orientation': 'horizontal',
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'type',
+            value: 'range',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

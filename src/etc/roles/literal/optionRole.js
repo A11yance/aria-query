@@ -20,9 +20,21 @@ const optionRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        name: 'item',
+      },
+      module: 'XForms',
+    },
+    {
+      concept: {
         name: 'listitem',
       },
       module: 'ARIA',
+    },
+    {
+      concept: {
+        name: 'option',
+      },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

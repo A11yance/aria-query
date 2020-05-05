@@ -23,9 +23,155 @@ const comboboxRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'email',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'search',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'tel',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'text',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'url',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'url',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'multiple',
+          },
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'size',
+          },
+        ],
         name: 'select',
       },
       module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'multiple',
+          },
+          {
+            name: 'size',
+            value: 1,
+          },
+        ],
+        name: 'select',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'select',
+      },
+      module: 'XForms',
     },
   ],
   requireContextRole: [],

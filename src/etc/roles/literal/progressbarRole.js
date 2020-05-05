@@ -16,6 +16,12 @@ const progressbarRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        name: 'progress',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
         name: 'status',
       },
       module: 'ARIA',

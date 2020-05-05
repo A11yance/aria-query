@@ -14,7 +14,20 @@ const rowheaderRole: ARIARoleDefinition = {
   props: {
     'aria-sort': null,
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'scope',
+            value: 'row',
+          },
+        ],
+        name: 'th',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [
     'row',
   ],

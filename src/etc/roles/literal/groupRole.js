@@ -17,7 +17,19 @@ const groupRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        name: 'details',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
         name: 'fieldset',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'optgroup',
       },
       module: 'HTML',
     },

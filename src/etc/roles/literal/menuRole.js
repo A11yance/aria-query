@@ -16,15 +16,27 @@ const menuRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        name: 'MENU',
+      },
+      module: 'JAPI',
+    },
+    {
+      concept: {
         name: 'list',
       },
       module: 'ARIA',
     },
     {
-      module: 'JAPI',
       concept: {
-        name: 'MENU',
+        name: 'select',
       },
+      module: 'XForms',
+    },
+    {
+      concept: {
+        name: 'sidebar',
+      },
+      module: 'DTB',
     },
   ],
   requireContextRole: [],

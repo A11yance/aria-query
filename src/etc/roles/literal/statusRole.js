@@ -14,7 +14,14 @@ const statusRole: ARIARoleDefinition = {
     'aria-atomic': 'true',
     'aria-live': 'polite',
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'output',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
