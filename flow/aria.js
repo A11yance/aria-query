@@ -176,7 +176,7 @@ type ARIARoleDefinition = {
   * content to text. */
   childrenPresentational: boolean,
   /* aria-* properties and states disallowed on this role. */
-  prohibitedProps: ARIAPropertyMap,
+  prohibitedProps: $Keys<ARIAPropertyMap>[],
   /* aria-* properties and states allowed on this role. */
   props: ARIAPropertyMap,
   /* The concepts in related domains that inform behavior mappings. */
