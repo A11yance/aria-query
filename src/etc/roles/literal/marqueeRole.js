@@ -9,6 +9,7 @@ const marqueeRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [],
   requireContextRole: [],

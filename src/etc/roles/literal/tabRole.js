@@ -10,10 +10,14 @@ const tabRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
+  prohibitedProps: [],
   props: {
+    'aria-disabled': null,
+    'aria-expanded': null,
+    'aria-haspopup': null,
     'aria-posinset': null,
-    'aria-selected': 'false',
     'aria-setsize': null,
+    'aria-selected': 'false',
   },
   relatedConcepts: [],
   requireContextRole: [

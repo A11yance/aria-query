@@ -9,11 +9,11 @@ const tablistRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-level': null,
     'aria-multiselectable': null,
     'aria-orientation': 'horizontal',
-    'aria-expanded': null,
   },
   relatedConcepts: [
     {
@@ -26,9 +26,7 @@ const tablistRole: ARIARoleDefinition = {
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
-    [
-      'tab',
-    ],
+    'tab',
   ],
   requiredProps: {},
   superClass: [

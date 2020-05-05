@@ -9,11 +9,11 @@ const rangeRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-valuemax': null,
     'aria-valuemin': null,
     'aria-valuenow': null,
-    'aria-valuetext': null,
   },
   relatedConcepts: [],
   requireContextRole: [],
@@ -23,7 +23,7 @@ const rangeRole: ARIARoleDefinition = {
   superClass: [
     [
       'roletype',
-      'widget',
+      'structure',
     ],
   ],
 };

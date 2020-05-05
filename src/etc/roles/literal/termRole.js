@@ -9,13 +9,14 @@ const termRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'dt',
+        name: 'dfn',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

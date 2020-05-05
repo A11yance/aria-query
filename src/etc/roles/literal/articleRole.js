@@ -9,16 +9,17 @@ const articleRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-posinset': null,
     'aria-setsize': null,
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'article',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

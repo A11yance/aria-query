@@ -9,186 +9,28 @@ const comboboxRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
-    'aria-expanded': 'false',
+    'aria-activedescendant': null,
     'aria-autocomplete': null,
-    'aria-required': null,
-    'aria-haspopup': 'listbox',
+    'aria-errormessage': null,
+    'aria-invalid': null,
     'aria-readonly': null,
+    'aria-required': null,
+    'aria-expanded': 'false',
+    'aria-haspopup': 'listbox',
   },
   relatedConcepts: [
     {
-      module: 'HTML',
-      concept: {
-        name: 'select',
-        attributes: [
-          {
-            name: 'multiple',
-            constraints: [
-              'undefined',
-            ],
-          },
-          {
-            name: 'size',
-            constraints: [
-              'undefined',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'select',
-        attributes: [
-          {
-            name: 'multiple',
-            constraints: [
-              'undefined',
-            ],
-          },
-          {
-            name: 'size',
-            value: 1,
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'text',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'search',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'url',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'tel',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'url',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'email',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'XForms',
       concept: {
         name: 'select',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],
   requiredContextRole: [],
-  requiredOwnedElements: [
-    [
-      'textbox',
-    ],
-    [
-      'listbox',
-    ],
-    [
-      'tree',
-    ],
-    [
-      'grid',
-    ],
-    [
-      'dialog',
-    ],
-  ],
+  requiredOwnedElements: [],
   requiredProps: {
     'aria-controls': null,
     'aria-expanded': 'false',
@@ -197,15 +39,7 @@ const comboboxRole: ARIARoleDefinition = {
     [
       'roletype',
       'widget',
-      'composite',
-      'select',
-    ],
-    [
-      'roletype',
-      'structure',
-      'section',
-      'group',
-      'select',
+      'input',
     ],
   ],
 };

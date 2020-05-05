@@ -17,15 +17,10 @@ type ARIAAbstractRole =
   | 'window';
 
 type ARIAWidgetRole =
-  'alert'
-  | 'alertdialog'
   | 'button'
   | 'checkbox'
-  | 'dialog'
   | 'gridcell'
   | 'link'
-  | 'log'
-  | 'marquee'
   | 'menuitem'
   | 'menuitemcheckbox'
   | 'menuitemradio'
@@ -36,13 +31,10 @@ type ARIAWidgetRole =
   | 'searchbox'
   | 'slider'
   | 'spinbutton'
-  | 'status'
   | 'switch'
   | 'tab'
   | 'tabpanel'
   | 'textbox'
-  | 'timer'
-  | 'tooltip'
   | 'treeitem';
 
 type ARIACompositeWidgetRole =
@@ -57,41 +49,68 @@ type ARIACompositeWidgetRole =
   | 'treegrid';
 
 type ARIADocumentStructureRole =
-  'article'
+  'application'
+  | 'article'
+  | 'blockquote'
+  | 'caption'
   | 'cell'
   | 'columnheader'
   | 'definition'
+  | 'deletion'
   | 'directory'
   | 'document'
+  | 'emphasis'
   | 'feed'
   | 'figure'
+  | 'generic'
   | 'group'
   | 'heading'
   | 'img'
+  | 'insertion'
   | 'list'
   | 'listitem'
   | 'math'
+  | 'meter'
   | 'none'
   | 'note'
+  | 'paragraph'
   | 'presentation'
-  | 'region'
   | 'row'
   | 'rowgroup'
   | 'rowheader'
   | 'separator'
+  | 'strong'
+  | 'subscript'
+  | 'superscript'
   | 'table'
   | 'term'
-  | 'toolbar';
+  | 'time'
+  | 'toolbar'
+  | 'tooltip';
 
 type ARIALandmarkRole =
-  'application'
-  | 'banner'
+  'banner'
   | 'complementary'
   | 'contentinfo'
   | 'form'
   | 'main'
   | 'navigation'
+  | 'region'
   | 'search';
+
+type ARIALiveRegionRole =
+  'alert'
+  | 'log'
+  | 'marquee'
+  | 'status'
+  | 'timer';
+
+type ARIAWindowRole =
+  'alertdialog'
+  | 'dialog';
+
+type ARIAUncategorizedRole =
+  'code';
 
 type ARIADPubRole =
   | 'doc-abstract'
@@ -138,7 +157,10 @@ type ARIARole =
   ARIAWidgetRole
   | ARIACompositeWidgetRole
   | ARIADocumentStructureRole
-  | ARIALandmarkRole;
+  | ARIALandmarkRole
+  | ARIALiveRegionRole
+  | ARIAWindowRole
+  | ARIAUncategorizedRole;
 
 type ARIARoleDefintionKey =
   ARIAAbstractRole
@@ -153,6 +175,8 @@ type ARIARoleDefinition = {
   /* Child presentational roles strip child nodes of roles and flatten the
   * content to text. */
   childrenPresentational: boolean,
+  /* aria-* properties and states disallowed on this role. */
+  prohibitedProps: ARIAPropertyMap,
   /* aria-* properties and states allowed on this role. */
   props: ARIAPropertyMap,
   /* The concepts in related domains that inform behavior mappings. */

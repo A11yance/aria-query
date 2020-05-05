@@ -7,29 +7,9 @@ const sectionRole: ARIARoleDefinition = {
   baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [],
-  props: {
-    'aria-expanded': null,
-  },
-  relatedConcepts: [
-    {
-      module: 'DTB',
-      concept: {
-        name: 'frontmatter',
-      },
-    },
-    {
-      module: 'DTB',
-      concept: {
-        name: 'level',
-      },
-    },
-    {
-      module: 'SMIL',
-      concept: {
-        name: 'level',
-      },
-    },
-  ],
+  prohibitedProps: [],
+  props: {},
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

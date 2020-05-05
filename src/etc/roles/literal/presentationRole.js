@@ -7,8 +7,9 @@ const presentationRole: ARIARoleDefinition = {
   baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
-    'author',
+    'prohibited',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [],
   requireContextRole: [],

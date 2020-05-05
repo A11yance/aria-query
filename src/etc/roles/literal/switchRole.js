@@ -10,22 +10,14 @@ const switchRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
-  props: {
-    'aria-checked': 'false',
-  },
-  relatedConcepts: [
-    {
-      module: 'ARIA',
-      concept: {
-        name: 'button',
-      },
-    },
-  ],
+  prohibitedProps: [],
+  props: {},
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
-    'aria-checked': 'false',
+    'aria-checked': null,
   },
   superClass: [
     [

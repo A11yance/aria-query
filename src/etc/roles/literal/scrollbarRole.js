@@ -9,27 +9,10 @@ const scrollbarRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
-    'aria-controls': null,
-    'aria-orientation': null,
-    'aria-valuemax': null,
-    'aria-valuemin': null,
-    'aria-valuenow': null,
-    'aria-atomic': null,
-    'aria-busy': null,
-    'aria-describedby': null,
     'aria-disabled': null,
-    'aria-dropeffect': null,
-    'aria-flowto': null,
-    'aria-grabbed': null,
-    'aria-haspopup': null,
-    'aria-hidden': null,
-    'aria-invalid': null,
-    'aria-label': null,
-    'aria-labelledby': null,
-    'aria-live': null,
-    'aria-owns': null,
-    'aria-relevant': null,
+    'aria-orientation': null,
     'aria-valuetext': null,
   },
   relatedConcepts: [],
@@ -38,12 +21,19 @@ const scrollbarRole: ARIARoleDefinition = {
   requiredOwnedElements: [],
   requiredProps: {
     'aria-controls': null,
-    'aria-orientation': null,
-    'aria-valuemax': null,
-    'aria-valuemin': null,
     'aria-valuenow': null,
   },
-  superClass: [],
+  superClass: [
+    [
+      'roletype',
+      'structure',
+      'range',
+    ],
+    [
+      'roletype',
+      'widget',
+    ],
+  ],
 };
 
 export default scrollbarRole;

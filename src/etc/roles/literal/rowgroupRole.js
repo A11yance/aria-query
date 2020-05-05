@@ -10,30 +10,9 @@ const rowgroupRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
-  props: {
-    'aria-activedescendant': null,
-    'aria-expanded': null,
-  },
-  relatedConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'tbody',
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'tfoot',
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'thead',
-      },
-    },
-  ],
+  prohibitedProps: [],
+  props: {},
+  relatedConcepts: [],
   requireContextRole: [
     'grid',
     'table',
@@ -45,9 +24,7 @@ const rowgroupRole: ARIARoleDefinition = {
     'treegrid',
   ],
   requiredOwnedElements: [
-    [
-      'row',
-    ],
+    'row',
   ],
   requiredProps: {},
   superClass: [

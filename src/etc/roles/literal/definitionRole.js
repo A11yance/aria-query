@@ -9,15 +9,9 @@ const definitionRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
-  relatedConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'dd',
-      },
-    },
-  ],
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

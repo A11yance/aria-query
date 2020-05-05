@@ -10,15 +10,22 @@ const columnheaderRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
+  prohibitedProps: [],
   props: {
     'aria-sort': null,
   },
   relatedConcepts: [
     {
-      module: 'HTML',
+      attributes: [
+        {
+          name: 'scope',
+          value: 'col',
+        },
+      ],
       concept: {
         name: 'th',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [

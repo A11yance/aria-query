@@ -9,15 +9,9 @@ const alertdialogRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
-  relatedConcepts: [
-    {
-      module: 'XForms',
-      concept: {
-        name: 'alert',
-      },
-    },
-  ],
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

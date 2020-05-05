@@ -9,16 +9,16 @@ const separatorRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
-    'aria-expanded': null,
     'aria-orientation': 'horizontal',
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'hr',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

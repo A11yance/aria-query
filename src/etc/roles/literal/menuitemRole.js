@@ -10,28 +10,32 @@ const menuitemRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
+  prohibitedProps: [],
   props: {
+    'aria-disabled': null,
+    'aria-expanded': null,
+    'aria-haspopup': null,
     'aria-posinset': null,
     'aria-setsize': null,
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'option',
       },
+      module: 'ARIA',
     },
     {
-      module: 'ARIA',
       concept: {
         name: 'listitem',
       },
+      module: 'ARIA',
     },
     {
-      module: 'HTML',
       concept: {
         name: 'menuitem',
       },
+      module: 'HTML',
     },
     {
       module: 'JAPI',

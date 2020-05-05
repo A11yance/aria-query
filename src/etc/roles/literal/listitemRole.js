@@ -9,6 +9,7 @@ const listitemRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-level': null,
     'aria-posinset': null,
@@ -16,27 +17,18 @@ const listitemRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'li',
-        constraints: [
-          'direct descendant of ol, ul or menu',
-        ],
       },
-    },
-    {
-      module: 'XForms',
-      concept: {
-        name: 'item',
-      },
+      module: 'HTML',
     },
   ],
   requireContextRole: [
-    'group',
+    'directory',
     'list',
   ],
   requiredContextRole: [
-    'group',
+    'directory',
     'list',
   ],
   requiredOwnedElements: [],

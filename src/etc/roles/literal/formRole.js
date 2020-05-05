@@ -9,49 +9,14 @@ const formRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'form',
-        attributes: [
-          {
-            name: 'name',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
       },
-    },
-    {
       module: 'HTML',
-      concept: {
-        name: 'form',
-        attributes: [
-          {
-            name: 'aria-label',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'form',
-        attributes: [
-          {
-            name: 'aria-labelledby',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
     },
   ],
   requireContextRole: [],

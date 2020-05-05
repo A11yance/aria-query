@@ -10,38 +10,23 @@ const optionRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
+  prohibitedProps: [],
   props: {
     'aria-checked': null,
     'aria-posinset': null,
-    'aria-selected': 'false',
     'aria-setsize': null,
+    'aria-selected': 'false',
   },
   relatedConcepts: [
     {
-      module: 'HTML',
-      concept: {
-        name: 'option',
-      },
-    },
-    {
-      module: 'ARIA',
       concept: {
         name: 'listitem',
       },
-    },
-    {
-      module: 'XForms',
-      concept: {
-        name: 'item',
-      },
+      module: 'ARIA',
     },
   ],
-  requireContextRole: [
-    'listbox',
-  ],
-  requiredContextRole: [
-    'listbox',
-  ],
+  requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
     'aria-selected': 'false',

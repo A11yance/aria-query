@@ -9,7 +9,11 @@ const listboxRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
+    'aria-errormessage': null,
+    'aria-expanded': null,
+    'aria-invalid': null,
     'aria-multiselectable': null,
     'aria-readonly': null,
     'aria-required': null,
@@ -17,71 +21,25 @@ const listboxRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
-      concept: {
-        name: 'datalist',
-      },
-    },
-    {
-      module: 'HTML',
       concept: {
         name: 'select',
-        attributes: [
-          {
-            name: 'multiple',
-          },
-        ],
       },
-    },
-    {
       module: 'HTML',
-      concept: {
-        name: 'select',
-        attributes: [
-          {
-            name: 'multiple',
-          },
-          {
-            name: 'size',
-            constraints: [
-              '>1',
-            ],
-          },
-        ],
-      },
     },
     {
-      module: 'HTML',
-      concept: {
-        name: 'select',
-        attributes: [
-          {
-            name: 'size',
-            constraints: [
-              '>1',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'ARIA',
       concept: {
         name: 'list',
       },
-    },
-    {
-      module: 'XForms',
-      concept: {
-        name: 'select',
-      },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
+    'option',
     [
       'option',
+      'group',
     ],
   ],
   requiredProps: {},

@@ -9,34 +9,23 @@ const sliderRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
-    'aria-orientation': 'horizontal',
+    'aria-errormessage': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
     'aria-readonly': null,
-    'aria-valuemax': '100',
+    'aria-valuetext': null,
     'aria-valuemin': '0',
-    'aria-valuenow': '50',
+    'aria-valuemax': '100',
+    'aria-orientation': 'horizontal',
   },
-  relatedConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'range',
-          },
-        ],
-      },
-    },
-  ],
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
-    'aria-valuemax': '100',
-    'aria-valuemin': '0',
-    'aria-valuenow': '50',
+    'aria-valuenow': null,
   },
   superClass: [
     [
@@ -46,7 +35,7 @@ const sliderRole: ARIARoleDefinition = {
     ],
     [
       'roletype',
-      'widget',
+      'structure',
       'range',
     ],
   ],

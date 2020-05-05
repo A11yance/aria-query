@@ -9,28 +9,20 @@ const tableRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-colcount': null,
     'aria-rowcount': null,
   },
-  relatedConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'table',
-      },
-    },
-  ],
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
     [
       'row',
-    ],
-    [
       'rowgroup',
-      'row',
     ],
+    'row',
   ],
   requiredProps: {},
   superClass: [

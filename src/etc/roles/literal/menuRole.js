@@ -9,27 +9,16 @@ const menuRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-orientation': 'vertical',
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'list',
       },
-    },
-    {
-      module: 'DTB',
-      concept: {
-        name: 'sidebar',
-      },
-    },
-    {
-      module: 'XForms',
-      concept: {
-        name: 'select',
-      },
+      module: 'ARIA',
     },
     {
       module: 'JAPI',
@@ -42,18 +31,20 @@ const menuRole: ARIARoleDefinition = {
   requiredContextRole: [],
   requiredOwnedElements: [
     [
+      'menuitem',
       'group',
-      'menuitemradio',
     ],
     [
-      'menuitem',
+      'menuitemradio',
+      'group',
     ],
     [
       'menuitemcheckbox',
+      'group',
     ],
-    [
-      'menuitemradio',
-    ],
+    'menuitem',
+    'menuitemcheckbox',
+    'menuitemradio',
   ],
   requiredProps: {},
   superClass: [

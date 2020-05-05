@@ -9,8 +9,8 @@ const windowRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
-    'aria-expanded': null,
     'aria-modal': null,
   },
   relatedConcepts: [],

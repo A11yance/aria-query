@@ -3,15 +3,14 @@
  */
 const logRole: ARIARoleDefinition = {
   abstract: false,
-  accessibleNameRequired: true,
+  accessibleNameRequired: false,
   baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
     'author',
   ],
-  props: {
-    'aria-live': 'polite',
-  },
+  prohibitedProps: [],
+  props: {},
   relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],

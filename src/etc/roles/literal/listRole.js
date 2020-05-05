@@ -9,37 +9,26 @@ const listRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'ol',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
         name: 'ul',
       },
-    },
-    {
       module: 'HTML',
-      concept: {
-        name: 'menu',
-      },
     },
   ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
-    [
-      'group',
-      'listitem',
-    ],
-    [
-      'listitem',
-    ],
+    'listitem',
   ],
   requiredProps: {},
   superClass: [

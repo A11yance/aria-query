@@ -9,15 +9,11 @@ const inputRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
-  props: {},
-  relatedConcepts: [
-    {
-      module: 'XForms',
-      concept: {
-        name: 'input',
-      },
-    },
-  ],
+  prohibitedProps: [],
+  props: {
+    'aria-disabled': null,
+  },
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

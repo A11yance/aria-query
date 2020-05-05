@@ -6,9 +6,8 @@ const roletypeRole: ARIARoleDefinition = {
   accessibleNameRequired: false,
   baseConcepts: [],
   childrenPresentational: false,
-  nameFrom: [
-    'author',
-  ],
+  nameFrom: [],
+  prohibitedProps: [],
   props: {
     'aria-atomic': null,
     'aria-busy': null,
@@ -16,14 +15,10 @@ const roletypeRole: ARIARoleDefinition = {
     'aria-current': null,
     'aria-describedby': null,
     'aria-details': null,
-    'aria-disabled': null,
     'aria-dropeffect': null,
-    'aria-errormessage': null,
     'aria-flowto': null,
     'aria-grabbed': null,
-    'aria-haspopup': null,
     'aria-hidden': null,
-    'aria-invalid': null,
     'aria-keyshortcuts': null,
     'aria-label': null,
     'aria-labelledby': null,
@@ -37,12 +32,6 @@ const roletypeRole: ARIARoleDefinition = {
       module: 'XHTML',
       concept: {
         name: 'role',
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'rel',
       },
     },
     {

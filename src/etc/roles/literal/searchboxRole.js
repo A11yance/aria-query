@@ -9,27 +9,9 @@ const searchboxRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
-  relatedConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'search',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'undefined',
-            ],
-          },
-        ],
-      },
-    },
-  ],
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

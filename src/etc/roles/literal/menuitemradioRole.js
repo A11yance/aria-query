@@ -10,15 +10,14 @@ const menuitemradioRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
-  props: {
-    'aria-checked': 'false',
-  },
+  prohibitedProps: [],
+  props: {},
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'menuitem',
       },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [
@@ -39,15 +38,15 @@ const menuitemradioRole: ARIARoleDefinition = {
     [
       'roletype',
       'widget',
-      'command',
-      'menuitem',
+      'input',
+      'checkbox',
       'menuitemcheckbox',
     ],
     [
       'roletype',
       'widget',
-      'input',
-      'checkbox',
+      'command',
+      'menuitem',
       'menuitemcheckbox',
     ],
     [

@@ -10,22 +10,25 @@ const menuitemcheckboxRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
+  prohibitedProps: [],
   props: {
-    'aria-checked': 'false',
+    'aria-checked': null,
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'menuitem',
       },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [
+    'group',
     'menu',
     'menubar',
   ],
   requiredContextRole: [
+    'group',
     'menu',
     'menubar',
   ],
@@ -37,14 +40,14 @@ const menuitemcheckboxRole: ARIARoleDefinition = {
     [
       'roletype',
       'widget',
-      'command',
-      'menuitem',
+      'input',
+      'checkbox',
     ],
     [
       'roletype',
       'widget',
-      'input',
-      'checkbox',
+      'command',
+      'menuitem',
     ],
   ],
 };

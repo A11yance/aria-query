@@ -9,33 +9,36 @@ const menubarRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
-    'aria-orientation': 'vertical',
+    'aria-orientation': 'horizontal',
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'toolbar',
       },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
     [
+      'menuitem',
       'group',
-      'menuitemradio',
     ],
     [
-      'menuitem',
+      'menuitemradio',
+      'group',
     ],
     [
       'menuitemcheckbox',
+      'group',
     ],
-    [
-      'menuitemradio',
-    ],
+    'menuitem',
+    'menuitemcheckbox',
+    'menuitemradio',
   ],
   requiredProps: {},
   superClass: [

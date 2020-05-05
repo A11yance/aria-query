@@ -9,6 +9,7 @@ const selectRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-orientation': null,
   },

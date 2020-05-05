@@ -10,23 +10,14 @@ const cellRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
+  prohibitedProps: [],
   props: {
     'aria-colindex': null,
     'aria-colspan': null,
     'aria-rowindex': null,
     'aria-rowspan': null,
   },
-  relatedConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'td',
-        constraints: [
-          'descendant of table',
-        ],
-      },
-    },
-  ],
+  relatedConcepts: [],
   requireContextRole: [
     'row',
   ],

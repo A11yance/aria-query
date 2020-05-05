@@ -9,46 +9,14 @@ const regionRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
-      concept: {
-        name: 'frame',
-      },
-    },
-    {
-      concept: {
-        name: 'Device Independence Glossart perceivable unit',
-      },
-    },
-    {
-      module: 'HTML',
       concept: {
         name: 'section',
-        attributes: [
-          {
-            name: 'aria-label',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
       },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'section',
-        attributes: [
-          {
-            name: 'aria-labelledby',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [],

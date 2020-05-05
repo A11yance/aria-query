@@ -10,23 +10,11 @@ const rowheaderRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
+  prohibitedProps: [],
   props: {
     'aria-sort': null,
   },
-  relatedConcepts: [
-    {
-      module: 'HTML',
-      concept: {
-        name: 'th',
-        attributes: [
-          {
-            name: 'scope',
-            value: 'row',
-          },
-        ],
-      },
-    },
-  ],
+  relatedConcepts: [],
   requireContextRole: [
     'row',
   ],

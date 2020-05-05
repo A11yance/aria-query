@@ -9,13 +9,14 @@ const commandRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'menuitem',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],
