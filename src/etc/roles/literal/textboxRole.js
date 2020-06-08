@@ -55,6 +55,26 @@ const textboxRole: ARIARoleDefinition = {
         attributes: [
           {
             name: 'type',
+            constraints: [
+              'undefined',
+            ],
+          },
+          {
+            name: 'list',
+            constraints: [
+              'undefined',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      module: 'HTML',
+      concept: {
+        name: 'input',
+        attributes: [
+          {
+            name: 'type',
             value: 'email',
           },
           {
