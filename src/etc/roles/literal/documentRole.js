@@ -19,10 +19,10 @@ const documentRole: ARIARoleDefinition = {
       },
     },
     {
-      module: 'HTML',
       concept: {
         name: 'body',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

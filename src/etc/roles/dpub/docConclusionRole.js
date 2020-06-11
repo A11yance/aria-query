@@ -12,10 +12,10 @@ const docConclusionRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'conclusion [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [],

@@ -16,22 +16,22 @@ const checkboxRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'option',
       },
+      module: 'ARIA',
     },
     {
-      module: 'HTML',
       concept: {
-        name: 'input',
         attributes: [
           {
             name: 'type',
             value: 'checkbox',
           },
         ],
+        name: 'input',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

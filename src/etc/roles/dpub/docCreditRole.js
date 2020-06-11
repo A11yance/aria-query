@@ -12,10 +12,10 @@ const docCreditRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'credit [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [],

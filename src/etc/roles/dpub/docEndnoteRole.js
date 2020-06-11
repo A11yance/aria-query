@@ -12,10 +12,10 @@ const docEndnoteRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'rearnote [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [

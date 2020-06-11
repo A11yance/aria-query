@@ -17,10 +17,10 @@ const tablistRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'DAISY',
       concept: {
         name: 'guide',
       },
+      module: 'DAISY',
     },
   ],
   requireContextRole: [],

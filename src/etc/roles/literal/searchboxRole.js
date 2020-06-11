@@ -12,22 +12,22 @@ const searchboxRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'input',
         attributes: [
           {
             name: 'type',
             value: 'search',
           },
           {
-            name: 'list',
             constraints: [
               'undefined',
             ],
+            name: 'list',
           },
         ],
+        name: 'input',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

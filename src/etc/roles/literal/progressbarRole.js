@@ -12,16 +12,16 @@ const progressbarRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'progress',
       },
+      module: 'HTML',
     },
     {
-      module: 'ARIA',
       concept: {
         name: 'status',
       },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [],

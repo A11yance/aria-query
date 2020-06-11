@@ -12,10 +12,10 @@ const mathRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'math',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

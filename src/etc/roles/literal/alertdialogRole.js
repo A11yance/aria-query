@@ -12,10 +12,10 @@ const alertdialogRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'XForms',
       concept: {
         name: 'alert',
       },
+      module: 'XForms',
     },
   ],
   requireContextRole: [],

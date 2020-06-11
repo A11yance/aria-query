@@ -18,16 +18,16 @@ const sliderRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'input',
         attributes: [
           {
             name: 'type',
             value: 'range',
           },
         ],
+        name: 'input',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

@@ -15,10 +15,10 @@ const articleRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'article',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

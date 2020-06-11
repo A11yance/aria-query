@@ -12,10 +12,10 @@ const inputRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'XForms',
       concept: {
         name: 'input',
       },
+      module: 'XForms',
     },
   ],
   requireContextRole: [],

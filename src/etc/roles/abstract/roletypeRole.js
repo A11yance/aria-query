@@ -34,22 +34,22 @@ const roletypeRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'XHTML',
       concept: {
         name: 'role',
       },
+      module: 'XHTML',
     },
     {
-      module: 'HTML',
       concept: {
         name: 'rel',
       },
+      module: 'HTML',
     },
     {
-      module: 'Dublin Core',
       concept: {
         name: 'type',
       },
+      module: 'Dublin Core',
     },
   ],
   requireContextRole: [],

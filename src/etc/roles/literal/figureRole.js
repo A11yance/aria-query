@@ -12,10 +12,10 @@ const figureRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'figure',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

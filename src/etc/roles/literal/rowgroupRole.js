@@ -16,22 +16,22 @@ const rowgroupRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'tbody',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
         name: 'tfoot',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
         name: 'thead',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [

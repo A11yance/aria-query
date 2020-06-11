@@ -16,16 +16,16 @@ const spinbuttonRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'input',
         attributes: [
           {
             name: 'type',
             value: 'number',
           },
         ],
+        name: 'input',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

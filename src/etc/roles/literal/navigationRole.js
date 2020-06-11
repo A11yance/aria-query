@@ -12,10 +12,10 @@ const navigationRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'nav',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

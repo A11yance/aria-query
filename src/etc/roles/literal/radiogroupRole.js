@@ -15,10 +15,10 @@ const radiogroupRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'list',
       },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [],

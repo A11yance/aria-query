@@ -14,10 +14,10 @@ const toolbarRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'menubar',
       },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [],

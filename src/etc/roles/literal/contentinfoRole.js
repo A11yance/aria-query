@@ -12,13 +12,13 @@ const contentinfoRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'footer',
         constraints: [
           'direct descendant of document',
         ],
+        name: 'footer',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

@@ -12,10 +12,10 @@ const commandRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'menuitem',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

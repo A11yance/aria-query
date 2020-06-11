@@ -18,10 +18,10 @@ const rowRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'tr',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [

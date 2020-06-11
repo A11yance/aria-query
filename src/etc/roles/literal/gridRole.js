@@ -16,16 +16,16 @@ const gridRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'table',
         attributes: [
           {
             name: 'role',
             value: 'grid',
           },
         ],
+        name: 'table',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],
