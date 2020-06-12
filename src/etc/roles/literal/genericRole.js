@@ -36,8 +36,6 @@ const genericRole: ARIARoleDefinition = {
     [
       'roletype',
       'structure',
-      'section',
-      'landmark',
     ],
   ],
 };

@@ -2948,7 +2948,7 @@
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
-    "superClass": ["landmark"]
+    "superClass": ["structure"]
   },
   "grid": {
     "abstract": false,
