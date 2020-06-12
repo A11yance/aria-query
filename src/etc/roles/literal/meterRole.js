@@ -10,9 +10,7 @@ const meterRole: ARIARoleDefinition = {
     'author',
   ],
   prohibitedProps: [],
-  props: {
-    'aria-valuetext': null,
-  },
+  props: {},
   relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],

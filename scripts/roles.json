@@ -4407,7 +4407,8 @@
       "aria-roledescription",
       "aria-valuemax",
       "aria-valuemin",
-      "aria-valuenow"
+      "aria-valuenow",
+      "aria-valuetext"
     ],
     "relatedConcepts": [],
     "requiredContextRole": [],

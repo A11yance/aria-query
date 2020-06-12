@@ -15,7 +15,6 @@ const sliderRole: ARIARoleDefinition = {
     'aria-haspopup': null,
     'aria-invalid': null,
     'aria-readonly': null,
-    'aria-valuetext': null,
     'aria-orientation': 'horizontal',
     'aria-valuemax': '100',
     'aria-valuemin': '0',
