@@ -449,6 +449,7 @@
     "props": [
       "aria-atomic",
       "aria-busy",
+      "aria-checked",
       "aria-controls",
       "aria-current",
       "aria-describedby",
@@ -593,6 +594,7 @@
       "aria-atomic",
       "aria-autocomplete",
       "aria-busy",
+      "aria-controls",
       "aria-current",
       "aria-describedby",
       "aria-details",
@@ -2798,7 +2800,7 @@
     ],
     "relatedConcepts": [],
     "requiredContextRole": [],
-    "requiredOwnedElements": ["article"],
+    "requiredOwnedElements": [["article"]],
     "requiredProps": [],
     "superClass": ["list"]
   },
@@ -2996,7 +2998,7 @@
       }
     ],
     "requiredContextRole": [],
-    "requiredOwnedElements": [["row", "rowgroup"], "row"],
+    "requiredOwnedElements": [["row"], ["row", "rowgroup"]],
     "requiredProps": [],
     "superClass": ["composite", "table"]
   },
@@ -3450,7 +3452,7 @@
       }
     ],
     "requiredContextRole": [],
-    "requiredOwnedElements": ["listitem"],
+    "requiredOwnedElements": [["listitem"]],
     "requiredProps": [],
     "superClass": ["section"]
   },
@@ -3547,7 +3549,7 @@
       }
     ],
     "requiredContextRole": [],
-    "requiredOwnedElements": ["option", ["option", "group"]],
+    "requiredOwnedElements": [["option", "group"], ["option"]],
     "requiredProps": [],
     "superClass": ["select"]
   },
@@ -3619,10 +3621,10 @@
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
-      "aria-live",
       "aria-owns",
       "aria-relevant",
-      "aria-roledescription"
+      "aria-roledescription",
+      ["aria-live", "polite"]
     ],
     "relatedConcepts": [],
     "requiredContextRole": [],
@@ -3702,7 +3704,7 @@
   "math": {
     "abstract": false,
     "accessibleNameRequired": false,
-    "childrenPresentational": true,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
     "prohibitedProps": [],
     "props": [
@@ -3796,9 +3798,9 @@
       ["menuitem", "group"],
       ["menuitemradio", "group"],
       ["menuitemcheckbox", "group"],
-      "menuitem",
-      "menuitemcheckbox",
-      "menuitemradio"
+      ["menuitem"],
+      ["menuitemcheckbox"],
+      ["menuitemradio"]
     ],
     "requiredProps": [],
     "superClass": ["select"]
@@ -3844,9 +3846,9 @@
       ["menuitem", "group"],
       ["menuitemradio", "group"],
       ["menuitemcheckbox", "group"],
-      "menuitem",
-      "menuitemcheckbox",
-      "menuitemradio"
+      ["menuitem"],
+      ["menuitemcheckbox"],
+      ["menuitemradio"]
     ],
     "requiredProps": [],
     "superClass": ["menu"]
@@ -4032,6 +4034,9 @@
       "aria-owns",
       "aria-relevant",
       "aria-roledescription",
+      "aria-valuemax",
+      "aria-valuemin",
+      "aria-valuenow",
       "aria-valuetext"
     ],
     "relatedConcepts": [],
@@ -4211,7 +4216,7 @@
     "accessibleNameRequired": false,
     "childrenPresentational": false,
     "nameFrom": ["prohibited"],
-    "prohibitedProps": [],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -4292,6 +4297,7 @@
     "props": [
       "aria-atomic",
       "aria-busy",
+      "aria-checked",
       "aria-controls",
       "aria-current",
       "aria-describedby",
@@ -4371,7 +4377,7 @@
       }
     ],
     "requiredContextRole": [],
-    "requiredOwnedElements": ["radio"],
+    "requiredOwnedElements": [["radio"]],
     "requiredProps": [],
     "superClass": ["select"]
   },
@@ -4569,7 +4575,12 @@
       }
     ],
     "requiredContextRole": ["grid", "rowgroup", "table", "treegrid"],
-    "requiredOwnedElements": ["cell", "columnheader", "gridcell", "rowheader"],
+    "requiredOwnedElements": [
+      ["cell"],
+      ["columnheader"],
+      ["gridcell"],
+      ["rowheader"]
+    ],
     "requiredProps": [],
     "superClass": ["group", "widget"]
   },
@@ -4619,7 +4630,7 @@
       }
     ],
     "requiredContextRole": ["grid", "table", "treegrid"],
-    "requiredOwnedElements": ["row"],
+    "requiredOwnedElements": [["row"]],
     "requiredProps": [],
     "superClass": ["structure"]
   },
@@ -4689,6 +4700,7 @@
     "props": [
       "aria-atomic",
       "aria-busy",
+      "aria-controls",
       "aria-current",
       "aria-describedby",
       "aria-details",
@@ -4701,13 +4713,14 @@
       "aria-label",
       "aria-labelledby",
       "aria-live",
-      "aria-orientation",
       "aria-owns",
       "aria-relevant",
       "aria-roledescription",
-      "aria-valuemax",
-      "aria-valuemin",
-      "aria-valuetext"
+      "aria-valuenow",
+      "aria-valuetext",
+      ["aria-orientation", "vertical"],
+      ["aria-valuemax", "100"],
+      ["aria-valuemin", "0"]
     ],
     "relatedConcepts": [],
     "requiredContextRole": [],
@@ -4932,6 +4945,7 @@
       "aria-current",
       "aria-describedby",
       "aria-details",
+      "aria-disabled",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
@@ -4943,7 +4957,10 @@
       "aria-owns",
       "aria-relevant",
       "aria-roledescription",
-      ["aria-orientation", "horizontal"]
+      "aria-valuetext",
+      ["aria-orientation", "horizontal"],
+      ["aria-valuemax", "100"],
+      ["aria-valuemin", "0"]
     ],
     "relatedConcepts": [
       {
@@ -4987,10 +5004,11 @@
       "aria-readonly",
       "aria-relevant",
       "aria-roledescription",
+      "aria-valuenow",
       "aria-valuetext",
-      ["aria-valuemin", "0"],
+      ["aria-orientation", "horizontal"],
       ["aria-valuemax", "100"],
-      ["aria-orientation", "horizontal"]
+      ["aria-valuemin", "0"]
     ],
     "relatedConcepts": [
       {
@@ -5230,6 +5248,7 @@
     "props": [
       "aria-atomic",
       "aria-busy",
+      "aria-checked",
       "aria-controls",
       "aria-current",
       "aria-describedby",
@@ -5338,7 +5357,7 @@
       }
     ],
     "requiredContextRole": [],
-    "requiredOwnedElements": [["row", "rowgroup"], "row"],
+    "requiredOwnedElements": [["row"], ["row", "rowgroup"]],
     "requiredProps": [],
     "superClass": ["section"]
   },
@@ -5381,7 +5400,7 @@
       }
     ],
     "requiredContextRole": [],
-    "requiredOwnedElements": ["tab"],
+    "requiredOwnedElements": [["tab"]],
     "requiredProps": [],
     "superClass": ["composite"]
   },
@@ -5756,7 +5775,7 @@
     ],
     "relatedConcepts": [],
     "requiredContextRole": [],
-    "requiredOwnedElements": [["treeitem", "group"], "treeitem"],
+    "requiredOwnedElements": [["treeitem", "group"], ["treeitem"]],
     "requiredProps": [],
     "superClass": ["select"]
   },
@@ -5797,7 +5816,7 @@
     ],
     "relatedConcepts": [],
     "requiredContextRole": [],
-    "requiredOwnedElements": [["row", "rowgroup"], "row"],
+    "requiredOwnedElements": [["row"], ["row", "rowgroup"]],
     "requiredProps": [],
     "superClass": ["grid", "tree"]
   },

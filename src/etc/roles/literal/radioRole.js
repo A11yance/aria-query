@@ -12,6 +12,7 @@ const radioRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
+    'aria-checked': null,
     'aria-posinset': null,
     'aria-setsize': null,
   },

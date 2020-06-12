@@ -41,10 +41,18 @@ const rowRole: ARIARoleDefinition = {
     'treegrid',
   ],
   requiredOwnedElements: [
-    'cell',
-    'columnheader',
-    'gridcell',
-    'rowheader',
+    [
+      'cell',
+    ],
+    [
+      'columnheader',
+    ],
+    [
+      'gridcell',
+    ],
+    [
+      'rowheader',
+    ],
   ],
   requiredProps: {},
   superClass: [

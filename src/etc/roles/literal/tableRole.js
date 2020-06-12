@@ -27,9 +27,11 @@ const tableRole: ARIARoleDefinition = {
   requiredOwnedElements: [
     [
       'row',
+    ],
+    [
+      'row',
       'rowgroup',
     ],
-    'row',
   ],
   requiredProps: {},
   superClass: [

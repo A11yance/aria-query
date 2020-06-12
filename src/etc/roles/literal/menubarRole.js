@@ -36,9 +36,15 @@ const menubarRole: ARIARoleDefinition = {
       'menuitemcheckbox',
       'group',
     ],
-    'menuitem',
-    'menuitemcheckbox',
-    'menuitemradio',
+    [
+      'menuitem',
+    ],
+    [
+      'menuitemcheckbox',
+    ],
+    [
+      'menuitemradio',
+    ],
   ],
   requiredProps: {},
   superClass: [

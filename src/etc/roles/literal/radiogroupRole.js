@@ -27,7 +27,9 @@ const radiogroupRole: ARIARoleDefinition = {
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
-    'radio',
+    [
+      'radio',
+    ],
   ],
   requiredProps: {},
   superClass: [

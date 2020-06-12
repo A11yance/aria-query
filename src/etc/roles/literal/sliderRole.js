@@ -16,9 +16,9 @@ const sliderRole: ARIARoleDefinition = {
     'aria-invalid': null,
     'aria-readonly': null,
     'aria-valuetext': null,
-    'aria-valuemin': '0',
-    'aria-valuemax': '100',
     'aria-orientation': 'horizontal',
+    'aria-valuemax': '100',
+    'aria-valuemin': '0',
   },
   relatedConcepts: [
     {

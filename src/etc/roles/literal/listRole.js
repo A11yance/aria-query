@@ -34,7 +34,9 @@ const listRole: ARIARoleDefinition = {
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
-    'listitem',
+    [
+      'listitem',
+    ],
   ],
   requiredProps: {},
   superClass: [

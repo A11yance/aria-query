@@ -15,7 +15,9 @@ const feedRole: ARIARoleDefinition = {
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
-    'article',
+    [
+      'article',
+    ],
   ],
   requiredProps: {},
   superClass: [

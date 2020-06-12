@@ -5,7 +5,7 @@ const mathRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],
-  childrenPresentational: true,
+  childrenPresentational: false,
   nameFrom: [
     'author',
   ],

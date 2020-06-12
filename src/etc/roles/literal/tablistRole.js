@@ -26,7 +26,9 @@ const tablistRole: ARIARoleDefinition = {
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
-    'tab',
+    [
+      'tab',
+    ],
   ],
   requiredProps: {},
   superClass: [

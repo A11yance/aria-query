@@ -9,7 +9,10 @@ const presentationRole: ARIARoleDefinition = {
   nameFrom: [
     'prohibited',
   ],
-  prohibitedProps: [],
+  prohibitedProps: [
+    'aria-label',
+    'aria-labelledby',
+  ],
   props: {},
   relatedConcepts: [],
   requireContextRole: [],

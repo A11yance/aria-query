@@ -84,10 +84,12 @@ const listboxRole: ARIARoleDefinition = {
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
-    'option',
     [
       'option',
       'group',
+    ],
+    [
+      'option',
     ],
   ],
   requiredProps: {},

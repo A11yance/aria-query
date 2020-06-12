@@ -43,7 +43,9 @@ const rowgroupRole: ARIARoleDefinition = {
     'treegrid',
   ],
   requiredOwnedElements: [
-    'row',
+    [
+      'row',
+    ],
   ],
   requiredProps: {},
   superClass: [

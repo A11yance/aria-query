@@ -11,9 +11,7 @@ const menuitemcheckboxRole: ARIARoleDefinition = {
     'contents',
   ],
   prohibitedProps: [],
-  props: {
-    'aria-checked': null,
-  },
+  props: {},
   relatedConcepts: [
     {
       concept: {

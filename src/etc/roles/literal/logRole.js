@@ -10,7 +10,9 @@ const logRole: ARIARoleDefinition = {
     'author',
   ],
   prohibitedProps: [],
-  props: {},
+  props: {
+    'aria-live': 'polite',
+  },
   relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
