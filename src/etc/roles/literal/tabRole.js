@@ -12,8 +12,8 @@ const tabRole: ARIARoleDefinition = {
   ],
   props: {
     'aria-posinset': null,
-    'aria-selected': 'false',
     'aria-setsize': null,
+    'aria-selected': 'false',
   },
   relatedConcepts: [],
   requireContextRole: [

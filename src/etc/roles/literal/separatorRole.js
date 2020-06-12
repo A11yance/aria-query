@@ -15,10 +15,10 @@ const separatorRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'hr',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

@@ -16,28 +16,28 @@ const menuitemRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
-      concept: {
-        name: 'option',
-      },
-    },
-    {
-      module: 'ARIA',
-      concept: {
-        name: 'listitem',
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'menuitem',
-      },
-    },
-    {
-      module: 'JAPI',
       concept: {
         name: 'MENU_ITEM',
       },
+      module: 'JAPI',
+    },
+    {
+      concept: {
+        name: 'listitem',
+      },
+      module: 'ARIA',
+    },
+    {
+      concept: {
+        name: 'menuitem',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'option',
+      },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [

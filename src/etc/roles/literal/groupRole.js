@@ -14,22 +14,22 @@ const groupRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
-      concept: {
-        name: 'fieldset',
-      },
-    },
-    {
-      module: 'HTML',
       concept: {
         name: 'details',
       },
+      module: 'HTML',
     },
     {
+      concept: {
+        name: 'fieldset',
+      },
       module: 'HTML',
+    },
+    {
       concept: {
         name: 'optgroup',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

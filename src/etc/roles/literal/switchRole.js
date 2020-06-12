@@ -15,10 +15,10 @@ const switchRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'button',
       },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [],

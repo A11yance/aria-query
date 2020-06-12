@@ -12,13 +12,13 @@ const bannerRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'banner',
         constraints: [
           'direct descendant of document',
         ],
+        name: 'banner',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

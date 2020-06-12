@@ -15,10 +15,10 @@ const tableRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'table',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],
@@ -26,9 +26,9 @@ const tableRole: ARIARoleDefinition = {
   requiredOwnedElements: [
     [
       'row',
+      'rowgroup',
     ],
     [
-      'rowgroup',
       'row',
     ],
   ],

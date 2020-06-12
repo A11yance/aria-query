@@ -16,109 +16,109 @@ const buttonRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'button',
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
         attributes: [
           {
-            name: 'type',
-            value: 'button',
+            constraints: [
+              'set',
+            ],
+            name: 'aria-pressed',
           },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'image',
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'reset',
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'submit',
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
           {
             name: 'type',
             value: 'checkbox',
           },
-          {
-            name: 'aria-pressed',
-            constraints: [
-              'set',
-            ],
-          },
         ],
+        name: 'input',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
-        name: 'summary',
-        constraints: [
-          'direct descendant of details element with the open attribute defined',
-        ],
-        attributes: [
-          {
-            name: 'aria-expanded',
-            value: 'true',
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'summary',
         attributes: [
           {
             name: 'aria-expanded',
             value: 'false',
           },
         ],
+        name: 'summary',
       },
+      module: 'HTML',
     },
     {
-      module: 'XForms',
+      concept: {
+        attributes: [
+          {
+            name: 'aria-expanded',
+            value: 'true',
+          },
+        ],
+        constraints: [
+          'direct descendant of details element with the open attribute defined',
+        ],
+        name: 'summary',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'type',
+            value: 'button',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'type',
+            value: 'image',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'type',
+            value: 'reset',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'type',
+            value: 'submit',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'button',
+      },
+      module: 'HTML',
+    },
+    {
       concept: {
         name: 'trigger',
       },
+      module: 'XForms',
     },
   ],
   requireContextRole: [],

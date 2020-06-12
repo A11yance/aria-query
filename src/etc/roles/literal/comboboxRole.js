@@ -10,183 +10,183 @@ const comboboxRole: ARIARoleDefinition = {
     'author',
   ],
   props: {
-    'aria-expanded': 'false',
     'aria-autocomplete': null,
-    'aria-required': null,
-    'aria-haspopup': 'listbox',
     'aria-readonly': null,
+    'aria-required': null,
+    'aria-expanded': 'false',
+    'aria-haspopup': 'listbox',
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'select',
         attributes: [
           {
-            name: 'multiple',
             constraints: [
-              'undefined',
+              'set',
             ],
+            name: 'list',
           },
           {
-            name: 'size',
-            constraints: [
-              'undefined',
-            ],
+            name: 'type',
+            value: 'email',
           },
         ],
+        name: 'input',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
-        name: 'select',
         attributes: [
           {
-            name: 'multiple',
+            constraints: [
+              'set',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'search',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'tel',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'text',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'url',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'url',
+          },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
             constraints: [
               'undefined',
             ],
+            name: 'multiple',
+          },
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'size',
+          },
+        ],
+        name: 'select',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'multiple',
           },
           {
             name: 'size',
             value: 1,
           },
         ],
+        name: 'select',
       },
-    },
-    {
       module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'text',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
     },
     {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'search',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'url',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'tel',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'url',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
-          {
-            name: 'type',
-            value: 'email',
-          },
-          {
-            name: 'list',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'XForms',
       concept: {
         name: 'select',
       },
+      module: 'XForms',
     },
   ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
     [
-      'textbox',
-    ],
-    [
-      'listbox',
-    ],
-    [
-      'tree',
+      'dialog',
     ],
     [
       'grid',
     ],
     [
-      'dialog',
+      'listbox',
+    ],
+    [
+      'textbox',
+    ],
+    [
+      'tree',
     ],
   ],
   requiredProps: {

@@ -13,27 +13,27 @@ const optionRole: ARIARoleDefinition = {
   props: {
     'aria-checked': null,
     'aria-posinset': null,
-    'aria-selected': 'false',
     'aria-setsize': null,
+    'aria-selected': 'false',
   },
   relatedConcepts: [
     {
-      module: 'HTML',
-      concept: {
-        name: 'option',
-      },
-    },
-    {
-      module: 'ARIA',
-      concept: {
-        name: 'listitem',
-      },
-    },
-    {
-      module: 'XForms',
       concept: {
         name: 'item',
       },
+      module: 'XForms',
+    },
+    {
+      concept: {
+        name: 'listitem',
+      },
+      module: 'ARIA',
+    },
+    {
+      concept: {
+        name: 'option',
+      },
+      module: 'HTML',
     },
   ],
   requireContextRole: [

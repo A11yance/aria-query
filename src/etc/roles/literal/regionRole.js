@@ -12,10 +12,32 @@ const regionRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'frame',
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'aria-label',
+          },
+        ],
+        name: 'section',
       },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'aria-labelledby',
+          },
+        ],
+        name: 'section',
+      },
+      module: 'HTML',
     },
     {
       concept: {
@@ -23,32 +45,10 @@ const regionRole: ARIARoleDefinition = {
       },
     },
     {
-      module: 'HTML',
       concept: {
-        name: 'section',
-        attributes: [
-          {
-            name: 'aria-label',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
+        name: 'frame',
       },
-    },
-    {
       module: 'HTML',
-      concept: {
-        name: 'section',
-        attributes: [
-          {
-            name: 'aria-labelledby',
-            constraints: [
-              'set',
-            ],
-          },
-        ],
-      },
     },
   ],
   requireContextRole: [],

@@ -10,31 +10,31 @@ const spinbuttonRole: ARIARoleDefinition = {
     'author',
   ],
   props: {
-    'aria-valuenow': '0',
-    'aria-required': null,
+    0: 'aria-valuenow',
     'aria-readonly': null,
+    'aria-required': null,
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'input',
         attributes: [
           {
             name: 'type',
             value: 'number',
           },
         ],
+        name: 'input',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
+    0: 'aria-valuenow',
     'aria-valuemax': null,
     'aria-valuemin': null,
-    'aria-valuenow': '0',
   },
   superClass: [
     [

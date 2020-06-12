@@ -11,44 +11,44 @@ const headingRole: ARIARoleDefinition = {
     'contents',
   ],
   props: {
-    'aria-level': '2',
+    2: 'aria-level',
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'h1',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
         name: 'h2',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
         name: 'h3',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
         name: 'h4',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
         name: 'h5',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
         name: 'h6',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

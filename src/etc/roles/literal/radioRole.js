@@ -11,23 +11,23 @@ const radioRole: ARIARoleDefinition = {
     'contents',
   ],
   props: {
-    'aria-checked': 'false',
     'aria-posinset': null,
     'aria-selected': null,
     'aria-setsize': null,
+    'aria-checked': 'false',
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'input',
         attributes: [
           {
             name: 'type',
             value: 'radio',
           },
         ],
+        name: 'input',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

@@ -12,20 +12,20 @@ const docGlossaryRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'glossary [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
     [
-      'term',
+      'definition',
     ],
     [
-      'definition',
+      'term',
     ],
   ],
   requiredProps: {},

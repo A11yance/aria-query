@@ -18,13 +18,13 @@ const cellRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'td',
         constraints: [
           'descendant of table',
         ],
+        name: 'td',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [

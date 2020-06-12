@@ -17,64 +17,64 @@ const listboxRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              '>1',
+            ],
+            name: 'size',
+          },
+          {
+            name: 'multiple',
+          },
+        ],
+        name: 'select',
+      },
       module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              '>1',
+            ],
+            name: 'size',
+          },
+        ],
+        name: 'select',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'multiple',
+          },
+        ],
+        name: 'select',
+      },
+      module: 'HTML',
+    },
+    {
       concept: {
         name: 'datalist',
       },
-    },
-    {
       module: 'HTML',
-      concept: {
-        name: 'select',
-        attributes: [
-          {
-            name: 'multiple',
-          },
-        ],
-      },
     },
     {
-      module: 'HTML',
-      concept: {
-        name: 'select',
-        attributes: [
-          {
-            name: 'multiple',
-          },
-          {
-            name: 'size',
-            constraints: [
-              '>1',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'select',
-        attributes: [
-          {
-            name: 'size',
-            constraints: [
-              '>1',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      module: 'ARIA',
       concept: {
         name: 'list',
       },
+      module: 'ARIA',
     },
     {
-      module: 'XForms',
       concept: {
         name: 'select',
       },
+      module: 'XForms',
     },
   ],
   requireContextRole: [],

@@ -12,10 +12,10 @@ const complementaryRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'aside',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

@@ -10,7 +10,7 @@ const selectRole: ARIARoleDefinition = {
     'author',
   ],
   props: {
-    'aria-orientation': null,
+    'aria-orientation': 'vertical',
   },
   relatedConcepts: [],
   requireContextRole: [],

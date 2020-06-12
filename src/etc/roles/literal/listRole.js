@@ -12,22 +12,22 @@ const listRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
-      concept: {
-        name: 'ol',
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'ul',
-      },
-    },
-    {
-      module: 'HTML',
       concept: {
         name: 'menu',
       },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'ol',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'ul',
+      },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

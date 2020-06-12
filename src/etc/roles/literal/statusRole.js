@@ -15,10 +15,10 @@ const statusRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'output',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

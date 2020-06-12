@@ -15,16 +15,16 @@ const rowheaderRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'th',
         attributes: [
           {
             name: 'scope',
             value: 'row',
           },
         ],
+        name: 'th',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [

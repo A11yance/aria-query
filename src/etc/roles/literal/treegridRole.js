@@ -15,8 +15,8 @@ const treegridRole: ARIARoleDefinition = {
   requiredContextRole: [],
   requiredOwnedElements: [
     [
-      'rowgroup',
       'row',
+      'rowgroup',
     ],
     [
       'row',

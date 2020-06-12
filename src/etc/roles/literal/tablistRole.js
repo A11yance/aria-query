@@ -10,17 +10,17 @@ const tablistRole: ARIARoleDefinition = {
     'author',
   ],
   props: {
+    'aria-expanded': null,
     'aria-level': null,
     'aria-multiselectable': null,
     'aria-orientation': 'horizontal',
-    'aria-expanded': null,
   },
   relatedConcepts: [
     {
-      module: 'DAISY',
       concept: {
         name: 'guide',
       },
+      module: 'DAISY',
     },
   ],
   requireContextRole: [],

@@ -12,10 +12,10 @@ const docBiblioentryRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'EPUB biblioentry [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [

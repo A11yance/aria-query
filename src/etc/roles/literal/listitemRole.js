@@ -16,19 +16,19 @@ const listitemRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'li',
         constraints: [
           'direct descendant of ol, ul or menu',
         ],
+        name: 'li',
       },
+      module: 'HTML',
     },
     {
-      module: 'XForms',
       concept: {
         name: 'item',
       },
+      module: 'XForms',
     },
   ],
   requireContextRole: [

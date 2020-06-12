@@ -15,10 +15,10 @@ const menuitemradioRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'menuitem',
       },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [
@@ -39,15 +39,15 @@ const menuitemradioRole: ARIARoleDefinition = {
     [
       'roletype',
       'widget',
-      'command',
-      'menuitem',
+      'input',
+      'checkbox',
       'menuitemcheckbox',
     ],
     [
       'roletype',
       'widget',
-      'input',
-      'checkbox',
+      'command',
+      'menuitem',
       'menuitemcheckbox',
     ],
     [

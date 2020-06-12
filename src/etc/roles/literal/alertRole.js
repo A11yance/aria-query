@@ -15,10 +15,10 @@ const alertRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'XForms',
       concept: {
         name: 'alert',
       },
+      module: 'XForms',
     },
   ],
   requireContextRole: [],

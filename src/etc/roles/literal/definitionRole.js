@@ -12,10 +12,10 @@ const definitionRole: ARIARoleDefinition = {
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'dd',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

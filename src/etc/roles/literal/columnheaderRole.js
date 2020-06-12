@@ -15,10 +15,10 @@ const columnheaderRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'th',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [
