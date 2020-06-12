@@ -9,15 +9,16 @@ const toolbarRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-orientation': 'horizontal',
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'menubar',
       },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [],

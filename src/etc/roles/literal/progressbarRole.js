@@ -9,19 +9,20 @@ const progressbarRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'progress',
       },
+      module: 'HTML',
     },
     {
-      module: 'ARIA',
       concept: {
         name: 'status',
       },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [],
@@ -31,8 +32,12 @@ const progressbarRole: ARIARoleDefinition = {
   superClass: [
     [
       'roletype',
-      'widget',
+      'structure',
       'range',
+    ],
+    [
+      'roletype',
+      'widget',
     ],
   ],
 };

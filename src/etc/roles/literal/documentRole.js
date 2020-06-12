@@ -9,9 +9,8 @@ const documentRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
-  props: {
-    'aria-expanded': null,
-  },
+  prohibitedProps: [],
+  props: {},
   relatedConcepts: [
     {
       concept: {
@@ -19,10 +18,10 @@ const documentRole: ARIARoleDefinition = {
       },
     },
     {
-      module: 'HTML',
       concept: {
         name: 'body',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

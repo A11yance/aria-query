@@ -10,13 +10,18 @@ const docBacklinkRole: ARIARoleDefinition = {
     'author',
     'content',
   ],
-  props: {},
+  prohibitedProps: [],
+  props: {
+    'aria-errormessage': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
+  },
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'referrer [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [],

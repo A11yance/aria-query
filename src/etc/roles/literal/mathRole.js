@@ -5,17 +5,18 @@ const mathRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],
-  childrenPresentational: true,
+  childrenPresentational: false,
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'math',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

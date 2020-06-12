@@ -9,13 +9,14 @@ const figureRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'figure',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

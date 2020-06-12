@@ -10,18 +10,22 @@ const rowRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
+  prohibitedProps: [],
   props: {
     'aria-colindex': null,
+    'aria-expanded': null,
     'aria-level': null,
+    'aria-posinset': null,
     'aria-rowindex': null,
     'aria-selected': null,
+    'aria-setsize': null,
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'tr',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [

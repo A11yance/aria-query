@@ -9,8 +9,14 @@ const applicationRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-activedescendant': null,
+    'aria-disabled': null,
+    'aria-errormessage': null,
+    'aria-expanded': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
   },
   relatedConcepts: [
     {

@@ -9,6 +9,7 @@ const landmarkRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [],
   requireContextRole: [],

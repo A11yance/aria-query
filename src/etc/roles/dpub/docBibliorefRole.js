@@ -10,13 +10,18 @@ const docBibliorefRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
-  props: {},
+  prohibitedProps: [],
+  props: {
+    'aria-errormessage': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
+  },
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'biblioref [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [],

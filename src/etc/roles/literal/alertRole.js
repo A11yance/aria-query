@@ -9,16 +9,17 @@ const alertRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-atomic': 'true',
     'aria-live': 'assertive',
   },
   relatedConcepts: [
     {
-      module: 'XForms',
       concept: {
         name: 'alert',
       },
+      module: 'XForms',
     },
   ],
   requireContextRole: [],

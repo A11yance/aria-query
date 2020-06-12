@@ -9,13 +9,14 @@ const docPullquoteRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'pullquote [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [],

@@ -7,6 +7,7 @@ const widgetRole: ARIARoleDefinition = {
   baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [],
   requireContextRole: [],

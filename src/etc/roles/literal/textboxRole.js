@@ -9,9 +9,13 @@ const textboxRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-activedescendant': null,
     'aria-autocomplete': null,
+    'aria-errormessage': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
     'aria-multiline': null,
     'aria-placeholder': null,
     'aria-readonly': null,
@@ -19,108 +23,108 @@ const textboxRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      module: 'XForms',
       concept: {
-        name: 'input',
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'textarea',
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
         attributes: [
           {
-            name: 'type',
-            value: 'text',
-          },
-          {
-            name: 'list',
             constraints: [
               'undefined',
             ],
+            name: 'type',
+          },
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'list',
           },
         ],
+        name: 'input',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
-        name: 'input',
         attributes: [
           {
-            name: 'type',
             constraints: [
               'undefined',
             ],
-          },
-          {
             name: 'list',
-            constraints: [
-              'undefined',
-            ],
           },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
           {
             name: 'type',
             value: 'email',
           },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
           {
-            name: 'list',
             constraints: [
               'undefined',
             ],
+            name: 'list',
           },
-        ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
-        attributes: [
           {
             name: 'type',
             value: 'tel',
           },
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
           {
-            name: 'list',
             constraints: [
               'undefined',
             ],
+            name: 'list',
+          },
+          {
+            name: 'type',
+            value: 'text',
           },
         ],
+        name: 'input',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
-        name: 'input',
         attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'list',
+          },
           {
             name: 'type',
             value: 'url',
           },
-          {
-            name: 'list',
-            constraints: [
-              'undefined',
-            ],
-          },
         ],
+        name: 'input',
       },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'input',
+      },
+      module: 'XForms',
+    },
+    {
+      concept: {
+        name: 'textarea',
+      },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

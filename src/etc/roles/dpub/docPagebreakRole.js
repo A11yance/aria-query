@@ -9,13 +9,19 @@ const docPagebreakRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
-  props: {},
+  prohibitedProps: [],
+  props: {
+    'aria-errormessage': null,
+    'aria-expanded': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
+  },
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'pagebreak [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [],

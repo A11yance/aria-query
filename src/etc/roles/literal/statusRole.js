@@ -9,16 +9,17 @@ const statusRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-atomic': 'true',
     'aria-live': 'polite',
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'output',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

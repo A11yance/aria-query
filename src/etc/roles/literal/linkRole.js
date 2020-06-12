@@ -10,42 +10,44 @@ const linkRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
+  prohibitedProps: [],
   props: {
+    'aria-disabled': null,
     'aria-expanded': null,
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
+        attributes: [
+          {
+            name: 'href',
+          },
+        ],
         name: 'a',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
         attributes: [
           {
             name: 'href',
           },
         ],
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
         name: 'area',
-        attributes: [
-          {
-            name: 'href',
-          },
-        ],
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
-        name: 'link',
         attributes: [
           {
             name: 'href',
           },
         ],
+        name: 'link',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

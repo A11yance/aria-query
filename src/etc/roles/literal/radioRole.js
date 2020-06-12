@@ -10,31 +10,31 @@ const radioRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
+  prohibitedProps: [],
   props: {
-    'aria-checked': 'false',
+    'aria-checked': null,
     'aria-posinset': null,
-    'aria-selected': null,
     'aria-setsize': null,
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'input',
         attributes: [
           {
             name: 'type',
             value: 'radio',
           },
         ],
+        name: 'input',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
-    'aria-checked': 'false',
+    'aria-checked': null,
   },
   superClass: [
     [

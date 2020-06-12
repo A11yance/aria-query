@@ -9,16 +9,19 @@ const radiogroupRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
+    'aria-errormessage': null,
+    'aria-invalid': null,
     'aria-readonly': null,
     'aria-required': null,
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
         name: 'list',
       },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [],

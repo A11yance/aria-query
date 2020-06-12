@@ -3,12 +3,13 @@
  */
 const timerRole: ARIARoleDefinition = {
   abstract: false,
-  accessibleNameRequired: true,
+  accessibleNameRequired: false,
   baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [],
   requireContextRole: [],

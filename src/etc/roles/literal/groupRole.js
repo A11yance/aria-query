@@ -9,27 +9,29 @@ const groupRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-activedescendant': null,
+    'aria-disabled': null,
   },
   relatedConcepts: [
     {
-      module: 'HTML',
-      concept: {
-        name: 'fieldset',
-      },
-    },
-    {
-      module: 'HTML',
       concept: {
         name: 'details',
       },
+      module: 'HTML',
     },
     {
+      concept: {
+        name: 'fieldset',
+      },
       module: 'HTML',
+    },
+    {
       concept: {
         name: 'optgroup',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

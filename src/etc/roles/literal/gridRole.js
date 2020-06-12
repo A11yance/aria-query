@@ -9,34 +9,34 @@ const gridRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
-    'aria-level': null,
     'aria-multiselectable': null,
     'aria-readonly': null,
   },
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'table',
         attributes: [
           {
             name: 'role',
             value: 'grid',
           },
         ],
+        name: 'table',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
     [
-      'rowgroup',
       'row',
     ],
     [
       'row',
+      'rowgroup',
     ],
   ],
   requiredProps: {},

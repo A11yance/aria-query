@@ -1,572 +1,769 @@
 {
   "alert": {
-    "superClass": ["section"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
-      ["aria-atomic", "true"],
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
-      ["aria-live", "assertive"],
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription",
+      ["aria-atomic", "true"],
+      ["aria-live", "assertive"]
     ],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "XForms",
-      "concept": {
-        "name": "alert"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "alert"
+        },
+        "module": "XForms"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "alertdialog": {
-    "superClass": ["alert", "dialog"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-modal",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "XForms",
-      "concept": {
-        "name": "alert"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "alert"
+        },
+        "module": "XForms"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["alert", "dialog"]
   },
   "application": {
-    "superClass": ["structure"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
+    "prohibitedProps": [],
     "props": [
       "aria-activedescendant",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "concept": {
-        "name": "Device Independence Delivery Unit"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "Device Independence Delivery Unit"
+        }
       }
-    }]
-  },
-  "article": {
-    "superClass": ["document"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
+    "superClass": ["structure"]
+  },
+  "article": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
       "aria-posinset",
-      "aria-setsize",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-setsize"
     ],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "article"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "article"
+        },
+        "module": "HTML"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["document"]
   },
   "banner": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "banner",
-        "constraints": ["direct descendant of document"]
+    "relatedConcepts": [
+      {
+        "concept": {
+          "constraints": ["direct descendant of document"],
+          "name": "banner"
+        },
+        "module": "HTML"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
+  },
+  "blockquote": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "button": {
-    "superClass": ["command"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": true,
     "nameFrom": ["author", "contents"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
-      "aria-pressed",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-pressed",
+      "aria-relevant",
+      "aria-roledescription"
     ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "aria-pressed"
+            },
+            {
+              "name": "type",
+              "value": "checkbox"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "aria-expanded",
+              "value": "false"
+            }
+          ],
+          "name": "summary"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "aria-expanded",
+              "value": "true"
+            }
+          ],
+          "constraints": [
+            "direct descendant of details element with the open attribute defined"
+          ],
+          "name": "summary"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "button"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "image"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "reset"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "submit"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "button"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "trigger"
+        },
+        "module": "XForms"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["command"]
+  },
+  "caption": {
     "abstract": false,
-    "childrenPresentational": true,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "button"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "button"
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "image"
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "reset"
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "submit"
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "checkbox"
-        }, {
-          "name": "aria-pressed",
-          "constraints": ["set"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "summary",
-        "constraints": ["direct descendant of details element with the open attribute defined"],
-        "attributes": [{
-          "name": "aria-expanded",
-          "value": "true"
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "summary",
-        "attributes": [{
-          "name": "aria-expanded",
-          "value": "false"
-        }]
-      }
-    }, {
-      "module": "XForms",
-      "concept": {
-        "name": "trigger"
-      }
-    }]
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": ["figure", "grid", "table"],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "cell": {
-    "superClass": ["section"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author", "contents"],
-    "requiredContextRole": ["row"],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
+    "prohibitedProps": [],
     "props": [
+      "aria-atomic",
+      "aria-busy",
       "aria-colindex",
       "aria-colspan",
-      "aria-rowindex",
-      "aria-rowspan",
-      "aria-atomic",
-      "aria-busy",
       "aria-controls",
       "aria-current",
       "aria-describedby",
       "aria-details",
-      "aria-disabled",
       "aria-dropeffect",
-      "aria-errormessage",
-      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
       "aria-relevant",
-      "aria-roledescription"
+      "aria-roledescription",
+      "aria-rowindex",
+      "aria-rowspan"
     ],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "td",
-        "constraints": ["descendant of table"]
+    "relatedConcepts": [
+      {
+        "concept": {
+          "constraints": ["descendant of table"],
+          "name": "td"
+        },
+        "module": "HTML"
       }
-    }],
-    "childrenPresentational": false
-  },
-  "checkbox": {
-    "superClass": ["input"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [
-      "aria-checked"
     ],
-    "props": [
-      ["aria-checked", "false"],
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-readonly",
-      "aria-relevant"
-    ],
-    "abstract": false,
-    "childrenPresentational": true,
-    "relatedConcepts": [{
-      "module": "ARIA",
-      "concept": {
-        "name": "option"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "checkbox"
-        }]
-      }
-    }]
-  },
-  "columnheader": {
-    "superClass": ["cell", "gridcell", "sectionhead"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
     "requiredContextRole": ["row"],
     "requiredOwnedElements": [],
     "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "checkbox": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
     "props": [
-      "aria-sort",
-      "aria-readonly",
-      "aria-required",
-      "aria-selected",
+      "aria-atomic",
+      "aria-busy",
+      "aria-checked",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
       "aria-expanded",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-readonly",
+      "aria-relevant",
+      "aria-required",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "checkbox"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "option"
+        },
+        "module": "ARIA"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": ["aria-checked"],
+    "superClass": ["input"]
+  },
+  "code": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
+    "props": [
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "columnheader": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-colindex",
+      "aria-colspan",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-readonly",
+      "aria-relevant",
+      "aria-required",
+      "aria-roledescription",
+      "aria-rowindex",
+      "aria-rowspan",
+      "aria-selected",
+      "aria-sort"
     ],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "th"
+    "relatedConcepts": [
+      {
+        "attributes": [
+          {
+            "name": "scope",
+            "value": "col"
+          }
+        ],
+        "concept": {
+          "name": "th"
+        },
+        "module": "HTML"
       }
-    }]
+    ],
+    "requiredContextRole": ["row"],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["cell", "gridcell", "sectionhead"]
   },
   "combobox": {
-    "superClass": ["select"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["textbox"],
-      ["listbox"],
-      ["tree"],
-      ["grid"],
-      ["dialog"]
-    ],
-    "requiredProps": [
-      "aria-controls",
-      ["aria-expanded", "false"]
-    ],
+    "prohibitedProps": [],
     "props": [
-      ["aria-expanded", "false"],
-      "aria-autocomplete",
-      "aria-required",
       "aria-activedescendant",
       "aria-atomic",
+      "aria-autocomplete",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
-      ["aria-haspopup", "listbox"],
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
       "aria-readonly",
       "aria-relevant",
-      "aria-required"
+      "aria-required",
+      "aria-roledescription",
+      ["aria-expanded", "false"],
+      ["aria-haspopup", "listbox"]
     ],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "select",
-        "attributes": [{
-          "name": "multiple",
-          "constraints": ["undefined"]
-        }, {
-          "name": "size",
-          "constraints": ["undefined"]
-        }]
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "email"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "search"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "tel"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "text"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "url"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "url"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "multiple"
+            },
+            {
+              "constraints": ["undefined"],
+              "name": "size"
+            }
+          ],
+          "name": "select"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "multiple"
+            },
+            {
+              "name": "size",
+              "value": 1
+            }
+          ],
+          "name": "select"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "select"
+        },
+        "module": "XForms"
       }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "select",
-        "attributes": [{
-          "name": "multiple",
-          "constraints": ["undefined"]
-        }, {
-          "name": "size",
-          "value": 1
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "text"
-        }, {
-          "name": "list",
-          "constraints": ["set"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "search"
-        }, {
-          "name": "list",
-          "constraints": ["set"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "url"
-        }, {
-          "name": "list",
-          "constraints": ["set"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "tel"
-        }, {
-          "name": "list",
-          "constraints": ["set"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "url"
-        }, {
-          "name": "list",
-          "constraints": ["set"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "email"
-        }, {
-          "name": "list",
-          "constraints": ["set"]
-        }]
-      }
-    }, {
-      "module": "XForms",
-      "concept": {
-        "name": "select"
-      }
-    }]
-  },
-  "command": {
-    "superClass": ["widget"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
+    "requiredProps": ["aria-controls", ["aria-expanded", "false"]],
+    "superClass": ["input"]
+  },
+  "command": {
+    "abstract": true,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -574,14 +771,10 @@
       "aria-current",
       "aria-describedby",
       "aria-details",
-      "aria-disabled",
       "aria-dropeffect",
-      "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
@@ -590,57 +783,63 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": true,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "menuitem"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "menuitem"
+        },
+        "module": "HTML"
       }
-    }]
-  },
-  "complementary": {
-    "superClass": ["landmark"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
+    "superClass": ["widget"]
+  },
+  "complementary": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "aside"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "aside"
+        },
+        "module": "HTML"
       }
-    }]
-  },
-  "composite": {
-    "superClass": ["widget"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
+  },
+  "composite": {
+    "abstract": true,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
       "aria-activedescendant",
       "aria-atomic",
@@ -651,12 +850,9 @@
       "aria-details",
       "aria-disabled",
       "aria-dropeffect",
-      "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
@@ -665,156 +861,198 @@
       "aria-relevant",
       "aria-roledescription"
     ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
-    "abstract": true,
-    "childrenPresentational": false,
-    "relatedConcepts": []
+    "superClass": ["widget"]
   },
   "contentinfo": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "footer",
-        "constraints": ["direct descendant of document"]
+    "relatedConcepts": [
+      {
+        "concept": {
+          "constraints": ["direct descendant of document"],
+          "name": "footer"
+        },
+        "module": "HTML"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "definition": {
-    "superClass": ["section"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "dd"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "dd"
+        },
+        "module": "HTML"
       }
-    }]
-  },
-  "dialog": {
-    "superClass": ["window"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "deletion": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "dialog": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-modal",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "dialog"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "dialog"
+        },
+        "module": "HTML"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["window"]
   },
   "directory": {
-    "superClass": ["list"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "DAISY Guide"
-    }],
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "module": "DAISY Guide"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["list"]
   },
   "doc-abstract": {
-    "superClass": ["section"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -839,22 +1077,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "abstract [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "abstract [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "doc-acknowledgments": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -879,22 +1120,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "acknowledgments [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "acknowledgments [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-afterword": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -919,22 +1163,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "afterword [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "afterword [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-appendix": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -959,22 +1206,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "appendix [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "appendix [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-backlink": {
-    "superClass": ["link"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author", "content"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -999,67 +1249,71 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "referrer [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "referrer [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["link"]
   },
   "doc-biblioentry": {
-    "superClass": ["listitem"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-haspopup",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-level",
+      "aria-live",
+      "aria-owns",
+      "aria-posinset",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-setsize"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "EPUB biblioentry [EPUB-SSV]"
+        },
+        "module": "EPUB"
+      }
+    ],
     "requiredContextRole": ["doc-bibliography"],
     "requiredOwnedElements": [],
-    "props": [
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-current",
-      "aria-describedby",
-      "aria-details",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-errormessage",
-      "aria-expanded",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-keyshortcuts",
-      "aria-label",
-      "aria-labelledby",
-      "aria-level",
-      "aria-live",
-      "aria-owns",
-      "aria-posinset",
-      "aria-relevant",
-      "aria-roledescription",
-      "aria-setsize"
-    ],
     "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "EPUB biblioentry [EPUB-SSV]"
-      }
-    }]
+    "superClass": ["listitem"]
   },
   "doc-bibliography": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["doc-biblioentry"]
-    ],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1084,22 +1338,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "bibliography [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "bibliography [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["doc-biblioentry"]],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-biblioref": {
-    "superClass": ["link"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author", "contents"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1124,22 +1381,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "biblioref [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "biblioref [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["link"]
   },
   "doc-chapter": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1164,22 +1424,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "chapter [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "chapter [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-colophon": {
-    "superClass": ["section"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1204,22 +1467,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "colophon [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "colophon [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "doc-conclusion": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1244,22 +1510,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "conclusion [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "conclusion [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-cover": {
-    "superClass": ["img"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1284,22 +1553,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "cover [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "cover [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["img"]
   },
   "doc-credit": {
-    "superClass": ["section"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1324,22 +1596,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "credit [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "credit [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "doc-credits": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1364,22 +1639,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "credits [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "credits [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-dedication": {
-    "superClass": ["section"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1404,22 +1682,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "dedication [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "dedication [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "doc-endnote": {
-    "superClass": ["listitem"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": ["doc-endnotes"],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1447,24 +1728,25 @@
       "aria-roledescription",
       "aria-setsize"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "rearnote [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "rearnote [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": ["doc-endnotes"],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["listitem"]
   },
   "doc-endnotes": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["doc-endnote"]
-    ],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1489,22 +1771,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "rearnotes [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "rearnotes [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["doc-endnote"]],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-epigraph": {
-    "superClass": ["section"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1529,22 +1814,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "epigraph [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "epigraph [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "doc-epilogue": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1569,22 +1857,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "epilogue [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "epilogue [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-errata": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1609,22 +1900,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "errata [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "errata [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-example": {
-    "superClass": ["section"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1649,17 +1943,18 @@
       "aria-relevant",
       "aria-roledescription"
     ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": []
+    "superClass": ["section"]
   },
   "doc-footnote": {
-    "superClass": ["section"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1684,22 +1979,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "footnote [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "footnote [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "doc-foreword": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1724,25 +2022,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "foreword [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "foreword [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-glossary": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["term"],
-      ["definition"]
-    ],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1767,22 +2065,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "glossary [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "glossary [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["definition"], ["term"]],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-glossref": {
-    "superClass": ["link"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author", "contents"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1807,22 +2108,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "glossref [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "glossref [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["link"]
   },
   "doc-index": {
-    "superClass": ["navigation"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1847,22 +2151,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "index [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "index [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["navigation"]
   },
   "doc-introduction": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1887,22 +2194,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "introduction [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "introduction [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-noteref": {
-    "superClass": ["link"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author", "contents"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1927,22 +2237,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "noteref [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "noteref [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["link"]
   },
   "doc-notice": {
-    "superClass": ["note"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -1967,22 +2280,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "notice [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "notice [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
-  },
-  "doc-pagebreak": {
-    "superClass": ["separator"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["note"]
+  },
+  "doc-pagebreak": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2008,22 +2324,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": true,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "pagebreak [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "pagebreak [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["separator"]
   },
   "doc-pagelist": {
-    "superClass": ["navigation"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2048,22 +2367,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "page-list [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "page-list [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["navigation"]
   },
   "doc-part": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2088,22 +2410,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "part [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "part [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-preface": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2128,22 +2453,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "preface [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "preface [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-prologue": {
-    "superClass": ["landmark"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2168,39 +2496,45 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "prologue [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "prologue [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "doc-pullquote": {
-    "superClass": ["none"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "pullquote [EPUB-SSV]"
+        },
+        "module": "EPUB"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
-    "props": [],
     "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "pullquote [EPUB-SSV]"
-      }
-    }]
+    "superClass": ["none"]
   },
   "doc-qna": {
-    "superClass": ["section"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2225,22 +2559,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "qna [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "qna [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "doc-subtitle": {
-    "superClass": ["sectionhead"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2265,22 +2602,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "subtitle [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "subtitle [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["sectionhead"]
   },
   "doc-tip": {
-    "superClass": ["note"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2305,22 +2645,25 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "help [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "help [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["note"]
   },
   "doc-toc": {
-    "superClass": ["navigation"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2345,66 +2688,97 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "EPUB",
-      "concept": {
-        "name": "toc [EPUB-SSV]"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "toc [EPUB-SSV]"
+        },
+        "module": "EPUB"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["navigation"]
   },
   "document": {
-    "superClass": ["structure"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "concept": {
-        "name": "Device Independence Delivery Unit"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "body"
-      }
-    }],
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "Device Independence Delivery Unit"
+        }
+      },
+      {
+        "concept": {
+          "name": "body"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["structure"]
+  },
+  "emphasis": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "feed": {
-    "superClass": ["list"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["article"]
-    ],
-    "requiredProps": [],
     "abstract": false,
+    "accessibleNameRequired": false,
     "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2412,15 +2786,10 @@
       "aria-current",
       "aria-describedby",
       "aria-details",
-      "aria-disabled",
       "aria-dropeffect",
-      "aria-errormessage",
-      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
@@ -2429,16 +2798,18 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": []
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["article"]],
+    "requiredProps": [],
+    "superClass": ["list"]
   },
   "figure": {
-    "superClass": ["section"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
     "abstract": false,
+    "accessibleNameRequired": false,
     "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -2446,15 +2817,10 @@
       "aria-current",
       "aria-describedby",
       "aria-details",
-      "aria-disabled",
       "aria-dropeffect",
-      "aria-errormessage",
-      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
@@ -2463,1279 +2829,1521 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "relatedConcepts":[{
-      "module": "HTML",
-      "concept": {
-        "name": "figure"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "figure"
+        },
+        "module": "HTML"
       }
-    }]
-  },
-  "form": {
-    "superClass": ["landmark"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "form": {
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "form",
-        "attributes": [{
-          "name": "name",
-          "constraints": ["set"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "form",
-        "attributes": [{
-          "name": "aria-label",
-          "constraints": ["set"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "form",
-        "attributes": [{
-          "name": "aria-labelledby",
-          "constraints": ["set"]
-        }]
-      }
-    }],
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "aria-label"
+            }
+          ],
+          "name": "form"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "aria-labelledby"
+            }
+          ],
+          "name": "form"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "name"
+            }
+          ],
+          "name": "form"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
+  },
+  "generic": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "span"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "div"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["structure"]
   },
   "grid": {
-    "superClass": [
-      "composite",
-      "table"
-    ],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["rowgroup", "row"],
-      ["row"]
-    ],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "table",
-        "attributes": [{
-          "name": "role",
-          "value": "grid"
-        }]
-      }
-    }],
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-level",
-      "aria-multiselectable",
-      "aria-readonly",
       "aria-activedescendant",
       "aria-atomic",
       "aria-busy",
+      "aria-colcount",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-multiselectable",
+      "aria-owns",
+      "aria-readonly",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-rowcount"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "role",
+              "value": "grid"
+            }
+          ],
+          "name": "table"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["row"], ["row", "rowgroup"]],
+    "requiredProps": [],
+    "superClass": ["composite", "table"]
+  },
+  "gridcell": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-colindex",
+      "aria-colspan",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
+      "aria-readonly",
       "aria-relevant",
-      "aria-expanded"
+      "aria-required",
+      "aria-roledescription",
+      "aria-rowindex",
+      "aria-rowspan",
+      "aria-selected"
     ],
-    "childrenPresentational": false
-  },
-  "gridcell": {
-    "superClass": ["cell", "widget"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "role",
+              "value": "gridcell"
+            }
+          ],
+          "name": "td"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": ["row"],
     "requiredOwnedElements": [],
     "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "td",
-        "attributes": [{
-          "name": "role",
-          "value": "gridcell"
-        }]
-      }
-    }],
-    "props": [
-      "aria-readonly",
-      "aria-required",
-      "aria-selected",
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
+    "superClass": ["cell", "widget"]
   },
   "group": {
-    "superClass": ["section"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "fieldset"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "details"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "optgroup"
-      }
-    }],
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
       "aria-activedescendant",
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "details"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "fieldset"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "optgroup"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "heading": {
-    "superClass": ["sectionhead"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "h1"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "h2"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "h3"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "h4"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "h5"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "h6"
-      }
-    }],
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
     "props": [
-      ["aria-level", "2"],
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "h1"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "h2"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "h3"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "h4"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "h5"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "h6"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["sectionhead"]
   },
   "img": {
-    "superClass": ["section"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "img",
-        "attributes": [{
-          "name": "alt",
-          "constraints": ["set"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "img",
-        "attributes": [{
-          "name": "alt",
-          "constraints": ["undefined"]
-        }]
-      }
-    }, {
-      "module": "DTB",
-      "concept": {
-        "name": "imggroup"
-      }
-    }],
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "childrenPresentational": true
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "alt"
+            }
+          ],
+          "name": "img"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "alt"
+            }
+          ],
+          "name": "img"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "imggroup"
+        },
+        "module": "DTB"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "input": {
-    "superClass": ["widget"],
+    "abstract": true,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": true,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "XForms",
-      "concept": {
-        "name": "input"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "input"
+        },
+        "module": "XForms"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["widget"]
+  },
+  "insertion": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "landmark": {
-    "superClass": ["section"],
+    "abstract": true,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
-    "abstract": true,
-    "childrenPresentational": false,
-    "relatedConcepts": []
+    "superClass": ["section"]
   },
   "link": {
-    "superClass": ["command"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "a",
-        "attributes": [{
-          "name": "href"
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "area",
-        "attributes": [{
-          "name": "href"
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "link",
-        "attributes": [{
-          "name": "href"
-        }]
-      }
-    }],
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "href"
+            }
+          ],
+          "name": "a"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "href"
+            }
+          ],
+          "name": "area"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "href"
+            }
+          ],
+          "name": "link"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["command"]
   },
   "list": {
-    "superClass": ["section"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["group", "listitem"],
-      ["listitem"]
-    ],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "ol"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "ul"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "menu"
-      }
-    }],
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "menu"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "ol"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "ul"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["listitem"]],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "listbox": {
-    "superClass": ["select"],
+    "abstract": false,
     "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["option"]
-    ],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "datalist"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "select",
-        "attributes": [{
-          "name": "multiple"
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "select",
-        "attributes": [{
-          "name": "multiple"
-        }, {
-          "name": "size",
-          "constraints": [">1"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "select",
-        "attributes": [{
-          "name": "size",
-          "constraints": [">1"]
-        }]
-      }
-    }, {
-      "module": "ARIA",
-      "concept": {
-        "name": "list"
-      }
-    }, {
-      "module": "XForms",
-      "concept": {
-        "name": "select"
-      }
-    }],
-    "props": [
-      "aria-multiselectable",
-      "aria-readonly",
-      "aria-required",
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      ["aria-orientation", "vertical"],
-      "aria-owns",
-      "aria-relevant",
-      "aria-activedescendant"
-    ],
-    "childrenPresentational": false
-  },
-  "listitem": {
-    "superClass": ["section"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [
-      "group",
-      "list"
-    ],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "li",
-        "constraints": ["direct descendant of ol, ul or menu"]
-      }
-    }, {
-      "module": "XForms",
-      "concept": {
-        "name": "item"
-      }
-    }],
-    "props": [
-      "aria-level",
-      "aria-posinset",
-      "aria-setsize",
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "log": {
-    "superClass": ["section"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [],
-    "props": [
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      ["aria-live", "polite"],
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "main": {
-    "superClass": ["landmark"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "main"
-      }
-    }],
-    "props": [
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "marquee": {
-    "superClass": ["section"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [],
-    "props": [
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "math": {
-    "superClass": ["section"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "math"
-      }
-    }],
-    "props": [
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": true
-  },
-  "menu": {
-    "superClass": ["select"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["group", "menuitemradio"],
-      ["menuitem"],
-      ["menuitemcheckbox"],
-      ["menuitemradio"]
-    ],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "ARIA",
-      "concept": {
-        "name": "list"
-      }
-    }, {
-      "module": "DTB",
-      "concept": {
-        "name": "sidebar"
-      }
-    }, {
-      "module": "XForms",
-      "concept": {
-        "name": "select"
-      }
-    }, {
-      "module": "JAPI",
-      "concept": {
-        "name": "MENU"
-      }
-    }],
-    "props": [
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      ["aria-orientation", "vertical"],
-      "aria-owns",
-      "aria-relevant",
-      "aria-activedescendant"
-    ],
-    "childrenPresentational": false
-  },
-  "menubar": {
-    "superClass": ["menu"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["group", "menuitemradio"],
-      ["menuitem"],
-      ["menuitemcheckbox"],
-      ["menuitemradio"]
-    ],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "ARIA",
-      "concept": {
-        "name": "toolbar"
-      }
-    }],
-    "props": [
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      ["aria-orientation", "vertical"],
-      "aria-owns",
-      "aria-relevant",
-      "aria-activedescendant"
-    ],
-    "childrenPresentational": false
-  },
-  "menuitem": {
-    "superClass": ["command"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [
-      "group",
-      "menu",
-      "menubar"
-    ],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "ARIA",
-      "concept": {
-        "name": "option"
-      }
-    }, {
-      "module": "ARIA",
-      "concept": {
-        "name": "listitem"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "menuitem"
-      }
-    }, {
-      "module": "JAPI",
-      "concept": {
-        "name": "MENU_ITEM"
-      }
-    }],
-    "props": [
-      "aria-posinset",
-      "aria-setsize",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "menuitemcheckbox": {
-    "superClass": ["menuitem", "checkbox"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [
-      "menu",
-      "menubar"
-    ],
-    "requiredOwnedElements": [],
-    "requiredProps": [
-      "aria-checked"
-    ],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "ARIA",
-      "concept": {
-        "name": "menuitem"
-      }
-    }],
-    "props": [
-      ["aria-checked", "false"],
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": true
-  },
-  "menuitemradio": {
-    "superClass": ["menuitemcheckbox", "radio"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [
-      "group",
-      "menu",
-      "menubar"
-    ],
-    "requiredOwnedElements": [],
-    "requiredProps": [
-      "aria-checked"
-    ],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "ARIA",
-      "concept": {
-        "name": "menuitem"
-      }
-    }],
-    "props": [
-      ["aria-checked", "false"],
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant",
-      "aria-posinset",
-      "aria-selected",
-      "aria-setsize"
-    ],
-    "childrenPresentational": true
-  },
-  "navigation": {
-    "superClass": ["landmark"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "nav"
-      }
-    }],
-    "props": [
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "none": {
-    "accessibleNameRequired": false,
-    "nameFrom": [],
-    "superClass": [],
-    "props": [],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "relatedConcepts": [],
     "childrenPresentational": false,
-    "abstract": false
-  },
-  "note": {
-    "superClass": ["section"],
-    "accessibleNameRequired": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "option": {
-    "superClass": ["input"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [
-      "listbox"
-    ],
-    "requiredOwnedElements": [],
-    "requiredProps": [
-      ["aria-selected", "false"]
-    ],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "option"
-      }
-    }, {
-      "module": "ARIA",
-      "concept": {
-        "name": "listitem"
-      }
-    }, {
-      "module": "XForms",
-      "concept": {
-        "name": "item"
-      }
-    }],
-    "props": [
-      "aria-checked",
-      "aria-posinset",
-      ["aria-selected", "false"],
-      "aria-setsize",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": true
-  },
-  "presentation": {
-    "superClass": ["structure"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [],
-    "props": [
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "progressbar": {
-    "superClass": ["range"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "progress"
-      }
-    }, {
-      "module": "ARIA",
-      "concept": {
-        "name": "status"
-      }
-    }],
-    "props": [
-      "aria-valuemax",
-      "aria-valuemin",
-      "aria-valuenow",
-      "aria-valuetext",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": true
-  },
-  "radio": {
-    "superClass": ["input"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [
-      ["aria-checked", "false"]
-    ],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "radio"
-        }]
-      }
-    }],
-    "props": [
-      ["aria-checked", "false"],
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant",
-      "aria-posinset",
-      "aria-selected",
-      "aria-setsize"
-    ],
-    "childrenPresentational": true
-  },
-  "radiogroup": {
-    "superClass": ["select"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["radio"]
-    ],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "ARIA",
-      "concept": {
-        "name": "list"
-      }
-    }],
-    "props": [
-      "aria-readonly",
-      "aria-required",
       "aria-activedescendant",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-multiselectable",
+      "aria-owns",
+      "aria-readonly",
+      "aria-relevant",
+      "aria-required",
+      "aria-roledescription",
+      ["aria-orientation", "vertical"]
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": [">1"],
+              "name": "size"
+            },
+            {
+              "name": "multiple"
+            }
+          ],
+          "name": "select"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": [">1"],
+              "name": "size"
+            }
+          ],
+          "name": "select"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "multiple"
+            }
+          ],
+          "name": "select"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "datalist"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "list"
+        },
+        "module": "ARIA"
+      },
+      {
+        "concept": {
+          "name": "select"
+        },
+        "module": "XForms"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["option", "group"], ["option"]],
+    "requiredProps": [],
+    "superClass": ["select"]
+  },
+  "listitem": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-level",
+      "aria-live",
+      "aria-owns",
+      "aria-posinset",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-setsize"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "constraints": ["direct descendant of ol, ul or menu"],
+          "name": "li"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "item"
+        },
+        "module": "XForms"
+      }
+    ],
+    "requiredContextRole": ["directory", "list"],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "log": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription",
+      ["aria-live", "polite"]
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "main": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
       "aria-relevant",
-      "aria-expanded"
+      "aria-roledescription"
     ],
-    "childrenPresentational": false
-  },
-  "range": {
-    "superClass": ["widget"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "main"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
+  },
+  "marquee": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "math": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "math"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "menu": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-activedescendant",
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription",
+      ["aria-orientation", "vertical"]
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "MENU"
+        },
+        "module": "JAPI"
+      },
+      {
+        "concept": {
+          "name": "list"
+        },
+        "module": "ARIA"
+      },
+      {
+        "concept": {
+          "name": "select"
+        },
+        "module": "XForms"
+      },
+      {
+        "concept": {
+          "name": "sidebar"
+        },
+        "module": "DTB"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [
+      ["menuitem", "group"],
+      ["menuitemradio", "group"],
+      ["menuitemcheckbox", "group"],
+      ["menuitem"],
+      ["menuitemcheckbox"],
+      ["menuitemradio"]
+    ],
+    "requiredProps": [],
+    "superClass": ["select"]
+  },
+  "menubar": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-activedescendant",
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription",
+      ["aria-orientation", "horizontal"]
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "toolbar"
+        },
+        "module": "ARIA"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [
+      ["menuitem", "group"],
+      ["menuitemradio", "group"],
+      ["menuitemcheckbox", "group"],
+      ["menuitem"],
+      ["menuitemcheckbox"],
+      ["menuitemradio"]
+    ],
+    "requiredProps": [],
+    "superClass": ["menu"]
+  },
+  "menuitem": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-expanded",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-haspopup",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-posinset",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-setsize"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "MENU_ITEM"
+        },
+        "module": "JAPI"
+      },
+      {
+        "concept": {
+          "name": "listitem"
+        },
+        "module": "ARIA"
+      },
+      {
+        "concept": {
+          "name": "menuitem"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "option"
+        },
+        "module": "ARIA"
+      }
+    ],
+    "requiredContextRole": ["group", "menu", "menubar"],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["command"]
+  },
+  "menuitemcheckbox": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-checked",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-haspopup",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-posinset",
+      "aria-readonly",
+      "aria-relevant",
+      "aria-required",
+      "aria-roledescription",
+      "aria-setsize"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "menuitem"
+        },
+        "module": "ARIA"
+      }
+    ],
+    "requiredContextRole": ["group", "menu", "menubar"],
+    "requiredOwnedElements": [],
+    "requiredProps": ["aria-checked"],
+    "superClass": ["checkbox", "menuitem"]
+  },
+  "menuitemradio": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-checked",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-haspopup",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-posinset",
+      "aria-readonly",
+      "aria-relevant",
+      "aria-required",
+      "aria-roledescription",
+      "aria-setsize"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "menuitem"
+        },
+        "module": "ARIA"
+      }
+    ],
+    "requiredContextRole": ["group", "menu", "menubar"],
+    "requiredOwnedElements": [],
+    "requiredProps": ["aria-checked"],
+    "superClass": ["menuitemcheckbox", "radio"]
+  },
+  "meter": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription",
       "aria-valuemax",
       "aria-valuemin",
       "aria-valuenow",
-      "aria-valuetext",
+      "aria-valuetext"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": ["aria-valuemax", "aria-valuemin", "aria-valuenow"],
+    "superClass": ["range"]
+  },
+  "navigation": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "nav"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
+  },
+  "none": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": [],
+    "prohibitedProps": [],
+    "props": [],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": []
+  },
+  "note": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "option": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-checked",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-posinset",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-setsize",
+      ["aria-selected", "false"]
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "item"
+        },
+        "module": "XForms"
+      },
+      {
+        "concept": {
+          "name": "listitem"
+        },
+        "module": "ARIA"
+      },
+      {
+        "concept": {
+          "name": "option"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [["aria-selected", "false"]],
+    "superClass": ["input"]
+  },
+  "paragraph": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "presentation": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["structure"]
+  },
+  "progressbar": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-valuemax",
+      "aria-valuemin",
+      "aria-valuenow",
+      "aria-valuetext"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "progress"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "status"
+        },
+        "module": "ARIA"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["range", "widget"]
+  },
+  "radio": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-checked",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-posinset",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-setsize"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "radio"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": ["aria-checked"],
+    "superClass": ["input"]
+  },
+  "radiogroup": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-activedescendant",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -3747,85 +4355,73 @@
       "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
+      "aria-orientation",
       "aria-owns",
+      "aria-readonly",
       "aria-relevant",
+      "aria-required",
       "aria-roledescription"
     ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "list"
+        },
+        "module": "ARIA"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["radio"]],
     "requiredProps": [],
+    "superClass": ["select"]
+  },
+  "range": {
     "abstract": true,
+    "accessibleNameRequired": false,
     "childrenPresentational": false,
-    "relatedConcepts": []
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-valuemax",
+      "aria-valuemin",
+      "aria-valuenow",
+      "aria-valuetext"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["structure"]
   },
   "region": {
-    "superClass": ["landmark"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "frame"
-      }
-    }, {
-      "concept": {
-        "name": "Device Independence Glossart perceivable unit"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "section",
-        "attributes": [{
-          "name": "aria-label",
-          "constraints": ["set"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "section",
-        "attributes": [{
-          "name": "aria-labelledby",
-          "constraints": ["set"]
-        }]
-      }
-    }],
-    "props": [
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "roletype": {
-    "superClass": [],
-    "accessibleNameRequired": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -3833,14 +4429,10 @@
       "aria-current",
       "aria-describedby",
       "aria-details",
-      "aria-disabled",
       "aria-dropeffect",
-      "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
@@ -3849,36 +4441,141 @@
       "aria-relevant",
       "aria-roledescription"
     ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "aria-label"
+            }
+          ],
+          "name": "section"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "aria-labelledby"
+            }
+          ],
+          "name": "section"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "Device Independence Glossart perceivable unit"
+        }
+      },
+      {
+        "concept": {
+          "name": "frame"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
+    "superClass": ["landmark"]
+  },
+  "roletype": {
     "abstract": true,
+    "accessibleNameRequired": false,
     "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "XHTML",
-      "concept": {
-        "name": "role"
+    "nameFrom": [],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "rel"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "role"
+        },
+        "module": "XHTML"
+      },
+      {
+        "concept": {
+          "name": "type"
+        },
+        "module": "Dublin Core"
       }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "rel"
-      }
-    }, {
-      "module": "Dublin Core",
-      "concept": {
-        "name": "type"
-      }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": []
   },
   "row": {
-    "superClass": ["group", "widget"],
+    "abstract": false,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author", "contents"],
-    "requiredContextRole": [
-      "grid",
-      "rowgroup",
-      "table",
-      "treegrid"
+    "prohibitedProps": [],
+    "props": [
+      "aria-activedescendant",
+      "aria-atomic",
+      "aria-busy",
+      "aria-colindex",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-expanded",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-level",
+      "aria-live",
+      "aria-owns",
+      "aria-posinset",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-rowindex",
+      "aria-selected",
+      "aria-setsize"
     ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "tr"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": ["grid", "rowgroup", "table", "treegrid"],
     "requiredOwnedElements": [
       ["cell"],
       ["columnheader"],
@@ -3886,190 +4583,189 @@
       ["rowheader"]
     ],
     "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "tr"
-      }
-    }],
-    "props": [
-      "aria-colindex",
-      "aria-level",
-      "aria-rowindex",
-      "aria-selected",
-      "aria-activedescendant",
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
+    "superClass": ["group", "widget"]
   },
   "rowgroup": {
-    "superClass": ["structure"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [
-      "grid",
-      "table",
-      "treegrid"
-    ],
-    "requiredOwnedElements": [
-      ["row"]
-    ],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "tbody"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "tfoot"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "thead"
-      }
-    }],
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
     "props": [
-      "aria-activedescendant",
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "tbody"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "tfoot"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "thead"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": ["grid", "table", "treegrid"],
+    "requiredOwnedElements": [["row"]],
+    "requiredProps": [],
+    "superClass": ["structure"]
   },
   "rowheader": {
-    "superClass": ["cell", "gridcell", "sectionhead"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [
-      "row"
-    ],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "th",
-        "attributes": [{
-          "name": "scope",
-          "value": "row"
-        }]
-      }
-    }],
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
     "props": [
-      "aria-sort",
-      "aria-readonly",
-      "aria-required",
-      "aria-selected",
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
+      "aria-colindex",
+      "aria-colspan",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-readonly",
+      "aria-relevant",
+      "aria-required",
+      "aria-roledescription",
+      "aria-rowindex",
+      "aria-rowspan",
+      "aria-selected",
+      "aria-sort"
     ],
-    "childrenPresentational": false
-  },
-  "scrollbar": {
-    "superClass": ["range"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "scope",
+              "value": "row"
+            }
+          ],
+          "name": "th"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": ["row"],
     "requiredOwnedElements": [],
     "requiredProps": [],
+    "superClass": ["cell", "gridcell", "sectionhead"]
+  },
+  "scrollbar": {
     "abstract": false,
-    "relatedConcepts": [],
+    "accessibleNameRequired": false,
+    "childrenPresentational": true,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
+      "aria-atomic",
+      "aria-busy",
       "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-valuenow",
+      "aria-valuetext",
       ["aria-orientation", "vertical"],
       ["aria-valuemax", "100"],
-      ["aria-valuemin", "0"],
-      ["aria-valuenow", "50"]
+      ["aria-valuemin", "0"]
     ],
-    "childrenPresentational": true
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": ["aria-controls", "aria-valuenow"],
+    "superClass": ["range", "widget"]
   },
   "search": {
-    "superClass": ["landmark"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [],
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["landmark"]
   },
   "searchbox": {
-    "superClass": ["textbox"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-activedescendant",
       "aria-atomic",
@@ -4099,327 +4795,368 @@
       "aria-required",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": false,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "search"
-        }, {
-          "name": "list",
-          "constraints": ["undefined"]
-        }]
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "search"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["textbox"]
   },
   "section": {
-    "superClass": ["structure"],
+    "abstract": true,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": [],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "frontmatter"
+        },
+        "module": "DTB"
+      },
+      {
+        "concept": {
+          "name": "level"
+        },
+        "module": "DTB"
+      },
+      {
+        "concept": {
+          "name": "level"
+        },
+        "module": "SMIL"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
-    "abstract": true,
-    "childrenPresentational": false,
-    "relatedConcepts": [{
-      "module": "DTB",
-      "concept": {
-        "name": "frontmatter"
-      }
-    }, {
-      "module": "DTB",
-      "concept": {
-        "name": "level"
-      }
-    }, {
-      "module": "SMIL",
-      "concept": {
-        "name": "level"
-      }
-    }]
+    "superClass": ["structure"]
   },
   "sectionhead": {
-    "superClass": ["structure"],
+    "abstract": true,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author", "contents"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
-    "abstract": true,
-    "childrenPresentational": false,
-    "relatedConcepts": []
+    "superClass": ["structure"]
   },
   "select": {
-    "superClass": ["composite", "group"],
+    "abstract": true,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
-      ["aria-orientation", "vertical"],
       "aria-activedescendant",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-orientation",
       "aria-owns",
       "aria-relevant",
-      "aria-expanded"
+      "aria-roledescription"
     ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
-    "abstract": true,
-    "childrenPresentational": false,
-    "relatedConcepts": []
+    "superClass": ["composite", "group"]
   },
   "separator": {
-    "superClass": ["structure"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "hr"
-      }
-    }],
+    "accessibleNameRequired": false,
+    "childrenPresentational": true,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
-      ["aria-orientation", "horizontal"],
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": true
-  },
-  "scrollbar": {
-    "superClass": [],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [
-      "aria-controls",
-      "aria-orientation",
-      "aria-valuemax",
-      "aria-valuemin",
-      "aria-valuenow"
-    ],
-    "abstract": false,
-    "relatedConcepts": [],
-    "props": [
-      "aria-controls",
-      "aria-orientation",
-      "aria-valuemax",
-      "aria-valuemin",
-      "aria-valuenow",
-      "aria-atomic",
-      "aria-busy",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
       "aria-relevant",
-      "aria-valuetext"
+      "aria-roledescription",
+      "aria-valuetext",
+      ["aria-orientation", "horizontal"],
+      ["aria-valuemax", "100"],
+      ["aria-valuemin", "0"]
     ],
-    "childrenPresentational": true
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "hr"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["structure"]
   },
   "slider": {
-    "superClass": ["input", "range"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": true,
     "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-haspopup",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-readonly",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-valuenow",
+      "aria-valuetext",
+      ["aria-orientation", "horizontal"],
+      ["aria-valuemax", "100"],
+      ["aria-valuemin", "0"]
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "range"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
-    "requiredProps": [
-      ["aria-valuemax", "100"],
-      ["aria-valuemin", "0"],
-      ["aria-valuenow", "50"]
-    ],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "range"
-        }]
-      }
-    }],
-    "props": [
-      ["aria-orientation", "horizontal"],
-      "aria-readonly",
-      ["aria-valuemax", "100"],
-      ["aria-valuemin", "0"],
-      ["aria-valuenow", "50"]
-    ],
-    "childrenPresentational": true
+    "requiredProps": ["aria-valuenow"],
+    "superClass": ["input", "range"]
   },
   "spinbutton": {
-    "superClass": ["composite", "input", "range"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": false,
     "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [
+    "prohibitedProps": [],
+    "props": [
+      "aria-activedescendant",
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-readonly",
+      "aria-relevant",
+      "aria-required",
+      "aria-roledescription",
       "aria-valuemax",
       "aria-valuemin",
+      "aria-valuetext",
       ["aria-valuenow", "0"]
     ],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "number"
-        }]
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "type",
+              "value": "number"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
       }
-    }],
-    "props": [
-      "aria-valuemax",
-      "aria-valuemin",
-      ["aria-valuenow", "0"],
-      "aria-required",
-      "aria-readonly",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant",
-      "aria-valuetext"
     ],
-    "childrenPresentational": false
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["composite", "input", "range"]
   },
   "status": {
-    "superClass": ["section"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "output"
-      }
-    }],
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
-      ["aria-atomic", "true"],
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
-      ["aria-live", "polite"],
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription",
+      ["aria-atomic", "true"],
+      ["aria-live", "polite"]
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "output"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "strong": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "structure": {
-    "superClass": ["roletype"],
+    "abstract": true,
     "accessibleNameRequired": false,
+    "childrenPresentational": false,
     "nameFrom": [],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -4427,14 +5164,10 @@
       "aria-current",
       "aria-describedby",
       "aria-details",
-      "aria-disabled",
       "aria-dropeffect",
-      "aria-errormessage",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
@@ -4443,213 +5176,272 @@
       "aria-relevant",
       "aria-roledescription"
     ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
     "requiredProps": [],
-    "abstract": true,
+    "superClass": ["roletype"]
+  },
+  "subscript": {
+    "abstract": false,
+    "accessibleNameRequired": false,
     "childrenPresentational": false,
-    "relatedConcepts": []
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "superscript": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "switch": {
-    "superClass": ["checkbox"],
+    "abstract": false,
     "accessibleNameRequired": true,
+    "childrenPresentational": true,
     "nameFrom": ["author", "contents"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [
-      ["aria-checked", "false"]
-    ],
+    "prohibitedProps": [],
     "props": [
-      ["aria-checked", "false"],
       "aria-atomic",
       "aria-busy",
+      "aria-checked",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
       "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-readonly",
+      "aria-relevant",
+      "aria-required",
+      "aria-roledescription"
     ],
-    "abstract": false,
-    "childrenPresentational": true,
-    "relatedConcepts": [{
-      "module": "ARIA",
-      "concept": {
-        "name": "button"
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "button"
+        },
+        "module": "ARIA"
       }
-    }]
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": ["aria-checked"],
+    "superClass": ["checkbox"]
   },
   "tab": {
-    "superClass": ["sectionhead", "widget"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [
-      "tablist"
-    ],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [],
+    "accessibleNameRequired": false,
+    "childrenPresentational": true,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
     "props": [
-      "aria-posinset",
-      ["aria-selected", "false"],
-      "aria-setsize",
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
+      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-posinset",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-setsize",
+      ["aria-selected", "false"]
     ],
-    "childrenPresentational": true
+    "relatedConcepts": [],
+    "requiredContextRole": ["tablist"],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["sectionhead", "widget"]
   },
   "table": {
-    "superClass": ["section"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["row"],
-      ["rowgroup", "row"]
-    ],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "table"
-      }
-    }],
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-colcount",
-      "aria-rowcount",
       "aria-atomic",
       "aria-busy",
+      "aria-colcount",
       "aria-controls",
       "aria-current",
       "aria-describedby",
       "aria-details",
-      "aria-disabled",
       "aria-dropeffect",
-      "aria-errormessage",
-      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
       "aria-relevant",
-      "aria-roledescription"
+      "aria-roledescription",
+      "aria-rowcount"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "table"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["row"], ["row", "rowgroup"]],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "tablist": {
-    "superClass": ["composite"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["tab"]
-    ],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "DAISY",
-      "concept": {
-        "name": "guide"
-      }
-    }],
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-level",
-      "aria-multiselectable",
-      ["aria-orientation", "horizontal"],
       "aria-activedescendant",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
+      "aria-details",
       "aria-disabled",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
+      "aria-level",
       "aria-live",
+      "aria-multiselectable",
       "aria-owns",
       "aria-relevant",
-      "aria-expanded"
+      "aria-roledescription",
+      ["aria-orientation", "horizontal"]
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "module": "DAISY",
+        "concept": {
+          "name": "guide"
+        }
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["tab"]],
+    "requiredProps": [],
+    "superClass": ["composite"]
   },
   "tabpanel": {
-    "superClass": ["section"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [],
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
+      "aria-current",
       "aria-describedby",
-      "aria-disabled",
+      "aria-details",
       "aria-dropeffect",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
       "aria-live",
       "aria-owns",
-      "aria-relevant"
+      "aria-relevant",
+      "aria-roledescription"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "term": {
-    "superClass": ["section"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "HTML",
-      "concept": {
-        "name": "dt"
-      }
-    }],
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
       "aria-atomic",
       "aria-busy",
@@ -4657,15 +5449,10 @@
       "aria-current",
       "aria-describedby",
       "aria-details",
-      "aria-disabled",
       "aria-dropeffect",
-      "aria-errormessage",
-      "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
-      "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
@@ -4674,331 +5461,29 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "childrenPresentational": false
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "dfn"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "textbox": {
-    "superClass": ["input"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
     "abstract": false,
-    "relatedConcepts": [{
-      "module": "XForms",
-      "concept": {
-        "name": "input"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "textarea"
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "text"
-        }, {
-          "name": "list",
-          "constraints": ["undefined"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "constraints": ["undefined"]
-        }, {
-          "name": "list",
-          "constraints": ["undefined"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "email"
-        }, {
-          "name": "list",
-          "constraints": ["undefined"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "tel"
-        }, {
-          "name": "list",
-          "constraints": ["undefined"]
-        }]
-      }
-    }, {
-      "module": "HTML",
-      "concept": {
-        "name": "input",
-        "attributes": [{
-          "name": "type",
-          "value": "url"
-        }, {
-          "name": "list",
-          "constraints": ["undefined"]
-        }]
-      }
-    }],
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
       "aria-activedescendant",
+      "aria-atomic",
       "aria-autocomplete",
-      "aria-multiline",
-      "aria-placeholder",
-      "aria-readonly",
-      "aria-required",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "timer": {
-    "superClass": ["status"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [],
-    "props": [
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "toolbar": {
-    "superClass": ["group"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [{
-      "module": "ARIA",
-      "concept": {
-        "name": "menubar"
-      }
-    }],
-    "props": [
-      ["aria-orientation", "horizontal"],
-      "aria-activedescendant",
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "tooltip": {
-    "superClass": ["section"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [],
-    "props": [
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant"
-    ],
-    "childrenPresentational": false
-  },
-  "tree": {
-    "superClass": ["select"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["group", "treeitem"],
-      ["treeitem"]
-    ],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [],
-    "props": [
-      "aria-multiselectable",
-      "aria-required",
-      "aria-activedescendant",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant",
-      "aria-expanded",
-      ["aria-orientation", "vertical"]
-    ],
-    "childrenPresentational": false
-  },
-  "treegrid": {
-    "superClass": ["grid", "tree"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [
-      ["rowgroup", "row"],
-      ["row"]
-    ],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [],
-    "props": [
-      "aria-level",
-      "aria-multiselectable",
-      "aria-readonly",
-      "aria-activedescendant",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant",
-      "aria-expanded",
-      "aria-required"
-    ],
-    "childrenPresentational": false
-  },
-  "treeitem": {
-    "superClass": ["listitem", "option"],
-    "accessibleNameRequired": true,
-    "nameFrom": ["author", "contents"],
-    "requiredContextRole": [
-      "group",
-      "tree"
-    ],
-    "requiredOwnedElements": [],
-    "requiredProps": [],
-    "abstract": false,
-    "relatedConcepts": [],
-    "props": [
-      "aria-level",
-      "aria-posinset",
-      "aria-setsize",
-      "aria-expanded",
-      "aria-atomic",
-      "aria-busy",
-      "aria-controls",
-      "aria-describedby",
-      "aria-disabled",
-      "aria-dropeffect",
-      "aria-flowto",
-      "aria-grabbed",
-      "aria-haspopup",
-      "aria-hidden",
-      "aria-invalid",
-      "aria-label",
-      "aria-labelledby",
-      "aria-live",
-      "aria-owns",
-      "aria-relevant",
-      "aria-checked",
-      "aria-selected"
-    ],
-    "childrenPresentational": false
-  },
-  "widget": {
-    "superClass": ["roletype"],
-    "accessibleNameRequired": false,
-    "nameFrom": [],
-    "requiredContextRole": [],
-    "requiredOwnedElements": [],
-    "props": [
-      "aria-atomic",
       "aria-busy",
       "aria-controls",
       "aria-current",
@@ -5016,23 +5501,255 @@
       "aria-label",
       "aria-labelledby",
       "aria-live",
+      "aria-multiline",
+      "aria-owns",
+      "aria-placeholder",
+      "aria-readonly",
+      "aria-relevant",
+      "aria-required",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "type"
+            },
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "email"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "tel"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "text"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "url"
+            }
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "input"
+        },
+        "module": "XForms"
+      },
+      {
+        "concept": {
+          "name": "textarea"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["input"]
+  },
+  "time": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
       "aria-owns",
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": true,
-    "childrenPresentational": false,
-    "relatedConcepts": []
-  },
-  "window": {
-    "superClass": ["roletype"],
-    "accessibleNameRequired": false,
-    "nameFrom": ["author"],
+    "relatedConcepts": [],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "timer": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
     "props": [
-      "aria-expanded",
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["status"]
+  },
+  "toolbar": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-activedescendant",
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription",
+      ["aria-orientation", "horizontal"]
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "menubar"
+        },
+        "module": "ARIA"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["group"]
+  },
+  "tooltip": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "tree": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-activedescendant",
       "aria-atomic",
       "aria-busy",
       "aria-controls",
@@ -5042,12 +5759,155 @@
       "aria-disabled",
       "aria-dropeffect",
       "aria-errormessage",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-multiselectable",
+      "aria-owns",
+      "aria-relevant",
+      "aria-required",
+      "aria-roledescription",
+      ["aria-orientation", "vertical"]
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["treeitem", "group"], ["treeitem"]],
+    "requiredProps": [],
+    "superClass": ["select"]
+  },
+  "treegrid": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-activedescendant",
+      "aria-atomic",
+      "aria-busy",
+      "aria-colcount",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-multiselectable",
+      "aria-orientation",
+      "aria-owns",
+      "aria-readonly",
+      "aria-relevant",
+      "aria-required",
+      "aria-roledescription",
+      "aria-rowcount"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["row"], ["row", "rowgroup"]],
+    "requiredProps": [],
+    "superClass": ["grid", "tree"]
+  },
+  "treeitem": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-checked",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
       "aria-expanded",
       "aria-flowto",
       "aria-grabbed",
       "aria-haspopup",
       "aria-hidden",
-      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-level",
+      "aria-live",
+      "aria-owns",
+      "aria-posinset",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-selected",
+      "aria-setsize"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": ["group", "tree"],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["listitem", "option"]
+  },
+  "widget": {
+    "abstract": true,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": [],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["roletype"]
+  },
+  "window": {
+    "abstract": true,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
@@ -5057,9 +5917,10 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "requiredProps": [],
-    "abstract": true,
     "relatedConcepts": [],
-    "childrenPresentational": false
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["roletype"]
   }
 }

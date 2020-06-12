@@ -9,13 +9,20 @@ const docCreditsRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
-  props: {},
+  prohibitedProps: [],
+  props: {
+    'aria-disabled': null,
+    'aria-errormessage': null,
+    'aria-expanded': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
+  },
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'credits [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [],

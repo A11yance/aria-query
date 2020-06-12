@@ -3,23 +3,24 @@
  */
 const treegridRole: ARIARoleDefinition = {
   abstract: false,
-  accessibleNameRequired: false,
+  accessibleNameRequired: true,
   baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
     [
-      'rowgroup',
       'row',
     ],
     [
       'row',
+      'rowgroup',
     ],
   ],
   requiredProps: {},

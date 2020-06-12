@@ -10,9 +10,8 @@ const sectionheadRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
-  props: {
-    'aria-expanded': null,
-  },
+  prohibitedProps: [],
+  props: {},
   relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],

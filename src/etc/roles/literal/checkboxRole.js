@@ -10,28 +10,33 @@ const checkboxRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
+  prohibitedProps: [],
   props: {
-    'aria-checked': 'false',
+    'aria-checked': null,
+    'aria-errormessage': null,
+    'aria-expanded': null,
+    'aria-invalid': null,
     'aria-readonly': null,
+    'aria-required': null,
   },
   relatedConcepts: [
     {
-      module: 'ARIA',
       concept: {
-        name: 'option',
-      },
-    },
-    {
-      module: 'HTML',
-      concept: {
-        name: 'input',
         attributes: [
           {
             name: 'type',
             value: 'checkbox',
           },
         ],
+        name: 'input',
       },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        name: 'option',
+      },
+      module: 'ARIA',
     },
   ],
   requireContextRole: [],

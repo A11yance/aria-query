@@ -9,6 +9,7 @@ const feedRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [],
   requireContextRole: [],

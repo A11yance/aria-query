@@ -10,7 +10,11 @@ const treeitemRole: ARIARoleDefinition = {
     'author',
     'contents',
   ],
-  props: {},
+  prohibitedProps: [],
+  props: {
+    'aria-expanded': null,
+    'aria-haspopup': null,
+  },
   relatedConcepts: [],
   requireContextRole: [
     'group',

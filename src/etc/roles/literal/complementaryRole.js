@@ -9,13 +9,14 @@ const complementaryRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'aside',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

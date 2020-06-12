@@ -9,23 +9,30 @@ const docGlossaryRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
-  props: {},
+  prohibitedProps: [],
+  props: {
+    'aria-disabled': null,
+    'aria-errormessage': null,
+    'aria-expanded': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
+  },
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'glossary [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
     [
-      'term',
+      'definition',
     ],
     [
-      'definition',
+      'term',
     ],
   ],
   requiredProps: {},

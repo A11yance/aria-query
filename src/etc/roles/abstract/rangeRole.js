@@ -9,6 +9,7 @@ const rangeRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-valuemax': null,
     'aria-valuemin': null,
@@ -23,7 +24,7 @@ const rangeRole: ARIARoleDefinition = {
   superClass: [
     [
       'roletype',
-      'widget',
+      'structure',
     ],
   ],
 };

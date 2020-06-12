@@ -9,13 +9,20 @@ const docIndexRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
-  props: {},
+  prohibitedProps: [],
+  props: {
+    'aria-disabled': null,
+    'aria-errormessage': null,
+    'aria-expanded': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
+  },
   relatedConcepts: [
     {
-      module: 'EPUB',
       concept: {
         name: 'index [EPUB-SSV]',
       },
+      module: 'EPUB',
     },
   ],
   requireContextRole: [],

@@ -9,8 +9,10 @@ const compositeRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
     'aria-activedescendant': null,
+    'aria-disabled': null,
   },
   relatedConcepts: [],
   requireContextRole: [],

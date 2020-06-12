@@ -9,13 +9,14 @@ const dialogRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
         name: 'dialog',
       },
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

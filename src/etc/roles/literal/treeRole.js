@@ -9,7 +9,10 @@ const treeRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {
+    'aria-errormessage': null,
+    'aria-invalid': null,
     'aria-multiselectable': null,
     'aria-required': null,
     'aria-orientation': 'vertical',
@@ -19,8 +22,8 @@ const treeRole: ARIARoleDefinition = {
   requiredContextRole: [],
   requiredOwnedElements: [
     [
-      'group',
       'treeitem',
+      'group',
     ],
     [
       'treeitem',

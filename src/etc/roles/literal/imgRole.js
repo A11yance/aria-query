@@ -9,41 +9,42 @@ const imgRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
   ],
+  prohibitedProps: [],
   props: {},
   relatedConcepts: [
     {
-      module: 'HTML',
       concept: {
-        name: 'img',
         attributes: [
           {
-            name: 'alt',
             constraints: [
               'set',
             ],
+            name: 'alt',
           },
         ],
+        name: 'img',
       },
+      module: 'HTML',
     },
     {
-      module: 'HTML',
       concept: {
-        name: 'img',
         attributes: [
           {
-            name: 'alt',
             constraints: [
               'undefined',
             ],
+            name: 'alt',
           },
         ],
+        name: 'img',
       },
+      module: 'HTML',
     },
     {
-      module: 'DTB',
       concept: {
         name: 'imggroup',
       },
+      module: 'DTB',
     },
   ],
   requireContextRole: [],
