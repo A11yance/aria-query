@@ -34,31 +34,31 @@
   },
   "homepage": "https://github.com/A11yance/aria-query#readme",
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-flow": "^7.7.4",
-    "babel-eslint": "^10.0.1",
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-flow": "^7.10.1",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^24.0.0",
     "commander": "^2.11.0",
     "coveralls": "^2.11.15",
-    "eslint": "^5 || ^6",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-flowtype": "^3.5.0",
-    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-import": "^2.21.2",
     "expect": "^1.20.2",
     "flow-bin": "^0.112.0",
     "jest": "^24.9.0",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.5",
     "rimraf": "^2.6.3"
   },
   "engines": {
     "node": ">=6.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.7.4",
-    "@babel/runtime-corejs3": "^7.7.4"
+    "@babel/runtime": "^7.10.2",
+    "@babel/runtime-corejs3": "^7.10.2"
   },
   "jest": {
     "coverageReporters": [
