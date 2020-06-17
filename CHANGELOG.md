@@ -43,3 +43,23 @@
 - a3e2f1e Added the Copyright year (2020) for A11yance
 - 3173a07 Remove Peer Dependency to ESLint
 
+## 4.2.0
+
+Upgrade support of ARIA from 1.1 to 1.2
+
+- f1b8f11 Add aria-level as a required prop for the heading role
+- 5beb07b Fix babelrc and update package lock
+- 32256c7 Update dependencies and babelrc
+- 132ebca test: Verify that role.json is synced (#52)
+- d2c7b1b test: Narrow test matrix
+- f4d115c fix: manual add aria-valuetext to range
+- fb8fcf8 fix: Update with latest parser script
+- 7dae700 fix: Superclass of generic is structure
+- 5ea8353 Adding a license line
+- 48cc635 fix: input type is text by default
+- b50587e Revert relatedConcepts changes
+- 1aa562f fix flowtype of prohibitedProps
+- 8b81b14 Run node scripts/breakUpAriaJSON
+- f65c156 chore: sort roles.json keys alphanumerically
+- 3c2f213 chore: format role.json
+- 38694f3 fix: input type is text by default (#42)
