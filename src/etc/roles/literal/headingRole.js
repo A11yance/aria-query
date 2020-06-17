@@ -53,7 +53,9 @@ const headingRole: ARIARoleDefinition = {
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
-  requiredProps: {},
+  requiredProps: {
+    'aria-level': 2,
+  },
   superClass: [
     [
       'roletype',
