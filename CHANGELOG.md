@@ -63,3 +63,8 @@ Upgrade support of ARIA from 1.1 to 1.2
 - f65c156 chore: sort roles.json keys alphanumerically
 - 3c2f213 chore: format role.json
 - 38694f3 fix: input type is text by default (#42)
+
+## 4.2.1
+
+- bdd6082 Change master branch main in Travis
+- 0b2d4ed Handle header element as banner role (#47)
