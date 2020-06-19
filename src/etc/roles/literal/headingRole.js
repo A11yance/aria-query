@@ -11,7 +11,9 @@ const headingRole: ARIARoleDefinition = {
     'contents',
   ],
   prohibitedProps: [],
-  props: {},
+  props: {
+    'aria-level': null,
+  },
   relatedConcepts: [
     {
       concept: {

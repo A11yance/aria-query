@@ -3130,6 +3130,7 @@
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
+      "aria-level",
       "aria-live",
       "aria-owns",
       "aria-relevant",
