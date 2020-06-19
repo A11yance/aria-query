@@ -68,3 +68,7 @@ Upgrade support of ARIA from 1.1 to 1.2
 
 - bdd6082 Change master branch main in Travis
 - 0b2d4ed Handle header element as banner role (#47)
+
+## 4.2.2
+
+- 7819fe4 Fix the allowed props of the heading role (jsx-eslint/eslint-plugin-jsx-a11y#704)
