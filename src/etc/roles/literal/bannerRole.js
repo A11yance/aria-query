@@ -17,7 +17,7 @@ const bannerRole: ARIARoleDefinition = {
         constraints: [
           'direct descendant of document',
         ],
-        name: 'banner',
+        name: 'header',
       },
       module: 'HTML',
     },
