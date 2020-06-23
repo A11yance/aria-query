@@ -3130,11 +3130,11 @@
       "aria-keyshortcuts",
       "aria-label",
       "aria-labelledby",
-      "aria-level",
       "aria-live",
       "aria-owns",
       "aria-relevant",
-      "aria-roledescription"
+      "aria-roledescription",
+      ["aria-level", "2"]
     ],
     "relatedConcepts": [
       {
@@ -3176,9 +3176,7 @@
     ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
-    "requiredProps": [
-      ["aria-level", 2]
-    ],
+    "requiredProps": [["aria-level", "2"]],
     "superClass": ["sectionhead"]
   },
   "img": {
@@ -5860,7 +5858,7 @@
     "relatedConcepts": [],
     "requiredContextRole": ["group", "tree"],
     "requiredOwnedElements": [],
-    "requiredProps": [],
+    "requiredProps": ["aria-selected"],
     "superClass": ["listitem", "option"]
   },
   "widget": {
