@@ -14,6 +14,9 @@ const textboxRole: ARIARoleDefinition = {
   props: {
     'aria-activedescendant': null,
     'aria-autocomplete': null,
+    'aria-errormessage': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
     'aria-multiline': null,
     'aria-placeholder': null,
     'aria-readonly': null,

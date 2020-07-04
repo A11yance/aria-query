@@ -12,6 +12,7 @@ const compositeRole: ARIARoleDefinition = {
   prohibitedProps: [],
   props: {
     'aria-activedescendant': null,
+    'aria-disabled': null,
   },
   relatedConcepts: [],
   requireContextRole: [],

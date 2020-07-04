@@ -12,6 +12,8 @@ const spinbuttonRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
+    'aria-errormessage': null,
+    'aria-invalid': null,
     'aria-readonly': null,
     'aria-required': null,
     'aria-valuemax': 'that there is no maximum value',

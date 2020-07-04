@@ -12,6 +12,8 @@ const radiogroupRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
+    'aria-errormessage': null,
+    'aria-invalid': null,
     'aria-readonly': null,
     'aria-required': null,
   },

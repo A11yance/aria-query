@@ -11,7 +11,11 @@ const docNoterefRole: ARIARoleDefinition = {
     'contents',
   ],
   prohibitedProps: [],
-  props: {},
+  props: {
+    'aria-errormessage': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
+  },
   relatedConcepts: [
     {
       concept: {

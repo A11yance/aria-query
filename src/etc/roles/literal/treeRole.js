@@ -11,6 +11,8 @@ const treeRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
+    'aria-errormessage': null,
+    'aria-invalid': null,
     'aria-multiselectable': null,
     'aria-required': null,
     'aria-orientation': 'vertical',

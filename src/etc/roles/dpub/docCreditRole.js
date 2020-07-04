@@ -11,7 +11,11 @@ const docCreditRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
+    'aria-disabled': null,
+    'aria-errormessage': null,
     'aria-expanded': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
   },
   relatedConcepts: [
     {

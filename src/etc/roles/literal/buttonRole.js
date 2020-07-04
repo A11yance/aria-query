@@ -12,7 +12,9 @@ const buttonRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
+    'aria-disabled': null,
     'aria-expanded': null,
+    'aria-haspopup': null,
     'aria-pressed': null,
   },
   relatedConcepts: [

@@ -11,7 +11,11 @@ const docBacklinkRole: ARIARoleDefinition = {
     'content',
   ],
   prohibitedProps: [],
-  props: {},
+  props: {
+    'aria-errormessage': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
+  },
   relatedConcepts: [
     {
       concept: {

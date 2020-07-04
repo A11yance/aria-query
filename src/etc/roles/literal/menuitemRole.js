@@ -12,7 +12,9 @@ const menuitemRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
+    'aria-disabled': null,
     'aria-expanded': null,
+    'aria-haspopup': null,
     'aria-posinset': null,
     'aria-setsize': null,
   },

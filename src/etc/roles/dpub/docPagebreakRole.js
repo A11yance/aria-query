@@ -11,7 +11,10 @@ const docPagebreakRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
+    'aria-errormessage': null,
     'aria-expanded': null,
+    'aria-haspopup': null,
+    'aria-invalid': null,
   },
   relatedConcepts: [
     {

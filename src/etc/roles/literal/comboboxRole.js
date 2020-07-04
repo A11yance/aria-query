@@ -13,7 +13,9 @@ const comboboxRole: ARIARoleDefinition = {
   props: {
     'aria-activedescendant': null,
     'aria-autocomplete': null,
+    'aria-errormessage': null,
     'aria-expanded': null,
+    'aria-invalid': null,
     'aria-readonly': null,
     'aria-required': null,
     'aria-haspopup': 'listbox',

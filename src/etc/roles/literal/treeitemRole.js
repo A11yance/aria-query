@@ -13,6 +13,7 @@ const treeitemRole: ARIARoleDefinition = {
   prohibitedProps: [],
   props: {
     'aria-expanded': null,
+    'aria-haspopup': null,
   },
   relatedConcepts: [],
   requireContextRole: [

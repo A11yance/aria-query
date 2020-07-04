@@ -10,7 +10,9 @@ const inputRole: ARIARoleDefinition = {
     'author',
   ],
   prohibitedProps: [],
-  props: {},
+  props: {
+    'aria-disabled': null,
+  },
   relatedConcepts: [
     {
       concept: {

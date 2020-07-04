@@ -12,6 +12,7 @@ const linkRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
+    'aria-disabled': null,
     'aria-expanded': null,
   },
   relatedConcepts: [
