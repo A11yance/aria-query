@@ -12,9 +12,7 @@ const tabRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
-    'aria-disabled': null,
     'aria-expanded': null,
-    'aria-haspopup': null,
     'aria-posinset': null,
     'aria-setsize': null,
     'aria-selected': 'false',

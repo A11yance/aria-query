@@ -9,13 +9,12 @@ const checkboxRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
     'contents',
+    'encapsulation',
   ],
   prohibitedProps: [],
   props: {
     'aria-checked': null,
-    'aria-errormessage': null,
     'aria-expanded': null,
-    'aria-invalid': null,
     'aria-readonly': null,
     'aria-required': null,
   },

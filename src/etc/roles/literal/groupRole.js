@@ -8,11 +8,11 @@ const groupRole: ARIARoleDefinition = {
   childrenPresentational: false,
   nameFrom: [
     'author',
+    'legend',
   ],
   prohibitedProps: [],
   props: {
     'aria-activedescendant': null,
-    'aria-disabled': null,
   },
   relatedConcepts: [
     {

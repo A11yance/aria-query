@@ -11,7 +11,6 @@ const tablistRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
-    'aria-level': null,
     'aria-multiselectable': null,
     'aria-orientation': 'horizontal',
   },

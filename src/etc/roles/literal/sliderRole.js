@@ -11,9 +11,6 @@ const sliderRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
-    'aria-errormessage': null,
-    'aria-haspopup': null,
-    'aria-invalid': null,
     'aria-readonly': null,
     'aria-orientation': 'horizontal',
     'aria-valuemax': '100',

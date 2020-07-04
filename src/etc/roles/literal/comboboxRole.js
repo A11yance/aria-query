@@ -13,11 +13,9 @@ const comboboxRole: ARIARoleDefinition = {
   props: {
     'aria-activedescendant': null,
     'aria-autocomplete': null,
-    'aria-errormessage': null,
-    'aria-invalid': null,
+    'aria-expanded': null,
     'aria-readonly': null,
     'aria-required': null,
-    'aria-expanded': 'false',
     'aria-haspopup': 'listbox',
   },
   relatedConcepts: [
@@ -179,7 +177,7 @@ const comboboxRole: ARIARoleDefinition = {
   requiredOwnedElements: [],
   requiredProps: {
     'aria-controls': null,
-    'aria-expanded': 'false',
+    'aria-expanded': null,
   },
   superClass: [
     [

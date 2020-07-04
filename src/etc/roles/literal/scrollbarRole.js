@@ -11,7 +11,6 @@ const scrollbarRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
-    'aria-disabled': null,
     'aria-orientation': 'vertical',
     'aria-valuemax': '100',
     'aria-valuemin': '0',

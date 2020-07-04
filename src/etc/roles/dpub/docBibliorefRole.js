@@ -11,11 +11,7 @@ const docBibliorefRole: ARIARoleDefinition = {
     'contents',
   ],
   prohibitedProps: [],
-  props: {
-    'aria-errormessage': null,
-    'aria-haspopup': null,
-    'aria-invalid': null,
-  },
+  props: {},
   relatedConcepts: [
     {
       concept: {

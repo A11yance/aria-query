@@ -8,14 +8,15 @@ const spinbuttonRole: ARIARoleDefinition = {
   childrenPresentational: false,
   nameFrom: [
     'author',
+    'encapsulation',
   ],
   prohibitedProps: [],
   props: {
-    'aria-errormessage': null,
-    'aria-invalid': null,
     'aria-readonly': null,
     'aria-required': null,
-    'aria-valuenow': '0',
+    'aria-valuemax': 'that there is no maximum value',
+    'aria-valuemin': 'that there is no minimum value',
+    'aria-valuenow': 'that there is no current value',
   },
   relatedConcepts: [
     {

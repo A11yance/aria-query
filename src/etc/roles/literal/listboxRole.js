@@ -8,12 +8,11 @@ const listboxRole: ARIARoleDefinition = {
   childrenPresentational: false,
   nameFrom: [
     'author',
+    'encapsulation',
   ],
   prohibitedProps: [],
   props: {
-    'aria-errormessage': null,
     'aria-expanded': null,
-    'aria-invalid': null,
     'aria-multiselectable': null,
     'aria-readonly': null,
     'aria-required': null,

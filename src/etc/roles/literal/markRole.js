@@ -1,26 +1,20 @@
 /**
  * @flow
  */
-const docIntroductionRole: ARIARoleDefinition = {
+const markRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
-    'author',
+    'prohibited',
   ],
-  prohibitedProps: [],
-  props: {
-    'aria-expanded': null,
-  },
-  relatedConcepts: [
-    {
-      concept: {
-        name: 'introduction [EPUB-SSV]',
-      },
-      module: 'EPUB',
-    },
+  prohibitedProps: [
+    'aria-label',
+    'aria-labelledby',
   ],
+  props: {},
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
@@ -30,9 +24,8 @@ const docIntroductionRole: ARIARoleDefinition = {
       'roletype',
       'structure',
       'section',
-      'landmark',
     ],
   ],
 };
 
-export default docIntroductionRole;
+export default markRole;

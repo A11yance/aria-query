@@ -5,6 +5,9 @@ import alertRole from './literal/alertRole';
 import alertdialogRole from './literal/alertdialogRole';
 import applicationRole from './literal/applicationRole';
 import articleRole from './literal/articleRole';
+import associationlistRole from './literal/associationlistRole';
+import associationlistitemkeyRole from './literal/associationlistitemkeyRole';
+import associationlistitemvalueRole from './literal/associationlistitemvalueRole';
 import bannerRole from './literal/bannerRole';
 import blockquoteRole from './literal/blockquoteRole';
 import buttonRole from './literal/buttonRole';
@@ -14,6 +17,7 @@ import checkboxRole from './literal/checkboxRole';
 import codeRole from './literal/codeRole';
 import columnheaderRole from './literal/columnheaderRole';
 import comboboxRole from './literal/comboboxRole';
+import commentRole from './literal/commentRole';
 import complementaryRole from './literal/complementaryRole';
 import contentinfoRole from './literal/contentinfoRole';
 import definitionRole from './literal/definitionRole';
@@ -32,12 +36,15 @@ import groupRole from './literal/groupRole';
 import headingRole from './literal/headingRole';
 import imgRole from './literal/imgRole';
 import insertionRole from './literal/insertionRole';
+import labelRole from './literal/labelRole';
+import legendRole from './literal/legendRole';
 import linkRole from './literal/linkRole';
 import listRole from './literal/listRole';
 import listboxRole from './literal/listboxRole';
 import listitemRole from './literal/listitemRole';
 import logRole from './literal/logRole';
 import mainRole from './literal/mainRole';
+import markRole from './literal/markRole';
 import marqueeRole from './literal/marqueeRole';
 import mathRole from './literal/mathRole';
 import menuRole from './literal/menuRole';
@@ -68,6 +75,7 @@ import spinbuttonRole from './literal/spinbuttonRole';
 import statusRole from './literal/statusRole';
 import strongRole from './literal/strongRole';
 import subscriptRole from './literal/subscriptRole';
+import suggestionRole from './literal/suggestionRole';
 import superscriptRole from './literal/superscriptRole';
 import switchRole from './literal/switchRole';
 import tabRole from './literal/tabRole';
@@ -89,6 +97,9 @@ const ariaLiteralRoles: MapOfRoleDefinitions = new Map([
   ['alertdialog', alertdialogRole],
   ['application', applicationRole],
   ['article', articleRole],
+  ['associationlist', associationlistRole],
+  ['associationlistitemkey', associationlistitemkeyRole],
+  ['associationlistitemvalue', associationlistitemvalueRole],
   ['banner', bannerRole],
   ['blockquote', blockquoteRole],
   ['button', buttonRole],
@@ -98,6 +109,7 @@ const ariaLiteralRoles: MapOfRoleDefinitions = new Map([
   ['code', codeRole],
   ['columnheader', columnheaderRole],
   ['combobox', comboboxRole],
+  ['comment', commentRole],
   ['complementary', complementaryRole],
   ['contentinfo', contentinfoRole],
   ['definition', definitionRole],
@@ -116,12 +128,15 @@ const ariaLiteralRoles: MapOfRoleDefinitions = new Map([
   ['heading', headingRole],
   ['img', imgRole],
   ['insertion', insertionRole],
+  ['label', labelRole],
+  ['legend', legendRole],
   ['link', linkRole],
   ['list', listRole],
   ['listbox', listboxRole],
   ['listitem', listitemRole],
   ['log', logRole],
   ['main', mainRole],
+  ['mark', markRole],
   ['marquee', marqueeRole],
   ['math', mathRole],
   ['menu', menuRole],
@@ -152,6 +167,7 @@ const ariaLiteralRoles: MapOfRoleDefinitions = new Map([
   ['status', statusRole],
   ['strong', strongRole],
   ['subscript', subscriptRole],
+  ['suggestion', suggestionRole],
   ['superscript', superscriptRole],
   ['switch', switchRole],
   ['tab', tabRole],

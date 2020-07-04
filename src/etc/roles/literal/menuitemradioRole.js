@@ -38,22 +38,9 @@ const menuitemradioRole: ARIARoleDefinition = {
     [
       'roletype',
       'widget',
-      'input',
-      'checkbox',
-      'menuitemcheckbox',
-    ],
-    [
-      'roletype',
-      'widget',
       'command',
       'menuitem',
       'menuitemcheckbox',
-    ],
-    [
-      'roletype',
-      'widget',
-      'input',
-      'radio',
     ],
   ],
 };
