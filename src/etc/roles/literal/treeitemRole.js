@@ -25,7 +25,9 @@ const treeitemRole: ARIARoleDefinition = {
     'tree',
   ],
   requiredOwnedElements: [],
-  requiredProps: {},
+  requiredProps: {
+    'aria-selected': null,
+  },
   superClass: [
     [
       'roletype',
