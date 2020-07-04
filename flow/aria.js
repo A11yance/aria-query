@@ -51,10 +51,14 @@ type ARIACompositeWidgetRole =
 type ARIADocumentStructureRole =
   'application'
   | 'article'
+  | 'associationlist'
+  | 'associationlistitemkey'
+  | 'associationlistitemvalue'
   | 'blockquote'
   | 'caption'
   | 'cell'
   | 'columnheader'
+  | 'comment'
   | 'definition'
   | 'deletion'
   | 'directory'
@@ -67,8 +71,11 @@ type ARIADocumentStructureRole =
   | 'heading'
   | 'img'
   | 'insertion'
+  | 'label'
+  | 'legend'
   | 'list'
   | 'listitem'
+  | 'mark'
   | 'math'
   | 'meter'
   | 'none'
@@ -81,6 +88,7 @@ type ARIADocumentStructureRole =
   | 'separator'
   | 'strong'
   | 'subscript'
+  | 'suggestion'
   | 'superscript'
   | 'table'
   | 'term'
@@ -207,12 +215,16 @@ type ARIAProperty =
   'aria-activedescendant'
   | 'aria-atomic'
   | 'aria-autocomplete'
+  | 'aria-braillelabel'
+  | 'aria-brailleroledescription'
   | 'aria-colcount'
   | 'aria-colindex'
+  | 'aria-colindextext'
   | 'aria-colspan'
   | 'aria-controls'
   | 'aria-current'
   | 'aria-describedby'
+  | 'aria-description'
   | 'aria-details'
   | 'aria-dropeffect'
   | 'aria-errormessage'
@@ -236,6 +248,7 @@ type ARIAProperty =
   | 'aria-roledescription'
   | 'aria-rowcount'
   | 'aria-rowindex'
+  | 'aria-rowindextext'
   | 'aria-rowspan'
   | 'aria-setsize'
   | 'aria-sort'
@@ -245,7 +258,8 @@ type ARIAProperty =
   | 'aria-valuetext'
   | ARIAState;
 
-type ARIAPropertyMap = {
+// {| [AriaProperty]?: mixed |}
+type ARIAPropertyMap = {|
   'aria-busy'?: mixed,
   'aria-checked'?: mixed,
   'aria-disabled'?: mixed,
@@ -258,12 +272,16 @@ type ARIAPropertyMap = {
   'aria-activedescendant'?: mixed,
   'aria-atomic'?: mixed,
   'aria-autocomplete'?: mixed,
+  'aria-braillelabel'?: mixed,
+  'aria-brailleroledescription'?: mixed,
   'aria-colcount'?: mixed,
   'aria-colindex'?: mixed,
+  'aria-colindextext'?: mixed,
   'aria-colspan'?: mixed,
   'aria-controls'?: mixed,
   'aria-current'?: ?ARIAPropertyCurrent,
   'aria-describedby'?: mixed,
+  'aria-description'?: mixed,
   'aria-details'?: mixed,
   'aria-dropeffect'?: mixed,
   'aria-errormessage'?: mixed,
@@ -287,6 +305,7 @@ type ARIAPropertyMap = {
   'aria-roledescription'?: mixed,
   'aria-rowcount'?: mixed,
   'aria-rowindex'?: mixed,
+  'aria-rowindextext'?: mixed,
   'aria-rowspan'?: mixed,
   'aria-setsize'?: mixed,
   'aria-sort'?: mixed,
@@ -294,7 +313,7 @@ type ARIAPropertyMap = {
   'aria-valuemin'?: mixed,
   'aria-valuenow'?: mixed,
   'aria-valuetext'?: mixed,
-};
+|};
 
 type ARIAPropertyDefinition = {
   type: 'string'
