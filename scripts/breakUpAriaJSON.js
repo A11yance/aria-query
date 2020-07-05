@@ -158,15 +158,15 @@ fs.readFile(path.join('scripts/roles.json'), {
         Object.keys(aria[name])
           .sort()
           .filter((prop) => {
-            // Create a set of all the props of the super classes.
             if (prop === 'props') {
+              // Create a set of all the props of the super classes.
               const inheritedProps = new Set([]);
               let superClasses = aria[name]['superClass'];
               while (superClasses.length > 0) {
                 const cloned = superClasses.slice();
                 superClasses = [];
                 cloned.forEach(superClass => {
-                  aria[superClass]['props'].forEach(
+                  aria[superClass]['props'].concat(aria[superClass]['requiredProps']).forEach(
                     superProp => {
                       const name = (Array.isArray(superProp))
                         ? superProp[0]
@@ -177,6 +177,22 @@ fs.readFile(path.join('scripts/roles.json'), {
                   superClasses = superClasses.concat(aria[superClass]['superClass']);
                 });
               }
+              // Create a map of all prop names
+              const propNamesMap = aria[name]['props'].reduce((acc, item, index) => {
+                const pName = Array.isArray(item) ? item[0] : item;
+                acc[pName] = index;
+                return acc;
+              }, {});
+              // Add the required props for this role to the props list.
+              aria[name]['requiredProps'].forEach((rProp) => {
+                const rName = Array.isArray(rProp) ? rProp[0] : rProp;
+                // If the prop exists in the list of props, replace it. Otherwise, just add it.
+                if (propNamesMap[rName] >= 0) {
+                  aria[name]['props'].splice(propNamesMap[rName], 1, rProp);
+                } else {
+                  aria[name]['props'].push(rProp);
+                }
+              });
               // Remove the props that exist in the super classes unless the
               // prop has a default value.
               aria[name]['props'] = aria[name]['props'].filter(
