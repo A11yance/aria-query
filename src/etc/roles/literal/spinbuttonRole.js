@@ -16,9 +16,6 @@ const spinbuttonRole: ARIARoleDefinition = {
     'aria-invalid': null,
     'aria-readonly': null,
     'aria-required': null,
-    'aria-valuemax': 'that there is no maximum value',
-    'aria-valuemin': 'that there is no minimum value',
-    'aria-valuenow': 'that there is no current value',
   },
   relatedConcepts: [
     {

@@ -5529,9 +5529,9 @@
       "aria-required",
       "aria-roledescription",
       "aria-valuetext",
-      ["aria-valuemax", "that there is no maximum value"],
-      ["aria-valuemin", "that there is no minimum value"],
-      ["aria-valuenow", "that there is no current value"]
+      "aria-valuemax",
+      "aria-valuemin",
+      "aria-valuenow"
     ],
     "relatedConcepts": [
       {
