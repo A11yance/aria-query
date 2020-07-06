@@ -4035,15 +4035,15 @@
       "aria-owns",
       "aria-relevant",
       "aria-roledescription",
-      "aria-valuemax",
-      "aria-valuemin",
       "aria-valuenow",
-      "aria-valuetext"
+      "aria-valuetext",
+      ["aria-valuemax", "100"],
+      ["aria-valuemin", "0"]
     ],
     "relatedConcepts": [],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
-    "requiredProps": ["aria-valuemax", "aria-valuemin", "aria-valuenow"],
+    "requiredProps": ["aria-valuenow"],
     "superClass": ["range"]
   },
   "navigation": {

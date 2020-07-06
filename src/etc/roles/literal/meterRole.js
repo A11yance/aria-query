@@ -10,14 +10,15 @@ const meterRole: ARIARoleDefinition = {
     'author',
   ],
   prohibitedProps: [],
-  props: {},
+  props: {
+    'aria-valuemax': '100',
+    'aria-valuemin': '0',
+  },
   relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
-    'aria-valuemax': null,
-    'aria-valuemin': null,
     'aria-valuenow': null,
   },
   superClass: [
