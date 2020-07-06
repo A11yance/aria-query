@@ -245,7 +245,8 @@ type ARIAProperty =
   | 'aria-valuetext'
   | ARIAState;
 
-type ARIAPropertyMap = {
+// {| [AriaProperty]?: mixed |}
+type ARIAPropertyMap = {|
   'aria-busy'?: mixed,
   'aria-checked'?: mixed,
   'aria-disabled'?: mixed,
@@ -294,7 +295,7 @@ type ARIAPropertyMap = {
   'aria-valuemin'?: mixed,
   'aria-valuenow'?: mixed,
   'aria-valuetext'?: mixed,
-};
+|};
 
 type ARIAPropertyDefinition = {
   type: 'string'
