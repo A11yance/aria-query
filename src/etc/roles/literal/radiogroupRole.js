@@ -8,6 +8,7 @@ const radiogroupRole: ARIARoleDefinition = {
   childrenPresentational: false,
   nameFrom: [
     'author',
+    'legend',
   ],
   prohibitedProps: [],
   props: {

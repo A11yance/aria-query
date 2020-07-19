@@ -1,34 +1,32 @@
 /**
  * @flow
  */
-const meterRole: ARIARoleDefinition = {
+const commentRole: ARIARoleDefinition = {
   abstract: false,
-  accessibleNameRequired: true,
+  accessibleNameRequired: false,
   baseConcepts: [],
-  childrenPresentational: true,
+  childrenPresentational: false,
   nameFrom: [
     'author',
-    'encapsulation',
+    'contents',
   ],
   prohibitedProps: [],
   props: {
-    'aria-valuemax': '100',
-    'aria-valuemin': '0',
+    'aria-level': null,
   },
   relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
-  requiredProps: {
-    'aria-valuenow': null,
-  },
+  requiredProps: {},
   superClass: [
     [
       'roletype',
       'structure',
-      'range',
+      'document',
+      'article',
     ],
   ],
 };
 
-export default meterRole;
+export default commentRole;

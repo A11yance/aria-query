@@ -8,6 +8,7 @@ const searchboxRole: ARIARoleDefinition = {
   childrenPresentational: false,
   nameFrom: [
     'author',
+    'encapsulation',
   ],
   prohibitedProps: [],
   props: {},

@@ -4,7 +4,8 @@ CDN URL: https://npm-cdn.com/pkg/aria-query/
 
 # ARIA Query
 
-Programmatic access to the [WAI-ARIA 1.1 Roles Model](https://www.w3.org/TR/wai-aria-1.1/#roles).
+Programmatic access to the [WAI-ARIA 1.2 Roles Model](https://w3c.github.io/aria/#roles).
+This package tracks the editor's draft (last update: 25 June 2020).
 
 ## Building the `src/etc` files.
 

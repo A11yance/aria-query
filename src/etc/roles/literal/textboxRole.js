@@ -8,6 +8,7 @@ const textboxRole: ARIARoleDefinition = {
   childrenPresentational: false,
   nameFrom: [
     'author',
+    'encapsulation',
   ],
   prohibitedProps: [],
   props: {

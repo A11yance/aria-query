@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const captionRole: ARIARoleDefinition = {
+const markRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],
@@ -15,18 +15,8 @@ const captionRole: ARIARoleDefinition = {
   ],
   props: {},
   relatedConcepts: [],
-  requireContextRole: [
-    'figure',
-    'grid',
-    'table',
-    'treegrid',
-  ],
-  requiredContextRole: [
-    'figure',
-    'grid',
-    'table',
-    'treegrid',
-  ],
+  requireContextRole: [],
+  requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {},
   superClass: [
@@ -38,4 +28,4 @@ const captionRole: ARIARoleDefinition = {
   ],
 };
 
-export default captionRole;
+export default markRole;

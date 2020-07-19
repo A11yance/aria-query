@@ -8,7 +8,6 @@ const rowgroupRole: ARIARoleDefinition = {
   childrenPresentational: false,
   nameFrom: [
     'author',
-    'contents',
   ],
   prohibitedProps: [],
   props: {},

@@ -12,7 +12,7 @@ const headingRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
-    'aria-level': '2',
+    'aria-level': null,
   },
   relatedConcepts: [
     {
@@ -56,7 +56,7 @@ const headingRole: ARIARoleDefinition = {
   requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {
-    'aria-level': '2',
+    'aria-level': null,
   },
   superClass: [
     [
