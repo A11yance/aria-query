@@ -10,7 +10,10 @@ const progressbarRole: ARIARoleDefinition = {
     'author',
   ],
   prohibitedProps: [],
-  props: {},
+  props: {
+    'aria-valuemax': '100',
+    'aria-valuemin': '0',
+  },
   relatedConcepts: [
     {
       concept: {

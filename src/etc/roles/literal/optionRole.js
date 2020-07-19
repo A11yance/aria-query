@@ -37,8 +37,14 @@ const optionRole: ARIARoleDefinition = {
       module: 'HTML',
     },
   ],
-  requireContextRole: [],
-  requiredContextRole: [],
+  requireContextRole: [
+    'group',
+    'listbox',
+  ],
+  requiredContextRole: [
+    'group',
+    'listbox',
+  ],
   requiredOwnedElements: [],
   requiredProps: {
     'aria-selected': 'false',

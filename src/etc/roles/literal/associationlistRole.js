@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const tablistRole: ARIARoleDefinition = {
+const associationlistRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],
@@ -10,33 +10,26 @@ const tablistRole: ARIARoleDefinition = {
     'author',
   ],
   prohibitedProps: [],
-  props: {
-    'aria-multiselectable': null,
-    'aria-orientation': 'horizontal',
-  },
-  relatedConcepts: [
-    {
-      module: 'DAISY',
-      concept: {
-        name: 'guide',
-      },
-    },
-  ],
+  props: {},
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [
     [
-      'tab',
+      'associationlistitemkey',
+    ],
+    [
+      'associationlistitemvalue',
     ],
   ],
   requiredProps: {},
   superClass: [
     [
       'roletype',
-      'widget',
-      'composite',
+      'structure',
+      'section',
     ],
   ],
 };
 
-export default tablistRole;
+export default associationlistRole;

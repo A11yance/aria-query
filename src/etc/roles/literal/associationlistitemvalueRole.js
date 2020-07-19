@@ -1,31 +1,25 @@
 /**
  * @flow
  */
-const captionRole: ARIARoleDefinition = {
+const associationlistitemvalueRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
-    'prohibited',
+    'author',
   ],
-  prohibitedProps: [
-    'aria-label',
-    'aria-labelledby',
-  ],
-  props: {},
+  prohibitedProps: [],
+  props: {
+    'aria-posinset': null,
+    'aria-setsize': null,
+  },
   relatedConcepts: [],
   requireContextRole: [
-    'figure',
-    'grid',
-    'table',
-    'treegrid',
+    'associationlist',
   ],
   requiredContextRole: [
-    'figure',
-    'grid',
-    'table',
-    'treegrid',
+    'associationlist',
   ],
   requiredOwnedElements: [],
   requiredProps: {},
@@ -38,4 +32,4 @@ const captionRole: ARIARoleDefinition = {
   ],
 };
 
-export default captionRole;
+export default associationlistitemvalueRole;

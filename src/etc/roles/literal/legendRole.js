@@ -1,34 +1,29 @@
 /**
  * @flow
  */
-const meterRole: ARIARoleDefinition = {
+const legendRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],
-  childrenPresentational: true,
+  childrenPresentational: false,
   nameFrom: [
     'author',
-    'encapsulation',
+    'contents',
   ],
   prohibitedProps: [],
-  props: {
-    'aria-valuemax': '100',
-    'aria-valuemin': '0',
-  },
+  props: {},
   relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
-  requiredProps: {
-    'aria-valuenow': null,
-  },
+  requiredProps: {},
   superClass: [
     [
       'roletype',
       'structure',
-      'range',
+      'section',
     ],
   ],
 };
 
-export default meterRole;
+export default legendRole;

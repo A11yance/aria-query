@@ -9,6 +9,7 @@ const checkboxRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
     'contents',
+    'encapsulation',
   ],
   prohibitedProps: [],
   props: {

@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const captionRole: ARIARoleDefinition = {
+const suggestionRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],
@@ -15,19 +15,16 @@ const captionRole: ARIARoleDefinition = {
   ],
   props: {},
   relatedConcepts: [],
-  requireContextRole: [
-    'figure',
-    'grid',
-    'table',
-    'treegrid',
+  requireContextRole: [],
+  requiredContextRole: [],
+  requiredOwnedElements: [
+    [
+      'insertion',
+    ],
+    [
+      'deletion',
+    ],
   ],
-  requiredContextRole: [
-    'figure',
-    'grid',
-    'table',
-    'treegrid',
-  ],
-  requiredOwnedElements: [],
   requiredProps: {},
   superClass: [
     [
@@ -38,4 +35,4 @@ const captionRole: ARIARoleDefinition = {
   ],
 };
 
-export default captionRole;
+export default suggestionRole;

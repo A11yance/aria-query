@@ -117,6 +117,9 @@ fs.readFile(path.join('scripts/roles.json'), {
     for (let klass of klasses) {
       const newStack = stack.slice();
       newStack.unshift(klass);
+      if (aria[klass] === undefined) {
+        throw new TypeError(`Missing role '${klass}'`);
+      }
       let superClasses = aria[klass]['superClass'];
       if (superClasses.length > 0) {
         output = output.concat(
