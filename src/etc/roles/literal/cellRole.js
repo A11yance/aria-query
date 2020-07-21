@@ -13,10 +13,8 @@ const cellRole: ARIARoleDefinition = {
   prohibitedProps: [],
   props: {
     'aria-colindex': null,
-    'aria-colindextext': null,
     'aria-colspan': null,
     'aria-rowindex': null,
-    'aria-rowindextext': null,
     'aria-rowspan': null,
   },
   relatedConcepts: [

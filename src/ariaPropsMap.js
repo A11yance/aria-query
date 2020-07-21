@@ -23,12 +23,6 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
   ['aria-busy', {
     'type': 'boolean'
   }],
-  ['aria-braillelabel', {
-    'type': 'string'
-  }],
-  ['aria-brailleroledescription', {
-    'type': 'string'
-  }],
   ['aria-checked', {
     'type': 'tristate'
   }],
@@ -37,9 +31,6 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
   }],
   ['aria-colindex', {
     type: 'integer',
-  }],
-  ['aria-colindextext', {
-    type: 'string',
   }],
   ['aria-colspan', {
     type: 'integer',
@@ -61,9 +52,6 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
   }],
   ['aria-describedby', {
     'type': 'idlist'
-  }],
-  ['aria-description', {
-    'type': 'string'
   }],
   ['aria-details', {
     'type': 'id'
@@ -193,9 +181,6 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
   }],
   ['aria-rowindex', {
     type: 'integer',
-  }],
-  ['aria-rowindextext', {
-    type: 'string',
   }],
   ['aria-rowspan', {
     type: 'integer',

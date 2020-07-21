@@ -14,7 +14,6 @@ const rangeRole: ARIARoleDefinition = {
     'aria-valuemax': null,
     'aria-valuemin': null,
     'aria-valuenow': null,
-    'aria-valuetext': null,
   },
   relatedConcepts: [],
   requireContextRole: [],

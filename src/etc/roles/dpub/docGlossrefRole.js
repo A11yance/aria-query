@@ -13,7 +13,6 @@ const docGlossrefRole: ARIARoleDefinition = {
   prohibitedProps: [],
   props: {
     'aria-errormessage': null,
-    'aria-haspopup': null,
     'aria-invalid': null,
   },
   relatedConcepts: [

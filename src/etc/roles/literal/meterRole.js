@@ -8,10 +8,10 @@ const meterRole: ARIARoleDefinition = {
   childrenPresentational: true,
   nameFrom: [
     'author',
-    'encapsulation',
   ],
   prohibitedProps: [],
   props: {
+    'aria-valuetext': null,
     'aria-valuemax': '100',
     'aria-valuemin': '0',
   },
