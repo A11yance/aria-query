@@ -14,6 +14,12 @@ const definitionRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        name: 'dfn',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
         name: 'dd',
       },
       module: 'HTML',
