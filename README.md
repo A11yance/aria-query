@@ -92,7 +92,6 @@ Map {
   '{"name": "select"}' => Set { 'combobox', 'listbox' },
   '{"name": "menuitem"}' => Set { 'command', 'menuitem' },
   '{"name": "dd"}' => Set { 'definition' },
-  '{"name": "dfn"}' => Set { 'definition' },
   '{"name": "figure"}' => Set { 'figure' },
   '{"name": "form"}' => Set { 'form' },
   '{"name": "table"}' => Set { 'grid', 'table' },
@@ -122,6 +121,7 @@ Map {
   '{"name": "input", "attributes": [ {"name": "type", "value": "search"}] }' => Set { 'searchbox' },
   '{"name": "hr"}' => Set { 'separator' },
   '{"name": "dt"}' => Set { 'term' },
+  '{"name": "dfn"}' => Set { 'term' },
   '{"name": "textarea"}' => Set { 'textbox' },
   '{"name": "input", "attributes": [ {"name": "type", "value": "text"}] }' => Set { 'textbox' }
 }
