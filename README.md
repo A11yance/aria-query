@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/A11yance/aria-query.svg?branch=master)](https://travis-ci.org/A11yance/aria-query)
 
-CDN URL: https://npm-cdn.com/pkg/aria-query/
+CDN URL: https://unpkg.com/aria-query
 
 # ARIA Query
 
