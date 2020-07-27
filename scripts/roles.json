@@ -5468,6 +5468,12 @@
           "name": "dfn"
         },
         "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "dt"
+        },
+        "module": "HTML"
       }
     ],
     "requiredContextRole": [],

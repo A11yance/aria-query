@@ -18,6 +18,12 @@ const termRole: ARIARoleDefinition = {
       },
       module: 'HTML',
     },
+    {
+      concept: {
+        name: 'dt',
+      },
+      module: 'HTML',
+    },
   ],
   requireContextRole: [],
   requiredContextRole: [],
