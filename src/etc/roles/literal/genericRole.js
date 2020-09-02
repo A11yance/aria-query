@@ -10,10 +10,8 @@ const genericRole: ARIARoleDefinition = {
     'prohibited',
   ],
   prohibitedProps: [
-    'aria-brailleroledescription',
     'aria-label',
     'aria-labelledby',
-    'aria-roledescription',
   ],
   props: {},
   relatedConcepts: [

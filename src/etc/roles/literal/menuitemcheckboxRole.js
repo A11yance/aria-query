@@ -11,9 +11,7 @@ const menuitemcheckboxRole: ARIARoleDefinition = {
     'contents',
   ],
   prohibitedProps: [],
-  props: {
-    'aria-checked': null,
-  },
+  props: {},
   relatedConcepts: [
     {
       concept: {
@@ -37,6 +35,12 @@ const menuitemcheckboxRole: ARIARoleDefinition = {
     'aria-checked': null,
   },
   superClass: [
+    [
+      'roletype',
+      'widget',
+      'input',
+      'checkbox',
+    ],
     [
       'roletype',
       'widget',

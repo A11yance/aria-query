@@ -19,13 +19,11 @@ const captionRole: ARIARoleDefinition = {
     'figure',
     'grid',
     'table',
-    'treegrid',
   ],
   requiredContextRole: [
     'figure',
     'grid',
     'table',
-    'treegrid',
   ],
   requiredOwnedElements: [],
   requiredProps: {},

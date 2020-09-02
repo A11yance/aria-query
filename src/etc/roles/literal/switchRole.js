@@ -9,7 +9,6 @@ const switchRole: ARIARoleDefinition = {
   nameFrom: [
     'author',
     'contents',
-    'encapsulation',
   ],
   prohibitedProps: [],
   props: {},

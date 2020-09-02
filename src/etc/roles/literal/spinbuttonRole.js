@@ -8,7 +8,6 @@ const spinbuttonRole: ARIARoleDefinition = {
   childrenPresentational: false,
   nameFrom: [
     'author',
-    'encapsulation',
   ],
   prohibitedProps: [],
   props: {
@@ -16,6 +15,8 @@ const spinbuttonRole: ARIARoleDefinition = {
     'aria-invalid': null,
     'aria-readonly': null,
     'aria-required': null,
+    'aria-valuetext': null,
+    'aria-valuenow': '0',
   },
   relatedConcepts: [
     {

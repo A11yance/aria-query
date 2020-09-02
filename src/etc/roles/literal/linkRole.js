@@ -14,6 +14,7 @@ const linkRole: ARIARoleDefinition = {
   props: {
     'aria-disabled': null,
     'aria-expanded': null,
+    'aria-haspopup': null,
   },
   relatedConcepts: [
     {
