@@ -307,7 +307,7 @@ type ARIAPropertyDefinition = {
   | 'token'
   | 'tokenlist'
   | 'tristate',
-  value? : Array<string | boolean>,
+  value?: Array<string | boolean>,
   allowundefined?: boolean,
 };
 
@@ -335,12 +335,10 @@ type ARIARoleRelationConcept = {
   attributes?: Array<ARIARoleRelationConceptAttribute>,
   // These constraints are drawn from the mapping between ARIA and HTML:
   // https://www.w3.org/TR/html-aria
-  constraints?: Array<
-    'direct descendant of document'
+  constraints?: Array<'direct descendant of document'
     | 'direct descendant of ol, ul or menu'
     | 'direct descendant of details element with the open attribute defined'
-    | 'descendant of table'
-  >,
+    | 'descendant of table'>,
 };
 
 type ARIARoleRelationConceptAttribute = {
@@ -348,9 +346,7 @@ type ARIARoleRelationConceptAttribute = {
   value?: string | number,
   // These constraints are drawn from the mapping between ARIA and HTML:
   // https://www.w3.org/TR/html-aria
-  constraints?: Array<
-    'undefined' // The attribute does not exist on the node: <a>
+  constraints?: Array<'undefined' // The attribute does not exist on the node: <a>
     | 'set' // The attribute has a value: <a b="c">
-    | '>1'
-  >,
+    | '>1'>,
 };
