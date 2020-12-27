@@ -1,11 +1,9 @@
-[![Build Status](https://travis-ci.org/A11yance/aria-query.svg?branch=master)](https://travis-ci.org/A11yance/aria-query)
-
-CDN URL: https://unpkg.com/aria-query
-
 # ARIA Query
 
 Programmatic access to the [WAI-ARIA 1.2 Roles Model](https://raw.githack.com/w3c/aria/stable/#roles).
 This package tracks the stable editor's draft (last update: 21 July 2020).
+
+CDN URL: https://unpkg.com/aria-query
 
 ## Building the `src/etc` files.
 
