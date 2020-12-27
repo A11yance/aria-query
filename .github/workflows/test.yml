@@ -14,22 +14,55 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  test-flow:
+    runs-on: ubuntu-latest
+    steps:
+        # Checkss out the repository under $GITHUB_WORKSPACE
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Load Node
+        uses: actions/setup-node@v1
+      - name: Npm Install
+        run: npm install
+      - name: Flow type check
+        run: npm run flow
+  test-eslint:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        eslint: [3, 4, 5, 6]
+        node: [6, 7, 8, 9, 10, 12]
+        exclude:
+          - node: 7
+            eslint: 6
+          - node: 7
+            eslint: 5
+          - node: 7
+            eslint: 4
+          - node: 7
+            eslint: 3
+          - node: 6
+            eslint: 6
+          - node: 6
+            eslint: 5
+          - node: 6
+            eslint: 4
+          - node: 6
+            eslint: 3
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        # Checkss out the repository under $GITHUB_WORKSPACE
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Load Node version ${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Npm Install
+        run: npm install
+      - name: Install ESLint version ${{matrix.eslint}}
+        run: npm uninstall --no-save eslint-config-airbnb-base && npm install --no-save "eslint@${{matrix.eslint}}"
+      - name: Run ESLint
+        run: npm run test:ci
