@@ -1,68 +1,93 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
-
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches:
       - main
   pull_request:
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  test-flow:
-    runs-on: ubuntu-latest
-    steps:
-        # Checkss out the repository under $GITHUB_WORKSPACE
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Load Node
-        uses: actions/setup-node@v1
-      - name: Npm Install
-        run: npm install
-      - name: Flow type check
-        run: npm run flow
-  test-eslint:
-    # The type of runner that the job will run on
+  jest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        eslint: [3, 4, 5, 6]
-        node: [6, 7, 8, 9, 10, 12]
-        exclude:
-          - node: 7
-            eslint: 6
-          - node: 7
-            eslint: 5
-          - node: 7
-            eslint: 4
-          - node: 7
-            eslint: 3
-          - node: 6
-            eslint: 6
-          - node: 6
-            eslint: 5
-          - node: 6
-            eslint: 4
-          - node: 6
-            eslint: 3
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+        node: [10, 12, 14, 15]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Load Node version ${{ matrix.node }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Npm Install
+        run: npm ci
+      - name: Run Jest
+        run: npm run test:ci
+      - name: Run Coveralls
+        uses: coverallsapp/github-action@v1.1.2
+        if: matrix.node == '12'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./reports/lcov.info
+  flow:
+    runs-on: ubuntu-latest
     steps:
         # Checkss out the repository under $GITHUB_WORKSPACE
       - name: Checkout
         uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Load Node
+        uses: actions/setup-node@v2
+      - name: Npm Install
+        run: npm ci
+      - name: Flow type check
+        run: npm run flow
+  eslint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [12]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Load Node version ${{ matrix.node }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
       - name: Npm Install
-        run: npm install
-      - name: Install ESLint version ${{matrix.eslint}}
-        run: npm uninstall --no-save eslint-config-airbnb-base && npm install --no-save "eslint@${{matrix.eslint}}"
+        run: npm ci
       - name: Run ESLint
-        run: npm run test:ci
+        run: npm run lint
+  diff-breakUpAriaJSON:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Load Node version
+        uses: actions/setup-node@v2
+      - name: Npm Install
+        run: npm ci
+      - name: Run diff check for the breakUpAriaJSON script
+        run: node scripts/breakUpAriaJSON.js && git diff --exit-code
