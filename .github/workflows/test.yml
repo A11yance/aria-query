@@ -66,3 +66,20 @@ jobs:
         run: npm uninstall --no-save eslint-config-airbnb-base && npm install --no-save "eslint@${{matrix.eslint}}"
       - name: Run ESLint
         run: npm run test:ci
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+        # Checkss out the repository under $GITHUB_WORKSPACE
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Load Node
+        uses: actions/setup-node@v2
+      - name: Npm Install
+        run: npm ci
+      - name: Flow type check
+        run: npm run test:ci
+      - name: Coveralls
+        uses: coverallsapp/github-action@v1.1.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./reports/lcov.info
