@@ -9,7 +9,6 @@
   "scripts": {
     "build": "rimraf lib && babel src --out-dir lib",
     "prepareOnly": "npm run lint && npm run flow && npm run test && npm run build",
-    "coveralls": "cat ./reports/lcov.info | coveralls",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "lint": "eslint  --config .eslintrc src __tests__",
     "lint:fix": "npm run lint -- --fix",
@@ -42,7 +41,6 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^24.0.0",
     "commander": "^2.11.0",
-    "coveralls": "^2.11.15",
     "eslint": "^7.16.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-flowtype": "^3.5.0",
