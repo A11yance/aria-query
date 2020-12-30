@@ -307,7 +307,7 @@ type ARIAPropertyDefinition = {
   | 'token'
   | 'tokenlist'
   | 'tristate',
-  value? : Array<string | boolean>,
+  values? : Array<string | boolean>,
   allowundefined?: boolean,
 };
 
