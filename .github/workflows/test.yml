@@ -108,4 +108,4 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm install
       - name: Run diff check for the breakUpAriaJSON script
-        run: node scripts/breakUpAriaJSON.js && git diff --exit-code
+        run: node scripts/breakUpAriaJSON.js && git diff --exit-code -- src
