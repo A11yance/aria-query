@@ -92,7 +92,7 @@ function triageValue(value, depth = 0) {
       output = output.concat(stringifyBoolean(value, (depth + 1)));
       break;
     case 'string':
-      output = output.concat(`\'${value}\'`);
+      output = output.concat(`'${value}'`);
       break;
     case 'number':
       output = output.concat(`${value}`);
@@ -269,13 +269,13 @@ fs.readFile(path.join('scripts/roles.json'), {
 
 function requiresMapper (roles, path, depth) {
   return roles.map(role => {
-    return `${constructIndent(depth)}import ${role[1]} from \'./${path}/${role[1]}\';`;
+    return `${constructIndent(depth)}import ${role[1]} from './${path}/${role[1]}';`;
   }).join('\n');
 }
 
 function requiresCombiner(roles, depth) {
   return roles.map(role => {
-    return `${constructIndent(depth)}[\'${role[0]}\', ${role[1]}]`;
+    return `${constructIndent(depth)}['${role[0]}', ${role[1]}]`;
   }).join(',\n');
 }
 
