@@ -1,12 +1,31 @@
 {
-  extends: [
+  "extends": [
+    "eslint:recommended",
     "plugin:flowtype/recommended"
   ],
-  parser: "babel-eslint",
-  plugins: [
+  "env": {
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
     "flowtype"
   ],
-  rules: {
-    'no-template-curly-in-string': 'off'
-  }
+  "overrides": [
+    {
+      "files": [
+        "scripts/*.js"
+      ],
+      "env": {
+        "node": true
+      }
+    },
+    {
+      "files": [
+        "__tests__/**/*.js"
+      ],
+      "env": {
+        "mocha": true
+      }
+    }
+  ]
 }

@@ -92,7 +92,7 @@ function triageValue(value, depth = 0) {
       output = output.concat(stringifyBoolean(value, (depth + 1)));
       break;
     case 'string':
-      output = output.concat(`\'${value}\'`);
+      output = output.concat(`'${value}'`);
       break;
     case 'number':
       output = output.concat(`${value}`);
@@ -139,8 +139,7 @@ fs.readFile(path.join('scripts/roles.json'), {
       // Create a set of all the props of the super classes.
       let superClasses = aria[name]['superClass'];
       const accumulation = superClassWalker(superClasses);
-      const output = accumulatedSuperClasses.set(name, accumulation);
-      // console.log(`${name} => ${accumulatedSuperClasses.get(name).map(group => `[${group}]`).join('\n')}`);
+      accumulatedSuperClasses.set(name, accumulation);
     });
 
   Object.keys(aria)
@@ -269,17 +268,15 @@ fs.readFile(path.join('scripts/roles.json'), {
 
 function requiresMapper (roles, path, depth) {
   return roles.map(role => {
-    return `${constructIndent(depth)}import ${role[1]} from \'./${path}/${role[1]}\';`;
+    return `${constructIndent(depth)}import ${role[1]} from './${path}/${role[1]}';`;
   }).join('\n');
 }
 
 function requiresCombiner(roles, depth) {
   return roles.map(role => {
-    return `${constructIndent(depth)}[\'${role[0]}\', ${role[1]}]`;
+    return `${constructIndent(depth)}['${role[0]}', ${role[1]}]`;
   }).join(',\n');
 }
-
-const srcDir = 'src';
 
 fs.readFile(path.join('scripts/roles.json'), {
   encoding: 'utf8'
@@ -299,10 +296,8 @@ fs.readFile(path.join('scripts/roles.json'), {
       const camelName = createCamelName(name);
 
       if (aria[name].abstract) {
-        subDir = 'abstract';
         abstractRequires.push([name, camelName]);
       } else if (name.indexOf('doc-') === 0) {
-        subDir = 'dpub';
         dpubRequires.push([name, camelName]);
       } else {
         literalRequires.push([name, camelName]);

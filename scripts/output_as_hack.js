@@ -57,7 +57,7 @@ function stringifyArray(arr, depth) {
       }
     );
     output.push(tmp.join('\n'));
-    output.push(`${constructIndent(depth - 1)}\}`);
+    output.push(`${constructIndent(depth - 1)}}`);
   }
   return output.join('\n');
 }
@@ -110,7 +110,7 @@ function stringifySet(value, depth) {
       }
     );
     output.push(tmp.join('\n'));
-    output.push(`${constructIndent(depth - 1)}\}`);
+    output.push(`${constructIndent(depth - 1)}}`);
   }
   return output.join('\n');
 }
@@ -138,7 +138,7 @@ function triageValue(value, depth = 0) {
       output = output.concat(stringifyBoolean(value, (depth + 1)));
       break;
     case 'string':
-      output = output.concat(`\'${value}\'`);
+      output = output.concat(`'${value}'`);
       break;
     default:
       output.push('null');
@@ -150,14 +150,14 @@ let hack = [];
 
 Object.keys(output).forEach(type => {
   hack = hack.concat(
-    `\$${type} = Map \{`,
+    `$${type} = Map {`,
     ...[...output[type].keys()]
       .sort()
       .map(prop => {
         const depth = 2;
         return `${constructIndent(depth)}${triageValue(prop, depth, false)} => ${triageValue(output[type].get(prop), depth).join('\n')},`;
       }),
-    `${constructIndent(1)}\};`
+    `${constructIndent(1)}};`
   );
 });
 

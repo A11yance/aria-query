@@ -30,6 +30,7 @@ const elementRoleMap: ElementARIARoleRelationMap = new Map([]);
 
             let roles: ?RoleSet = ([...elementRoleMap.entries()]
               .find(
+                // eslint-disable-next-line no-unused-vars
                 ([key, value]) => JSON.stringify(key) === conceptStr)|| []
               )[1];
 

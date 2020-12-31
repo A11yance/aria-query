@@ -22,6 +22,7 @@ const rolesMap: MapOfRoleDefinitions = new Map([]);
 
 rolesMap.forEach((
   roleDefinition: ARIARoleDefinition,
+  // eslint-disable-next-line no-unused-vars
   name: string,
 ) => {
   // Conglomerate the properties

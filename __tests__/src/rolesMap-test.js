@@ -1,4 +1,3 @@
-/* eslint-env mocha */
 import expect from 'expect';
 import rolesMap from '../../src/rolesMap';
 import ariaPropsMap from '../../src/ariaPropsMap';
