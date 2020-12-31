@@ -1,4 +1,3 @@
-/* eslint-env mocha */
 import expect from 'expect';
 import domMap from '../../src/domMap';
 

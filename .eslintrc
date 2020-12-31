@@ -18,6 +18,14 @@
       "env": {
         "node": true
       }
+    },
+    {
+      "files": [
+        "__tests__/**/*.js"
+      ],
+      "env": {
+        "mocha": true
+      }
     }
   ]
 }
