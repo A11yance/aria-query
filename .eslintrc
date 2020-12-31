@@ -10,9 +10,6 @@
   "plugins": [
     "flowtype"
   ],
-  "rules": {
-    "no-template-curly-in-string": "off"
-  },
   "overrides": [
     {
       "files": [
