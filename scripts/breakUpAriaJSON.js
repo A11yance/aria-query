@@ -139,8 +139,7 @@ fs.readFile(path.join('scripts/roles.json'), {
       // Create a set of all the props of the super classes.
       let superClasses = aria[name]['superClass'];
       const accumulation = superClassWalker(superClasses);
-      const output = accumulatedSuperClasses.set(name, accumulation);
-      // console.log(`${name} => ${accumulatedSuperClasses.get(name).map(group => `[${group}]`).join('\n')}`);
+      accumulatedSuperClasses.set(name, accumulation);
     });
 
   Object.keys(aria)
@@ -278,8 +277,6 @@ function requiresCombiner(roles, depth) {
     return `${constructIndent(depth)}['${role[0]}', ${role[1]}]`;
   }).join(',\n');
 }
-
-const srcDir = 'src';
 
 fs.readFile(path.join('scripts/roles.json'), {
   encoding: 'utf8'

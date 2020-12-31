@@ -11,8 +11,7 @@
     "flowtype"
   ],
   "rules": {
-    "no-template-curly-in-string": "off",
-    "no-unused-vars": "off"
+    "no-template-curly-in-string": "off"
   },
   "overrides": [
     {
