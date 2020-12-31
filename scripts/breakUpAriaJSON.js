@@ -299,10 +299,8 @@ fs.readFile(path.join('scripts/roles.json'), {
       const camelName = createCamelName(name);
 
       if (aria[name].abstract) {
-        subDir = 'abstract';
         abstractRequires.push([name, camelName]);
       } else if (name.indexOf('doc-') === 0) {
-        subDir = 'dpub';
         dpubRequires.push([name, camelName]);
       } else {
         literalRequires.push([name, camelName]);

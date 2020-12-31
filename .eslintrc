@@ -3,13 +3,25 @@
     "eslint:recommended",
     "plugin:flowtype/recommended"
   ],
+  "env": {
+    "es6": true
+  },
   "parser": "babel-eslint",
   "plugins": [
     "flowtype"
   ],
   "rules": {
     "no-template-curly-in-string": "off",
-    "no-undef": "off",
     "no-unused-vars": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "scripts/*.js"
+      ],
+      "env": {
+        "node": true
+      }
+    }
+  ]
 }
