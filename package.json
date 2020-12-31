@@ -8,7 +8,6 @@
   ],
   "scripts": {
     "build": "rimraf lib && babel src --out-dir lib",
-    "coveralls": "cat ./reports/lcov.info | coveralls",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "lint": "eslint  --config .eslintrc src __tests__",
     "lint:fix": "npm run lint -- --fix",
@@ -41,14 +40,13 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "commander": "^2.11.0",
-    "coveralls": "^3.1.0",
     "eslint": "^7.16.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-flowtype": "^3.5.0",
     "eslint-plugin-import": "^2.21.2",
     "expect": "^26.6.2",
     "flow-bin": "^0.141.0",
-    "jest": "^24.9.0",
+    "jest": "^26.6.3",
     "minimist": "^1.2.5",
     "rimraf": "^2.6.3"
   },
