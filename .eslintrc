@@ -1,5 +1,6 @@
 {
   "extends": [
+    "eslint:recommended",
     "plugin:flowtype/recommended"
   ],
   "parser": "babel-eslint",
@@ -7,6 +8,9 @@
     "flowtype"
   ],
   "rules": {
-    "no-template-curly-in-string": "off"
+    "no-template-curly-in-string": "off",
+    "no-undef": "off",
+    "no-useless-escape": "off",
+    "no-unused-vars": "off"
   }
 }
