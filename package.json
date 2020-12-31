@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rimraf lib && babel src --out-dir lib",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
-    "lint": "eslint  --config .eslintrc src __tests__",
+    "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "pretest": "npm run lint:fix && npm run flow",
     "test": "npm run jest",
