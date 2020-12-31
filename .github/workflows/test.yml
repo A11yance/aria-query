@@ -31,7 +31,7 @@ jobs:
           node-version: ${{ matrix.node }}
       - name: Npm Install
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci
       - name: Run Jest
         run: npm run test:ci
       - name: Run Coveralls
@@ -59,7 +59,7 @@ jobs:
         uses: actions/setup-node@v2
       - name: Npm Install
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci
       - name: Flow type check
         run: npm run flow
   eslint:
@@ -85,7 +85,7 @@ jobs:
           node-version: ${{ matrix.node }}
       - name: Npm Install
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci
       - name: Run ESLint
         run: npm run lint
   diff-breakUpAriaJSON:
@@ -106,6 +106,6 @@ jobs:
         uses: actions/setup-node@v2
       - name: Npm Install
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci
       - name: Run diff check for the breakUpAriaJSON script
         run: node scripts/breakUpAriaJSON.js && git diff --exit-code -- src
