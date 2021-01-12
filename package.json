@@ -48,7 +48,7 @@
     "flow-bin": "^0.142.0",
     "jest": "^26.6.3",
     "minimist": "^1.2.5",
-    "rimraf": "^2.6.3"
+    "rimraf": "^3.0.2"
   },
   "engines": {
     "node": ">=6.0"
