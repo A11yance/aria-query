@@ -2,16 +2,18 @@
  * @flow
  */
 
-type MapOfARIAPropertyDefinitions = Map<ARIAProperty, ARIAPropertyDefinition>;
+import {convertToMap} from './map-converter';
 
-const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
-  ['aria-activedescendant', {
+type MapOfARIAPropertyDefinitions = Map<string, ARIAPropertyDefinition>;
+
+const ariaPropsMap: MapOfARIAPropertyDefinitions = convertToMap<ARIAPropertyDefinition>({
+  'aria-activedescendant': {
     'type': 'id'
-  }],
-  ['aria-atomic', {
+  },
+  'aria-atomic': {
     'type': 'boolean'
-  }],
-  ['aria-autocomplete', {
+  },
+  'aria-autocomplete': {
     'type': 'token',
     'values': [
       'inline',
@@ -19,26 +21,26 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
       'both',
       'none'
     ]
-  }],
-  ['aria-busy', {
+  },
+  'aria-busy': {
     'type': 'boolean'
-  }],
-  ['aria-checked', {
+  },
+  'aria-checked': {
     'type': 'tristate'
-  }],
-  ['aria-colcount', {
+  },
+  'aria-colcount': {
     type: 'integer',
-  }],
-  ['aria-colindex', {
+  },
+  'aria-colindex': {
     type: 'integer',
-  }],
-  ['aria-colspan', {
+  },
+  'aria-colspan': {
     type: 'integer',
-  }],
-  ['aria-controls', {
+  },
+  'aria-controls': {
     'type': 'idlist'
-  }],
-  ['aria-current', {
+  },
+  'aria-current': {
     type: 'token',
     values: [
       'page',
@@ -49,17 +51,17 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
       true,
       false,
     ],
-  }],
-  ['aria-describedby', {
+  },
+  'aria-describedby': {
     'type': 'idlist'
-  }],
-  ['aria-details', {
+  },
+  'aria-details': {
     'type': 'id'
-  }],
-  ['aria-disabled', {
+  },
+  'aria-disabled': {
     'type': 'boolean'
-  }],
-  ['aria-dropeffect', {
+  },
+  'aria-dropeffect': {
     'type': 'tokenlist',
     'values': [
       'copy',
@@ -69,22 +71,22 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
       'none',
       'popup'
     ]
-  }],
-  ['aria-errormessage', {
+  },
+  'aria-errormessage': {
     'type': 'id'
-  }],
-  ['aria-expanded', {
+  },
+  'aria-expanded': {
     'type': 'boolean',
     'allowundefined': true
-  }],
-  ['aria-flowto', {
+  },
+  'aria-flowto': {
     'type': 'idlist'
-  }],
-  ['aria-grabbed', {
+  },
+  'aria-grabbed': {
     'type': 'boolean',
     'allowundefined': true
-  }],
-  ['aria-haspopup', {
+  },
+  'aria-haspopup': {
     'type': 'token',
     'values': [
       false,
@@ -95,12 +97,12 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
       'grid',
       'dialog'
     ]
-  }],
-  ['aria-hidden', {
+  },
+  'aria-hidden': {
     'type': 'boolean',
     'allowundefined': true
-  }],
-  ['aria-invalid', {
+  },
+  'aria-invalid': {
     'type': 'token',
     'values': [
       'grammar',
@@ -108,60 +110,60 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
       'spelling',
       true
     ]
-  }],
-  ['aria-keyshortcuts', {
+  },
+  'aria-keyshortcuts': {
     type: 'string',
-  }],
-  ['aria-label', {
+  },
+  'aria-label': {
     'type': 'string'
-  }],
-  ['aria-labelledby', {
+  },
+  'aria-labelledby': {
     'type': 'idlist'
-  }],
-  ['aria-level', {
+  },
+  'aria-level': {
     'type': 'integer'
-  }],
-  ['aria-live', {
+  },
+  'aria-live': {
     'type': 'token',
     'values': [
       'assertive',
       'off',
       'polite'
     ]
-  }],
-  ['aria-modal', {
+  },
+  'aria-modal': {
     type: 'boolean',
-  }],
-  ['aria-multiline', {
+  },
+  'aria-multiline': {
     'type': 'boolean'
-  }],
-  ['aria-multiselectable', {
+  },
+  'aria-multiselectable': {
     'type': 'boolean'
-  }],
-  ['aria-orientation', {
+  },
+  'aria-orientation': {
     'type': 'token',
     'values': [
       'vertical',
       'undefined',
       'horizontal'
     ]
-  }],
-  ['aria-owns', {
+  },
+  'aria-owns': {
     'type': 'idlist'
-  }],
-  ['aria-placeholder', {
+  },
+  'aria-placeholder': {
     type: 'string',
-  }],
-  ['aria-posinset', {
+  },
+  'aria-posinset': {
     'type': 'integer'
-  }],
-  ['aria-pressed', {
+  },
+  'aria-pressed': {
     'type': 'tristate'
-  }],
-  ['aria-readonly', {
+  },
+  'aria-readonly': {
     'type': 'boolean'
-  }],
-  ['aria-relevant', {
+  },
+  'aria-relevant': {
     'type': 'tokenlist',
     'values': [
       'additions',
@@ -169,30 +171,30 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
       'removals',
       'text',
     ]
-  }],
-  ['aria-required', {
+  },
+  'aria-required': {
     'type': 'boolean'
-  }],
-  ['aria-roledescription', {
+  },
+  'aria-roledescription': {
     type: 'string',
-  }],
-  ['aria-rowcount', {
+  },
+  'aria-rowcount': {
     type: 'integer',
-  }],
-  ['aria-rowindex', {
+  },
+  'aria-rowindex': {
     type: 'integer',
-  }],
-  ['aria-rowspan', {
+  },
+  'aria-rowspan': {
     type: 'integer',
-  }],
-  ['aria-selected', {
+  },
+  'aria-selected': {
     'type': 'boolean',
     'allowundefined': true
-  }],
-  ['aria-setsize', {
+  },
+  'aria-setsize': {
     'type': 'integer'
-  }],
-  ['aria-sort', {
+  },
+  'aria-sort': {
     'type': 'token',
     'values': [
       'ascending',
@@ -200,19 +202,19 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
       'none',
       'other'
     ]
-  }],
-  ['aria-valuemax', {
+  },
+  'aria-valuemax': {
     'type': 'number'
-  }],
-  ['aria-valuemin', {
+  },
+  'aria-valuemin': {
     'type': 'number'
-  }],
-  ['aria-valuenow', {
+  },
+  'aria-valuenow': {
     'type': 'number'
-  }],
-  ['aria-valuetext', {
+  },
+  'aria-valuetext': {
     'type': 'string'
-  }],
-]);
+  },
+});
 
 export default ariaPropsMap;

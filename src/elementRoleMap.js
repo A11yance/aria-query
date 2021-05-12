@@ -10,39 +10,37 @@ type ElementARIARoleRelationMap = Map<ARIARoleRelationConcept, RoleSet>;
 
 const elementRoleMap: ElementARIARoleRelationMap = new Map([]);
 
-[...rolesMap.keys()]
-  .forEach((
-    key: ARIARoleDefintionKey,
-  ): void => {
-    const role = rolesMap.get(key);
-    if (role) {
-      [
-        ...role.baseConcepts,
-        ...role.relatedConcepts,
-      ]
-      .forEach((
-        relation: ARIARoleRelation,
-      ): void => {
-        if (relation.module === 'HTML') {
-          const concept = relation.concept;
-          if (concept) {
-            const conceptStr = JSON.stringify(concept);
+for (const key: ARIARoleDefintionKey of [...rolesMap.keys()]) {
+  const role = rolesMap.get(key);
+  if (role) {
+    const relations: Array<ARIARoleRelation> = role.baseConcepts.concat(role.relatedConcepts);
+    for (let i = 0; i < relations.length; i++) {
+      const relation = relations[i];
+      if (relation.module === 'HTML') {
+        const concept = relation.concept;
+        if (concept) {
+          const conceptStr = JSON.stringify(concept);
 
-            let roles: ?RoleSet = ([...elementRoleMap.entries()]
-              .find(
-                // eslint-disable-next-line no-unused-vars
-                ([key, value]) => JSON.stringify(key) === conceptStr)|| []
-              )[1];
+          const elementRoles = Array.from(elementRoleMap.entries());
+          let roles: ?RoleSet;
 
-            if (!roles) {
-              roles = new Set([]);
+          for (let elementRoleIndex = 0; elementRoleIndex < elementRoles.length; elementRoleIndex++) {
+            const elementRolesEntry = elementRoles[elementRoleIndex];
+            if (JSON.stringify(elementRolesEntry[0]) === conceptStr) {
+              roles = elementRolesEntry[1];
+              break;
             }
-            roles.add(key);
-            elementRoleMap.set(concept, roles);
           }
+
+          if (!roles) {
+            roles = new Set([]);
+          }
+          roles.add(key);
+          elementRoleMap.set(concept, roles);
         }
-      });
+      }
     }
-  });
+  }
+}
 
 export default elementRoleMap;
