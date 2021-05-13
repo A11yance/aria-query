@@ -5,7 +5,7 @@ import rolesMap from '../../src/rolesMap';
 
 describe('ariaPropsMap', function () {
   it('should be a Map', function () {
-    expect(ariaPropsMap).toBeA(Map);
+    expect(ariaPropsMap).toBeInstanceOf(Map);
   });
   it('should have size', function () {
     expect(ariaPropsMap.size).toBeGreaterThan(0);
@@ -20,7 +20,7 @@ describe('ariaPropsMap', function () {
   for (const prop of ariaPropsMap.keys()) {
     describe(prop, function() {
       it('should be used in at least one role definition', function() {
-        expect(usedProps.has(prop)).toBeTruthy(`Expected '${prop}' is used in at least one role definition`);
+        expect(usedProps.has(prop)).toBeTruthy();
       });
     });
   }

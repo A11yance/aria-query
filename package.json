@@ -56,10 +56,6 @@
   "engines": {
     "node": ">=6.0"
   },
-  "dependencies": {
-    "@babel/runtime": "^7.10.2",
-    "@babel/runtime-corejs3": "^7.10.2"
-  },
   "jest": {
     "coverageReporters": [
       "lcov"
@@ -70,9 +66,6 @@
     ]
   },
   "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all",
-    "ie 11"
+    "node 6"
   ]
 }

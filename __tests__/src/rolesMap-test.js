@@ -5,7 +5,7 @@ import ariaPropsMap from '../../src/ariaPropsMap';
 
 describe('rolesMap', function () {
   it('should be a Map', function () {
-    expect(rolesMap).toBeA(Map);
+    expect(rolesMap).toBeInstanceOf(Map);
   });
   it('should have size', function () {
     expect(rolesMap.size).toBeGreaterThan(0);
@@ -29,11 +29,11 @@ describe('rolesMap', function () {
     const { props } = abstract;
 
     it('should not have aria-describedat property', function () {
-      expect(props).toExcludeKey('aria-describedat');
+      expect(props).not.toHaveProperty('aria-describedat');
     });
 
     it('should have aria-details property', function () {
-      expect(props).toInclude({ 'aria-details': null });
+      expect(props).toHaveProperty('aria-details', null);
     });
   });
 });
