@@ -1,32 +1,32 @@
 /**
  * @flow
  */
-import command from "./abstract/commandRole";
-import composite from "./abstract/compositeRole";
-import input from "./abstract/inputRole";
-import landmark from "./abstract/landmarkRole";
-import range from "./abstract/rangeRole";
-import roletype from "./abstract/roletypeRole";
-import section from "./abstract/sectionRole";
-import sectionhead from "./abstract/sectionheadRole";
-import select from "./abstract/selectRole";
-import structure from "./abstract/structureRole";
-import widget from "./abstract/widgetRole";
-import window from "./abstract/windowRole";
+import commandRole from './abstract/commandRole';
+import compositeRole from './abstract/compositeRole';
+import inputRole from './abstract/inputRole';
+import landmarkRole from './abstract/landmarkRole';
+import rangeRole from './abstract/rangeRole';
+import roletypeRole from './abstract/roletypeRole';
+import sectionRole from './abstract/sectionRole';
+import sectionheadRole from './abstract/sectionheadRole';
+import selectRole from './abstract/selectRole';
+import structureRole from './abstract/structureRole';
+import widgetRole from './abstract/widgetRole';
+import windowRole from './abstract/windowRole';
 
-const ariaAbstracts: { [ARIARoleDefintionKey]: ARIARoleDefinition } = {
-  command,
-  composite,
-  input,
-  landmark,
-  range,
-  roletype,
-  section,
-  sectionhead,
-  select,
-  structure,
-  widget,
-  window,
+const ariaAbstractRoles: { [ARIARoleDefintionKey]: ARIARoleDefinition } = {
+  'command': commandRole,
+  'composite': compositeRole,
+  'input': inputRole,
+  'landmark': landmarkRole,
+  'range': rangeRole,
+  'roletype': roletypeRole,
+  'section': sectionRole,
+  'sectionhead': sectionheadRole,
+  'select': selectRole,
+  'structure': structureRole,
+  'widget': widgetRole,
+  'window': windowRole
 };
 
-export default ariaAbstracts;
+export default ariaAbstractRoles;

@@ -274,7 +274,7 @@ function requiresMapper (roles, path, depth) {
 
 function requiresCombiner(roles, depth) {
   return roles.map(role => {
-    return `${constructIndent(depth)}['${role[0]}', ${role[1]}]`;
+    return `${constructIndent(depth)}'${role[0]}': ${role[1]}`;
   }).join(',\n');
 }
 
@@ -317,9 +317,9 @@ fs.readFile(path.join('scripts/roles.json'), {
         + ' */\n'
         + `${requiresMapper(requires[0], path.join(requires[2]), 0)}\n`
         + `\n`
-        + `const ${requires[1]}: MapOfRoleDefinitions = new Map([\n`
+        + `const ${requires[1]}: { [ARIARoleDefintionKey]: ARIARoleDefinition } = {\n`
         + `${requiresCombiner(requires[0], 1)}\n`
-        + `]);\n`
+        + `};\n`
         + `\n`
         + `export default ${requires[1]};`,
         {
