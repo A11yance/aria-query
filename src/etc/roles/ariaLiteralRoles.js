@@ -1,172 +1,172 @@
 /**
  * @flow
  */
-import alertRole from './literal/alertRole';
-import alertdialogRole from './literal/alertdialogRole';
-import applicationRole from './literal/applicationRole';
-import articleRole from './literal/articleRole';
-import bannerRole from './literal/bannerRole';
-import blockquoteRole from './literal/blockquoteRole';
-import buttonRole from './literal/buttonRole';
-import captionRole from './literal/captionRole';
-import cellRole from './literal/cellRole';
-import checkboxRole from './literal/checkboxRole';
-import codeRole from './literal/codeRole';
-import columnheaderRole from './literal/columnheaderRole';
-import comboboxRole from './literal/comboboxRole';
-import complementaryRole from './literal/complementaryRole';
-import contentinfoRole from './literal/contentinfoRole';
-import definitionRole from './literal/definitionRole';
-import deletionRole from './literal/deletionRole';
-import dialogRole from './literal/dialogRole';
-import directoryRole from './literal/directoryRole';
-import documentRole from './literal/documentRole';
-import emphasisRole from './literal/emphasisRole';
-import feedRole from './literal/feedRole';
-import figureRole from './literal/figureRole';
-import formRole from './literal/formRole';
-import genericRole from './literal/genericRole';
-import gridRole from './literal/gridRole';
-import gridcellRole from './literal/gridcellRole';
-import groupRole from './literal/groupRole';
-import headingRole from './literal/headingRole';
-import imgRole from './literal/imgRole';
-import insertionRole from './literal/insertionRole';
-import linkRole from './literal/linkRole';
-import listRole from './literal/listRole';
-import listboxRole from './literal/listboxRole';
-import listitemRole from './literal/listitemRole';
-import logRole from './literal/logRole';
-import mainRole from './literal/mainRole';
-import marqueeRole from './literal/marqueeRole';
-import mathRole from './literal/mathRole';
-import menuRole from './literal/menuRole';
-import menubarRole from './literal/menubarRole';
-import menuitemRole from './literal/menuitemRole';
-import menuitemcheckboxRole from './literal/menuitemcheckboxRole';
-import menuitemradioRole from './literal/menuitemradioRole';
-import meterRole from './literal/meterRole';
-import navigationRole from './literal/navigationRole';
-import noneRole from './literal/noneRole';
-import noteRole from './literal/noteRole';
-import optionRole from './literal/optionRole';
-import paragraphRole from './literal/paragraphRole';
-import presentationRole from './literal/presentationRole';
-import progressbarRole from './literal/progressbarRole';
-import radioRole from './literal/radioRole';
-import radiogroupRole from './literal/radiogroupRole';
-import regionRole from './literal/regionRole';
-import rowRole from './literal/rowRole';
-import rowgroupRole from './literal/rowgroupRole';
-import rowheaderRole from './literal/rowheaderRole';
-import scrollbarRole from './literal/scrollbarRole';
-import searchRole from './literal/searchRole';
-import searchboxRole from './literal/searchboxRole';
-import separatorRole from './literal/separatorRole';
-import sliderRole from './literal/sliderRole';
-import spinbuttonRole from './literal/spinbuttonRole';
-import statusRole from './literal/statusRole';
-import strongRole from './literal/strongRole';
-import subscriptRole from './literal/subscriptRole';
-import superscriptRole from './literal/superscriptRole';
-import switchRole from './literal/switchRole';
-import tabRole from './literal/tabRole';
-import tableRole from './literal/tableRole';
-import tablistRole from './literal/tablistRole';
-import tabpanelRole from './literal/tabpanelRole';
-import termRole from './literal/termRole';
-import textboxRole from './literal/textboxRole';
-import timeRole from './literal/timeRole';
-import timerRole from './literal/timerRole';
-import toolbarRole from './literal/toolbarRole';
-import tooltipRole from './literal/tooltipRole';
-import treeRole from './literal/treeRole';
-import treegridRole from './literal/treegridRole';
-import treeitemRole from './literal/treeitemRole';
+import alert from "./literal/alertRole";
+import alertdialog from "./literal/alertdialogRole";
+import application from "./literal/applicationRole";
+import article from "./literal/articleRole";
+import banner from "./literal/bannerRole";
+import blockquote from "./literal/blockquoteRole";
+import button from "./literal/buttonRole";
+import caption from "./literal/captionRole";
+import cell from "./literal/cellRole";
+import checkbox from "./literal/checkboxRole";
+import code from "./literal/codeRole";
+import columnheader from "./literal/columnheaderRole";
+import combobox from "./literal/comboboxRole";
+import complementary from "./literal/complementaryRole";
+import contentinfo from "./literal/contentinfoRole";
+import definition from "./literal/definitionRole";
+import deletion from "./literal/deletionRole";
+import dialog from "./literal/dialogRole";
+import directory from "./literal/directoryRole";
+import document from "./literal/documentRole";
+import emphasis from "./literal/emphasisRole";
+import feed from "./literal/feedRole";
+import figure from "./literal/figureRole";
+import form from "./literal/formRole";
+import generic from "./literal/genericRole";
+import grid from "./literal/gridRole";
+import gridcell from "./literal/gridcellRole";
+import group from "./literal/groupRole";
+import heading from "./literal/headingRole";
+import img from "./literal/imgRole";
+import insertion from "./literal/insertionRole";
+import link from "./literal/linkRole";
+import list from "./literal/listRole";
+import listbox from "./literal/listboxRole";
+import listitem from "./literal/listitemRole";
+import log from "./literal/logRole";
+import main from "./literal/mainRole";
+import marquee from "./literal/marqueeRole";
+import math from "./literal/mathRole";
+import menu from "./literal/menuRole";
+import menubar from "./literal/menubarRole";
+import menuitem from "./literal/menuitemRole";
+import menuitemcheckbox from "./literal/menuitemcheckboxRole";
+import menuitemradio from "./literal/menuitemradioRole";
+import meter from "./literal/meterRole";
+import navigation from "./literal/navigationRole";
+import none from "./literal/noneRole";
+import note from "./literal/noteRole";
+import option from "./literal/optionRole";
+import paragraph from "./literal/paragraphRole";
+import presentation from "./literal/presentationRole";
+import progressbar from "./literal/progressbarRole";
+import radio from "./literal/radioRole";
+import radiogroup from "./literal/radiogroupRole";
+import region from "./literal/regionRole";
+import row from "./literal/rowRole";
+import rowgroup from "./literal/rowgroupRole";
+import rowheader from "./literal/rowheaderRole";
+import scrollbar from "./literal/scrollbarRole";
+import search from "./literal/searchRole";
+import searchbox from "./literal/searchboxRole";
+import separator from "./literal/separatorRole";
+import slider from "./literal/sliderRole";
+import spinbutton from "./literal/spinbuttonRole";
+import status from "./literal/statusRole";
+import strong from "./literal/strongRole";
+import subscript from "./literal/subscriptRole";
+import superscript from "./literal/superscriptRole";
+import switchRole from "./literal/switchRole";
+import tab from "./literal/tabRole";
+import table from "./literal/tableRole";
+import tablist from "./literal/tablistRole";
+import tabpanel from "./literal/tabpanelRole";
+import term from "./literal/termRole";
+import textbox from "./literal/textboxRole";
+import time from "./literal/timeRole";
+import timer from "./literal/timerRole";
+import toolbar from "./literal/toolbarRole";
+import tooltip from "./literal/tooltipRole";
+import tree from "./literal/treeRole";
+import treegrid from "./literal/treegridRole";
+import treeitem from "./literal/treeitemRole";
 
-const ariaLiteralRoles: MapOfRoleDefinitions = new Map([
-  ['alert', alertRole],
-  ['alertdialog', alertdialogRole],
-  ['application', applicationRole],
-  ['article', articleRole],
-  ['banner', bannerRole],
-  ['blockquote', blockquoteRole],
-  ['button', buttonRole],
-  ['caption', captionRole],
-  ['cell', cellRole],
-  ['checkbox', checkboxRole],
-  ['code', codeRole],
-  ['columnheader', columnheaderRole],
-  ['combobox', comboboxRole],
-  ['complementary', complementaryRole],
-  ['contentinfo', contentinfoRole],
-  ['definition', definitionRole],
-  ['deletion', deletionRole],
-  ['dialog', dialogRole],
-  ['directory', directoryRole],
-  ['document', documentRole],
-  ['emphasis', emphasisRole],
-  ['feed', feedRole],
-  ['figure', figureRole],
-  ['form', formRole],
-  ['generic', genericRole],
-  ['grid', gridRole],
-  ['gridcell', gridcellRole],
-  ['group', groupRole],
-  ['heading', headingRole],
-  ['img', imgRole],
-  ['insertion', insertionRole],
-  ['link', linkRole],
-  ['list', listRole],
-  ['listbox', listboxRole],
-  ['listitem', listitemRole],
-  ['log', logRole],
-  ['main', mainRole],
-  ['marquee', marqueeRole],
-  ['math', mathRole],
-  ['menu', menuRole],
-  ['menubar', menubarRole],
-  ['menuitem', menuitemRole],
-  ['menuitemcheckbox', menuitemcheckboxRole],
-  ['menuitemradio', menuitemradioRole],
-  ['meter', meterRole],
-  ['navigation', navigationRole],
-  ['none', noneRole],
-  ['note', noteRole],
-  ['option', optionRole],
-  ['paragraph', paragraphRole],
-  ['presentation', presentationRole],
-  ['progressbar', progressbarRole],
-  ['radio', radioRole],
-  ['radiogroup', radiogroupRole],
-  ['region', regionRole],
-  ['row', rowRole],
-  ['rowgroup', rowgroupRole],
-  ['rowheader', rowheaderRole],
-  ['scrollbar', scrollbarRole],
-  ['search', searchRole],
-  ['searchbox', searchboxRole],
-  ['separator', separatorRole],
-  ['slider', sliderRole],
-  ['spinbutton', spinbuttonRole],
-  ['status', statusRole],
-  ['strong', strongRole],
-  ['subscript', subscriptRole],
-  ['superscript', superscriptRole],
-  ['switch', switchRole],
-  ['tab', tabRole],
-  ['table', tableRole],
-  ['tablist', tablistRole],
-  ['tabpanel', tabpanelRole],
-  ['term', termRole],
-  ['textbox', textboxRole],
-  ['time', timeRole],
-  ['timer', timerRole],
-  ['toolbar', toolbarRole],
-  ['tooltip', tooltipRole],
-  ['tree', treeRole],
-  ['treegrid', treegridRole],
-  ['treeitem', treeitemRole]
-]);
+const ariaLiteralRoles: { [ARIARoleDefintionKey]: ARIARoleDefinition } = {
+  alert,
+  alertdialog,
+  application,
+  article,
+  banner,
+  blockquote,
+  button,
+  caption,
+  cell,
+  checkbox,
+  code,
+  columnheader,
+  combobox,
+  complementary,
+  contentinfo,
+  definition,
+  deletion,
+  dialog,
+  directory,
+  document,
+  emphasis,
+  feed,
+  figure,
+  form,
+  generic,
+  grid,
+  gridcell,
+  group,
+  heading,
+  img,
+  insertion,
+  link,
+  list,
+  listbox,
+  listitem,
+  log,
+  main,
+  marquee,
+  math,
+  menu,
+  menubar,
+  menuitem,
+  menuitemcheckbox,
+  menuitemradio,
+  meter,
+  navigation,
+  none,
+  note,
+  option,
+  paragraph,
+  presentation,
+  progressbar,
+  radio,
+  radiogroup,
+  region,
+  row,
+  rowgroup,
+  rowheader,
+  scrollbar,
+  search,
+  searchbox,
+  separator,
+  slider,
+  spinbutton,
+  status,
+  strong,
+  subscript,
+  superscript,
+  switch: switchRole,
+  tab,
+  table,
+  tablist,
+  tabpanel,
+  term,
+  textbox,
+  time,
+  timer,
+  toolbar,
+  tooltip,
+  tree,
+  treegrid,
+  treeitem,
+};
 
 export default ariaLiteralRoles;
