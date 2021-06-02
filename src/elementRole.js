@@ -4,8 +4,8 @@
 
 import roles from "./roles";
 
-const elementRole: { [ARIARoleRelationConcept]: Set<ARIARoleDefintionKey> } =
-  {};
+// TODO: Create actual keys for ARIARoleRelationConcept instead of JSON.stringify
+const elementRoles: [ARIARoleRelationConcept, Set<ARIARoleDefintionKey>][] = [];
 
 Object.keys(roles).forEach((key: ARIARoleDefintionKey): void => {
   const role = roles[key];
@@ -18,20 +18,21 @@ Object.keys(roles).forEach((key: ARIARoleDefintionKey): void => {
           if (concept) {
             const conceptStr = JSON.stringify(concept);
 
-            let roles = new Set<ARIARoleDefintionKey>([]);
-            Object.keys(elementRole).forEach((key) => {
-              if (JSON.stringify(key) === conceptStr) {
-                // `key` cannot be anything but ARIARoleRelationConcept
-                roles = elementRole[((key: any): ARIARoleRelationConcept)];
+            let elementRoleExists = false;
+            elementRoles.forEach((elementRole) => {
+              if (JSON.stringify(elementRole[0]) === conceptStr) {
+                elementRole[1].add(key);
+                elementRoleExists = true;
               }
             });
 
-            roles.add(key);
-            elementRole[concept] = roles;
+            if (!elementRoleExists) {
+              elementRoles.push([concept, new Set([key])]);
+            }
           }
         }
       });
   }
 });
 
-export default elementRole;
+export default elementRoles;
