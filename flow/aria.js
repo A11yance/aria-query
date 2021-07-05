@@ -192,6 +192,8 @@ type ARIARoleDefinition = {
 };
 
 type MapOfRoleDefinitions = Map<ARIARoleDefintionKey, ARIARoleDefinition>;
+type MapOfRoleRelationConceptSets = Map<ARIARoleDefintionKey, Set<ARIARoleRelationConcept>>
+type ElementARIARoleRelationMap = Map<ARIARoleRelationConcept, Set<ARIARoleDefintionKey>>;
 
 type ARIAState =
   'aria-busy'
@@ -312,6 +314,8 @@ type ARIAPropertyDefinition = {
   allowundefined?: boolean,
 };
 
+type MapOfARIAPropertyDefinitions = Map<ARIAProperty, ARIAPropertyDefinition>
+
 type ARIAPropertyCurrent =
   'page'
   | 'step'
@@ -351,3 +355,9 @@ type ARIARoleRelationConceptAttribute = {
     | 'set' // The attribute has a value: <a b="c">
     | '>1'>,
 };
+type DOMDefinition = {
+  reserved?: boolean,
+  interactive?: boolean,
+};
+
+type MapOfDOMDefinitions = Map<string, DOMDefinition>;

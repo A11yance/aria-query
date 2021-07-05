@@ -1,22 +1,21 @@
 import expect from 'expect';
-import rolesMap from '../../src/rolesMap';
-import ariaPropsMap from '../../src/ariaPropsMap';
+import { aria, roles } from '../../src';
 
-describe('rolesMap', function () {
+describe('roles', function () {
   it('should be a Map', function () {
-    expect(rolesMap instanceof Map).toBe(true);
+    expect(roles instanceof Map).toBe(true);
   });
   it('should have size', function () {
-    expect(rolesMap.size).toBeGreaterThan(0);
+    expect(roles.size).toBeGreaterThan(0);
   });
 
   test.each(
-    [...rolesMap.entries()])(
-    'The definition for role %s has only props defined in ariaPropsMap',
+    [...roles.entries()])(
+    'The definition for role %s has only props defined in aria',
     (role, definition) => {
 
       const unknownProps = Object.keys(definition.props).filter((prop) => {
-        return !ariaPropsMap.has(prop);
+        return !aria.has(prop);
       });
       expect(unknownProps.length).toEqual(0);
     }
@@ -24,7 +23,7 @@ describe('rolesMap', function () {
 
   // dpub-aria
   describe('doc-abstract role', function () {
-    const abstract = rolesMap.get('doc-abstract');
+    const abstract = roles.get('doc-abstract');
     const { props } = abstract;
 
     it('should not have aria-describedat property', function () {

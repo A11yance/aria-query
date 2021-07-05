@@ -1,11 +1,11 @@
 import expect from 'expect';
-import domMap from '../../src/domMap';
+import { dom } from '../../src';
 
-describe('domMap', function () {
+describe('dom', function () {
   it('should be a Map', function () {
-    expect(domMap instanceof Map).toBe(true);
+    expect(dom instanceof Map).toBe(true);
   });
   it('should have size', function () {
-    expect(domMap.size).toBeGreaterThan(0);
+    expect(dom.size).toBeGreaterThan(0);
   });
 });

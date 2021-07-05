@@ -2,14 +2,25 @@
  * @flow
  */
 
-import ariaPropsMap from './ariaPropsMap';
-import domMap from './domMap';
-import rolesMap from './rolesMap';
-import elementRoleMap from './elementRoleMap';
-import roleElementMap from './roleElementMap';
+import ariaPropsRecord from "./ariaProps";
+import domRecord from "./dom";
+import rolesRecord from "./roles";
+import elementRoleEntries from "./elementRole";
+import roleElementRecord from "./roleElement";
 
-export const aria = ariaPropsMap;
-export const dom = domMap;
-export const roles = rolesMap;
-export const elementRoles = elementRoleMap;
-export const roleElements = roleElementMap;
+function recordToMap<K, V>(record: { [K]: V }): Map<K, V> {
+  return new Map(
+    Object.keys(record).map((key) => {
+      return [key, record[key]];
+    })
+  );
+}
+
+export const aria: MapOfARIAPropertyDefinitions = recordToMap(ariaPropsRecord);
+export const dom: MapOfDOMDefinitions = recordToMap(domRecord);
+export const roles: MapOfRoleDefinitions = recordToMap(rolesRecord);
+export const elementRoles: ElementARIARoleRelationMap = new Map(
+  elementRoleEntries
+);
+export const roleElements: MapOfRoleRelationConceptSets =
+  recordToMap(roleElementRecord);

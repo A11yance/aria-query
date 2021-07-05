@@ -1,11 +1,11 @@
 import expect from 'expect';
-import elementRoleMap from '../../src/elementRoleMap';
+import { elementRoles } from '../../src';
 
-describe('domRolesMap', function () {
+describe('elementRoles', function () {
   it('should be a Map', function () {
-    expect(elementRoleMap instanceof Map).toBe(true);
+    expect(elementRoles instanceof Map).toBe(true);
   });
   it('should have size', function () {
-    expect(elementRoleMap.size).toBeGreaterThan(0);
+    expect(elementRoles.size).toBeGreaterThan(0);
   });
 });

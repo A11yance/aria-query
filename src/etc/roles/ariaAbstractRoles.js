@@ -14,19 +14,19 @@ import structureRole from './abstract/structureRole';
 import widgetRole from './abstract/widgetRole';
 import windowRole from './abstract/windowRole';
 
-const ariaAbstractRoles: MapOfRoleDefinitions = new Map([
-  ['command', commandRole],
-  ['composite', compositeRole],
-  ['input', inputRole],
-  ['landmark', landmarkRole],
-  ['range', rangeRole],
-  ['roletype', roletypeRole],
-  ['section', sectionRole],
-  ['sectionhead', sectionheadRole],
-  ['select', selectRole],
-  ['structure', structureRole],
-  ['widget', widgetRole],
-  ['window', windowRole]
-]);
+const ariaAbstractRoles: { [ARIARoleDefintionKey]: ARIARoleDefinition } = {
+  'command': commandRole,
+  'composite': compositeRole,
+  'input': inputRole,
+  'landmark': landmarkRole,
+  'range': rangeRole,
+  'roletype': roletypeRole,
+  'section': sectionRole,
+  'sectionhead': sectionheadRole,
+  'select': selectRole,
+  'structure': structureRole,
+  'widget': widgetRole,
+  'window': windowRole
+};
 
 export default ariaAbstractRoles;

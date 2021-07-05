@@ -34,7 +34,6 @@
   "devDependencies": {
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
-    "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-flow": "^7.10.1",
     "babel-eslint": "^10.1.0",
@@ -53,10 +52,7 @@
   "engines": {
     "node": ">=6.0"
   },
-  "dependencies": {
-    "@babel/runtime": "^7.10.2",
-    "@babel/runtime-corejs3": "^7.10.2"
-  },
+  "dependencies": {},
   "jest": {
     "coverageReporters": [
       "lcov"
