@@ -2,6 +2,8 @@
  * @flow
  */
 
+import {convertToMap} from './map-converter';
+
 type DOMDefinition = {
   reserved?: boolean,
   interactive?: boolean,
@@ -9,394 +11,394 @@ type DOMDefinition = {
 
 type MapOfDOMDefinitions = Map<string, DOMDefinition>;
 
-const domMap: MapOfDOMDefinitions = new Map([
-  ['a', {
+const domMap: MapOfDOMDefinitions = convertToMap<DOMDefinition>({
+  a: {
     reserved: false,
-  }],
-  ['abbr', {
+  },
+  abbr: {
     reserved: false,
-  }],
-  ['acronym', {
+  },
+  acronym: {
     reserved: false,
-  }],
-  ['address', {
+  },
+  address: {
     reserved: false,
-  }],
-  ['applet', {
+  },
+  applet: {
     reserved: false,
-  }],
-  ['area', {
+  },
+  area: {
     reserved: false,
-  }],
-  ['article', {
+  },
+  article: {
     reserved: false,
-  }],
-  ['aside', {
+  },
+  aside: {
     reserved: false,
-  }],
-  ['audio', {
+  },
+  audio: {
     reserved: false,
-  }],
-  ['b', {
+  },
+  b: {
     reserved: false,
-  }],
-  ['base', {
+  },
+  base: {
     reserved: true
-  }],
-  ['bdi', {
+  },
+  bdi: {
     reserved: false,
-  }],
-  ['bdo', {
+  },
+  bdo: {
     reserved: false,
-  }],
-  ['big', {
+  },
+  big: {
     reserved: false,
-  }],
-  ['blink', {
+  },
+  blink: {
     reserved: false,
-  }],
-  ['blockquote', {
+  },
+  blockquote: {
     reserved: false,
-  }],
-  ['body', {
+  },
+  body: {
     reserved: false,
-  }],
-  ['br', {
+  },
+  br: {
     reserved: false,
-  }],
-  ['button', {
+  },
+  button: {
     reserved: false,
-  }],
-  ['canvas', {
+  },
+  canvas: {
     reserved: false,
-  }],
-  ['caption', {
+  },
+  caption: {
     reserved: false,
-  }],
-  ['center', {
+  },
+  center: {
     reserved: false,
-  }],
-  ['cite', {
+  },
+  cite: {
     reserved: false,
-  }],
-  ['code', {
+  },
+  code: {
     reserved: false,
-  }],
-  ['col', {
+  },
+  col: {
     reserved: true
-  }],
-  ['colgroup', {
+  },
+  colgroup: {
     reserved: true
-  }],
-  ['content', {
+  },
+  content: {
     reserved: false,
-  }],
-  ['data', {
+  },
+  data: {
     reserved: false,
-  }],
-  ['datalist', {
+  },
+  datalist: {
     reserved: false,
-  }],
-  ['dd', {
+  },
+  dd: {
     reserved: false,
-  }],
-  ['del', {
+  },
+  del: {
     reserved: false,
-  }],
-  ['details', {
+  },
+  details: {
     reserved: false,
-  }],
-  ['dfn', {
+  },
+  dfn: {
     reserved: false,
-  }],
-  ['dialog', {
+  },
+  dialog: {
     reserved: false,
-  }],
-  ['dir', {
+  },
+  dir: {
     reserved: false,
-  }],
-  ['div', {
+  },
+  div: {
     reserved: false,
-  }],
-  ['dl', {
+  },
+  dl: {
     reserved: false,
-  }],
-  ['dt', {
+  },
+  dt: {
     reserved: false,
-  }],
-  ['em', {
+  },
+  em: {
     reserved: false,
-  }],
-  ['embed', {
+  },
+  embed: {
     reserved: false,
-  }],
-  ['fieldset', {
+  },
+  fieldset: {
     reserved: false,
-  }],
-  ['figcaption', {
+  },
+  figcaption: {
     reserved: false,
-  }],
-  ['figure', {
+  },
+  figure: {
     reserved: false,
-  }],
-  ['font', {
+  },
+  font: {
     reserved: false,
-  }],
-  ['footer', {
+  },
+  footer: {
     reserved: false,
-  }],
-  ['form', {
+  },
+  form: {
     reserved: false,
-  }],
-  ['frame', {
+  },
+  frame: {
     reserved: false,
-  }],
-  ['frameset', {
+  },
+  frameset: {
     reserved: false,
-  }],
-  ['h1', {
+  },
+  h1: {
     reserved: false,
-  }],
-  ['h2', {
+  },
+  h2: {
     reserved: false,
-  }],
-  ['h3', {
+  },
+  h3: {
     reserved: false,
-  }],
-  ['h4', {
+  },
+  h4: {
     reserved: false,
-  }],
-  ['h5', {
+  },
+  h5: {
     reserved: false,
-  }],
-  ['h6', {
+  },
+  h6: {
     reserved: false,
-  }],
-  ['head', {
+  },
+  head: {
     reserved: true
-  }],
-  ['header', {
+  },
+  header: {
     reserved: false,
-  }],
-  ['hgroup', {
+  },
+  hgroup: {
     reserved: false,
-  }],
-  ['hr', {
+  },
+  hr: {
     reserved: false,
-  }],
-  ['html', {
+  },
+  html: {
     reserved: true
-  }],
-  ['i', {
+  },
+  i: {
     reserved: false,
-  }],
-  ['iframe', {
+  },
+  iframe: {
     reserved: false,
-  }],
-  ['img', {
+  },
+  img: {
     reserved: false,
-  }],
-  ['input', {
+  },
+  input: {
     reserved: false,
-  }],
-  ['ins', {
+  },
+  ins: {
     reserved: false,
-  }],
-  ['kbd', {
+  },
+  kbd: {
     reserved: false,
-  }],
-  ['keygen', {
+  },
+  keygen: {
     reserved: false,
-  }],
-  ['label', {
+  },
+  label: {
     reserved: false,
-  }],
-  ['legend', {
+  },
+  legend: {
     reserved: false,
-  }],
-  ['li', {
+  },
+  li: {
     reserved: false,
-  }],
-  ['link', {
+  },
+  link: {
     reserved: true
-  }],
-  ['main', {
+  },
+  main: {
     reserved: false,
-  }],
-  ['map', {
+  },
+  map: {
     reserved: false,
-  }],
-  ['mark', {
+  },
+  mark: {
     reserved: false,
-  }],
-  ['marquee', {
+  },
+  marquee: {
     reserved: false,
-  }],
-  ['menu', {
+  },
+  menu: {
     reserved: false,
-  }],
-  ['menuitem', {
+  },
+  menuitem: {
     reserved: false,
-  }],
-  ['meta', {
+  },
+  meta: {
     reserved: true
-  }],
-  ['meter', {
+  },
+  meter: {
     reserved: false,
-  }],
-  ['nav', {
+  },
+  nav: {
     reserved: false,
-  }],
-  ['noembed', {
+  },
+  noembed: {
     reserved: true
-  }],
-  ['noscript', {
+  },
+  noscript: {
     reserved: true
-  }],
-  ['object', {
+  },
+  object: {
     reserved: false,
-  }],
-  ['ol', {
+  },
+  ol: {
     reserved: false,
-  }],
-  ['optgroup', {
+  },
+  optgroup: {
     reserved: false,
-  }],
-  ['option', {
+  },
+  option: {
     reserved: false,
-  }],
-  ['output', {
+  },
+  output: {
     reserved: false,
-  }],
-  ['p', {
+  },
+  p: {
     reserved: false,
-  }],
-  ['param', {
+  },
+  param: {
     reserved: true
-  }],
-  ['picture', {
+  },
+  picture: {
     reserved: true
-  }],
-  ['pre', {
+  },
+  pre: {
     reserved: false,
-  }],
-  ['progress', {
+  },
+  progress: {
     reserved: false,
-  }],
-  ['q', {
+  },
+  q: {
     reserved: false,
-  }],
-  ['rp', {
+  },
+  rp: {
     reserved: false,
-  }],
-  ['rt', {
+  },
+  rt: {
     reserved: false,
-  }],
-  ['rtc', {
+  },
+  rtc: {
     reserved: false,
-  }],
-  ['ruby', {
+  },
+  ruby: {
     reserved: false,
-  }],
-  ['s', {
+  },
+  s: {
     reserved: false,
-  }],
-  ['samp', {
+  },
+  samp: {
     reserved: false,
-  }],
-  ['script', {
+  },
+  script: {
     reserved: true
-  }],
-  ['section', {
+  },
+  section: {
     reserved: false,
-  }],
-  ['select', {
+  },
+  select: {
     reserved: false,
-  }],
-  ['small', {
+  },
+  small: {
     reserved: false,
-  }],
-  ['source', {
+  },
+  source: {
     reserved: true
-  }],
-  ['spacer', {
+  },
+  spacer: {
     reserved: false,
-  }],
-  ['span', {
+  },
+  span: {
     reserved: false,
-  }],
-  ['strike', {
+  },
+  strike: {
     reserved: false,
-  }],
-  ['strong', {
+  },
+  strong: {
     reserved: false,
-  }],
-  ['style', {
+  },
+  style: {
     reserved: true
-  }],
-  ['sub', {
+  },
+  sub: {
     reserved: false,
-  }],
-  ['summary', {
+  },
+  summary: {
     reserved: false,
-  }],
-  ['sup', {
+  },
+  sup: {
     reserved: false,
-  }],
-  ['table', {
+  },
+  table: {
     reserved: false,
-  }],
-  ['tbody', {
+  },
+  tbody: {
     reserved: false,
-  }],
-  ['td', {
+  },
+  td: {
     reserved: false,
-  }],
-  ['textarea', {
+  },
+  textarea: {
     reserved: false,
-  }],
-  ['tfoot', {
+  },
+  tfoot: {
     reserved: false,
-  }],
-  ['th', {
+  },
+  th: {
     reserved: false,
-  }],
-  ['thead', {
+  },
+  thead: {
     reserved: false,
-  }],
-  ['time', {
+  },
+  time: {
     reserved: false,
-  }],
-  ['title', {
+  },
+  title: {
     reserved: true
-  }],
-  ['tr', {
+  },
+  tr: {
     reserved: false,
-  }],
-  ['track', {
+  },
+  track: {
     reserved: true
-  }],
-  ['tt', {
+  },
+  tt: {
     reserved: false,
-  }],
-  ['u', {
+  },
+  u: {
     reserved: false,
-  }],
-  ['ul', {
+  },
+  ul: {
     reserved: false,
-  }],
-  ['var', {
+  },
+  var: {
     reserved: false,
-  }],
-  ['video', {
+  },
+  video: {
     reserved: false,
-  }],
-  ['wbr', {
+  },
+  wbr: {
     reserved: false,
-  }],
-  ['xmp', {
+  },
+  xmp: {
     reserved: false,
-  }],
-]);
+  },
+});
 
 export default domMap;
