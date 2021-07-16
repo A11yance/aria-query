@@ -26,7 +26,7 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
       - name: Load Node version ${{ matrix.node }}
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.2.0
         with:
           node-version: ${{ matrix.node }}
       - name: Npm Install
@@ -56,7 +56,7 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
       - name: Load Node
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.2.0
       - name: Npm Install
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
@@ -80,7 +80,7 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
       - name: Load Node version ${{ matrix.node }}
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.2.0
         with:
           node-version: ${{ matrix.node }}
       - name: Npm Install
@@ -103,7 +103,7 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
       - name: Load Node version
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.2.0
       - name: Npm Install
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
