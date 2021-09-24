@@ -5,9 +5,6 @@ describe('domRolesMap', function () {
   it('should be a Map', function () {
     expect(elementRoleMap instanceof Map).toBe(true);
   });
-  it('should have size', function () {
-    expect(elementRoleMap.size).toBeGreaterThan(0);
-  });
   it('should have specific items', function () {
     expect(Array.from(elementRoleMap.entries())).toEqual(
       expect.arrayContaining(
