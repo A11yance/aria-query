@@ -3,8 +3,7 @@ import roleElementMap from '../../src/roleElementMap';
 
 describe('domRolesMap', function () {
   it('should have specific items', function () {
-    const entries = roleElementMap.map(entry => [entry[0], Array.from(entry[1])]);
-    expect(entries).toEqual(
+    expect(roleElementMap).toEqual(
       expect.arrayContaining(
         [
           ["command", [{"name": "menuitem"}]],

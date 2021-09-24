@@ -4,9 +4,9 @@
 
 import rolesMap from './rolesMap';
 
-type ARIARoleRelationConceptSet = Set<ARIARoleRelationConcept>;
+type ARIARoleRelationConcepts = Array<ARIARoleRelationConcept>;
 
-type RoleElementRelation = [ARIARoleDefintionKey, ARIARoleRelationConceptSet];
+type RoleElementRelation = [ARIARoleDefintionKey, ARIARoleRelationConcepts];
 
 type RoleElementRelations = Array<RoleElementRelation>;
 
@@ -25,13 +25,13 @@ for (let i = 0; i < keys.length; i++) {
         const concept = relation.concept;
         if (concept) {
           const roleElementRelation: ?RoleElementRelation = roleElementMap.find((item) => item[0] === key);
-          let relationConcepts;
+          let relationConcepts: ARIARoleRelationConcepts;
           if (roleElementRelation) {
             relationConcepts = roleElementRelation[1];
           } else {
-            relationConcepts = new Set([]);
+            relationConcepts = [];
           }
-          relationConcepts.add(concept);
+          relationConcepts.push(concept);
           roleElementMap.push([key, relationConcepts]);
         }
       }
