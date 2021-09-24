@@ -6,9 +6,11 @@ import rolesMap from './rolesMap';
 
 type ARIARoleRelationConceptSet = Set<ARIARoleRelationConcept>;
 
-type RoleElementRelationMap = Map<ARIARoleDefintionKey, ARIARoleRelationConceptSet>;
+type RoleElementRelation = [ARIARoleDefintionKey, ARIARoleRelationConceptSet];
 
-const roleElementMap: RoleElementRelationMap = new Map([]);
+type RoleElementRelations = Array<RoleElementRelation>;
+
+const roleElementMap: RoleElementRelations = [];
 
 const keys = Array.from(rolesMap.keys());
 
@@ -22,9 +24,15 @@ for (let i = 0; i < keys.length; i++) {
       if (relation.module === 'HTML') {
         const concept = relation.concept;
         if (concept) {
-          const relationConcepts = roleElementMap.get(key) || new Set([]);
+          const roleElementRelation: ?RoleElementRelation = roleElementMap.find((item) => item[0] === key);
+          let relationConcepts;
+          if (roleElementRelation) {
+            relationConcepts = roleElementRelation[1];
+          } else {
+            relationConcepts = new Set([]);
+          }
           relationConcepts.add(concept);
-          roleElementMap.set(key, relationConcepts);
+          roleElementMap.push([key, relationConcepts]);
         }
       }
     }
