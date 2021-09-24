@@ -10,13 +10,15 @@ type RoleElementRelationMap = Map<ARIARoleDefintionKey, ARIARoleRelationConceptS
 
 const roleElementMap: RoleElementRelationMap = new Map([]);
 
-const keys = rolesMap.keys();
+const keys = Array.from(rolesMap.keys());
 
-for (let key: ARIARoleDefintionKey of keys) {
+for (let i = 0; i < keys.length; i++) {
+  const key: ARIARoleDefintionKey = keys[i];
   const role = rolesMap.get(key);
   if (role) {
     const concepts = [].concat(role.baseConcepts, role.relatedConcepts);
-    for (let relation: ARIARoleRelation of concepts) {
+    for (let k = 0; k < concepts.length; k++) {
+      const relation: ARIARoleRelation = concepts[k];
       if (relation.module === 'HTML') {
         const concept = relation.concept;
         if (concept) {
