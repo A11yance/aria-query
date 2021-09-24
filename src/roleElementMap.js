@@ -10,29 +10,25 @@ type RoleElementRelationMap = Map<ARIARoleDefintionKey, ARIARoleRelationConceptS
 
 const roleElementMap: RoleElementRelationMap = new Map([]);
 
-[...rolesMap.keys()]
-  .forEach((
-    key: ARIARoleDefintionKey,
-  ): void => {
-    const role = rolesMap.get(key);
-    if (role) {
-      [
-        ...role.baseConcepts,
-        ...role.relatedConcepts,
-      ]
-      .forEach((
-        relation: ARIARoleRelation,
-      ): void => {
-        if (relation.module === 'HTML') {
-          const concept = relation.concept;
-          if (concept) {
-            const relationConcepts = roleElementMap.get(key) || new Set([]);
-            relationConcepts.add(concept);
-            roleElementMap.set(key, relationConcepts);
-          }
+const keys = Array.from(rolesMap.keys());
+
+for (let i = 0; i < keys.length; i++) {
+  const key: ARIARoleDefintionKey = keys[i];
+  const role = rolesMap.get(key);
+  if (role) {
+    const concepts = [].concat(role.baseConcepts, role.relatedConcepts);
+    for (let k = 0; k < concepts.length; k++) {
+      const relation: ARIARoleRelation = concepts[k];
+      if (relation.module === 'HTML') {
+        const concept = relation.concept;
+        if (concept) {
+          const relationConcepts = roleElementMap.get(key) || new Set([]);
+          relationConcepts.add(concept);
+          roleElementMap.set(key, relationConcepts);
         }
-      });
+      }
     }
-  });
+  }
+}
 
 export default roleElementMap;

@@ -12,10 +12,11 @@ const separatorRole: ARIARoleDefinition = {
   prohibitedProps: [],
   props: {
     'aria-disabled': null,
-    'aria-valuetext': null,
     'aria-orientation': 'horizontal',
     'aria-valuemax': '100',
     'aria-valuemin': '0',
+    'aria-valuenow': null,
+    'aria-valuetext': null,
   },
   relatedConcepts: [
     {

@@ -16,7 +16,7 @@ const rolesMap: MapOfRoleDefinitions = new Map([]);
     (
       roleDefinition: ARIARoleDefinition,
       name: ARIARoleDefintionKey,
-    ): {[ARIARoleDefintionKey]: ARIARoleDefinition} => rolesMap.set(name, roleDefinition)
+    ): MapOfRoleDefinitions => rolesMap.set(name, roleDefinition)
   );
 });
 
@@ -32,6 +32,7 @@ rolesMap.forEach((
       if (superClassDefinition) {
         for (let prop: string of Object.keys(superClassDefinition.props)) {
           if (
+            // $FlowIssue Accessing the hasOwnProperty on the Object prototype is fine.
             !Object.prototype.hasOwnProperty.call(roleDefinition.props, prop)
           ) {
             Object.assign(
