@@ -4,11 +4,13 @@
 
 import rolesMap from './rolesMap';
 
-type RoleSet = Set<ARIARoleDefintionKey>;
+type RoleSet = Array<ARIARoleDefintionKey>;
 
-type ElementARIARoleRelationMap = Map<ARIARoleRelationConcept, RoleSet>;
+type ElementARIARoleRelation = [ARIARoleRelationConcept, RoleSet]
 
-const elementRoleMap: ElementARIARoleRelationMap = new Map([]);
+type ElementARIARoleRelations = Array<ElementARIARoleRelation>;
+
+const elementRoleMap: ElementARIARoleRelations = [];
 
 const keys = Array.from(rolesMap.keys());
 
@@ -23,18 +25,25 @@ for (let i = 0; i < keys.length; i++) {
         const concept = relation.concept;
         if (concept) {
           const conceptStr = JSON.stringify(concept);
-
-          let roles: ?RoleSet = (Array.from(elementRoleMap.entries())
-            .find(
-              // eslint-disable-next-line no-unused-vars
-              ([key, value]) => JSON.stringify(key) === conceptStr)|| []
-            )[1];
-
-          if (!roles) {
-            roles = new Set([]);
+          const elementRoleRelation: ?ElementARIARoleRelation = elementRoleMap.find(relation => JSON.stringify(relation[0]) === conceptStr);
+          let roles: RoleSet;
+          
+          if (elementRoleRelation) {
+            roles = elementRoleRelation[1];
+          } else {
+            roles = [];
           }
-          roles.add(key);
-          elementRoleMap.set(concept, roles);
+          let isUnique = true;
+          for (let i = 0; i < roles.length; i++) {
+            if (roles[i] === key) {
+              isUnique = false;
+              break;
+            }
+          }
+          if (isUnique) {
+            roles.push(key);
+          }
+          elementRoleMap.push([concept, roles]);
         }
       }
     }
