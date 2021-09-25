@@ -2,11 +2,18 @@
  * @flow
  */
 
-type PropertyDefinitionTuple = [ARIAProperty, ARIAPropertyDefinition];
+type ARIAPropertyDefinitionTuple = [ARIAProperty, ARIAPropertyDefinition];
+type ARIAPropertyDefinitions = Array<ARIAPropertyDefinitionTuple>;
+type AriaPropertiesMap = {|
+  entries: () => ARIAPropertyDefinitions,
+  findIndex: (key: ARIAProperty) => number,
+  get: (key: ARIAProperty) => ?ARIAPropertyDefinition,
+  has: (key: ARIAProperty) => boolean,
+  keys: () => Array<ARIAProperty>,
+  values: () => Array<ARIAPropertyDefinition>,
+|};
 
-type MapOfARIAPropertyDefinitions = Array<PropertyDefinitionTuple>;
-
-const ariaPropsMap: MapOfARIAPropertyDefinitions = [
+const properties: ARIAPropertyDefinitions = [
   ['aria-activedescendant', {
     'type': 'id'
   }],
@@ -216,5 +223,27 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = [
     'type': 'string'
   }],
 ];
+
+const ariaPropsMap: AriaPropertiesMap = {
+  entries: function () {
+    return properties;
+  },
+  findIndex: function (key: ARIAProperty): number {
+    return properties.findIndex(tuple => tuple[0] === key);
+  },
+  get: function (key: ARIAProperty): ?ARIAPropertyDefinition {
+    const item = properties.find(tuple => (tuple[0] === key) ? true : false);
+    return item && item[1];
+  },
+  has: function (key: ARIAProperty): boolean {
+    return !!this.get(key);
+  },
+  keys: function (): Array<ARIAProperty> {
+    return properties.map(([key]) => key);
+  },
+  values: function (): Array<ARIAPropertyDefinition> {
+    return properties.map(([, values]) => values);
+  }
+};
 
 export default ariaPropsMap;

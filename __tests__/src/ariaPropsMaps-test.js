@@ -2,7 +2,31 @@ import expect from 'expect';
 import ariaPropsMap from '../../src/ariaPropsMap';
 import rolesMap from '../../src/rolesMap';
 
-describe('ariaPropsMap', function () {
+describe('ariaPropsMap API', function () {
+  it('entries', function () {
+    expect(ariaPropsMap.entries().length).toEqual(48);
+  });
+  it('findIndex', function () {
+    expect(ariaPropsMap.findIndex('aria-label')).toBeGreaterThan(-1);
+    expect(ariaPropsMap.findIndex('fake prop')).toEqual(-1);
+  });
+  it('get', function () {
+    expect(ariaPropsMap.get('aria-label')).toBeDefined();
+    expect(ariaPropsMap.get('fake prop')).toBeUndefined();
+  });
+  it('has', function () {
+    expect(ariaPropsMap.has('aria-label')).toEqual(true);
+    expect(ariaPropsMap.has('fake prop')).toEqual(false);
+  });
+  it('keys', function () {
+    expect(ariaPropsMap.keys().length).toEqual(48);
+  });
+  it('values', function () {
+    expect(ariaPropsMap.values().length).toEqual(48);
+  });
+});
+
+describe('ariaPropsMap content', function () {
   const usedProps = [];
   for (const roleDefinition of rolesMap.values()) {
     for (const prop of Object.keys(roleDefinition.props)) {
@@ -18,12 +42,10 @@ describe('ariaPropsMap', function () {
       }
     }
   }
-  for (let i =0; i < ariaPropsMap.length; i++) {
-    const prop = ariaPropsMap[i][0];
-    describe(prop, function() {
-      it('should be used in at least one role definition', function() {
-        expect(usedProps.find(p => p === prop)).toBeDefined();
-      });
-    });
-  }
+  test.each(ariaPropsMap.entries())(
+    'The prop %s should be used in at least one role definition',
+    (prop) => {
+      expect(usedProps.find(p => p === prop)).toBeDefined();
+    }
+  );
 });
