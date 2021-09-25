@@ -6,13 +6,12 @@ import ariaAbstractRoles from './etc/roles/ariaAbstractRoles';
 import ariaLiteralRoles from './etc/roles/ariaLiteralRoles';
 import ariaDpubRoles from './etc/roles/ariaDpubRoles';
 
-export type RolesMap = {|
+type RolesMap = {|
   entries: () => RoleDefinitions,
   findIndex: (key: ARIARoleDefinitionKey) => number,
   get: (key: ARIARoleDefinitionKey) => ?ARIARoleDefinition,
   has: (key: ARIARoleDefinitionKey) => boolean,
   keys: () => Array<ARIARoleDefinitionKey>,
-  set: (key: ARIARoleDefinitionKey, ARIARoleDefinition) => void,
   values: () => Array<ARIARoleDefinition>,
 |};
 
@@ -66,14 +65,6 @@ const rolesMap: RolesMap = {
   },
   keys: function (): Array<ARIARoleDefinitionKey> {
     return roles.map(([key]) => key);
-  },
-  set: function(key: ARIARoleDefinitionKey, definition: ARIARoleDefinition): void {
-    const index = this.findIndex(key);
-    if (index > -1) {
-      roles.splice(index, 1, [key, definition]);
-    } else {
-      roles.push([key, definition]);
-    }
   },
   values: function (): Array<ARIARoleDefinition> {
     return roles.map(([, values]) => values);
