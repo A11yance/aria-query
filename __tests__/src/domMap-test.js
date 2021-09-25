@@ -1,9 +1,29 @@
 import expect from 'expect';
 import domMap from '../../src/domMap';
 
+describe('domMap API', function () {
+  it('entries', function () {
+    expect(domMap.entries().length).toEqual(129);
+  });
+  it('get', function () {
+    expect(domMap.get('a')).toBeDefined();
+    expect(domMap.get('fake element')).toBeUndefined();
+  });
+  it('has', function () {
+    expect(domMap.has('a')).toEqual(true);
+    expect(domMap.has('fake element')).toEqual(false);
+  });
+  it('keys', function () {
+    expect(domMap.keys().length).toEqual(129);
+  });
+  it('values', function () {
+    expect(domMap.values().length).toEqual(129);
+  });
+});
+
 describe('domMap', function () {
   it('should have specific items', function () {
-    expect(domMap).toEqual(
+    expect(domMap.entries()).toEqual(
       expect.arrayContaining(
         [
           ["a", {"reserved": false}],

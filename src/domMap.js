@@ -3,14 +3,20 @@
  */
 
 type DOMDefinition = {
-  reserved?: boolean,
-  interactive?: boolean,
+  reserved: boolean,
 };
 
 type DOMDefinitionTuple = [string, DOMDefinition];
 type DOMDefinitions = Array<DOMDefinitionTuple>;
+type DomMap = {|
+  entries: () => DOMDefinitions,
+  get: (key: string) => ?DOMDefinition,
+  has: (key: string) => boolean,
+  keys: () => Array<string>,
+  values: () => Array<DOMDefinition>,
+|};
 
-const domMap: DOMDefinitions = [
+const dom: DOMDefinitions = [
   ['a', {
     reserved: false,
   }],
@@ -399,5 +405,24 @@ const domMap: DOMDefinitions = [
     reserved: false,
   }],
 ];
+
+const domMap: DomMap = {
+  entries: function (): DOMDefinitions {
+    return dom;
+  },
+  get: function (key: string): ?DOMDefinition {
+    const item = dom.find(tuple => (tuple[0] === key) ? true : false);
+    return item && item[1];
+  },
+  has: function (key: string): boolean {
+    return !!this.get(key);
+  },
+  keys: function (): Array<string> {
+    return dom.map(([key]) => key);
+  },
+  values: function (): Array<DOMDefinition> {
+    return dom.map(([, values]) => values);
+  }
+};
 
 export default domMap;
