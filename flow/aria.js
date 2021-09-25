@@ -192,7 +192,7 @@ type ARIARoleDefinition = {
 };
 
 type RoleDefinitionTuple = [ARIARoleDefintionKey, ARIARoleDefinition];
-type RoleDefinitions = Array<ARIARoleDefintionKey, ARIARoleDefinition>;
+type RoleDefinitions = Array<RoleDefinitionTuple>;
 
 type ARIAState =
   'aria-busy'

@@ -14,7 +14,7 @@ import structureRole from './abstract/structureRole';
 import widgetRole from './abstract/widgetRole';
 import windowRole from './abstract/windowRole';
 
-const ariaAbstractRoles: MapOfRoleDefinitions = [
+const ariaAbstractRoles: RoleDefinitions = [
   ['command', commandRole],
   ['composite', compositeRole],
   ['input', inputRole],
