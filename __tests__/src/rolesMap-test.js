@@ -3,20 +3,12 @@ import rolesMap from '../../src/rolesMap';
 import ariaPropsMap from '../../src/ariaPropsMap';
 
 describe('rolesMap', function () {
-  it('should be a Map', function () {
-    expect(rolesMap instanceof Map).toBe(true);
-  });
-  it('should have size', function () {
-    expect(rolesMap.size).toBeGreaterThan(0);
-  });
-
-  test.each(
-    [...rolesMap.entries()])(
+  const roles = rolesMap.entries();
+  test.each(roles)(
     'The definition for role %s has only props defined in ariaPropsMap',
     (role, definition) => {
-
       const unknownProps = Object.keys(definition.props).filter((prop) => {
-        return !ariaPropsMap.has(prop);
+        return ariaPropsMap.find(p => p === prop);
       });
       expect(unknownProps.length).toEqual(0);
     }

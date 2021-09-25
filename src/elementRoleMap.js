@@ -4,7 +4,7 @@
 
 import rolesMap from './rolesMap';
 
-type RoleSet = Array<ARIARoleDefintionKey>;
+type RoleSet = Array<ARIARoleDefinitionKey>;
 
 type ElementARIARoleRelation = [ARIARoleRelationConcept, RoleSet]
 
@@ -12,10 +12,10 @@ type ElementARIARoleRelations = Array<ElementARIARoleRelation>;
 
 const elementRoleMap: ElementARIARoleRelations = [];
 
-const keys = Array.from(rolesMap.keys());
+const keys = rolesMap.keys();
 
 for (let i = 0; i < keys.length; i++) {
-  const key: ARIARoleDefintionKey = keys[i];
+  const key: ARIARoleDefinitionKey = keys[i];
   const role = rolesMap.get(key);
   if (role) {
     const concepts = [].concat(role.baseConcepts, role.relatedConcepts);

@@ -1,7 +1,7 @@
 import expect from 'expect';
 import roleElementMap from '../../src/roleElementMap';
 
-describe('domRolesMap', function () {
+describe('roleElementMap', function () {
   it('should have specific items', function () {
     expect(roleElementMap).toEqual(
       expect.arrayContaining(

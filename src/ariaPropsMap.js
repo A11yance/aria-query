@@ -2,9 +2,11 @@
  * @flow
  */
 
-type MapOfARIAPropertyDefinitions = Map<ARIAProperty, ARIAPropertyDefinition>;
+type PropertyDefinitionTuple = [ARIAProperty, ARIAPropertyDefinition];
 
-const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
+type MapOfARIAPropertyDefinitions = Array<PropertyDefinitionTuple>;
+
+const ariaPropsMap: MapOfARIAPropertyDefinitions = [
   ['aria-activedescendant', {
     'type': 'id'
   }],
@@ -213,6 +215,6 @@ const ariaPropsMap: MapOfARIAPropertyDefinitions = new Map([
   ['aria-valuetext', {
     'type': 'string'
   }],
-]);
+];
 
 export default ariaPropsMap;

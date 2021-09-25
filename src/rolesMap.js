@@ -6,30 +6,34 @@ import ariaAbstractRoles from './etc/roles/ariaAbstractRoles';
 import ariaLiteralRoles from './etc/roles/ariaLiteralRoles';
 import ariaDpubRoles from './etc/roles/ariaDpubRoles';
 
-const rolesMap: MapOfRoleDefinitions = new Map([]);
-[
+export type RolesMap = {|
+  entries: () => RoleDefinitions,
+  findIndex: (key: ARIARoleDefinitionKey) => number,
+  get: (key: ARIARoleDefinitionKey) => ?ARIARoleDefinition,
+  has: (key: ARIARoleDefinitionKey) => boolean,
+  keys: () => Array<ARIARoleDefinitionKey>,
+  set: (key: ARIARoleDefinitionKey, ARIARoleDefinition) => void,
+  values: () => Array<ARIARoleDefinition>,
+|};
+
+const roles: RoleDefinitions = [].concat(
   ariaAbstractRoles,
   ariaLiteralRoles,
-  ariaDpubRoles,
-].forEach((roleSet): void => {
-  roleSet.forEach(
-    (
-      roleDefinition: ARIARoleDefinition,
-      name: ARIARoleDefintionKey,
-    ): MapOfRoleDefinitions => rolesMap.set(name, roleDefinition)
-  );
-});
+  ariaDpubRoles
+);
 
-rolesMap.forEach((
+roles.forEach(([
+  ,
   roleDefinition: ARIARoleDefinition,
-  // eslint-disable-next-line no-unused-vars
-  name: string,
-) => {
+]) => {
   // Conglomerate the properties
   for (let superClassIter of roleDefinition.superClass) {
     for (let superClassName of superClassIter) {
-      const superClassDefinition = rolesMap.get(superClassName);
-      if (superClassDefinition) {
+      const superClassRoleTuple = roles.find(([
+        name: string,
+      ]) => name === superClassName);
+      if (superClassRoleTuple) {
+        const superClassDefinition = superClassRoleTuple[1];
         for (let prop: string of Object.keys(superClassDefinition.props)) {
           if (
             // $FlowIssue Accessing the hasOwnProperty on the Object prototype is fine.
@@ -45,5 +49,35 @@ rolesMap.forEach((
     }
   }
 });
+
+const rolesMap: RolesMap = {
+  entries: function () {
+    return roles;
+  },
+  findIndex: function (key: ARIARoleDefinitionKey): number {
+    return roles.findIndex(tuple => tuple[0] === key);
+  },
+  get: function (key: ARIARoleDefinitionKey): ?ARIARoleDefinition {
+    const item = roles.find(tuple => (tuple[0] === key) ? true : false);
+    return item && item[1];
+  },
+  has: function (key: ARIARoleDefinitionKey): boolean {
+    return !!this.get(key);
+  },
+  keys: function (): Array<ARIARoleDefinitionKey> {
+    return roles.map(([key]) => key);
+  },
+  set: function(key: ARIARoleDefinitionKey, definition: ARIARoleDefinition): void {
+    const index = this.findIndex(key);
+    if (index > -1) {
+      roles.splice(index, 1, [key, definition]);
+    } else {
+      roles.push([key, definition]);
+    }
+  },
+  values: function (): Array<ARIARoleDefinition> {
+    return roles.map(([, values]) => values);
+  }
+};
 
 export default rolesMap;

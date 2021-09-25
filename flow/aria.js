@@ -163,7 +163,7 @@ type ARIARole =
   | ARIAWindowRole
   | ARIAUncategorizedRole;
 
-type ARIARoleDefintionKey =
+type ARIARoleDefinitionKey =
   ARIAAbstractRole
   | ARIARole
   | ARIADPubRole;
@@ -191,7 +191,7 @@ type ARIARoleDefinition = {
   superClass: Array<Array<ARIAAbstractRole | ARIARole | ARIADPubRole>>,
 };
 
-type RoleDefinitionTuple = [ARIARoleDefintionKey, ARIARoleDefinition];
+type RoleDefinitionTuple = [ARIARoleDefinitionKey, ARIARoleDefinition];
 type RoleDefinitions = Array<RoleDefinitionTuple>;
 
 type ARIAState =

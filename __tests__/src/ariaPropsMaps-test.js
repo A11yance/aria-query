@@ -3,23 +3,26 @@ import ariaPropsMap from '../../src/ariaPropsMap';
 import rolesMap from '../../src/rolesMap';
 
 describe('ariaPropsMap', function () {
-  it('should be a Map', function () {
-    expect(ariaPropsMap instanceof Map).toBe(true);
-  });
-  it('should have size', function () {
-    expect(ariaPropsMap.size).toBeGreaterThan(0);
-  });
-
-  const usedProps = new Set();
+  const usedProps = [];
   for (const roleDefinition of rolesMap.values()) {
     for (const prop of Object.keys(roleDefinition.props)) {
-      usedProps.add(prop);
+      let isUnique = true;
+      for (let i = 0; i < usedProps.length; i++) {
+        if (usedProps[i] === prop) {
+          isUnique = false;
+          break;
+        }
+      }
+      if (isUnique) {
+        usedProps.push(prop);
+      }
     }
   }
-  for (const prop of ariaPropsMap.keys()) {
+  for (let i =0; i < ariaPropsMap.length; i++) {
+    const prop = ariaPropsMap[i][0];
     describe(prop, function() {
       it('should be used in at least one role definition', function() {
-        expect(usedProps.has(prop)).toBe(true, `Expected '${prop}' is used in at least one role definition`);
+        expect(usedProps.find(p => p === prop)).toBeDefined();
       });
     });
   }
