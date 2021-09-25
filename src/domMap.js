@@ -7,9 +7,10 @@ type DOMDefinition = {
   interactive?: boolean,
 };
 
-type MapOfDOMDefinitions = Map<string, DOMDefinition>;
+type DOMDefinitionTuple = [string, DOMDefinition];
+type DOMDefinitions = Array<DOMDefinitionTuple>;
 
-const domMap: MapOfDOMDefinitions = new Map([
+const domMap: DOMDefinitions = [
   ['a', {
     reserved: false,
   }],
@@ -397,6 +398,6 @@ const domMap: MapOfDOMDefinitions = new Map([
   ['xmp', {
     reserved: false,
   }],
-]);
+];
 
 export default domMap;
