@@ -6,7 +6,6 @@ type ARIAPropertyDefinitionTuple = [ARIAProperty, ARIAPropertyDefinition];
 type ARIAPropertyDefinitions = Array<ARIAPropertyDefinitionTuple>;
 type AriaPropertiesMap = {|
   entries: () => ARIAPropertyDefinitions,
-  findIndex: (key: ARIAProperty) => number,
   get: (key: ARIAProperty) => ?ARIAPropertyDefinition,
   has: (key: ARIAProperty) => boolean,
   keys: () => Array<ARIAProperty>,
@@ -225,11 +224,8 @@ const properties: ARIAPropertyDefinitions = [
 ];
 
 const ariaPropsMap: AriaPropertiesMap = {
-  entries: function () {
+  entries: function (): ARIAPropertyDefinitions {
     return properties;
-  },
-  findIndex: function (key: ARIAProperty): number {
-    return properties.findIndex(tuple => tuple[0] === key);
   },
   get: function (key: ARIAProperty): ?ARIAPropertyDefinition {
     const item = properties.find(tuple => (tuple[0] === key) ? true : false);

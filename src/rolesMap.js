@@ -8,7 +8,6 @@ import ariaDpubRoles from './etc/roles/ariaDpubRoles';
 
 type RolesMap = {|
   entries: () => RoleDefinitions,
-  findIndex: (key: ARIARoleDefinitionKey) => number,
   get: (key: ARIARoleDefinitionKey) => ?ARIARoleDefinition,
   has: (key: ARIARoleDefinitionKey) => boolean,
   keys: () => Array<ARIARoleDefinitionKey>,
@@ -50,11 +49,8 @@ roles.forEach(([
 });
 
 const rolesMap: RolesMap = {
-  entries: function () {
+  entries: function (): RoleDefinitions {
     return roles;
-  },
-  findIndex: function (key: ARIARoleDefinitionKey): number {
-    return roles.findIndex(tuple => tuple[0] === key);
   },
   get: function (key: ARIARoleDefinitionKey): ?ARIARoleDefinition {
     const item = roles.find(tuple => (tuple[0] === key) ? true : false);

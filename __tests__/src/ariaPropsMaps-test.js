@@ -6,10 +6,6 @@ describe('ariaPropsMap API', function () {
   it('entries', function () {
     expect(ariaPropsMap.entries().length).toEqual(48);
   });
-  it('findIndex', function () {
-    expect(ariaPropsMap.findIndex('aria-label')).toBeGreaterThan(-1);
-    expect(ariaPropsMap.findIndex('fake prop')).toEqual(-1);
-  });
   it('get', function () {
     expect(ariaPropsMap.get('aria-label')).toBeDefined();
     expect(ariaPropsMap.get('fake prop')).toBeUndefined();

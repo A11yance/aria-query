@@ -6,10 +6,6 @@ describe('rolesMap API', function () {
   it('entries', function () {
     expect(rolesMap.entries().length).toEqual(133);
   });
-  it('findIndex', function () {
-    expect(rolesMap.findIndex('roletype')).toBeGreaterThan(-1);
-    expect(rolesMap.findIndex('fake role')).toEqual(-1);
-  });
   it('get', function () {
     expect(rolesMap.get('roletype')).toBeDefined();
     expect(rolesMap.get('fake role')).toBeUndefined();
