@@ -191,7 +191,8 @@ type ARIARoleDefinition = {
   superClass: Array<Array<ARIAAbstractRole | ARIARole | ARIADPubRole>>,
 };
 
-type MapOfRoleDefinitions = Map<ARIARoleDefintionKey, ARIARoleDefinition>;
+type RoleDefinitionTuple = [ARIARoleDefintionKey, ARIARoleDefinition];
+type RoleDefinitions = Array<ARIARoleDefintionKey, ARIARoleDefinition>;
 
 type ARIAState =
   'aria-busy'
