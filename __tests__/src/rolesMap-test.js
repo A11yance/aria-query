@@ -27,9 +27,9 @@ describe('rolesMap', function () {
   test.each(roles)(
     'The definition for role %s has only props defined in ariaPropsMap',
     (role, definition) => {
-      const unknownProps = Object.keys(definition.props).filter((prop) => {
-        return ariaPropsMap.find(p => p === prop);
-      });
+      const unknownProps = Object.keys(definition.props).filter(
+        prop => !ariaPropsMap.has(prop)
+      );
       expect(unknownProps.length).toEqual(0);
     }
   );
