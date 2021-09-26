@@ -1,9 +1,29 @@
 import expect from 'expect';
 import roleElementMap from '../../src/roleElementMap';
 
+describe('roleElementMap API', function () {
+  it('entries', function () {
+    expect(roleElementMap.entries().length).toEqual(87);
+  });
+  it('get', function () {
+    expect(roleElementMap.get('button')).toBeDefined();
+    expect(roleElementMap.get('fake role')).toBeUndefined();
+  });
+  it('has', function () {
+    expect(roleElementMap.has('button')).toEqual(true);
+    expect(roleElementMap.has('fake role')).toEqual(false);
+  });
+  it('keys', function () {
+    expect(roleElementMap.keys().length).toEqual(87);
+  });
+  it('values', function () {
+    expect(roleElementMap.values().length).toEqual(87);
+  });
+});
+
 describe('roleElementMap', function () {
   it('should have specific items', function () {
-    expect(roleElementMap).toEqual(
+    expect(roleElementMap.entries()).toEqual(
       expect.arrayContaining(
         [
           ["command", [{"name": "menuitem"}]],
