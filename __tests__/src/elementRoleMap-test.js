@@ -1,9 +1,49 @@
 import expect from 'expect';
 import elementRoleMap from '../../src/elementRoleMap';
 
-describe('domRolesMap', function () {
+describe('elementRoleMap API', function () {
+  it('entries', function () {
+    expect(elementRoleMap.entries().length).toEqual(87);
+  });
+  it('get', function () {
+    expect(elementRoleMap.get({
+      attributes: [
+        { name: 'href' }
+      ],
+      name: 'a'
+    })).toBeDefined();
+    expect(elementRoleMap.get({
+      attributes: {
+        name: 'fake attribute',
+      },
+      name: 'fake element',
+    })).toBeUndefined();
+  });
+  it('has', function () {
+    expect(elementRoleMap.has({
+      attributes: [
+        { name: 'href' }
+      ],
+      name: 'a'
+    })).toEqual(true);
+    expect(elementRoleMap.has({
+      attributes: {
+        name: 'fake attribute',
+      },
+      name: 'fake element',
+    })).toEqual(false);
+  });
+  it('keys', function () {
+    expect(elementRoleMap.keys().length).toEqual(87);
+  });
+  it('values', function () {
+    expect(elementRoleMap.values().length).toEqual(87);
+  });
+});
+
+describe('elementRolesMap', function () {
   it('should have specific items', function () {
-    expect(elementRoleMap).toEqual(
+    expect(elementRoleMap.entries()).toEqual(
       expect.arrayContaining(
         [
           [{"name": "menuitem"}, ["command", "menuitem"]],
