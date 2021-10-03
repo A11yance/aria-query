@@ -317,9 +317,9 @@ fs.readFile(path.join('scripts/roles.json'), {
         + ' */\n'
         + `${requiresMapper(requires[0], path.join(requires[2]), 0)}\n`
         + `\n`
-        + `const ${requires[1]}: MapOfRoleDefinitions = new Map([\n`
+        + `const ${requires[1]}: RoleDefinitions = [\n`
         + `${requiresCombiner(requires[0], 1)}\n`
-        + `]);\n`
+        + `];\n`
         + `\n`
         + `export default ${requires[1]};`,
         {

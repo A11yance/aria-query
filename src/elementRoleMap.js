@@ -4,16 +4,23 @@
 
 import rolesMap from './rolesMap';
 
-type RoleSet = Set<ARIARoleDefintionKey>;
+type RoleSet = Array<ARIARoleDefinitionKey>;
+type ElementARIARoleRelationTuple = [ARIARoleRelationConcept, RoleSet]
+type ElementARIARoleRelations = Array<ElementARIARoleRelationTuple>;
+type RolesMap = {|
+  entries: () => ElementARIARoleRelations,
+  get: (key: ARIARoleRelationConcept) => ?RoleSet,
+  has: (key: ARIARoleRelationConcept) => boolean,
+  keys: () => Array<ARIARoleRelationConcept>,
+  values: () => Array<RoleSet>,
+|};
 
-type ElementARIARoleRelationMap = Map<ARIARoleRelationConcept, RoleSet>;
+const elementRoles: ElementARIARoleRelations = [];
 
-const elementRoleMap: ElementARIARoleRelationMap = new Map([]);
-
-const keys = Array.from(rolesMap.keys());
+const keys = rolesMap.keys();
 
 for (let i = 0; i < keys.length; i++) {
-  const key: ARIARoleDefintionKey = keys[i];
+  const key: ARIARoleDefinitionKey = keys[i];
   const role = rolesMap.get(key);
   if (role) {
     const concepts = [].concat(role.baseConcepts, role.relatedConcepts);
@@ -23,22 +30,50 @@ for (let i = 0; i < keys.length; i++) {
         const concept = relation.concept;
         if (concept) {
           const conceptStr = JSON.stringify(concept);
-
-          let roles: ?RoleSet = (Array.from(elementRoleMap.entries())
-            .find(
-              // eslint-disable-next-line no-unused-vars
-              ([key, value]) => JSON.stringify(key) === conceptStr)|| []
-            )[1];
-
-          if (!roles) {
-            roles = new Set([]);
+          const elementRoleRelation: ?ElementARIARoleRelationTuple = elementRoles.find(relation => JSON.stringify(relation[0]) === conceptStr);
+          let roles: RoleSet;
+          
+          if (elementRoleRelation) {
+            roles = elementRoleRelation[1];
+          } else {
+            roles = [];
           }
-          roles.add(key);
-          elementRoleMap.set(concept, roles);
+          let isUnique = true;
+          for (let i = 0; i < roles.length; i++) {
+            if (roles[i] === key) {
+              isUnique = false;
+              break;
+            }
+          }
+          if (isUnique) {
+            roles.push(key);
+          }
+          elementRoles.push([concept, roles]);
         }
       }
     }
   }
 }
+
+const elementRoleMap: RolesMap = {
+  entries: function (): ElementARIARoleRelations {
+    return elementRoles;
+  },
+  get: function (key: ARIARoleRelationConcept): ?RoleSet {
+    const item = elementRoles.find(
+      tuple => JSON.stringify(tuple[0]) === JSON.stringify(key) ? true : false
+    );
+    return item && item[1];
+  },
+  has: function (key: ARIARoleRelationConcept): boolean {
+    return !!this.get(key);
+  },
+  keys: function (): Array<ARIARoleRelationConcept> {
+    return elementRoles.map(([key]) => key);
+  },
+  values: function (): Array<RoleSet> {
+    return elementRoles.map(([, values]) => values);
+  }
+};
 
 export default elementRoleMap;

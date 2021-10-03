@@ -1,101 +1,138 @@
 import expect from 'expect';
 import elementRoleMap from '../../src/elementRoleMap';
 
-describe('domRolesMap', function () {
-  it('should be a Map', function () {
-    expect(elementRoleMap instanceof Map).toBe(true);
+describe('elementRoleMap API', function () {
+  it('entries', function () {
+    expect(elementRoleMap.entries().length).toEqual(87);
   });
+  it('get', function () {
+    expect(elementRoleMap.get({
+      attributes: [
+        { name: 'href' }
+      ],
+      name: 'a'
+    })).toBeDefined();
+    expect(elementRoleMap.get({
+      attributes: {
+        name: 'fake attribute',
+      },
+      name: 'fake element',
+    })).toBeUndefined();
+  });
+  it('has', function () {
+    expect(elementRoleMap.has({
+      attributes: [
+        { name: 'href' }
+      ],
+      name: 'a'
+    })).toEqual(true);
+    expect(elementRoleMap.has({
+      attributes: {
+        name: 'fake attribute',
+      },
+      name: 'fake element',
+    })).toEqual(false);
+  });
+  it('keys', function () {
+    expect(elementRoleMap.keys().length).toEqual(87);
+  });
+  it('values', function () {
+    expect(elementRoleMap.values().length).toEqual(87);
+  });
+});
+
+describe('elementRolesMap', function () {
   it('should have specific items', function () {
-    expect(Array.from(elementRoleMap.entries())).toEqual(
+    expect(elementRoleMap.entries()).toEqual(
       expect.arrayContaining(
         [
-          [{"name": "menuitem"}, new Set("command", "menuitem")],
-          [{"name": "rel"}, new Set("roletype")],
-          [{"name": "article"}, new Set("article")],
-          [{"constraints": ["direct descendant of document"], "name": "header"}, new Set("banner")],
-          [{"attributes": [{"constraints": ["set"], "name": "aria-pressed"}, {"name": "type", "value": "checkbox"}], "name": "input"}, new Set("button")],
-          [{"attributes": [{"name": "aria-expanded", "value": "false"}], "name": "summary"}, new Set("button")],
-          [{"attributes": [{"name": "aria-expanded", "value": "true"}], "constraints": ["direct descendant of details element with the open attribute defined"], "name": "summary"}, new Set("button")],
-          [{"attributes": [{"name": "type", "value": "button"}], "name": "input"}, new Set("button")],
-          [{"attributes": [{"name": "type", "value": "image"}], "name": "input"}, new Set("button")],
-          [{"attributes": [{"name": "type", "value": "reset"}], "name": "input"}, new Set("button")],
-          [{"attributes": [{"name": "type", "value": "submit"}], "name": "input"}, new Set("button")],
-          [{"name": "button"}, new Set("button")],
-          [{"constraints": ["descendant of table"], "name": "td"}, new Set("cell")],
-          [{"attributes": [{"name": "type", "value": "checkbox"}], "name": "input"}, new Set("checkbox")],
-          [{"name": "th"}, new Set("columnheader")],
-          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "email"}], "name": "input"}, new Set("combobox")],
-          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "search"}], "name": "input"}, new Set("combobox")],
-          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "tel"}], "name": "input"}, new Set("combobox")],
-          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "text"}], "name": "input"}, new Set("combobox")],
-          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "url"}], "name": "input"}, new Set("combobox")],
-          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "url"}], "name": "input"}, new Set("combobox")],
-          [{"attributes": [{"constraints": ["undefined"], "name": "multiple"}, {"constraints": ["undefined"], "name": "size"}], "name": "select"}, new Set("combobox")],
-          [{"attributes": [{"constraints": ["undefined"], "name": "multiple"}, {"name": "size", "value": 1}], "name": "select"}, new Set("combobox")],
-          [{"name": "aside"}, new Set("complementary")],
-          [{"constraints": ["direct descendant of document"], "name": "footer"}, new Set("contentinfo")],
-          [{"name": "dd"}, new Set("definition")],
-          [{"name": "dialog"}, new Set("dialog")],
-          [{"name": "body"}, new Set("document")],
-          [{"name": "figure"}, new Set("figure")],
-          [{"attributes": [{"constraints": ["set"], "name": "aria-label"}], "name": "form"}, new Set("form")],
-          [{"attributes": [{"constraints": ["set"], "name": "aria-labelledby"}], "name": "form"}, new Set("form")],
-          [{"attributes": [{"constraints": ["set"], "name": "name"}], "name": "form"}, new Set("form")],
-          [{"name": "span"}, new Set("generic")],
-          [{"name": "div"}, new Set("generic")],
-          [{"attributes": [{"name": "role", "value": "grid"}], "name": "table"}, new Set("grid")],
-          [{"attributes": [{"name": "role", "value": "gridcell"}], "name": "td"}, new Set("gridcell")],
-          [{"name": "details"}, new Set("group")],
-          [{"name": "fieldset"}, new Set("group")],
-          [{"name": "optgroup"}, new Set("group")],
-          [{"name": "h1"}, new Set("heading")],
-          [{"name": "h2"}, new Set("heading")],
-          [{"name": "h3"}, new Set("heading")],
-          [{"name": "h4"}, new Set("heading")],
-          [{"name": "h5"}, new Set("heading")],
-          [{"name": "h6"}, new Set("heading")],
-          [{"attributes": [{"constraints": ["set"], "name": "alt"}], "name": "img"}, new Set("img")],
-          [{"attributes": [{"constraints": ["undefined"], "name": "alt"}], "name": "img"}, new Set("img")],
-          [{"attributes": [{"name": "href"}], "name": "a"}, new Set("link")],
-          [{"attributes": [{"name": "href"}], "name": "area"}, new Set("link")],
-          [{"attributes": [{"name": "href"}], "name": "link"}, new Set("link")],
-          [{"name": "menu"}, new Set("list")],
-          [{"name": "ol"}, new Set("list")],
-          [{"name": "ul"}, new Set("list")],
-          [{"attributes": [{"constraints": [">1"], "name": "size"}, {"name": "multiple"}], "name": "select"}, new Set("listbox")],
-          [{"attributes": [{"constraints": [">1"], "name": "size"}], "name": "select"}, new Set("listbox")],
-          [{"attributes": [{"name": "multiple"}], "name": "select"}, new Set("listbox")],
-          [{"name": "datalist"}, new Set("listbox")],
-          [{"constraints": ["direct descendant of ol, ul or menu"], "name": "li"}, new Set("listitem")],
-          [{"name": "main"}, new Set("main")],
-          [{"name": "math"}, new Set("math")],
-          [{"name": "menuitem"}, new Set("command", "menuitem")],
-          [{"name": "nav"}, new Set("navigation")],
-          [{"name": "option"}, new Set("option")],
-          [{"name": "progress"}, new Set("progressbar")],
-          [{"attributes": [{"name": "type", "value": "radio"}], "name": "input"}, new Set("radio")],
-          [{"attributes": [{"constraints": ["set"], "name": "aria-label"}], "name": "section"}, new Set("region")],
-          [{"attributes": [{"constraints": ["set"], "name": "aria-labelledby"}], "name": "section"}, new Set("region")],
-          [{"name": "frame"}, new Set("region")],
-          [{"name": "tr"}, new Set("row")],
-          [{"name": "tbody"}, new Set("rowgroup")],
-          [{"name": "tfoot"}, new Set("rowgroup")],
-          [{"name": "thead"}, new Set("rowgroup")],
-          [{"attributes": [{"name": "scope", "value": "row"}], "name": "th"}, new Set("rowheader")],
-          [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "search"}], "name": "input"}, new Set("searchbox")],
-          [{"name": "hr"}, new Set("separator")],
-          [{"attributes": [{"name": "type", "value": "range"}], "name": "input"}, new Set("slider")],
-          [{"attributes": [{"name": "type", "value": "number"}], "name": "input"}, new Set("spinbutton")],
-          [{"name": "output"}, new Set("status")],
-          [{"name": "table"}, new Set("table")],
-          [{"name": "dfn"}, new Set("term")],
-          [{"name": "dt"}, new Set("term")],
-          [{"attributes": [{"constraints": ["undefined"], "name": "type"}, {"constraints": ["undefined"], "name": "list"}], "name": "input"}, new Set("textbox")],
-          [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "email"}], "name": "input"}, new Set("textbox")],
-          [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "tel"}], "name": "input"}, new Set("textbox")],
-          [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "text"}], "name": "input"}, new Set("textbox")],
-          [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "url"}], "name": "input"}, new Set("textbox")],
-          [{"name": "textarea"}, new Set("textbox")]
+          [{"name": "menuitem"}, ["command", "menuitem"]],
+          [{"name": "rel"}, ["roletype"]],
+          [{"name": "article"}, ["article"]],
+          [{"constraints": ["direct descendant of document"], "name": "header"}, ["banner"]],
+          [{"attributes": [{"constraints": ["set"], "name": "aria-pressed"}, {"name": "type", "value": "checkbox"}], "name": "input"}, ["button"]],
+          [{"attributes": [{"name": "aria-expanded", "value": "false"}], "name": "summary"}, ["button"]],
+          [{"attributes": [{"name": "aria-expanded", "value": "true"}], "constraints": ["direct descendant of details element with the open attribute defined"], "name": "summary"}, ["button"]],
+          [{"attributes": [{"name": "type", "value": "button"}], "name": "input"}, ["button"]],
+          [{"attributes": [{"name": "type", "value": "image"}], "name": "input"}, ["button"]],
+          [{"attributes": [{"name": "type", "value": "reset"}], "name": "input"}, ["button"]],
+          [{"attributes": [{"name": "type", "value": "submit"}], "name": "input"}, ["button"]],
+          [{"name": "button"}, ["button"]],
+          [{"constraints": ["descendant of table"], "name": "td"}, ["cell"]],
+          [{"attributes": [{"name": "type", "value": "checkbox"}], "name": "input"}, ["checkbox"]],
+          [{"name": "th"}, ["columnheader"]],
+          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "email"}], "name": "input"}, ["combobox"]],
+          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "search"}], "name": "input"}, ["combobox"]],
+          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "tel"}], "name": "input"}, ["combobox"]],
+          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "text"}], "name": "input"}, ["combobox"]],
+          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "url"}], "name": "input"}, ["combobox"]],
+          [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "url"}], "name": "input"}, ["combobox"]],
+          [{"attributes": [{"constraints": ["undefined"], "name": "multiple"}, {"constraints": ["undefined"], "name": "size"}], "name": "select"}, ["combobox"]],
+          [{"attributes": [{"constraints": ["undefined"], "name": "multiple"}, {"name": "size", "value": 1}], "name": "select"}, ["combobox"]],
+          [{"name": "aside"}, ["complementary"]],
+          [{"constraints": ["direct descendant of document"], "name": "footer"}, ["contentinfo"]],
+          [{"name": "dd"}, ["definition"]],
+          [{"name": "dialog"}, ["dialog"]],
+          [{"name": "body"}, ["document"]],
+          [{"name": "figure"}, ["figure"]],
+          [{"attributes": [{"constraints": ["set"], "name": "aria-label"}], "name": "form"}, ["form"]],
+          [{"attributes": [{"constraints": ["set"], "name": "aria-labelledby"}], "name": "form"}, ["form"]],
+          [{"attributes": [{"constraints": ["set"], "name": "name"}], "name": "form"}, ["form"]],
+          [{"name": "span"}, ["generic"]],
+          [{"name": "div"}, ["generic"]],
+          [{"attributes": [{"name": "role", "value": "grid"}], "name": "table"}, ["grid"]],
+          [{"attributes": [{"name": "role", "value": "gridcell"}], "name": "td"}, ["gridcell"]],
+          [{"name": "details"}, ["group"]],
+          [{"name": "fieldset"}, ["group"]],
+          [{"name": "optgroup"}, ["group"]],
+          [{"name": "h1"}, ["heading"]],
+          [{"name": "h2"}, ["heading"]],
+          [{"name": "h3"}, ["heading"]],
+          [{"name": "h4"}, ["heading"]],
+          [{"name": "h5"}, ["heading"]],
+          [{"name": "h6"}, ["heading"]],
+          [{"attributes": [{"constraints": ["set"], "name": "alt"}], "name": "img"}, ["img"]],
+          [{"attributes": [{"constraints": ["undefined"], "name": "alt"}], "name": "img"}, ["img"]],
+          [{"attributes": [{"name": "href"}], "name": "a"}, ["link"]],
+          [{"attributes": [{"name": "href"}], "name": "area"}, ["link"]],
+          [{"attributes": [{"name": "href"}], "name": "link"}, ["link"]],
+          [{"name": "menu"}, ["list"]],
+          [{"name": "ol"}, ["list"]],
+          [{"name": "ul"}, ["list"]],
+          [{"attributes": [{"constraints": [">1"], "name": "size"}, {"name": "multiple"}], "name": "select"}, ["listbox"]],
+          [{"attributes": [{"constraints": [">1"], "name": "size"}], "name": "select"}, ["listbox"]],
+          [{"attributes": [{"name": "multiple"}], "name": "select"}, ["listbox"]],
+          [{"name": "datalist"}, ["listbox"]],
+          [{"constraints": ["direct descendant of ol, ul or menu"], "name": "li"}, ["listitem"]],
+          [{"name": "main"}, ["main"]],
+          [{"name": "math"}, ["math"]],
+          [{"name": "menuitem"}, ["command", "menuitem"]],
+          [{"name": "nav"}, ["navigation"]],
+          [{"name": "option"}, ["option"]],
+          [{"name": "progress"}, ["progressbar"]],
+          [{"attributes": [{"name": "type", "value": "radio"}], "name": "input"}, ["radio"]],
+          [{"attributes": [{"constraints": ["set"], "name": "aria-label"}], "name": "section"}, ["region"]],
+          [{"attributes": [{"constraints": ["set"], "name": "aria-labelledby"}], "name": "section"}, ["region"]],
+          [{"name": "frame"}, ["region"]],
+          [{"name": "tr"}, ["row"]],
+          [{"name": "tbody"}, ["rowgroup"]],
+          [{"name": "tfoot"}, ["rowgroup"]],
+          [{"name": "thead"}, ["rowgroup"]],
+          [{"attributes": [{"name": "scope", "value": "row"}], "name": "th"}, ["rowheader"]],
+          [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "search"}], "name": "input"}, ["searchbox"]],
+          [{"name": "hr"}, ["separator"]],
+          [{"attributes": [{"name": "type", "value": "range"}], "name": "input"}, ["slider"]],
+          [{"attributes": [{"name": "type", "value": "number"}], "name": "input"}, ["spinbutton"]],
+          [{"name": "output"}, ["status"]],
+          [{"name": "table"}, ["table"]],
+          [{"name": "dfn"}, ["term"]],
+          [{"name": "dt"}, ["term"]],
+          [{"attributes": [{"constraints": ["undefined"], "name": "type"}, {"constraints": ["undefined"], "name": "list"}], "name": "input"}, ["textbox"]],
+          [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "email"}], "name": "input"}, ["textbox"]],
+          [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "tel"}], "name": "input"}, ["textbox"]],
+          [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "text"}], "name": "input"}, ["textbox"]],
+          [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "url"}], "name": "input"}, ["textbox"]],
+          [{"name": "textarea"}, ["textbox"]]
         ]
       )
     );

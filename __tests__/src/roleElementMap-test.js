@@ -1,13 +1,29 @@
 import expect from 'expect';
 import roleElementMap from '../../src/roleElementMap';
 
-describe('domRolesMap', function () {
-  it('should be a Map', function () {
-    expect(roleElementMap instanceof Map).toBe(true);
+describe('roleElementMap API', function () {
+  it('entries', function () {
+    expect(roleElementMap.entries().length).toEqual(87);
   });
+  it('get', function () {
+    expect(roleElementMap.get('button')).toBeDefined();
+    expect(roleElementMap.get('fake role')).toBeUndefined();
+  });
+  it('has', function () {
+    expect(roleElementMap.has('button')).toEqual(true);
+    expect(roleElementMap.has('fake role')).toEqual(false);
+  });
+  it('keys', function () {
+    expect(roleElementMap.keys().length).toEqual(87);
+  });
+  it('values', function () {
+    expect(roleElementMap.values().length).toEqual(87);
+  });
+});
+
+describe('roleElementMap', function () {
   it('should have specific items', function () {
-    const entries = Array.from(roleElementMap.entries()).map(entry => [entry[0], Array.from(entry[1])]);
-    expect(entries).toEqual(
+    expect(roleElementMap.entries()).toEqual(
       expect.arrayContaining(
         [
           ["command", [{"name": "menuitem"}]],

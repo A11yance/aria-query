@@ -2,25 +2,46 @@ import expect from 'expect';
 import ariaPropsMap from '../../src/ariaPropsMap';
 import rolesMap from '../../src/rolesMap';
 
-describe('ariaPropsMap', function () {
-  it('should be a Map', function () {
-    expect(ariaPropsMap instanceof Map).toBe(true);
+describe('ariaPropsMap API', function () {
+  it('entries', function () {
+    expect(ariaPropsMap.entries().length).toEqual(48);
   });
-  it('should have size', function () {
-    expect(ariaPropsMap.size).toBeGreaterThan(0);
+  it('get', function () {
+    expect(ariaPropsMap.get('aria-label')).toBeDefined();
+    expect(ariaPropsMap.get('fake prop')).toBeUndefined();
   });
+  it('has', function () {
+    expect(ariaPropsMap.has('aria-label')).toEqual(true);
+    expect(ariaPropsMap.has('fake prop')).toEqual(false);
+  });
+  it('keys', function () {
+    expect(ariaPropsMap.keys().length).toEqual(48);
+  });
+  it('values', function () {
+    expect(ariaPropsMap.values().length).toEqual(48);
+  });
+});
 
-  const usedProps = new Set();
+describe('ariaPropsMap content', function () {
+  const usedProps = [];
   for (const roleDefinition of rolesMap.values()) {
     for (const prop of Object.keys(roleDefinition.props)) {
-      usedProps.add(prop);
+      let isUnique = true;
+      for (let i = 0; i < usedProps.length; i++) {
+        if (usedProps[i] === prop) {
+          isUnique = false;
+          break;
+        }
+      }
+      if (isUnique) {
+        usedProps.push(prop);
+      }
     }
   }
-  for (const prop of ariaPropsMap.keys()) {
-    describe(prop, function() {
-      it('should be used in at least one role definition', function() {
-        expect(usedProps.has(prop)).toBe(true, `Expected '${prop}' is used in at least one role definition`);
-      });
-    });
-  }
+  test.each(ariaPropsMap.entries())(
+    'The prop %s should be used in at least one role definition',
+    (prop) => {
+      expect(usedProps.find(p => p === prop)).toBeDefined();
+    }
+  );
 });
