@@ -22,14 +22,27 @@ It should work with Node version 6.11.2 or later.
 
 ## Utilities
 
+### Interface
+
+These methods are available on each export from the module. The typing here in the documentation is pseudo-typed. Each export will have its own specific types for each method signature.
+
+```javascript
+{|
+  entries: () => Array<$Item>,
+  get: (key: $Key) => ?$Value,
+  has: (key: $Key) => boolean,
+  keys: () => Array<$Key>,
+  values: () => Array<$Value>,
+|};
+```
+
 ### Roles
 
 ```javascript
 import { roles } from 'aria-query';
 ```
 
-A [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) of
-role names to the role definition. For example:
+A map of role names to the role definition. For example:
 
 ```javascript
 let alertRole = roles.get('alert');
@@ -83,48 +96,48 @@ import { elementRoles } from 'aria-query';
 HTML Elements with inherent roles are mapped to those roles. In the case of an element like `<input>`, the element often requires a `type` attribute to map to an ARIA role.
 
 ```javascript
-Map {
-  '{"name": "article"}' => Set { 'article' },
-  '{"name": "button"}' => Set { 'button' },
-  '{"name": "td"}' => Set { 'cell', 'gridcell' },
-  '{"name": "input", "attributes": [ {"name": "type", "value": "checkbox"}] }' => Set { 'checkbox' },
-  '{"name": "th"}' => Set { 'columnheader' },
-  '{"name": "select"}' => Set { 'combobox', 'listbox' },
-  '{"name": "menuitem"}' => Set { 'command', 'menuitem' },
-  '{"name": "dd"}' => Set { 'definition' },
-  '{"name": "figure"}' => Set { 'figure' },
-  '{"name": "form"}' => Set { 'form' },
-  '{"name": "table"}' => Set { 'grid', 'table' },
-  '{"name": "fieldset"}' => Set { 'group' },
-  '{"name": "h1"}' => Set { 'heading' },
-  '{"name": "h2"}' => Set { 'heading' },
-  '{"name": "h3"}' => Set { 'heading' },
-  '{"name": "h4"}' => Set { 'heading' },
-  '{"name": "h5"}' => Set { 'heading' },
-  '{"name": "h6"}' => Set { 'heading' },
-  '{"name": "img"}' => Set { 'img' },
-  '{"name": "a"}' => Set { 'link' },
-  '{"name": "link"}' => Set { 'link' },
-  '{"name": "ol"}' => Set { 'list' },
-  '{"name": "ul"}' => Set { 'list' },
-  '{"name": "li"}' => Set { 'listitem' },
-  '{"name": "nav"}' => Set { 'navigation' },
-  '{"name": "option"}' => Set { 'option' },
-  '{"name": "input", "attributes": [ {"name": "type", "value": "radio"}] }' => Set { 'radio' },
-  '{"name": "frame"}' => Set { 'region' },
-  '{"name": "rel"}' => Set { 'roletype' },
-  '{"name": "tr"}' => Set { 'row' },
-  '{"name": "tbody"}' => Set { 'rowgroup' },
-  '{"name": "tfoot"}' => Set { 'rowgroup' },
-  '{"name": "thead"}' => Set { 'rowgroup' },
-  '{"name": "th", "attributes": [ {"name": "scope", "value": "row"}] }' => Set { 'rowheader' },
-  '{"name": "input", "attributes": [ {"name": "type", "value": "search"}] }' => Set { 'searchbox' },
-  '{"name": "hr"}' => Set { 'separator' },
-  '{"name": "dt"}' => Set { 'term' },
-  '{"name": "dfn"}' => Set { 'term' },
-  '{"name": "textarea"}' => Set { 'textbox' },
-  '{"name": "input", "attributes": [ {"name": "type", "value": "text"}] }' => Set { 'textbox' }
-}
+[
+  [ '{"name": "article"}', [ 'article' ] ],
+  [ '{"name": "button"}', [ 'button' ] ],
+  [ '{"name": "td"}', [ 'cell', 'gridcell' ] ],
+  [ '{"name": "input", "attributes": [ {"name": "type", "value": "checkbox"}] }', [ 'checkbox' ] ],
+  [ '{"name": "th"}', [ 'columnheader' ] ],
+  [ '{"name": "select"}', [ 'combobox', 'listbox' ] ],
+  [ '{"name": "menuitem"}', [ 'command', 'menuitem' ] ],
+  [ '{"name": "dd"}', [ 'definition' ] ],
+  [ '{"name": "figure"}', [ 'figure' ] ],
+  [ '{"name": "form"}', [ 'form' ] ],
+  [ '{"name": "table"}', [ 'grid', 'table' ] ],
+  [ '{"name": "fieldset"}', [ 'group' ] ],
+  [ '{"name": "h1"}', [ 'heading' ] ],
+  [ '{"name": "h2"}', [ 'heading' ] ],
+  [ '{"name": "h3"}', [ 'heading' ] ],
+  [ '{"name": "h4"}', [ 'heading' ] ],
+  [ '{"name": "h5"}', [ 'heading' ] ],
+  [ '{"name": "h6"}', [ 'heading' ] ],
+  [ '{"name": "img"}', [ 'img' ] ],
+  [ '{"name": "a"}', [ 'link' ] ],
+  [ '{"name": "link"}', [ 'link' ] ],
+  [ '{"name": "ol"}', [ 'list' ] ],
+  [ '{"name": "ul"}', [ 'list' ] ],
+  [ '{"name": "li"}', [ 'listitem' ] ],
+  [ '{"name": "nav"}', [ 'navigation' ] ],
+  [ '{"name": "option"}', [ 'option' ] ],
+  [ '{"name": "input", "attributes": [ {"name": "type", "value": "radio"}] }', [ 'radio' ] ],
+  [ '{"name": "frame"}', [ 'region' ] ],
+  [ '{"name": "rel"}', [ 'roletype' ] ],
+  [ '{"name": "tr"}', [ 'row' ] ],
+  [ '{"name": "tbody"}', [ 'rowgroup' ] ],
+  [ '{"name": "tfoot"}', [ 'rowgroup' ] ],
+  [ '{"name": "thead"}', [ 'rowgroup' ] ],
+  [ '{"name": "th", "attributes": [ {"name": "scope", "value": "row"}] }', [ 'rowheader' ] ],
+  [ '{"name": "input", "attributes": [ {"name": "type", "value": "search"}] }', [ 'searchbox' ] ],
+  [ '{"name": "hr"}', [ 'separator' ] ],
+  [ '{"name": "dt"}', [ 'term' ] ],
+  [ '{"name": "dfn"}', [ 'term' ] ],
+  [ '{"name": "textarea"}', [ 'textbox' ] ],
+  [ '{"name": "input", "attributes": [ {"name": "type", "value": "text"}] }', [ 'textbox' ] ],
+]
 ```
 
 The map of elements to roles is keyed by an HTML concept. An HTML concept corresponds to the `baseConcepts` and `relatedConcepts` of an ARIA role. Concepts exist in the context of a `module`: HTML, XForms, Dublin Core, for example.  The concept representation is an object literal with a name property (the element name) and an optional attributes array.
@@ -140,45 +153,43 @@ import { roleElements } from 'aria-query';
 ARIA roles are mapped to the HTML Elements with the same inherent role. Some roles, such as `columnheader` are only mapped to an HTML element that expresses specific attributes. In the case of `<input>`, the element often requires a `type` attribute to map to an ARIA role.
 
 ```javascript
-Map {
-  'article' => Set { '{"name": "article"}' },
-  'button' => Set { '{"name": "button"}' },
-  'cell' => Set { '{"name": "td"}' },
-  'checkbox' => Set { '{"name": "input", "attributes": [ {"name": "type", "value": "checkbox"}] }' },
-  'columnheader' => Set { '{"name": "th"}' },
-  'combobox' => Set { '{"name": "select"}' },
-  'command' => Set { '{"name": "menuitem"}' },
-  'definition' => Set { '{"name": "dd"}', '{"name": "dfn"}' },
-  'figure' => Set { '{"name": "figure"}' },
-  'form' => Set { '{"name": "form"}' },
-  'grid' => Set { '{"name": "table"}' },
-  'gridcell' => Set { '{"name": "td"}' },
-  'group' => Set { '{"name": "fieldset"}' },
-  'heading' => Set { '{"name": "h1"}', '{"name": "h2"}', '{"name": "h3"}', '{"name": "h4"}',  '{"name": "h5"}', '{"name": "h6"}' },
-  'img' => Set { '{"name": "img"}' },
-  'link' => Set { '{"name": "a"}', '{"name": "link"}' },
-  'list' => Set { '{"name": "ol"}', '{"name": "ul"}' },
-  'listbox' => Set { '{"name": "select"}' },
-  'listitem' => Set { '{"name": "li"}' },
-  'menuitem' => Set { '{"name": "menuitem"}' },
-  'navigation' => Set { '{"name": "nav"}' },
-  'option' => Set { '{"name": "option"}' },
-  'radio' => Set { '{"name": "input", "attributes": [ {"name": "type", "value": "radio"}] }' },
-  'region' => Set { '{"name": "frame"}' },
-  'roletype' => Set { '{"name": "rel"}' },
-  'row' => Set { '{"name": "tr"}' },
-  'rowgroup' => Set { '{"name": "tbody"}', '{"name": "tfoot"}', '{"name": "thead"}' },
-  'rowheader' => Set { '{"name": "th", "attributes": [ {"name": "scope", "value": "row"}] }' },
-  'searchbox' => Set { '{"name": "input", "attributes": [ {"name": "type", "value": "search"}] }' },
-  'separator' => Set { '{"name": "hr"}' },
-  'table' => Set { '{"name": "table"}' },
-  'term' => Set { '{"name": "dt"}' },
-  'textbox' => Set { '{"name": "textarea"}', '{"name": "input", "attributes": [ {"name": "type", "value": "text"}] }' }
-}
+[
+  [ 'article', [ {"name": "article"} ] ],
+  [ 'button', [ {"name": "button"} ] ],
+  [ 'cell', [ {"name": "td"} ] ],
+  [ 'checkbox', [ {"name": "input", "attributes": [ {"name": "type", "value": "checkbox"}] } ] ],
+  [ 'columnheader', [ {"name": "th"} ] ],
+  [ 'combobox', [ {"name": "select"} ] ],
+  [ 'command', [ {"name": "menuitem"} ] ],
+  [ 'definition', [ {"name": "dd"}', '{"name": "dfn"} ] ],
+  [ 'figure', [ {"name": "figure"} ] ],
+  [ 'form', [ {"name": "form"} ] ],
+  [ 'grid', [ {"name": "table"} ] ],
+  [ 'gridcell', [ {"name": "td"} ] ],
+  [ 'group', [ {"name": "fieldset"} ] ],
+  [ 'heading', [ {"name": "h1"}', '{"name": "h2"}', '{"name": "h3"}', '{"name": "h4"}',  '{"name": "h5"}', '{"name": "h6"} ] ],
+  [ 'img', [ {"name": "img"} ] ],
+  [ 'link', [ {"name": "a"}', '{"name": "link"} ] ],
+  [ 'list', [ {"name": "ol"}', '{"name": "ul"} ] ],
+  [ 'listbox', [ {"name": "select"} ] ],
+  [ 'listitem', [ {"name": "li"} ] ],
+  [ 'menuitem', [ {"name": "menuitem"} ] ],
+  [ 'navigation', [ {"name": "nav"} ] ],
+  [ 'option', [ {"name": "option"} ] ],
+  [ 'radio', [ {"name": "input", "attributes": [ {"name": "type", "value": "radio"}] } ] ],
+  [ 'region', [ {"name": "frame"} ] ],
+  [ 'roletype', [ {"name": "rel"} ] ],
+  [ 'row', [ {"name": "tr"} ] ],
+  [ 'rowgroup', [ {"name": "tbody"}', '{"name": "tfoot"}', '{"name": "thead"} ] ],
+  [ 'rowheader', [ {"name": "th", "attributes": [ {"name": "scope", "value": "row"}] } ] ],
+  [ 'searchbox', [ {"name": "input", "attributes": [ {"name": "type", "value": "search"}] } ] ],
+  [ 'separator', [ {"name": "hr"} ] ],
+  [ 'table', [ {"name": "table"} ] ],
+  [ 'term', [ {"name": "dt"} ] ],
+  [ 'textbox', [ {"name": "textarea"}', '{"name": "input", "attributes": [ {"name": "type", "value": "text"}] } ] ],
+]
 ```
-
-The HTML concept values are provided in a [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
 
 ## License
 
-Copyright (c) 2020 A11yance
+Copyright (c) 2021 A11yance
