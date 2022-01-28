@@ -40,7 +40,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^27.0.2",
     "commander": "^8.0.0",
-    "eslint": "^7.16.0",
+    "eslint": "^8.7.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-flowtype": "^6.1.0",
     "eslint-plugin-import": "^2.21.2",
