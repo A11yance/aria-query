@@ -6,7 +6,7 @@
   "env": {
     "es6": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "plugins": [
     "flowtype"
   ],
@@ -23,8 +23,12 @@
       "files": [
         "__tests__/**/*.js"
       ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:jest/recommended"
+      ],
       "env": {
-        "mocha": true
+        "jest": true
       }
     }
   ]
