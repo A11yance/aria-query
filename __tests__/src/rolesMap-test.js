@@ -176,7 +176,7 @@ describe('rolesMap', function () {
         )
       );
     });
-    it('it should have specific keys', function () {
+    it('should have specific keys', function () {
       expect(rolesMap.keys()).toEqual(
         expect.arrayContaining(
           [
