@@ -16,21 +16,13 @@ jobs:
         node: [10, 12, 14, 15]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.4
-      - name: Cache node modules
-        id: cache
-        uses: actions/cache@v2.1.6
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
+        uses: actions/checkout@v2
       - name: Load Node version ${{ matrix.node }}
-        uses: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
+          cache: npm
       - name: Npm Install
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Run Jest
         run: npm run test:ci
@@ -46,19 +38,12 @@ jobs:
     steps:
         # Checkss out the repository under $GITHUB_WORKSPACE
       - name: Checkout
-        uses: actions/checkout@v2.3.4
-      - name: Cache node modules
-        id: cache
-        uses: actions/cache@v2.1.6
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        uses: actions/checkout@v2
       - name: Load Node
-        uses: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v2
+        with:
+          cache: npm
       - name: Npm Install
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Flow type check
         run: npm run flow
@@ -70,21 +55,13 @@ jobs:
         node: [12]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.4
-      - name: Cache node modules
-        id: cache
-        uses: actions/cache@v2.1.6
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
+        uses: actions/checkout@v2
       - name: Load Node version ${{ matrix.node }}
-        uses: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
+          cache: npm
       - name: Npm Install
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Run ESLint
         run: npm run lint
@@ -93,19 +70,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.4
-      - name: Cache node modules
-        id: cache
-        uses: actions/cache@v2.1.6
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        uses: actions/checkout@v2
       - name: Load Node version
-        uses: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v2
+        with:
+          cache: npm
       - name: Npm Install
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Run diff check for the breakUpAriaJSON script
         run: node scripts/breakUpAriaJSON.js && git diff --exit-code -- src
