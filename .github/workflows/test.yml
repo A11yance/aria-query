@@ -28,7 +28,7 @@ jobs:
         run: npm run test:ci
       - name: Run Coveralls
         uses: coverallsapp/github-action@1.1.3
-        if: matrix.node == '12'
+        if: matrix.node == '16'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path-to-lcov: ./reports/lcov.info
@@ -36,7 +36,6 @@ jobs:
     name: Flow type checking
     runs-on: ubuntu-latest
     steps:
-        # Checkss out the repository under $GITHUB_WORKSPACE
       - name: Checkout
         uses: actions/checkout@v2
       - name: Load Node
@@ -56,7 +55,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Load Node version
+      - name: Load Node version ${{ matrix.node }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
