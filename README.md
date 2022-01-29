@@ -181,7 +181,7 @@ ARIA roles are mapped to the HTML Elements with the same inherent role. Some rol
   [ 'roletype', [ {"name": "rel"} ] ],
   [ 'row', [ {"name": "tr"} ] ],
   [ 'rowgroup', [ {"name": "tbody"}', '{"name": "tfoot"}', '{"name": "thead"} ] ],
-  [ 'rowheader', [ {"name": "th", "attributes": [ {"name": "scope", "value": "row"}] } ] ],
+  [ 'rowheader', [ {"name": "th", "attributes": [ {"name": "scope", "value": "row"}] }, {"name": "th", "attributes": [ {"name": "scope", "value": "rowgroup"}] } ] ],
   [ 'searchbox', [ {"name": "input", "attributes": [ {"name": "type", "value": "search"}] } ] ],
   [ 'separator', [ {"name": "hr"} ] ],
   [ 'table', [ {"name": "table"} ] ],
