@@ -35,7 +35,6 @@
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
     "@babel/eslint-parser": "^7.16.5",
-    "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-flow": "^7.10.1",
     "babel-jest": "^27.0.2",
