@@ -27,12 +27,26 @@ const rowheaderRole: ARIARoleDefinition = {
       },
       module: 'HTML',
     },
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'scope',
+            value: 'rowgroup',
+          },
+        ],
+        name: 'th',
+      },
+      module: 'HTML',
+    },
   ],
   requireContextRole: [
     'row',
+    'rowgroup',
   ],
   requiredContextRole: [
     'row',
+    'rowgroup',
   ],
   requiredOwnedElements: [],
   requiredProps: {},

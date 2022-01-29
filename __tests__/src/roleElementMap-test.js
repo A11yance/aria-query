@@ -3,7 +3,7 @@ import roleElementMap from '../../src/roleElementMap';
 
 describe('roleElementMap API', function () {
   it('entries', function () {
-    expect(roleElementMap.entries().length).toEqual(87);
+    expect(roleElementMap.entries().length).toEqual(88);
   });
   it('get', function () {
     expect(roleElementMap.get('button')).toBeDefined();
@@ -14,10 +14,10 @@ describe('roleElementMap API', function () {
     expect(roleElementMap.has('fake role')).toEqual(false);
   });
   it('keys', function () {
-    expect(roleElementMap.keys().length).toEqual(87);
+    expect(roleElementMap.keys().length).toEqual(88);
   });
   it('values', function () {
-    expect(roleElementMap.values().length).toEqual(87);
+    expect(roleElementMap.values().length).toEqual(88);
   });
 });
 
@@ -62,7 +62,7 @@ describe('roleElementMap', function () {
           ["region", [{"attributes": [{"constraints": ["set"], "name": "aria-label"}], "name": "section"}, {"attributes": [{"constraints": ["set"], "name": "aria-labelledby"}], "name": "section"}, {"name": "frame"}]],
           ["row", [{"name": "tr"}]],
           ["rowgroup", [{"name": "tbody"}, {"name": "tfoot"}, {"name": "thead"}]],
-          ["rowheader", [{"attributes": [{"name": "scope", "value": "row"}], "name": "th"}]],
+          ["rowheader", [{"attributes": [{"name": "scope", "value": "row"}], "name": "th"}, {"attributes": [{"name": "scope", "value": "rowgroup"}], "name": "th"}]],
           ["searchbox", [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "search"}], "name": "input"}]],
           ["separator", [{"name": "hr"}]],
           ["slider", [{"attributes": [{"name": "type", "value": "range"}], "name": "input"}]],
