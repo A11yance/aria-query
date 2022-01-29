@@ -4686,9 +4686,21 @@
           "name": "th"
         },
         "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "scope",
+              "value": "rowgroup"
+            }
+          ],
+          "name": "th"
+        },
+        "module": "HTML"
       }
     ],
-    "requiredContextRole": ["row"],
+    "requiredContextRole": ["row", "rowgroup"],
     "requiredOwnedElements": [],
     "requiredProps": [],
     "superClass": ["cell", "gridcell", "sectionhead"]
