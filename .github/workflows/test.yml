@@ -50,6 +50,9 @@ jobs:
   eslint:
     name: ESLint (Node v${{ matrix.node }})
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [16]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
