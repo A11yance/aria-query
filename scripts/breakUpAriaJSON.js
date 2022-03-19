@@ -8,6 +8,7 @@ const baseDir = 'src/etc/roles';
 const literalRequires = [];
 const abstractRequires = [];
 const dpubRequires = [];
+const graphicsRequires = [];
 
 function createCamelName (name) {
   const nameArr = name.split('-');
@@ -246,6 +247,9 @@ fs.readFile(path.join('scripts/roles.json'), {
       } else if (name.indexOf('doc-') === 0) {
         subDir = 'dpub';
         dpubRequires.push(camelName);
+      } else if (name.indexOf('graphics-') === 0) {
+        subDir = 'graphics';
+        graphicsRequires.push([name, camelName]);
       } else {
         subDir = 'literal';
         literalRequires.push(camelName);
@@ -289,6 +293,7 @@ fs.readFile(path.join('scripts/roles.json'), {
   const literalRequires = [];
   const abstractRequires = [];
   const dpubRequires = [];
+  const graphicsRequires = [];
 
   let aria = JSON.parse(data);
   Object.keys(aria)
@@ -299,6 +304,8 @@ fs.readFile(path.join('scripts/roles.json'), {
         abstractRequires.push([name, camelName]);
       } else if (name.indexOf('doc-') === 0) {
         dpubRequires.push([name, camelName]);
+      } else if (name.indexOf('graphics-') === 0) {
+        graphicsRequires.push([name, camelName]);
       } else {
         literalRequires.push([name, camelName]);
       }
@@ -309,6 +316,7 @@ fs.readFile(path.join('scripts/roles.json'), {
       [literalRequires, 'ariaLiteralRoles', 'literal'],
       [abstractRequires, 'ariaAbstractRoles', 'abstract'],
       [dpubRequires, 'ariaDpubRoles', 'dpub'],
+      [graphicsRequires, 'ariaGraphicsRoles', 'graphics'],
     ].forEach(requires => {
       fs.writeFile(
         path.join(baseDir, `${requires[1]}.js`),

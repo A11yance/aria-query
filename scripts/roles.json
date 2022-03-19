@@ -2952,6 +2952,159 @@
     "requiredProps": [],
     "superClass": ["structure"]
   },
+  "graphics-document": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": false,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-haspopup",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [
+      {
+        "module": "GRAPHICS",
+        "concept": {
+          "name": "graphics-object"
+        }
+      },
+      {
+        "module": "ARIA",
+        "concept": {
+          "name": "img"
+        }
+      },
+      {
+        "module": "ARIA",
+        "concept": {
+          "name": "article"
+        }
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["document"]
+  },
+  "graphics-object": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-activedescendant",
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-haspopup",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [
+      {
+        "module": "GRAPHICS",
+        "concept": {
+          "name": "graphics-document"
+        }
+      },
+      {
+        "module": "ARIA",
+        "concept": {
+          "name": "group"
+        }
+      },
+      {
+        "module": "ARIA",
+        "concept": {
+          "name": "img"
+        }
+      },
+      {
+        "module": "GRAPHICS",
+        "concept": {
+          "name": "graphics-symbol"
+        }
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["group"]
+  },
+  "graphics-symbol": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-errormessage",
+      "aria-expanded",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-haspopup",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["img"]
+  },
   "grid": {
     "abstract": false,
     "accessibleNameRequired": true,
