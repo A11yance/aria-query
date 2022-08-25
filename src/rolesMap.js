@@ -22,14 +22,14 @@ const roles: RoleDefinitions = [].concat(
 
 roles.forEach(([
   ,
-  roleDefinition: ARIARoleDefinition,
-]) => {
+  roleDefinition,
+]: RoleDefinitionTuple) => {
   // Conglomerate the properties
   for (let superClassIter of roleDefinition.superClass) {
     for (let superClassName of superClassIter) {
       const superClassRoleTuple = roles.find(([
-        name: string,
-      ]) => name === superClassName);
+        name,
+      ]: RoleDefinitionTuple) => name === superClassName);
       if (superClassRoleTuple) {
         const superClassDefinition = superClassRoleTuple[1];
         for (let prop: string of Object.keys(superClassDefinition.props)) {
