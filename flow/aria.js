@@ -154,6 +154,11 @@ type ARIADPubRole =
   | 'doc-tip'
   | 'doc-toc';
 
+type ARIAGraphicsRole =
+  | 'graphics-document'
+  | 'graphics-object'
+  | 'graphics-symbol';
+
 type ARIARole =
   ARIAWidgetRole
   | ARIACompositeWidgetRole
@@ -166,7 +171,8 @@ type ARIARole =
 type ARIARoleDefinitionKey =
   ARIAAbstractRole
   | ARIARole
-  | ARIADPubRole;
+  | ARIADPubRole
+  | ARIAGraphicsRole;
 
 type ARIARoleDefinition = {
   /* Abstract roles may not be used in HTML. */
