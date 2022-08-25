@@ -45,7 +45,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.8.7",
     "expect": "^27.5.1",
-    "flow-bin": "^0.170.0",
+    "flow-bin": "^0.185.2",
     "jest": "^27.5.1",
     "minimist": "^1.2.6",
     "rimraf": "^3.0.2"
