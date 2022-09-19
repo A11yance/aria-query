@@ -3,7 +3,7 @@ import elementRoleMap from '../../src/elementRoleMap';
 
 describe('elementRoleMap API', function () {
   it('entries', function () {
-    expect(elementRoleMap.entries().length).toEqual(88);
+    expect(elementRoleMap.entries().length).toEqual(89);
   });
   it('get', function () {
     expect(elementRoleMap.get({
@@ -34,10 +34,10 @@ describe('elementRoleMap API', function () {
     })).toEqual(false);
   });
   it('keys', function () {
-    expect(elementRoleMap.keys().length).toEqual(88);
+    expect(elementRoleMap.keys().length).toEqual(89);
   });
   it('values', function () {
-    expect(elementRoleMap.values().length).toEqual(88);
+    expect(elementRoleMap.values().length).toEqual(89);
   });
 });
 

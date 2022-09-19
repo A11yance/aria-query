@@ -3,7 +3,7 @@ import roleElementMap from '../../src/roleElementMap';
 
 describe('roleElementMap API', function () {
   it('entries', function () {
-    expect(roleElementMap.entries().length).toEqual(88);
+    expect(roleElementMap.entries().length).toEqual(89);
   });
   it('get', function () {
     expect(roleElementMap.get('button')).toBeDefined();
@@ -14,10 +14,10 @@ describe('roleElementMap API', function () {
     expect(roleElementMap.has('fake role')).toEqual(false);
   });
   it('keys', function () {
-    expect(roleElementMap.keys().length).toEqual(88);
+    expect(roleElementMap.keys().length).toEqual(89);
   });
   it('values', function () {
-    expect(roleElementMap.values().length).toEqual(88);
+    expect(roleElementMap.values().length).toEqual(89);
   });
 });
 

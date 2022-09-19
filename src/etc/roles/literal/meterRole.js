@@ -15,7 +15,14 @@ const meterRole: ARIARoleDefinition = {
     'aria-valuemax': '100',
     'aria-valuemin': '0',
   },
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'meter',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
