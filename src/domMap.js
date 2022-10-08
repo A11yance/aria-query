@@ -2,19 +2,14 @@
  * @flow
  */
 
+import iterationDecorator from "./util/iterationDecorator";
+
 type DOMDefinition = {
   reserved: boolean,
 };
 
-type DOMDefinitionTuple = [string, DOMDefinition];
+type DOMDefinitionTuple = [TAriaQueryHTMLElement, DOMDefinition];
 type DOMDefinitions = Array<DOMDefinitionTuple>;
-type DomMap = {|
-  entries: () => DOMDefinitions,
-  get: (key: string) => ?DOMDefinition,
-  has: (key: string) => boolean,
-  keys: () => Array<string>,
-  values: () => Array<DOMDefinition>,
-|};
 
 const dom: DOMDefinitions = [
   ['a', {
@@ -406,18 +401,30 @@ const dom: DOMDefinitions = [
   }],
 ];
 
-const domMap: DomMap = {
+const domMap: TAriaQueryMap<
+  DOMDefinitions,
+  TAriaQueryHTMLElement,
+  DOMDefinition,
+> = {
   entries: function (): DOMDefinitions {
     return dom;
   },
-  get: function (key: string): ?DOMDefinition {
+  forEach: function (
+    fn: (DOMDefinition, TAriaQueryHTMLElement, DOMDefinitions) => void,
+    thisArg: any = null,
+  ): void {
+    for (let [key, values] of dom) {
+      fn.call(thisArg, values, key, dom);
+    }
+  },
+  get: function (key: TAriaQueryHTMLElement): ?DOMDefinition {
     const item = dom.find(tuple => (tuple[0] === key) ? true : false);
     return item && item[1];
   },
-  has: function (key: string): boolean {
+  has: function (key: TAriaQueryHTMLElement): boolean {
     return !!this.get(key);
   },
-  keys: function (): Array<string> {
+  keys: function (): Array<TAriaQueryHTMLElement> {
     return dom.map(([key]) => key);
   },
   values: function (): Array<DOMDefinition> {
@@ -425,4 +432,9 @@ const domMap: DomMap = {
   }
 };
 
-export default domMap;
+export default (
+  iterationDecorator(
+    domMap,
+    domMap.entries(),
+  ): TAriaQueryMap<DOMDefinitions, TAriaQueryHTMLElement, DOMDefinition>
+);

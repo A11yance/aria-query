@@ -2,18 +2,12 @@
  * @flow
  */
 
+import iterationDecorator from "./util/iterationDecorator";
 import rolesMap from './rolesMap';
 
 type ARIARoleRelationConcepts = Array<ARIARoleRelationConcept>;
 type RoleElementRelation = [ARIARoleDefinitionKey, ARIARoleRelationConcepts];
 type RoleElementRelations = Array<RoleElementRelation>;
-type RoleElementMap = {|
-  entries: () => RoleElementRelations,
-  get: (key: ARIARoleDefinitionKey) => ?ARIARoleRelationConcepts,
-  has: (key: ARIARoleDefinitionKey) => boolean,
-  keys: () => Array<ARIARoleDefinitionKey>,
-  values: () => Array<ARIARoleRelationConcepts>,
-|};
 
 const roleElement: RoleElementRelations = [];
 
@@ -44,9 +38,21 @@ for (let i = 0; i < keys.length; i++) {
   }
 }
 
-const roleElementMap: RoleElementMap = {
+const roleElementMap: TAriaQueryMap<
+  RoleElementRelations,
+  ARIARoleDefinitionKey,
+  ARIARoleRelationConcepts,
+> = {
   entries: function (): RoleElementRelations {
     return roleElement;
+  },
+  forEach: function (
+    fn: (ARIARoleRelationConcepts, ARIARoleDefinitionKey, RoleElementRelations) => void,
+    thisArg: any = null,
+  ): void {
+    for (let [key, values] of roleElement) {
+      fn.call(thisArg, values, key, roleElement);
+    }
   },
   get: function (key: ARIARoleDefinitionKey): ?ARIARoleRelationConcepts {
     const item = roleElement.find(tuple => (tuple[0] === key) ? true : false);
@@ -63,4 +69,9 @@ const roleElementMap: RoleElementMap = {
   }
 };
 
-export default roleElementMap;
+export default (
+  iterationDecorator(
+    roleElementMap,
+    roleElementMap.entries(),
+  ): TAriaQueryMap<RoleElementRelations, ARIARoleDefinitionKey, ARIARoleRelationConcepts>
+);

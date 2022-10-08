@@ -2,15 +2,10 @@
  * @flow
  */
 
+import iterationDecorator from "./util/iterationDecorator";
+
 type ARIAPropertyDefinitionTuple = [ARIAProperty, ARIAPropertyDefinition];
 type ARIAPropertyDefinitions = Array<ARIAPropertyDefinitionTuple>;
-type AriaPropertiesMap = {|
-  entries: () => ARIAPropertyDefinitions,
-  get: (key: ARIAProperty) => ?ARIAPropertyDefinition,
-  has: (key: ARIAProperty) => boolean,
-  keys: () => Array<ARIAProperty>,
-  values: () => Array<ARIAPropertyDefinition>,
-|};
 
 const properties: ARIAPropertyDefinitions = [
   ['aria-activedescendant', {
@@ -223,9 +218,21 @@ const properties: ARIAPropertyDefinitions = [
   }],
 ];
 
-const ariaPropsMap: AriaPropertiesMap = {
+const ariaPropsMap: TAriaQueryMap<
+  ARIAPropertyDefinitions,
+  ARIAProperty,
+  ARIAPropertyDefinition,
+> = {
   entries: function (): ARIAPropertyDefinitions {
     return properties;
+  },
+  forEach: function (
+    fn: (ARIAPropertyDefinition, ARIAProperty, ARIAPropertyDefinitions) => void,
+    thisArg: any = null,
+  ): void {
+    for (let [key, values] of properties) {
+      fn.call(thisArg, values, key, properties);
+    }
   },
   get: function (key: ARIAProperty): ?ARIAPropertyDefinition {
     const item = properties.find(tuple => (tuple[0] === key) ? true : false);
@@ -242,4 +249,9 @@ const ariaPropsMap: AriaPropertiesMap = {
   }
 };
 
-export default ariaPropsMap;
+export default (
+  iterationDecorator(
+    ariaPropsMap,
+    ariaPropsMap.entries(),
+  ): TAriaQueryMap<ARIAPropertyDefinitions, ARIAProperty, ARIAPropertyDefinition>
+);
