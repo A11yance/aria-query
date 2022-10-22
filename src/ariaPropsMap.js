@@ -239,7 +239,7 @@ const ariaPropsMap: TAriaQueryMap<
     return item && item[1];
   },
   has: function (key: ARIAProperty): boolean {
-    return !!this.get(key);
+    return !!ariaPropsMap.get(key);
   },
   keys: function (): Array<ARIAProperty> {
     return properties.map(([key]) => key);

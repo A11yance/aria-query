@@ -422,7 +422,7 @@ const domMap: TAriaQueryMap<
     return item && item[1];
   },
   has: function (key: TAriaQueryHTMLElement): boolean {
-    return !!this.get(key);
+    return !!domMap.get(key);
   },
   keys: function (): Array<TAriaQueryHTMLElement> {
     return dom.map(([key]) => key);
