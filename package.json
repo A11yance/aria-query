@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rimraf lib && babel src --out-dir lib",
     "flow": "flow",
-    "lint": "eslint .",
+    "lint": "eslint  --config .eslintrc src __tests__ scripts",
     "lint:fix": "npm run lint -- --fix",
     "pretest": "npm run lint:fix && npm run flow",
     "test": "npm run jest",
@@ -50,9 +50,6 @@
     "minimist": "^1.2.6",
     "rimraf": "^3.0.2"
   },
-  "engines": {
-    "node": ">=6.0"
-  },
   "jest": {
     "coverageReporters": [
       "lcov"
@@ -67,5 +64,8 @@
     "not dead",
     "not op_mini all",
     "ie 11"
-  ]
+  ],
+  "dependencies": {
+    "deep-equal": "^2.0.5"
+  }
 }

@@ -5,14 +5,7 @@
 import ariaAbstractRoles from './etc/roles/ariaAbstractRoles';
 import ariaLiteralRoles from './etc/roles/ariaLiteralRoles';
 import ariaDpubRoles from './etc/roles/ariaDpubRoles';
-
-type RolesMap = {|
-  entries: () => RoleDefinitions,
-  get: (key: ARIARoleDefinitionKey) => ?ARIARoleDefinition,
-  has: (key: ARIARoleDefinitionKey) => boolean,
-  keys: () => Array<ARIARoleDefinitionKey>,
-  values: () => Array<ARIARoleDefinition>,
-|};
+import iterationDecorator from "./util/iterationDecorator";
 
 const roles: RoleDefinitions = [].concat(
   ariaAbstractRoles,
@@ -48,9 +41,21 @@ roles.forEach(([
   }
 });
 
-const rolesMap: RolesMap = {
+const rolesMap: TAriaQueryMap<
+  RoleDefinitions,
+  ARIARoleDefinitionKey,
+  ARIARoleDefinition,
+> = {
   entries: function (): RoleDefinitions {
     return roles;
+  },
+  forEach: function (
+    fn: (ARIARoleDefinition, ARIARoleDefinitionKey, RoleDefinitions) => void,
+    thisArg: any = null,
+  ): void {
+    for (let [key, values] of roles) {
+      fn.call(thisArg, values, key, roles);
+    }
   },
   get: function (key: ARIARoleDefinitionKey): ?ARIARoleDefinition {
     const item = roles.find(tuple => (tuple[0] === key) ? true : false);
@@ -67,4 +72,9 @@ const rolesMap: RolesMap = {
   }
 };
 
-export default rolesMap;
+export default (
+  iterationDecorator(
+    rolesMap,
+    rolesMap.entries(),
+  ): TAriaQueryMap<RoleDefinitions, ARIARoleDefinitionKey, ARIARoleDefinition>
+);
