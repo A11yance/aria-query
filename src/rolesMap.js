@@ -62,7 +62,7 @@ const rolesMap: TAriaQueryMap<
     return item && item[1];
   },
   has: function (key: ARIARoleDefinitionKey): boolean {
-    return !!this.get(key);
+    return !!rolesMap.get(key);
   },
   keys: function (): Array<ARIARoleDefinitionKey> {
     return roles.map(([key]) => key);

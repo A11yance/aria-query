@@ -2,7 +2,8 @@
  * @flow
  */
 
- function iteratorProxy<T>(): Iterator<T> {
+// eslint-disable-next-line no-unused-vars
+ function iteratorProxy<T>(this: Array<*>): Iterator<T> {
   const values = this;
   let index = 0;
   const iter = {
