@@ -199,3 +199,28 @@ These are the changes in usage you might need to account for:
 - 1284970 Update roles.json
 - 1d9840c docs(readme): Add tracked aria version
 - 971679a fix: Normalize required props (#64)
+
+## 5.1.0 / 5.1.1
+
+This minor release introduces iteration support to the primary objects of the module, through the `Symbol.iterator` property. This reintroduces a native-like `Map` iteration support that was lost in the v3 update. A `forEach` method is also introduced in this update. The common interface of all objects exposed by this module is now:
+
+```
+type TAriaQueryMap<E, K, V> = {
+  entries: () => E,
+  forEach: ((V, K, E) => void) => void,
+  get: (key: K) => ?V,
+  has: (key: K) => boolean,
+  keys: () => Array<K>,
+  values: () => Array<V>,
+  @@iterator?: () => Iterator<E>,
+};
+```
+
+### Commits of note
+
+  - 6f3f54b Update dependencies to current minor releases (#437)
+  - 855eedc Introduce iteration support to the Maps in the module (#425)
+  - 38a2bbc Remove Node 12 as a target for Jest unit testing (#397)
+  - 8a0f588 Update out of date packages to latest major versions (#396)
+  - 8522117 Ran npm up --dev --save (#395)
+  - a21d1ed feat: Add graphics-* roles (#338)
