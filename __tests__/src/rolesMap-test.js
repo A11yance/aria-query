@@ -860,8 +860,8 @@ describe('rolesMap API', function () {
     );
   });
   it('values', function () {
-    expect(rolesMap.values().length).toEqual(133);
-    expect([...rolesMap.values()].length).toEqual(133);
+    expect(rolesMap.values().length).toEqual(136);
+    expect([...rolesMap.values()].length).toEqual(136);
   });
 });
 
@@ -871,7 +871,7 @@ describe('rolesMap', function () {
       expect(rolesMap[Symbol.iterator]).not.toBeUndefined();
     });
     it('should support the spread operator', function () {
-      expect([...rolesMap].length).toEqual(133);
+      expect([...rolesMap].length).toEqual(136);
       expect([...rolesMap]).toEqual(
         expect.arrayContaining(
           [
@@ -1007,7 +1007,10 @@ describe('rolesMap', function () {
             ["doc-qna", expect.any(Object)],
             ["doc-subtitle", expect.any(Object)],
             ["doc-tip", expect.any(Object)],
-            ["doc-toc", expect.any(Object)]
+            ["doc-toc", expect.any(Object)],
+            ["graphics-document", expect.any(Object)],
+            ["graphics-object", expect.any(Object)],
+            ["graphics-symbol", expect.any(Object)],
           ]
         )
       );
@@ -1152,7 +1155,10 @@ describe('rolesMap', function () {
             ["doc-qna", expect.any(Object)],
             ["doc-subtitle", expect.any(Object)],
             ["doc-tip", expect.any(Object)],
-            ["doc-toc", expect.any(Object)]
+            ["doc-toc", expect.any(Object)],
+            ["graphics-document", expect.any(Object)],
+            ["graphics-object", expect.any(Object)],
+            ["graphics-symbol", expect.any(Object)],
           ]
         )
       );

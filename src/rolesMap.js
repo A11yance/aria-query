@@ -5,12 +5,14 @@
 import ariaAbstractRoles from './etc/roles/ariaAbstractRoles';
 import ariaLiteralRoles from './etc/roles/ariaLiteralRoles';
 import ariaDpubRoles from './etc/roles/ariaDpubRoles';
+import ariaGraphicsRoles from './etc/roles/ariaGraphicsRoles';
 import iterationDecorator from "./util/iterationDecorator";
 
 const roles: RoleDefinitions = [].concat(
   ariaAbstractRoles,
   ariaLiteralRoles,
-  ariaDpubRoles
+  ariaDpubRoles,
+  ariaGraphicsRoles,
 );
 
 roles.forEach(([
