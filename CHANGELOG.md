@@ -224,3 +224,8 @@ type TAriaQueryMap<E, K, V> = {
   - 8a0f588 Update out of date packages to latest major versions (#396)
   - 8522117 Ran npm up --dev --save (#395)
   - a21d1ed feat: Add graphics-* roles (#338)
+
+  ## 5.1.2
+
+  - 8361a27 Plumb the graphics roles through to rolesMap (#444)
+  
