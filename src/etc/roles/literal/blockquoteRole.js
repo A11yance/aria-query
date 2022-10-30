@@ -11,7 +11,14 @@ const blockquoteRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'blockquote',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

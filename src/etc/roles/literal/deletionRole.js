@@ -14,7 +14,14 @@ const deletionRole: ARIARoleDefinition = {
     'aria-labelledby',
   ],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'del',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

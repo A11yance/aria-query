@@ -11,14 +11,7 @@ const commandRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {},
-  relatedConcepts: [
-    {
-      concept: {
-        name: 'menuitem',
-      },
-      module: 'HTML',
-    },
-  ],
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

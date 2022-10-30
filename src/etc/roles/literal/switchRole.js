@@ -15,9 +15,14 @@ const switchRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        attributes: [
+          {
+            name: 'aria-checked',
+          },
+        ],
         name: 'button',
       },
-      module: 'ARIA',
+      module: 'HTML',
     },
   ],
   requireContextRole: [],

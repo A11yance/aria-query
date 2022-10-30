@@ -14,7 +14,14 @@ const strongRole: ARIARoleDefinition = {
     'aria-labelledby',
   ],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'strong',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

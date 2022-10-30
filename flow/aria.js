@@ -70,6 +70,7 @@ type ARIADocumentStructureRole =
   | 'insertion'
   | 'list'
   | 'listitem'
+  | 'mark'
   | 'math'
   | 'meter'
   | 'none'
@@ -166,7 +167,9 @@ type ARIARole =
   | ARIALandmarkRole
   | ARIALiveRegionRole
   | ARIAWindowRole
-  | ARIAUncategorizedRole;
+  | ARIAUncategorizedRole
+  | ARIADPubRole
+  | ARIAGraphicsRole;
 
 type ARIARoleDefinitionKey =
   ARIAAbstractRole
@@ -174,20 +177,30 @@ type ARIARoleDefinitionKey =
   | ARIADPubRole
   | ARIAGraphicsRole;
 
-type ARIARoleDefinition = {
+type ARIANameFromSources =
+  'author'
+  | 'contents'
+  | 'prohibited';
+
+type ARIARoleDefinition = {|
   /* Abstract roles may not be used in HTML. */
   abstract: boolean,
+  accessibleNameRequired: boolean,
   /* The concepts in related domains that inform behavior mappings. */
   baseConcepts: Array<ARIARoleRelation>,
   /* Child presentational roles strip child nodes of roles and flatten the
   * content to text. */
   childrenPresentational: boolean,
+  nameFrom?: Array<ARIANameFromSources>,
   /* aria-* properties and states disallowed on this role. */
   prohibitedProps: $Keys<ARIAPropertyMap>[],
   /* aria-* properties and states allowed on this role. */
   props: ARIAPropertyMap,
   /* The concepts in related domains that inform behavior mappings. */
   relatedConcepts: Array<ARIARoleRelation>,
+  requireContextRole?: Array<ARIARole>,
+  requiredContextRole?: Array<ARIARole>,
+  requiredOwnedElements?: Array<Array<string>>,
   /* aria-* properties and states required on this role. */
   requiredProps: ARIAPropertyMap,
   /* An array or super class "stacks." Each stack contains a LIFO list of
@@ -195,7 +208,7 @@ type ARIARoleDefinition = {
   * role. Roles may have more than one inheritance chain, which is why
   * this property is an array of arrays and not a single array. */
   superClass: Array<Array<ARIAAbstractRole | ARIARole | ARIADPubRole>>,
-};
+|};
 
 type RoleDefinitionTuple = [ARIARoleDefinitionKey, ARIARoleDefinition];
 type RoleDefinitions = Array<RoleDefinitionTuple>;
@@ -215,12 +228,15 @@ type ARIAProperty =
   'aria-activedescendant'
   | 'aria-atomic'
   | 'aria-autocomplete'
+  | 'aria-braillelabel'
+  | 'aria-brailleroledescription'
   | 'aria-colcount'
   | 'aria-colindex'
   | 'aria-colspan'
   | 'aria-controls'
   | 'aria-current'
   | 'aria-describedby'
+  | 'aria-description'
   | 'aria-details'
   | 'aria-dropeffect'
   | 'aria-errormessage'
@@ -255,29 +271,30 @@ type ARIAProperty =
 
 // {| [AriaProperty]?: mixed |}
 type ARIAPropertyMap = {|
-  'aria-busy'?: mixed,
-  'aria-checked'?: mixed,
-  'aria-disabled'?: mixed,
-  'aria-expanded'?: mixed,
-  'aria-grabbed'?: mixed,
-  'aria-hidden'?: mixed,
-  'aria-invalid'?: mixed,
-  'aria-pressed'?: mixed,
-  'aria-selected'?: mixed,
   'aria-activedescendant'?: mixed,
   'aria-atomic'?: mixed,
   'aria-autocomplete'?: mixed,
+  'aria-braillelabel'?: mixed,
+  'aria-brailleroledescription'?: mixed,
+  'aria-busy'?: mixed,
+  'aria-checked'?: mixed,
   'aria-colcount'?: mixed,
   'aria-colindex'?: mixed,
   'aria-colspan'?: mixed,
   'aria-controls'?: mixed,
   'aria-current'?: ?ARIAPropertyCurrent,
   'aria-describedby'?: mixed,
+  'aria-description'?: mixed,
   'aria-details'?: mixed,
+  'aria-disabled'?: mixed,
   'aria-dropeffect'?: mixed,
   'aria-errormessage'?: mixed,
+  'aria-expanded'?: mixed,
   'aria-flowto'?: mixed,
+  'aria-grabbed'?: mixed,
   'aria-haspopup'?: mixed,
+  'aria-hidden'?: mixed,
+  'aria-invalid'?: mixed,
   'aria-keyshortcuts'?: mixed,
   'aria-label'?: mixed,
   'aria-labelledby'?: mixed,
@@ -290,6 +307,7 @@ type ARIAPropertyMap = {|
   'aria-owns'?: mixed,
   'aria-placeholder'?: mixed,
   'aria-posinset'?: mixed,
+  'aria-pressed'?: mixed,
   'aria-readonly'?: mixed,
   'aria-relevant'?: mixed,
   'aria-required'?: mixed,
@@ -297,6 +315,7 @@ type ARIAPropertyMap = {|
   'aria-rowcount'?: mixed,
   'aria-rowindex'?: mixed,
   'aria-rowspan'?: mixed,
+  'aria-selected'?: mixed,
   'aria-setsize'?: mixed,
   'aria-sort'?: mixed,
   'aria-valuemax'?: mixed,
@@ -305,7 +324,7 @@ type ARIAPropertyMap = {|
   'aria-valuetext'?: mixed,
 |};
 
-type ARIAPropertyDefinition = {
+type ARIAPropertyDefinition = {|
   type: 'string'
   | 'id'
   | 'idlist'
@@ -317,7 +336,7 @@ type ARIAPropertyDefinition = {
   | 'tristate',
   values?: Array<string | boolean>,
   allowundefined?: boolean,
-};
+|};
 
 type ARIAPropertyCurrent =
   'page'
@@ -330,31 +349,44 @@ type ARIAPropertyCurrent =
   | true
   | false;
 
-type ARIARoleRelation = {
+type ARIARoleRelation = {|
   module?: string,
   concept?: ARIARoleRelationConcept,
-};
+|};
 
 /* The concept in a related domain that informs behavior mappings.
  * Related domains include: HTML, "Device Independence Delivery Unit", XForms,
  * and ARIA to name a few. */
-type ARIARoleRelationConcept = {
+type ARIARoleRelationConcept = {|
   name: string,
   attributes?: Array<ARIARoleRelationConceptAttribute>,
   // These constraints are drawn from the mapping between ARIA and HTML:
   // https://www.w3.org/TR/html-aria
-  constraints?: Array<'direct descendant of document'
-    | 'direct descendant of ol, ul or menu'
+  constraints?: Array<
+    | 'scoped to the body element'
+    | 'scoped to the main element'
+    | 'scoped to a sectioning root element other than body'
+    | 'scoped to a sectioning content element'
+    | 'direct descendant of document'
+    | 'direct descendant of ol'
+    | 'direct descendant of ul'
+    | 'direct descendant of menu'
     | 'direct descendant of details element with the open attribute defined'
-    | 'descendant of table'>,
-};
+    | 'ancestor table element has table role'
+    | 'ancestor table element has grid role'
+    | 'ancestor table element has treegrid role'
+    | 'the progress bar is determinate'
+    | 'the datalist selection model allows multiple option elements to be selected at a time'
+    | 'the aria-controls attribute is set to the same value as the list attribute'
+    | 'the size attribute value is greater than 1'
+    | 'the multiple attribute value is greater than 1'
+    | 'the multiple attribute and the size attribute do not have a value greater than 1'
+    | 'the list attribute is not set'>,
+|};
 
-type ARIARoleRelationConceptAttribute = {
+type ARIARoleRelationConceptAttribute = {|
   name: string,
   value?: string | number,
   // These constraints are drawn from the mapping between ARIA and HTML:
   // https://www.w3.org/TR/html-aria
-  constraints?: Array<'undefined' // The attribute does not exist on the node: <a>
-    | 'set' // The attribute has a value: <a b="c">
-    | '>1'>,
-};
+|};

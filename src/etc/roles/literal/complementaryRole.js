@@ -18,6 +18,36 @@ const complementaryRole: ARIARoleDefinition = {
       },
       module: 'HTML',
     },
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'aria-label',
+          },
+        ],
+        constraints: [
+          'scoped to a sectioning content element',
+          'scoped to a sectioning root element other than body',
+        ],
+        name: 'aside',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'aria-labelledby',
+          },
+        ],
+        constraints: [
+          'scoped to a sectioning content element',
+          'scoped to a sectioning root element other than body',
+        ],
+        name: 'aside',
+      },
+      module: 'HTML',
+    },
   ],
   requireContextRole: [],
   requiredContextRole: [],

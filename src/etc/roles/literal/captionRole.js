@@ -14,7 +14,14 @@ const captionRole: ARIARoleDefinition = {
     'aria-labelledby',
   ],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'caption',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [
     'figure',
     'grid',

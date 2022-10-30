@@ -24,14 +24,14 @@ const listboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              '>1',
-            ],
             name: 'size',
           },
           {
             name: 'multiple',
           },
+        ],
+        constraints: [
+          'the size attribute value is greater than 1',
         ],
         name: 'select',
       },
@@ -41,11 +41,11 @@ const listboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              '>1',
-            ],
             name: 'size',
           },
+        ],
+        constraints: [
+          'the size attribute value is greater than 1',
         ],
         name: 'select',
       },
@@ -58,13 +58,37 @@ const listboxRole: ARIARoleDefinition = {
             name: 'multiple',
           },
         ],
+        constraints: [
+          'the multiple attribute value is greater than 1',
+        ],
         name: 'select',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'aria-multiselectable',
+            value: 'true',
+          },
+        ],
+        constraints: [
+          'the datalist selection model allows multiple option elements to be selected at a time',
+        ],
+        name: 'datalist',
       },
       module: 'HTML',
     },
     {
       concept: {
         name: 'datalist',
+        attributes: [
+          {
+            name: 'aria-multiselectable',
+            value: 'false',
+          },
+        ],
       },
       module: 'HTML',
     },

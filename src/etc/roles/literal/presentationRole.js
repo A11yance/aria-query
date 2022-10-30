@@ -14,7 +14,20 @@ const presentationRole: ARIARoleDefinition = {
     'aria-labelledby',
   ],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'alt',
+            value: '',
+          },
+        ],
+        name: 'img',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

@@ -23,6 +23,12 @@ const properties: ARIAPropertyDefinitions = [
       'none'
     ]
   }],
+  ['aria-braillelabel', {
+    'type': 'string'
+  }],
+  ['aria-brailleroledescription', {
+    'type': 'string'
+  }],
   ['aria-busy', {
     'type': 'boolean'
   }],
@@ -55,6 +61,9 @@ const properties: ARIAPropertyDefinitions = [
   }],
   ['aria-describedby', {
     'type': 'idlist'
+  }],
+  ['aria-description', {
+    'type': 'string'
   }],
   ['aria-details', {
     'type': 'id'

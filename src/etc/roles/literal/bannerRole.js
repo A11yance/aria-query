@@ -15,7 +15,7 @@ const bannerRole: ARIARoleDefinition = {
     {
       concept: {
         constraints: [
-          'direct descendant of document',
+          'scoped to the body element',
         ],
         name: 'header',
       },

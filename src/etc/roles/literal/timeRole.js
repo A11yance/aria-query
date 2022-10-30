@@ -11,7 +11,14 @@ const timeRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'time',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

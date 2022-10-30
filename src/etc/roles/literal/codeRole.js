@@ -14,7 +14,14 @@ const codeRole: ARIARoleDefinition = {
     'aria-labelledby',
   ],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'code',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],

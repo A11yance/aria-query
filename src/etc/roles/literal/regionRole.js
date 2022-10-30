@@ -16,9 +16,6 @@ const regionRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'set',
-            ],
             name: 'aria-label',
           },
         ],
@@ -30,9 +27,6 @@ const regionRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'set',
-            ],
             name: 'aria-labelledby',
           },
         ],
@@ -44,12 +38,6 @@ const regionRole: ARIARoleDefinition = {
       concept: {
         name: 'Device Independence Glossart perceivable unit',
       },
-    },
-    {
-      concept: {
-        name: 'frame',
-      },
-      module: 'HTML',
     },
   ],
   requireContextRole: [],

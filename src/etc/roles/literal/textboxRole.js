@@ -24,19 +24,8 @@ const textboxRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
-        attributes: [
-          {
-            constraints: [
-              'undefined',
-            ],
-            name: 'type',
-          },
-          {
-            constraints: [
-              'undefined',
-            ],
-            name: 'list',
-          },
+        constraints: [
+          'the list attribute is not set',
         ],
         name: 'input',
       },
@@ -45,17 +34,14 @@ const textboxRole: ARIARoleDefinition = {
     {
       concept: {
         attributes: [
-          {
-            constraints: [
-              'undefined',
-            ],
-            name: 'list',
-          },
           {
             name: 'type',
             value: 'email',
           },
         ],
+        constraints: [
+          'the list attribute is not set',
+        ],
         name: 'input',
       },
       module: 'HTML',
@@ -63,34 +49,13 @@ const textboxRole: ARIARoleDefinition = {
     {
       concept: {
         attributes: [
-          {
-            constraints: [
-              'undefined',
-            ],
-            name: 'list',
-          },
           {
             name: 'type',
             value: 'tel',
           },
         ],
-        name: 'input',
-      },
-      module: 'HTML',
-    },
-    {
-      concept: {
-        attributes: [
-          {
-            constraints: [
-              'undefined',
-            ],
-            name: 'list',
-          },
-          {
-            name: 'type',
-            value: 'text',
-          },
+        constraints: [
+          'the list attribute is not set',
         ],
         name: 'input',
       },
@@ -100,15 +65,27 @@ const textboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'undefined',
-            ],
-            name: 'list',
+            name: 'type',
+            value: 'text',
           },
+        ],
+        constraints: [
+          'the list attribute is not set',
+        ],
+        name: 'input',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
           {
             name: 'type',
             value: 'url',
           },
+        ],
+        constraints: [
+          'the list attribute is not set',
         ],
         name: 'input',
       },
