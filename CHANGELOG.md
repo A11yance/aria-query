@@ -228,4 +228,8 @@ type TAriaQueryMap<E, K, V> = {
   ## 5.1.2
 
   - 8361a27 Plumb the graphics roles through to rolesMap (#444)
+
+  ## 5.1.3
+
+  No changes, just trying to get the NPM build to reflect the changes in v5.1.2
   
