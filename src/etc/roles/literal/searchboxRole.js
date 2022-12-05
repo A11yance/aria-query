@@ -16,15 +16,15 @@ const searchboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'undefined',
-            ],
             name: 'list',
           },
           {
             name: 'type',
             value: 'search',
           },
+        ],
+        constraints: [
+          'the list attribute is not set',
         ],
         name: 'input',
       },

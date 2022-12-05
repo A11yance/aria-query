@@ -16,13 +16,31 @@ const columnheaderRole: ARIARoleDefinition = {
   },
   relatedConcepts: [
     {
-      attributes: [
-        {
-          name: 'scope',
-          value: 'col',
-        },
-      ],
       concept: {
+        name: 'th',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'scope',
+            value: 'col',
+          },
+        ],
+        name: 'th',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'scope',
+            value: 'colgroup',
+          },
+        ],
         name: 'th',
       },
       module: 'HTML',

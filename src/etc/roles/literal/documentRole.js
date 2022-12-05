@@ -19,7 +19,7 @@ const documentRole: ARIARoleDefinition = {
     },
     {
       concept: {
-        name: 'body',
+        name: 'html',
       },
       module: 'HTML',
     },

@@ -19,7 +19,9 @@ const listitemRole: ARIARoleDefinition = {
     {
       concept: {
         constraints: [
-          'direct descendant of ol, ul or menu',
+          'direct descendant of ol',
+          'direct descendant of ul',
+          'direct descendant of menu',
         ],
         name: 'li',
       },

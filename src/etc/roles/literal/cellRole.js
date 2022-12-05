@@ -21,7 +21,7 @@ const cellRole: ARIARoleDefinition = {
     {
       concept: {
         constraints: [
-          'descendant of table',
+          'ancestor table element has table role',
         ],
         name: 'td',
       },

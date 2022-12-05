@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const subscriptRole: ARIARoleDefinition = {
+const markRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],
@@ -9,15 +9,16 @@ const subscriptRole: ARIARoleDefinition = {
   nameFrom: [
     'prohibited',
   ],
-  prohibitedProps: [
-    'aria-label',
-    'aria-labelledby',
-  ],
-  props: {},
+  prohibitedProps: [],
+  props: {
+    'aria-braillelabel': null,
+    'aria-brailleroledescription': null,
+    'aria-description': null,
+  },
   relatedConcepts: [
     {
       concept: {
-        name: 'sub',
+        name: 'mark',
       },
       module: 'HTML',
     },
@@ -35,4 +36,4 @@ const subscriptRole: ARIARoleDefinition = {
   ],
 };
 
-export default subscriptRole;
+export default markRole;

@@ -187,7 +187,7 @@
     "relatedConcepts": [
       {
         "concept": {
-          "constraints": ["direct descendant of document"],
+          "constraints": ["scoped to the body element"],
           "name": "header"
         },
         "module": "HTML"
@@ -223,7 +223,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "blockquote"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -259,49 +266,6 @@
       "aria-roledescription"
     ],
     "relatedConcepts": [
-      {
-        "concept": {
-          "attributes": [
-            {
-              "constraints": ["set"],
-              "name": "aria-pressed"
-            },
-            {
-              "name": "type",
-              "value": "checkbox"
-            }
-          ],
-          "name": "input"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
-          "attributes": [
-            {
-              "name": "aria-expanded",
-              "value": "false"
-            }
-          ],
-          "name": "summary"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
-          "attributes": [
-            {
-              "name": "aria-expanded",
-              "value": "true"
-            }
-          ],
-          "constraints": [
-            "direct descendant of details element with the open attribute defined"
-          ],
-          "name": "summary"
-        },
-        "module": "HTML"
-      },
       {
         "concept": {
           "attributes": [
@@ -391,7 +355,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "caption"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": ["figure", "grid", "table"],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -429,7 +400,9 @@
     "relatedConcepts": [
       {
         "concept": {
-          "constraints": ["descendant of table"],
+          "constraints": [
+            "ancestor table element has table role"
+          ],
           "name": "td"
         },
         "module": "HTML"
@@ -520,7 +493,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "code"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -566,13 +546,32 @@
     ],
     "relatedConcepts": [
       {
-        "attributes": [
-          {
-            "name": "scope",
-            "value": "col"
-          }
-        ],
         "concept": {
+          "name": "th"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "scope",
+              "value": "col"
+            }
+          ],
+          "name": "th"
+        },
+        "module": "HTML"
+      },
+      {
+        
+        "concept": {
+          "attributes": [
+            {
+              "name": "scope",
+              "value": "colgroup"
+            }
+          ],
           "name": "th"
         },
         "module": "HTML"
@@ -622,7 +621,9 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["set"],
+              "name": "aria-controls"
+            },
+            {
               "name": "list"
             },
             {
@@ -630,6 +631,9 @@
               "value": "email"
             }
           ],
+          "constraints": [
+            "the aria-controls attribute is set to the same value as the list attribute"
+          ],
           "name": "input"
         },
         "module": "HTML"
@@ -638,7 +642,9 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["set"],
+              "name": "aria-controls"
+            },
+            {
               "name": "list"
             },
             {
@@ -646,6 +652,9 @@
               "value": "search"
             }
           ],
+          "constraints": [
+            "the aria-controls attribute is set to the same value as the list attribute"
+          ],
           "name": "input"
         },
         "module": "HTML"
@@ -654,7 +663,9 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["set"],
+              "name": "aria-controls"
+            },
+            {
               "name": "list"
             },
             {
@@ -662,6 +673,9 @@
               "value": "tel"
             }
           ],
+          "constraints": [
+            "the aria-controls attribute is set to the same value as the list attribute"
+          ],
           "name": "input"
         },
         "module": "HTML"
@@ -670,7 +684,9 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["set"],
+              "name": "aria-controls"
+            },
+            {
               "name": "list"
             },
             {
@@ -678,21 +694,8 @@
               "value": "text"
             }
           ],
-          "name": "input"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
-          "attributes": [
-            {
-              "constraints": ["set"],
-              "name": "list"
-            },
-            {
-              "name": "type",
-              "value": "url"
-            }
+          "constraints": [
+            "the aria-controls attribute is set to the same value as the list attribute"
           ],
           "name": "input"
         },
@@ -702,13 +705,18 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["set"],
+              "name": "aria-controls"
+            },
+            {
               "name": "list"
             },
             {
               "name": "type",
               "value": "url"
             }
+          ],
+          "constraints": [
+            "the aria-controls attribute is set to the same value as the list attribute"
           ],
           "name": "input"
         },
@@ -718,29 +726,35 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["undefined"],
+              "name": "aria-controls"
+            },
+            {
+              "name": "list"
+            },
+            {
+              "name": "type",
+              "value": "url"
+            }
+          ],
+          "constraints": [
+            "the aria-controls attribute is set to the same value as the list attribute"
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
               "name": "multiple"
             },
             {
-              "constraints": ["undefined"],
               "name": "size"
             }
           ],
-          "name": "select"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
-          "attributes": [
-            {
-              "constraints": ["undefined"],
-              "name": "multiple"
-            },
-            {
-              "name": "size",
-              "value": 1
-            }
+          "constraints": [
+            "the multiple attribute and the size attribute do not have a value greater than 1"
           ],
           "name": "select"
         },
@@ -783,14 +797,7 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [
-      {
-        "concept": {
-          "name": "menuitem"
-        },
-        "module": "HTML"
-      }
-    ],
+    "relatedConcepts": [],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -824,6 +831,36 @@
     "relatedConcepts": [
       {
         "concept": {
+          "name": "aside"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "aria-label"
+            }
+          ],
+          "constraints": [
+            "scoped to a sectioning content element",
+            "scoped to a sectioning root element other than body"
+          ],
+          "name": "aside"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "aria-labelledby"
+            }
+          ],
+          "constraints": [
+            "scoped to a sectioning content element",
+            "scoped to a sectioning root element other than body"
+          ],
           "name": "aside"
         },
         "module": "HTML"
@@ -895,7 +932,7 @@
     "relatedConcepts": [
       {
         "concept": {
-          "constraints": ["direct descendant of document"],
+          "constraints": ["scoped to the body element"],
           "name": "footer"
         },
         "module": "HTML"
@@ -967,7 +1004,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "del"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -1223,7 +1267,7 @@
     "abstract": false,
     "accessibleNameRequired": true,
     "childrenPresentational": false,
-    "nameFrom": ["author", "content"],
+    "nameFrom": ["author", "contents"],
     "prohibitedProps": [],
     "props": [
       "aria-atomic",
@@ -2734,7 +2778,7 @@
       },
       {
         "concept": {
-          "name": "body"
+          "name": "html"
         },
         "module": "HTML"
       }
@@ -2767,7 +2811,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "em"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -2872,7 +2923,6 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["set"],
               "name": "aria-label"
             }
           ],
@@ -2884,7 +2934,6 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["set"],
               "name": "aria-labelledby"
             }
           ],
@@ -2896,7 +2945,6 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["set"],
               "name": "name"
             }
           ],
@@ -2934,6 +2982,119 @@
       "aria-roledescription"
     ],
     "relatedConcepts": [
+      
+      {
+        "concept": {
+          "name": "a"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "area"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "aside"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "b"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "bdo"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "body"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "data"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "div"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "constraints": [
+            "scoped to the main element",
+            "scoped to a sectioning content element",
+            "scoped to a sectioning root element other than body"
+          ],
+          "name": "footer"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "constraints": [
+            "scoped to the main element",
+            "scoped to a sectioning content element",
+            "scoped to a sectioning root element other than body"
+          ],
+          "name": "header"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "hgroup"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "i"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "pre"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "q"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "samp"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "section"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "small"
+        },
+        "module": "HTML"
+      },
       {
         "concept": {
           "name": "span"
@@ -2942,7 +3103,7 @@
       },
       {
         "concept": {
-          "name": "div"
+          "name": "u"
         },
         "module": "HTML"
       }
@@ -3136,20 +3297,7 @@
       "aria-roledescription",
       "aria-rowcount"
     ],
-    "relatedConcepts": [
-      {
-        "concept": {
-          "attributes": [
-            {
-              "name": "role",
-              "value": "grid"
-            }
-          ],
-          "name": "table"
-        },
-        "module": "HTML"
-      }
-    ],
+    "relatedConcepts": [],
     "requiredContextRole": [],
     "requiredOwnedElements": [["row"], ["row", "rowgroup"]],
     "requiredProps": [],
@@ -3195,11 +3343,8 @@
     "relatedConcepts": [
       {
         "concept": {
-          "attributes": [
-            {
-              "name": "role",
-              "value": "gridcell"
-            }
+          "constraints": [
+            "ancestor table element has grid role"
           ],
           "name": "td"
         },
@@ -3254,6 +3399,12 @@
       {
         "concept": {
           "name": "optgroup"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "address"
         },
         "module": "HTML"
       }
@@ -3360,24 +3511,6 @@
     "relatedConcepts": [
       {
         "concept": {
-          "attributes": [
-            {
-              "constraints": ["set"],
-              "name": "alt"
-            }
-          ],
-          "name": "img"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
-          "attributes": [
-            {
-              "constraints": ["undefined"],
-              "name": "alt"
-            }
-          ],
           "name": "img"
         },
         "module": "HTML"
@@ -3456,7 +3589,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "ins"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -3541,17 +3681,6 @@
             }
           ],
           "name": "area"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
-          "attributes": [
-            {
-              "name": "href"
-            }
-          ],
-          "name": "link"
         },
         "module": "HTML"
       }
@@ -3650,13 +3779,15 @@
         "concept": {
           "attributes": [
             {
-              "constraints": [">1"],
               "name": "size"
             },
             {
               "name": "multiple"
             }
           ],
+          "constraints":[
+            "the size attribute value is greater than 1"
+          ],
           "name": "select"
         },
         "module": "HTML"
@@ -3665,9 +3796,11 @@
         "concept": {
           "attributes": [
             {
-              "constraints": [">1"],
               "name": "size"
             }
+          ],
+          "constraints":[
+            "the size attribute value is greater than 1"
           ],
           "name": "select"
         },
@@ -3680,13 +3813,37 @@
               "name": "multiple"
             }
           ],
+          "constraints": [
+            "the multiple attribute value is greater than 1"
+          ],
           "name": "select"
         },
         "module": "HTML"
       },
       {
         "concept": {
+          "attributes": [
+            {
+              "name": "aria-multiselectable",
+              "value": "true"
+            }
+          ],
+          "constraints": [
+            "the datalist selection model allows multiple option elements to be selected at a time"
+          ],
           "name": "datalist"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "datalist",
+          "attributes": [
+            {
+              "name": "aria-multiselectable",
+              "value": "false"
+            }
+          ]
         },
         "module": "HTML"
       },
@@ -3739,7 +3896,11 @@
     "relatedConcepts": [
       {
         "concept": {
-          "constraints": ["direct descendant of ol, ul or menu"],
+          "constraints": [
+            "direct descendant of ol",
+            "direct descendant of ul",
+            "direct descendant of menu"
+          ],
           "name": "li"
         },
         "module": "HTML"
@@ -3824,6 +3985,47 @@
     "requiredOwnedElements": [],
     "requiredProps": [],
     "superClass": ["landmark"]
+  },
+  "mark": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-braillelabel",
+      "aria-brailleroledescription",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-description",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "mark"
+        },
+        "module": "HTML"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
   },
   "marquee": {
     "abstract": false,
@@ -4047,18 +4249,6 @@
       },
       {
         "concept": {
-          "name": "listitem"
-        },
-        "module": "ARIA"
-      },
-      {
-        "concept": {
-          "name": "menuitem"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
           "name": "option"
         },
         "module": "ARIA"
@@ -4194,7 +4384,14 @@
       ["aria-valuemax", "100"],
       ["aria-valuemin", "0"]
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "meter"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": ["aria-valuenow"],
@@ -4360,7 +4557,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "p"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -4389,7 +4593,20 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "alt",
+              "value": ""
+            }
+          ],
+          "name": "img"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -4427,6 +4644,27 @@
     "relatedConcepts": [
       {
         "concept": {
+          "name": "progress"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "aria-valuemax"
+            },
+            {
+              "name": "aria-valuemin",
+              "value": 0
+            },
+            {
+              "name": "aria-valuenow"
+            }
+          ],
+          "constraints": [
+            "the progress bar is determinate"
+          ],
           "name": "progress"
         },
         "module": "HTML"
@@ -4600,7 +4838,6 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["set"],
               "name": "aria-label"
             }
           ],
@@ -4612,7 +4849,6 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["set"],
               "name": "aria-labelledby"
             }
           ],
@@ -4624,12 +4860,6 @@
         "concept": {
           "name": "Device Independence Glossart perceivable unit"
         }
-      },
-      {
-        "concept": {
-          "name": "frame"
-        },
-        "module": "HTML"
       }
     ],
     "requiredContextRole": [],
@@ -4663,12 +4893,6 @@
       "aria-roledescription"
     ],
     "relatedConcepts": [
-      {
-        "concept": {
-          "name": "rel"
-        },
-        "module": "HTML"
-      },
       {
         "concept": {
           "name": "role"
@@ -4966,13 +5190,15 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["undefined"],
               "name": "list"
             },
             {
               "name": "type",
               "value": "search"
             }
+          ],
+          "constraints":[
+            "the list attribute is not set"
           ],
           "name": "input"
         },
@@ -5010,6 +5236,28 @@
       "aria-roledescription"
     ],
     "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "aria-label"
+            }
+          ],
+          "name": "section"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "aria-labelledby"
+            }
+          ],
+          "name": "section"
+        },
+        "module": "HTML"
+      },
       {
         "concept": {
           "name": "frontmatter"
@@ -5312,7 +5560,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "strong"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -5372,7 +5627,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "sub"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -5401,7 +5663,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "sup"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
@@ -5442,9 +5711,12 @@
     "relatedConcepts": [
       {
         "concept": {
+          "attributes":[{
+            "name": "aria-checked"
+          }],
           "name": "button"
         },
-        "module": "ARIA"
+        "module": "HTML"
       }
     ],
     "requiredContextRole": [],
@@ -5685,15 +5957,8 @@
     "relatedConcepts": [
       {
         "concept": {
-          "attributes": [
-            {
-              "constraints": ["undefined"],
-              "name": "type"
-            },
-            {
-              "constraints": ["undefined"],
-              "name": "list"
-            }
+          "constraints":[
+            "the list attribute is not set"
           ],
           "name": "input"
         },
@@ -5702,15 +5967,14 @@
       {
         "concept": {
           "attributes": [
-            {
-              "constraints": ["undefined"],
-              "name": "list"
-            },
             {
               "name": "type",
               "value": "email"
             }
           ],
+          "constraints":[
+            "the list attribute is not set"
+          ],
           "name": "input"
         },
         "module": "HTML"
@@ -5718,30 +5982,13 @@
       {
         "concept": {
           "attributes": [
-            {
-              "constraints": ["undefined"],
-              "name": "list"
-            },
             {
               "name": "type",
               "value": "tel"
             }
           ],
-          "name": "input"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
-          "attributes": [
-            {
-              "constraints": ["undefined"],
-              "name": "list"
-            },
-            {
-              "name": "type",
-              "value": "text"
-            }
+          "constraints":[
+            "the list attribute is not set"
           ],
           "name": "input"
         },
@@ -5751,13 +5998,27 @@
         "concept": {
           "attributes": [
             {
-              "constraints": ["undefined"],
-              "name": "list"
-            },
+              "name": "type",
+              "value": "text"
+            }
+          ],
+          "constraints":[
+            "the list attribute is not set"
+          ],
+          "name": "input"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
             {
               "name": "type",
               "value": "url"
             }
+          ],
+          "constraints":[
+            "the list attribute is not set"
           ],
           "name": "input"
         },
@@ -5806,7 +6067,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "time"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],

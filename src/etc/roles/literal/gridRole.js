@@ -14,20 +14,7 @@ const gridRole: ARIARoleDefinition = {
     'aria-multiselectable': null,
     'aria-readonly': null,
   },
-  relatedConcepts: [
-    {
-      concept: {
-        attributes: [
-          {
-            name: 'role',
-            value: 'grid',
-          },
-        ],
-        name: 'table',
-      },
-      module: 'HTML',
-    },
-  ],
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [

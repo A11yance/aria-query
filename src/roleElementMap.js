@@ -16,24 +16,20 @@ const keys = rolesMap.keys();
 for (let i = 0; i < keys.length; i++) {
   const key: ARIARoleDefinitionKey = keys[i];
   const role = rolesMap.get(key);
+  const relationConcepts: ARIARoleRelationConcepts = [];
   if (role) {
     const concepts = [].concat(role.baseConcepts, role.relatedConcepts);
     for (let k = 0; k < concepts.length; k++) {
       const relation: ARIARoleRelation = concepts[k];
       if (relation.module === 'HTML') {
         const concept = relation.concept;
-        if (concept) {
-          const roleElementRelation: ?RoleElementRelation = roleElement.find((item) => item[0] === key);
-          let relationConcepts: ARIARoleRelationConcepts;
-          if (roleElementRelation) {
-            relationConcepts = roleElementRelation[1];
-          } else {
-            relationConcepts = [];
-          }
+        if (concept != null) {
           relationConcepts.push(concept);
-          roleElement.push([key, relationConcepts]);
         }
       }
+    }
+    if (relationConcepts.length > 0) {
+      roleElement.push([key, relationConcepts]);
     }
   }
 }

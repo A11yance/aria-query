@@ -38,6 +38,7 @@ import listboxRole from './literal/listboxRole';
 import listitemRole from './literal/listitemRole';
 import logRole from './literal/logRole';
 import mainRole from './literal/mainRole';
+import markRole from './literal/markRole';
 import marqueeRole from './literal/marqueeRole';
 import mathRole from './literal/mathRole';
 import menuRole from './literal/menuRole';
@@ -122,6 +123,7 @@ const ariaLiteralRoles: RoleDefinitions = [
   ['listitem', listitemRole],
   ['log', logRole],
   ['main', mainRole],
+  ['mark', markRole],
   ['marquee', marqueeRole],
   ['math', mathRole],
   ['menu', menuRole],

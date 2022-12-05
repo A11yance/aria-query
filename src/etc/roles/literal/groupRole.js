@@ -33,6 +33,12 @@ const groupRole: ARIARoleDefinition = {
       },
       module: 'HTML',
     },
+    {
+      concept: {
+        name: 'address',
+      },
+      module: 'HTML',
+    },
   ],
   requireContextRole: [],
   requiredContextRole: [],

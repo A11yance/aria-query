@@ -25,9 +25,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'set',
-            ],
+            name: 'aria-controls',
+          },
+          {
             name: 'list',
           },
           {
@@ -35,6 +35,9 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'email',
           },
         ],
+        constraints: [
+          'the aria-controls attribute is set to the same value as the list attribute',
+        ],
         name: 'input',
       },
       module: 'HTML',
@@ -43,9 +46,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'set',
-            ],
+            name: 'aria-controls',
+          },
+          {
             name: 'list',
           },
           {
@@ -53,6 +56,9 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'search',
           },
         ],
+        constraints: [
+          'the aria-controls attribute is set to the same value as the list attribute',
+        ],
         name: 'input',
       },
       module: 'HTML',
@@ -61,9 +67,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'set',
-            ],
+            name: 'aria-controls',
+          },
+          {
             name: 'list',
           },
           {
@@ -71,6 +77,9 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'tel',
           },
         ],
+        constraints: [
+          'the aria-controls attribute is set to the same value as the list attribute',
+        ],
         name: 'input',
       },
       module: 'HTML',
@@ -79,9 +88,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'set',
-            ],
+            name: 'aria-controls',
+          },
+          {
             name: 'list',
           },
           {
@@ -89,6 +98,9 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'text',
           },
         ],
+        constraints: [
+          'the aria-controls attribute is set to the same value as the list attribute',
+        ],
         name: 'input',
       },
       module: 'HTML',
@@ -97,9 +109,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'set',
-            ],
+            name: 'aria-controls',
+          },
+          {
             name: 'list',
           },
           {
@@ -107,6 +119,9 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'url',
           },
         ],
+        constraints: [
+          'the aria-controls attribute is set to the same value as the list attribute',
+        ],
         name: 'input',
       },
       module: 'HTML',
@@ -115,9 +130,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'set',
-            ],
+            name: 'aria-controls',
+          },
+          {
             name: 'list',
           },
           {
@@ -125,6 +140,9 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'url',
           },
         ],
+        constraints: [
+          'the aria-controls attribute is set to the same value as the list attribute',
+        ],
         name: 'input',
       },
       module: 'HTML',
@@ -133,35 +151,14 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'undefined',
-            ],
             name: 'multiple',
           },
           {
-            constraints: [
-              'undefined',
-            ],
             name: 'size',
           },
         ],
-        name: 'select',
-      },
-      module: 'HTML',
-    },
-    {
-      concept: {
-        attributes: [
-          {
-            constraints: [
-              'undefined',
-            ],
-            name: 'multiple',
-          },
-          {
-            name: 'size',
-            value: 1,
-          },
+        constraints: [
+          'the multiple attribute and the size attribute do not have a value greater than 1',
         ],
         name: 'select',
       },

@@ -8,7 +8,7 @@ const docBacklinkRole: ARIARoleDefinition = {
   childrenPresentational: false,
   nameFrom: [
     'author',
-    'content',
+    'contents',
   ],
   prohibitedProps: [],
   props: {

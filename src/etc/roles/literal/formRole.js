@@ -16,9 +16,6 @@ const formRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'set',
-            ],
             name: 'aria-label',
           },
         ],
@@ -30,9 +27,6 @@ const formRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'set',
-            ],
             name: 'aria-labelledby',
           },
         ],
@@ -44,9 +38,6 @@ const formRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            constraints: [
-              'set',
-            ],
             name: 'name',
           },
         ],
