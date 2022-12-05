@@ -94,6 +94,7 @@ const entriesList = [
   [{"attributes": [{"name": "aria-labelledby"}], "name": "section"}, ["region"]],
   [{"name": "tr"}, ["row"]],
   [{"name": "tbody"}, ["rowgroup"]],
+  [{"constraints": ["ancestor table element has table role"], "name": "td"}, ["cell"]],
   [{"name": "tfoot"}, ["rowgroup"]],
   [{"name": "thead"}, ["rowgroup"]],
   [{"attributes": [{"name": "scope", "value": "row"}], "name": "th"}, ["rowheader"]],
