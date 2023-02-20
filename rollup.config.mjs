@@ -32,6 +32,9 @@ const plugins = [
 // put shared chunks into lib/chunks/*
 const chunkFileNames = (chunkInfo) => 'chunks/[name].[hash].js'
 
+// Fix reference to global.
+const intro = 'var global = typeof self !== undefined ? self : this;'
+
 /** @type {import("rollup").RollupOptions[]} */
 export default [
   {
@@ -40,6 +43,7 @@ export default [
       dir: 'lib/esm',
       format: 'es',
       chunkFileNames,
+      intro
     },
     plugins
   },
@@ -48,7 +52,8 @@ export default [
     output: {
       dir: 'lib',
       format: 'cjs',
-      chunkFileNames
+      chunkFileNames,
+      intro
     },
     plugins
   }
