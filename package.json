@@ -1,6 +1,6 @@
 {
   "name": "aria-query",
-  "version": "5.1.3",
+  "version": "6.0.0",
   "description": "Programmatic access to the ARIA specification",
   "main": "lib/index.js",
   "module": "lib/esm/index.js",
@@ -30,6 +30,23 @@
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/A11yance/aria-query/issues"
+  },
+  "exports": {
+    ".": [
+      {
+        "import": "./lib/esm/index.js",
+        "default": "./lib/index.js"
+      },
+      "./lib/index.js"
+    ],
+    "./package.json": "./package.json",
+    "./*": [
+      {
+        "import": "./lib/esm/*/*.js",
+        "default": "./lib/*/*.js"
+      },
+      "./lib/*/*.js"
+    ]
   },
   "homepage": "https://github.com/A11yance/aria-query#readme",
   "devDependencies": {
