@@ -2,7 +2,7 @@
  * @flow
  */
 
-import deepEqual from 'deep-equal';
+import deepEqual from 'fast-deep-equal';
 import iterationDecorator from "./util/iterationDecorator";
 import rolesMap from './rolesMap';
 
