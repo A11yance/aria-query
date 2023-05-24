@@ -2,7 +2,7 @@
  * @flow
  */
 
-import deepEqual from 'deep-equal';
+import { dequal } from 'dequal/lite';
 import iterationDecorator from "./util/iterationDecorator";
 import rolesMap from './rolesMap';
 
@@ -24,7 +24,7 @@ for (let i = 0; i < keys.length; i++) {
       if (relation.module === 'HTML') {
         const concept = relation.concept;
         if (concept) {
-          const elementRoleRelation: ?ElementARIARoleRelationTuple = elementRoles.find(relation => deepEqual(relation, concept));
+          const elementRoleRelation: ?ElementARIARoleRelationTuple = elementRoles.find(relation => dequal(relation, concept));
           let roles: RoleSet;
           
           if (elementRoleRelation) {
@@ -67,7 +67,7 @@ const elementRoleMap: TAriaQueryMap<
   },
   get: function (key: ARIARoleRelationConcept): ?RoleSet {
     const item = elementRoles.find(tuple => (
-      key.name === tuple[0].name && deepEqual(key.attributes, tuple[0].attributes)
+      key.name === tuple[0].name && dequal(key.attributes, tuple[0].attributes)
     ));
     return item && item[1];
   },
