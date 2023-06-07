@@ -24,9 +24,6 @@ const textboxRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
-        constraints: [
-          'the list attribute is not set',
-        ],
         name: 'input',
       },
       module: 'HTML',
@@ -38,9 +35,6 @@ const textboxRole: ARIARoleDefinition = {
             name: 'type',
             value: 'email',
           },
-        ],
-        constraints: [
-          'the list attribute is not set',
         ],
         name: 'input',
       },
@@ -54,9 +48,6 @@ const textboxRole: ARIARoleDefinition = {
             value: 'tel',
           },
         ],
-        constraints: [
-          'the list attribute is not set',
-        ],
         name: 'input',
       },
       module: 'HTML',
@@ -69,9 +60,6 @@ const textboxRole: ARIARoleDefinition = {
             value: 'text',
           },
         ],
-        constraints: [
-          'the list attribute is not set',
-        ],
         name: 'input',
       },
       module: 'HTML',
@@ -83,9 +71,6 @@ const textboxRole: ARIARoleDefinition = {
             name: 'type',
             value: 'url',
           },
-        ],
-        constraints: [
-          'the list attribute is not set',
         ],
         name: 'input',
       },

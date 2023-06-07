@@ -5,6 +5,7 @@
 import deepEqual from 'deep-equal';
 import iterationDecorator from "./util/iterationDecorator";
 import rolesMap from './rolesMap';
+import { truncate } from "fs";
 
 type RoleSet = Array<ARIARoleDefinitionKey>;
 type ElementARIARoleRelationTuple = [ARIARoleRelationConcept, RoleSet]
@@ -71,20 +72,38 @@ const elementRoleMap: TAriaQueryMap<
       if (key.name !== tuple[0].name) {
         continue;
       }
-      if (!Array.isArray(key.attributes) && tuple[0].attributes === undefined) {
+      if (
+        !Array.isArray(key.attributes) && !Array.isArray(tuple[0].attributes)
+        && !Array.isArray(key.constraints) && !Array.isArray(tuple[0].constraints)
+        ) {
         tuple[1].forEach(role => ret[role] = true);
         continue;
       }
+      let attrsMatch;
+      let constraintsMatch = true;
       if (Array.isArray(key.attributes)) {
-        const attrsMatch = key.attributes.every(
-          attr => Array.isArray(tuple[0].attributes) && tuple[0].attributes.some(
-            candidateAttr => attr.name === candidateAttr.name && attr.value === candidateAttr.value
+        attrsMatch = Array.isArray(tuple[0].attributes) && tuple[0].attributes.every(
+          candidateAttr => Array.isArray(key.attributes) && key.attributes.some(
+            attr => attr.name === candidateAttr.name && attr.value === candidateAttr.value
           )
         );
-        if (attrsMatch) {
-          tuple[1].forEach(role => ret[role] = true);
-          continue;
-        }
+      } else if (Array.isArray(tuple[0].attributes)) {
+        attrsMatch = false;
+      }
+      if (Array.isArray(key.constraints)) {
+        constraintsMatch = key.constraints.some(
+          constraint => Array.isArray(tuple[0].constraints) && tuple[0].constraints.some(
+            candidateConstraint => constraint === candidateConstraint
+          )
+        );
+      }
+      if (
+        (attrsMatch === true && constraintsMatch === true)
+        || (attrsMatch && constraintsMatch === undefined)
+        || (attrsMatch === undefined && constraintsMatch === true)
+      ) {
+        tuple[1].forEach(role => ret[role] = true);
+        continue;
       }
     }
     const roleSet = Object.keys(ret);

@@ -99,7 +99,7 @@ const entriesList = [
   [{"name": "thead"}, ["rowgroup"]],
   [{"attributes": [{"name": "scope", "value": "row"}], "name": "th"}, ["rowheader"]],
   [{"attributes": [{"name": "scope", "value": "rowgroup"}], "name": "th"}, ["rowheader"]],
-  [{"attributes": [{"name": "list"}, {"name": "type", "value": "search"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["searchbox"]],
+  [{"attributes": [{"name": "type", "value": "search"}], "name": "input"}, ["searchbox"]],
   [{"attributes": [{"name": "aria-label"}], "name": "section"}, ["section"]],
   [{"attributes": [{"name": "aria-labelledby"}], "name": "section"}, ["section"]],
   [{"name": "hr"}, ["separator"]],
@@ -113,11 +113,11 @@ const entriesList = [
   [{"name": "table"}, ["table"]],
   [{"name": "dfn"}, ["term"]],
   [{"name": "dt"}, ["term"]],
-  [{"constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
-  [{"attributes": [{"name": "type", "value": "email"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
-  [{"attributes": [{"name": "type", "value": "tel"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
-  [{"attributes": [{"name": "type", "value": "text"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
-  [{"attributes": [{"name": "type", "value": "url"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
+  [{"name": "input"}, ["textbox"]],
+  [{"attributes": [{"name": "type", "value": "email"}], "name": "input"}, ["textbox"]],
+  [{"attributes": [{"name": "type", "value": "tel"}], "name": "input"}, ["textbox"]],
+  [{"attributes": [{"name": "type", "value": "text"}], "name": "input"}, ["textbox"]],
+  [{"attributes": [{"name": "type", "value": "url"}], "name": "input"}, ["textbox"]],
   [{"name": "textarea"}, ["textbox"]],
   [{"name": "time"}, ["time"]],
 ];
@@ -157,7 +157,8 @@ describe('elementRoleMap API', function () {
   });
   it('get()', function () {
     expect(elementRoleMap.get({"name": "article"})).toEqual(["article"]);
-    expect(elementRoleMap.get({"constraints": ["scoped to the body element"], "name": "header"})).toEqual(["banner", "generic"]);
+    expect(elementRoleMap.get({"name": "header"})).toEqual(["banner", "generic"]);
+    expect(elementRoleMap.get({"constraints": ["scoped to the body element"], "name": "header"})).toEqual(["banner"]);
     expect(elementRoleMap.get({"name": "blockquote"})).toEqual(["blockquote"]);
     expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "button"}], "name": "input"})).toEqual(["button"]);
     expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "image"}], "name": "input"})).toEqual(["button"]);
@@ -165,7 +166,7 @@ describe('elementRoleMap API', function () {
     expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "submit"}], "name": "input"})).toEqual(["button"]);
     expect(elementRoleMap.get({"name": "button"})).toEqual(["button"]);
     expect(elementRoleMap.get({"name": "caption"})).toEqual(["caption"]);
-    expect(elementRoleMap.get({"constraints": ["ancestor table element has table role"], "name": "td"})).toEqual(["cell", "gridcell"]);
+    expect(elementRoleMap.get({"constraints": ["ancestor table element has table role"], "name": "td"})).toEqual(["cell"]);
     expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "checkbox"}], "name": "input"})).toEqual(["checkbox"]);
     expect(elementRoleMap.get({"name": "code"})).toEqual(["code"]);
     expect(elementRoleMap.get({"name": "th"})).toEqual(["columnheader"]);
@@ -176,10 +177,12 @@ describe('elementRoleMap API', function () {
     expect(elementRoleMap.get({"attributes": [{"name": "aria-controls"}, {"name": "list"}, {"name": "type", "value": "tel"}], "constraints": ["the aria-controls attribute is set to the same value as the list attribute"], "name": "input"})).toEqual(["combobox"]);
     expect(elementRoleMap.get({"attributes": [{"name": "aria-controls"}, {"name": "list"}, {"name": "type", "value": "text"}], "constraints": ["the aria-controls attribute is set to the same value as the list attribute"], "name": "input"})).toEqual(["combobox"]);
     expect(elementRoleMap.get({"attributes": [{"name": "aria-controls"}, {"name": "list"}, {"name": "type", "value": "url"}], "constraints": ["the aria-controls attribute is set to the same value as the list attribute"], "name": "input"})).toEqual(["combobox"]);
-    expect(elementRoleMap.get({"attributes": [{"name": "multiple"}, {"name": "size"}], "constraints": ["the multiple attribute and the size attribute do not have a value greater than 1"], "name": "select"})).toEqual(["combobox", "listbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "multiple"}, {"name": "size"}], "name": "select"})).toEqual(["combobox", "listbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "multiple"}, {"name": "size"}], "constraints": ["the multiple attribute and the size attribute do not have a value greater than 1"], "name": "select"})).toEqual(["combobox"]);
     expect(elementRoleMap.get({"attributes": [{"name": "aria-label"}], "constraints": ["scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "aside"})).toEqual(["complementary"]);
     expect(elementRoleMap.get({"attributes": [{"name": "aria-labelledby"}], "constraints": ["scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "aside"})).toEqual(["complementary"]);
-    expect(elementRoleMap.get({"constraints": ["scoped to the body element"], "name": "footer"})).toEqual(["contentinfo", "generic"]);
+    expect(elementRoleMap.get({"name": "footer"})).toEqual(["contentinfo", "generic"]);
+    expect(elementRoleMap.get({"constraints": ["scoped to the body element"], "name": "footer"})).toEqual(["contentinfo"]);
     expect(elementRoleMap.get({"name": "dd"})).toEqual(["definition"]);
     expect(elementRoleMap.get({"name": "del"})).toEqual(["deletion"]);
     expect(elementRoleMap.get({"name": "dialog"})).toEqual(["dialog"]);
@@ -197,8 +200,13 @@ describe('elementRoleMap API', function () {
     expect(elementRoleMap.get({"name": "body"})).toEqual(["generic"]);
     expect(elementRoleMap.get({"name": "data"})).toEqual(["generic"]);
     expect(elementRoleMap.get({"name": "div"})).toEqual(["generic"]);
-    expect(elementRoleMap.get({"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "footer"})).toEqual(["contentinfo", "generic"]);
-    expect(elementRoleMap.get({"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "header"})).toEqual(["banner", "generic"]);
+    expect(elementRoleMap.get({"name": "footer"})).toEqual(["contentinfo", "generic"]);
+    expect(elementRoleMap.get({"constraints": ["scoped to the main element"], "name": "footer"})).toEqual(["generic"]);
+    expect(elementRoleMap.get({"constraints": ["scoped to a sectioning content element"], "name": "footer"})).toEqual(["generic"]);
+    expect(elementRoleMap.get({"constraints": ["scoped to a sectioning root element other than body"], "name": "footer"})).toEqual(["generic"]);
+    expect(elementRoleMap.get({"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "footer"})).toEqual(["generic"]);
+    expect(elementRoleMap.get({"name": "header"})).toEqual(["banner", "generic"]);
+    expect(elementRoleMap.get({"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "header"})).toEqual(["generic"]);
     expect(elementRoleMap.get({"name": "hgroup"})).toEqual(["generic"]);
     expect(elementRoleMap.get({"name": "i"})).toEqual(["generic"]);
     expect(elementRoleMap.get({"name": "pre"})).toEqual(["generic"]);
@@ -208,7 +216,7 @@ describe('elementRoleMap API', function () {
     expect(elementRoleMap.get({"name": "small"})).toEqual(["generic"]);
     expect(elementRoleMap.get({"name": "span"})).toEqual(["generic"]);
     expect(elementRoleMap.get({"name": "u"})).toEqual(["generic"]);
-    expect(elementRoleMap.get({"constraints": ["ancestor table element has grid role"], "name": "td"})).toEqual(["cell", "gridcell"]);
+    expect(elementRoleMap.get({"constraints": ["ancestor table element has grid role"], "name": "td"})).toEqual(["gridcell"]);
     expect(elementRoleMap.get({"name": "details"})).toEqual(["group"]);
     expect(elementRoleMap.get({"name": "fieldset"})).toEqual(["group"]);
     expect(elementRoleMap.get({"name": "optgroup"})).toEqual(["group"]);
@@ -226,9 +234,12 @@ describe('elementRoleMap API', function () {
     expect(elementRoleMap.get({"name": "menu"})).toEqual(["list"]);
     expect(elementRoleMap.get({"name": "ol"})).toEqual(["list"]);
     expect(elementRoleMap.get({"name": "ul"})).toEqual(["list"]);
-    expect(elementRoleMap.get({"attributes": [{"name": "size"}, {"name": "multiple"}], "constraints": ["the size attribute value is greater than 1"], "name": "select"})).toEqual(["combobox", "listbox"]);
-    expect(elementRoleMap.get({"attributes": [{"name": "size"}], "constraints": ["the size attribute value is greater than 1"], "name": "select"})).toEqual(["combobox", "listbox"]);
-    expect(elementRoleMap.get({"attributes": [{"name": "multiple"}], "constraints": ["the multiple attribute value is greater than 1"], "name": "select"})).toEqual(["combobox", "listbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "size"}, {"name": "multiple"}], "name": "select"})).toEqual(["combobox", "listbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "size"}, {"name": "multiple"}], "constraints": ["the size attribute value is greater than 1"], "name": "select"})).toEqual(["listbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "size"}], "name": "select"})).toEqual(["listbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "size"}], "constraints": ["the size attribute value is greater than 1"], "name": "select"})).toEqual(["listbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "multiple"}], "name": "select"})).toEqual(["listbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "multiple"}], "constraints": ["the multiple attribute value is greater than 1"], "name": "select"})).toEqual(["listbox"]);
     expect(elementRoleMap.get({"attributes": [{"name": "aria-multiselectable", "value": "true"}], "constraints": ["the datalist selection model allows multiple option elements to be selected at a time"], "name": "datalist"})).toEqual(["listbox"]);
     expect(elementRoleMap.get({"attributes": [{"name": "aria-multiselectable", "value": "false"}], "name": "datalist"})).toEqual(["listbox"]);
     expect(elementRoleMap.get({"constraints": ["direct descendant of ol", "direct descendant of ul", "direct descendant of menu"], "name": "li"})).toEqual(["listitem"]);
@@ -247,12 +258,14 @@ describe('elementRoleMap API', function () {
     expect(elementRoleMap.get({"attributes": [{"name": "aria-labelledby"}], "name": "section"})).toEqual(["section", "region"]);
     expect(elementRoleMap.get({"name": "tr"})).toEqual(["row"]);
     expect(elementRoleMap.get({"name": "tbody"})).toEqual(["rowgroup"]);
-    expect(elementRoleMap.get({"constraints": ["ancestor table element has table role"], "name": "td"})).toEqual(["cell", "gridcell"]);
+    expect(elementRoleMap.get({"name": "td"})).toEqual(["cell", "gridcell"]);
+    expect(elementRoleMap.get({"constraints": ["ancestor table element has table role"], "name": "td"})).toEqual(["cell"]);
     expect(elementRoleMap.get({"name": "tfoot"})).toEqual(["rowgroup"]);
     expect(elementRoleMap.get({"name": "thead"})).toEqual(["rowgroup"]);
     expect(elementRoleMap.get({"attributes": [{"name": "scope", "value": "row"}], "name": "th"})).toEqual(["rowheader"]);
     expect(elementRoleMap.get({"attributes": [{"name": "scope", "value": "rowgroup"}], "name": "th"})).toEqual(["rowheader"]);
-    expect(elementRoleMap.get({"attributes": [{"name": "list"}, {"name": "type", "value": "search"}], "constraints": ["the list attribute is not set"], "name": "input"})).toEqual(["combobox", "searchbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "aria-controls"}, {"name": "list"}, {"name": "type", "value": "search"}], "name": "input"})).toEqual(["combobox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "search"}], "name": "input"})).toEqual(["searchbox"]);
     expect(elementRoleMap.get({"attributes": [{"name": "aria-label"}], "name": "section"})).toEqual(["section", "region"]);
     expect(elementRoleMap.get({"attributes": [{"name": "aria-labelledby"}], "name": "section"})).toEqual(["section", "region"]);
     expect(elementRoleMap.get({"name": "hr"})).toEqual(["separator"]);
@@ -266,11 +279,15 @@ describe('elementRoleMap API', function () {
     expect(elementRoleMap.get({"name": "table"})).toEqual(["table"]);
     expect(elementRoleMap.get({"name": "dfn"})).toEqual(["term"]);
     expect(elementRoleMap.get({"name": "dt"})).toEqual(["term"]);
-    expect(elementRoleMap.get({"constraints": ["the list attribute is not set"], "name": "input"})).toEqual(["textbox"]);
-    expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "email"}], "constraints": ["the list attribute is not set"], "name": "input"})).toEqual(["combobox", "textbox"]);
-    expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "tel"}], "constraints": ["the list attribute is not set"], "name": "input"})).toEqual(["combobox", "textbox"]);
-    expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "text"}], "constraints": ["the list attribute is not set"], "name": "input"})).toEqual(["combobox", "textbox"]);
-    expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "url"}], "constraints": ["the list attribute is not set"], "name": "input"})).toEqual(["combobox", "textbox"]);
+    expect(elementRoleMap.get({"name": "input"})).toEqual(["textbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "list"}, {"name": "type", "value": "email"}], "name": "input"})).toEqual(["combobox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "email"}], "name": "input"})).toEqual(["textbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "list"}, {"name": "type", "value": "tel"}], "name": "input"})).toEqual(["combobox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "tel"}], "name": "input"})).toEqual(["textbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "list"}, {"name": "type", "value": "text"}], "name": "input"})).toEqual(["combobox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "text"}], "name": "input"})).toEqual(["textbox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "list"}, {"name": "type", "value": "url"}], "name": "input"})).toEqual(["combobox"]);
+    expect(elementRoleMap.get({"attributes": [{"name": "type", "value": "url"}], "name": "input"})).toEqual(["textbox"]);
     expect(elementRoleMap.get({"name": "textarea"})).toEqual(["textbox"]);
     expect(elementRoleMap.get({"name": "time"})).toEqual(["time"]);
     expect(elementRoleMap.get({

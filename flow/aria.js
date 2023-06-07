@@ -378,8 +378,7 @@ type ARIARoleRelationConcept = {|
     | 'the aria-controls attribute is set to the same value as the list attribute'
     | 'the size attribute value is greater than 1'
     | 'the multiple attribute value is greater than 1'
-    | 'the multiple attribute and the size attribute do not have a value greater than 1'
-    | 'the list attribute is not set'>,
+    | 'the multiple attribute and the size attribute do not have a value greater than 1'>,
 |};
 
 type ARIARoleRelationConceptAttribute = {|
