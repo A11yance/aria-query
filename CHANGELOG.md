@@ -233,3 +233,13 @@ type TAriaQueryMap<E, K, V> = {
 
   No changes, just trying to get the NPM build to reflect the changes in v5.1.2
   
+  ## 5.2.0
+
+  Commit f7f6120 contains a substantial audit and update of the project to match the ARIA spec. Testing coverage was substantially improved. It really locks down the project's output.
+
+  - e2e3eff docs: update README to WAI-ARIA 1.2 spec (#499)
+  - 5ef740f Switch to dequal to remove 45 transitive dependencies (#497)
+  - 58da9d5 fix: install command for codesandbox ci (#500)
+  - 1160138 test: Publish canaries via CodeSandbox CI (#486)
+  - 2d04e29 Add test case to elementRoleMap-test for td element
+  - f7f6120 Audited and updated roles source of truth to HTML Accessibility API Mapping 1.0 (#447)
