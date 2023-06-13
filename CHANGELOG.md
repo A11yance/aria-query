@@ -243,3 +243,8 @@ type TAriaQueryMap<E, K, V> = {
   - 1160138 test: Publish canaries via CodeSandbox CI (#486)
   - 2d04e29 Add test case to elementRoleMap-test for td element
   - f7f6120 Audited and updated roles source of truth to HTML Accessibility API Mapping 1.0 (#447)
+
+## 5.2.1
+
+  - c995082 Run npm i to update package-lock.json
+  
