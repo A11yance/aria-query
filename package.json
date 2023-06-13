@@ -11,6 +11,7 @@
     "flow": "flow",
     "lint": "eslint  --config .eslintrc src __tests__ scripts",
     "lint:fix": "npm run lint -- --fix",
+    "prepublishOnly": "npm run build",
     "pretest": "npm run lint:fix && npm run flow",
     "test": "npm run jest",
     "test:ci": "npm run jest -- --ci --runInBand",
