@@ -621,6 +621,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "list"
             },
             {
@@ -636,6 +637,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "list"
             },
             {
@@ -651,6 +653,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "list"
             },
             {
@@ -666,6 +669,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "list"
             },
             {
@@ -681,6 +685,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "list"
             },
             {
@@ -696,6 +701,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "list"
             },
             {
@@ -805,6 +811,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "aria-label"
             }
           ],
@@ -820,6 +827,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "aria-labelledby"
             }
           ],
@@ -2889,6 +2897,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "aria-label"
             }
           ],
@@ -2900,6 +2909,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "aria-labelledby"
             }
           ],
@@ -2911,6 +2921,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "name"
             }
           ],
@@ -3479,6 +3490,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "alt"
             }
           ],
@@ -3649,6 +3661,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "href"
             }
           ],
@@ -3660,6 +3673,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "href"
             }
           ],
@@ -3762,23 +3776,7 @@
         "concept": {
           "attributes": [
             {
-              "name": "size"
-            },
-            {
-              "name": "multiple"
-            }
-          ],
-          "constraints":[
-            "the size attribute value is greater than 1"
-          ],
-          "name": "select"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
-          "attributes": [
-            {
+              "constraints": [">1"],
               "name": "size"
             }
           ],
@@ -4782,6 +4780,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "aria-label"
             }
           ],
@@ -4793,6 +4792,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["set"],
               "name": "aria-labelledby"
             }
           ],
