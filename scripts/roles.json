@@ -621,18 +621,12 @@
         "concept": {
           "attributes": [
             {
-              "name": "aria-controls"
-            },
-            {
               "name": "list"
             },
             {
               "name": "type",
               "value": "email"
             }
-          ],
-          "constraints": [
-            "the aria-controls attribute is set to the same value as the list attribute"
           ],
           "name": "input"
         },
@@ -641,9 +635,6 @@
       {
         "concept": {
           "attributes": [
-            {
-              "name": "aria-controls"
-            },
             {
               "name": "list"
             },
@@ -652,9 +643,6 @@
               "value": "search"
             }
           ],
-          "constraints": [
-            "the aria-controls attribute is set to the same value as the list attribute"
-          ],
           "name": "input"
         },
         "module": "HTML"
@@ -662,9 +650,6 @@
       {
         "concept": {
           "attributes": [
-            {
-              "name": "aria-controls"
-            },
             {
               "name": "list"
             },
@@ -673,9 +658,6 @@
               "value": "tel"
             }
           ],
-          "constraints": [
-            "the aria-controls attribute is set to the same value as the list attribute"
-          ],
           "name": "input"
         },
         "module": "HTML"
@@ -683,9 +665,6 @@
       {
         "concept": {
           "attributes": [
-            {
-              "name": "aria-controls"
-            },
             {
               "name": "list"
             },
@@ -694,9 +673,6 @@
               "value": "text"
             }
           ],
-          "constraints": [
-            "the aria-controls attribute is set to the same value as the list attribute"
-          ],
           "name": "input"
         },
         "module": "HTML"
@@ -704,9 +680,6 @@
       {
         "concept": {
           "attributes": [
-            {
-              "name": "aria-controls"
-            },
             {
               "name": "list"
             },
@@ -715,9 +688,6 @@
               "value": "url"
             }
           ],
-          "constraints": [
-            "the aria-controls attribute is set to the same value as the list attribute"
-          ],
           "name": "input"
         },
         "module": "HTML"
@@ -725,9 +695,6 @@
       {
         "concept": {
           "attributes": [
-            {
-              "name": "aria-controls"
-            },
             {
               "name": "list"
             },
@@ -736,9 +703,6 @@
               "value": "url"
             }
           ],
-          "constraints": [
-            "the aria-controls attribute is set to the same value as the list attribute"
-          ],
           "name": "input"
         },
         "module": "HTML"
@@ -747,14 +711,16 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["undefined"],
               "name": "multiple"
             },
             {
+              "constraints": ["undefined"],
               "name": "size"
             }
           ],
           "constraints": [
-            "the multiple attribute and the size attribute do not have a value greater than 1"
+            "the multiple attribute is not set and the size attribute does not have a value greater than 1"
           ],
           "name": "select"
         },
@@ -2981,8 +2947,7 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [
-      
+    "relatedConcepts": [      
       {
         "concept": {
           "name": "a"
@@ -3344,7 +3309,8 @@
       {
         "concept": {
           "constraints": [
-            "ancestor table element has grid role"
+            "ancestor table element has grid role",
+            "ancestor table element has treegrid role"
           ],
           "name": "td"
         },
@@ -3511,6 +3477,23 @@
     "relatedConcepts": [
       {
         "concept": {
+          "attributes": [
+            {
+              "name": "alt"
+            }
+          ],
+          "name": "img"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "alt"
+            }
+          ],
           "name": "img"
         },
         "module": "HTML"
@@ -3813,37 +3796,13 @@
               "name": "multiple"
             }
           ],
-          "constraints": [
-            "the multiple attribute value is greater than 1"
-          ],
           "name": "select"
         },
         "module": "HTML"
       },
       {
         "concept": {
-          "attributes": [
-            {
-              "name": "aria-multiselectable",
-              "value": "true"
-            }
-          ],
-          "constraints": [
-            "the datalist selection model allows multiple option elements to be selected at a time"
-          ],
           "name": "datalist"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
-          "name": "datalist",
-          "attributes": [
-            {
-              "name": "aria-multiselectable",
-              "value": "false"
-            }
-          ]
         },
         "module": "HTML"
       },
@@ -4249,6 +4208,12 @@
       },
       {
         "concept": {
+          "name": "listitem"
+        },
+        "module": "ARIA"
+      },
+      {
+        "concept": {
           "name": "option"
         },
         "module": "ARIA"
@@ -4644,27 +4609,6 @@
     "relatedConcepts": [
       {
         "concept": {
-          "name": "progress"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
-          "attributes": [
-            {
-              "name": "aria-valuemax"
-            },
-            {
-              "name": "aria-valuemin",
-              "value": 0
-            },
-            {
-              "name": "aria-valuenow"
-            }
-          ],
-          "constraints": [
-            "the progress bar is determinate"
-          ],
           "name": "progress"
         },
         "module": "HTML"
@@ -5190,6 +5134,7 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["undefined"],
               "name": "list"
             },
             {
@@ -5236,28 +5181,6 @@
       "aria-roledescription"
     ],
     "relatedConcepts": [
-      {
-        "concept": {
-          "attributes": [
-            {
-              "name": "aria-label"
-            }
-          ],
-          "name": "section"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
-          "attributes": [
-            {
-              "name": "aria-labelledby"
-            }
-          ],
-          "name": "section"
-        },
-        "module": "HTML"
-      },
       {
         "concept": {
           "name": "frontmatter"
@@ -5711,12 +5634,9 @@
     "relatedConcepts": [
       {
         "concept": {
-          "attributes":[{
-            "name": "aria-checked"
-          }],
           "name": "button"
         },
-        "module": "HTML"
+        "module": "ARIA"
       }
     ],
     "requiredContextRole": [],
@@ -5957,6 +5877,16 @@
     "relatedConcepts": [
       {
         "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "type"
+            },
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            }
+          ],
           "constraints":[
             "the list attribute is not set"
           ],
@@ -5967,6 +5897,10 @@
       {
         "concept": {
           "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
             {
               "name": "type",
               "value": "email"
@@ -5983,6 +5917,10 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
+            {
               "name": "type",
               "value": "tel"
             }
@@ -5998,6 +5936,10 @@
         "concept": {
           "attributes": [
             {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
+            {
               "name": "type",
               "value": "text"
             }
@@ -6012,6 +5954,10 @@
       {
         "concept": {
           "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "list"
+            },
             {
               "name": "type",
               "value": "url"
