@@ -14,7 +14,7 @@
     "prepublishOnly": "npm run build",
     "pretest": "npm run lint:fix && npm run flow",
     "test": "npm run jest",
-    "test:ci": "npm run jest -- --ci --runInBand --watch",
+    "test:ci": "npm run jest -- --ci --runInBand",
     "jest": "jest --coverage __tests__/**/*",
     "output_as_hack": "babel-node ./scripts/output_as_hack.js"
   },
