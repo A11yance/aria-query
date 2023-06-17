@@ -16,6 +16,9 @@ const regionRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
+            constraints: [
+              'set',
+            ],
             name: 'aria-label',
           },
         ],
@@ -27,6 +30,9 @@ const regionRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
+            constraints: [
+              'set',
+            ],
             name: 'aria-labelledby',
           },
         ],

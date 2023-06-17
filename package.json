@@ -14,7 +14,7 @@
     "prepublishOnly": "npm run build",
     "pretest": "npm run lint:fix && npm run flow",
     "test": "npm run jest",
-    "test:ci": "npm run jest -- --ci --runInBand",
+    "test:ci": "npm run jest -- --ci --runInBand --watch",
     "jest": "jest --coverage __tests__/**/*",
     "output_as_hack": "babel-node ./scripts/output_as_hack.js"
   },
@@ -36,6 +36,7 @@
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.19.6",
     "@babel/eslint-parser": "^7.19.1",
+    "@babel/node": "^7.22.5",
     "@babel/preset-env": "^7.19.4",
     "@babel/preset-flow": "^7.18.6",
     "babel-jest": "^29.2.1",

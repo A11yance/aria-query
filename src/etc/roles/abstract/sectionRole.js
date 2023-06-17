@@ -12,28 +12,6 @@ const sectionRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
-        attributes: [
-          {
-            name: 'aria-label',
-          },
-        ],
-        name: 'section',
-      },
-      module: 'HTML',
-    },
-    {
-      concept: {
-        attributes: [
-          {
-            name: 'aria-labelledby',
-          },
-        ],
-        name: 'section',
-      },
-      module: 'HTML',
-    },
-    {
-      concept: {
         name: 'frontmatter',
       },
       module: 'DTB',
