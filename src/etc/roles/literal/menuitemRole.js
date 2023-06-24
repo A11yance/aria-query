@@ -27,6 +27,12 @@ const menuitemRole: ARIARoleDefinition = {
     },
     {
       concept: {
+        name: 'listitem',
+      },
+      module: 'ARIA',
+    },
+    {
+      concept: {
         name: 'option',
       },
       module: 'ARIA',

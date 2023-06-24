@@ -22,27 +22,6 @@ const progressbarRole: ARIARoleDefinition = {
     },
     {
       concept: {
-        attributes: [
-          {
-            name: 'aria-valuemax',
-          },
-          {
-            name: 'aria-valuemin',
-            value: 0,
-          },
-          {
-            name: 'aria-valuenow',
-          },
-        ],
-        constraints: [
-          'the progress bar is determinate',
-        ],
-        name: 'progress',
-      },
-      module: 'HTML',
-    },
-    {
-      concept: {
         name: 'status',
       },
       module: 'ARIA',

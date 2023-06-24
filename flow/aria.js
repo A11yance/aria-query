@@ -375,12 +375,8 @@ type ARIARoleRelationConcept = {|
     | 'ancestor table element has table role'
     | 'ancestor table element has grid role'
     | 'ancestor table element has treegrid role'
-    | 'the progress bar is determinate'
-    | 'the datalist selection model allows multiple option elements to be selected at a time'
-    | 'the aria-controls attribute is set to the same value as the list attribute'
     | 'the size attribute value is greater than 1'
-    | 'the multiple attribute value is greater than 1'
-    | 'the multiple attribute and the size attribute do not have a value greater than 1'
+    | 'the multiple attribute is not set and the size attribute does not have a value greater than 1'
     | 'the list attribute is not set'>,
 |};
 
@@ -389,4 +385,7 @@ type ARIARoleRelationConceptAttribute = {|
   value?: string | number,
   // These constraints are drawn from the mapping between ARIA and HTML:
   // https://www.w3.org/TR/html-aria
+  constraints?: Array<'undefined' // The attribute does not exist on the node: <a>
+    | 'set' // The attribute has a value: <a b="c">
+    | '>1'>,
 |};

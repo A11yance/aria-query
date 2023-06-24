@@ -16,6 +16,9 @@ const searchboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
+            constraints: [
+              'undefined',
+            ],
             name: 'list',
           },
           {

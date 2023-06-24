@@ -24,6 +24,20 @@ const textboxRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'type',
+          },
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'list',
+          },
+        ],
         constraints: [
           'the list attribute is not set',
         ],
@@ -34,6 +48,12 @@ const textboxRole: ARIARoleDefinition = {
     {
       concept: {
         attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'list',
+          },
           {
             name: 'type',
             value: 'email',
@@ -50,6 +70,12 @@ const textboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
+            constraints: [
+              'undefined',
+            ],
+            name: 'list',
+          },
+          {
             name: 'type',
             value: 'tel',
           },
@@ -65,6 +91,12 @@ const textboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
+            constraints: [
+              'undefined',
+            ],
+            name: 'list',
+          },
+          {
             name: 'type',
             value: 'text',
           },
@@ -79,6 +111,12 @@ const textboxRole: ARIARoleDefinition = {
     {
       concept: {
         attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'list',
+          },
           {
             name: 'type',
             value: 'url',

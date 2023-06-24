@@ -25,9 +25,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            name: 'aria-controls',
-          },
-          {
+            constraints: [
+              'set',
+            ],
             name: 'list',
           },
           {
@@ -35,9 +35,6 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'email',
           },
         ],
-        constraints: [
-          'the aria-controls attribute is set to the same value as the list attribute',
-        ],
         name: 'input',
       },
       module: 'HTML',
@@ -46,9 +43,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            name: 'aria-controls',
-          },
-          {
+            constraints: [
+              'set',
+            ],
             name: 'list',
           },
           {
@@ -56,9 +53,6 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'search',
           },
         ],
-        constraints: [
-          'the aria-controls attribute is set to the same value as the list attribute',
-        ],
         name: 'input',
       },
       module: 'HTML',
@@ -67,9 +61,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            name: 'aria-controls',
-          },
-          {
+            constraints: [
+              'set',
+            ],
             name: 'list',
           },
           {
@@ -77,9 +71,6 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'tel',
           },
         ],
-        constraints: [
-          'the aria-controls attribute is set to the same value as the list attribute',
-        ],
         name: 'input',
       },
       module: 'HTML',
@@ -88,9 +79,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            name: 'aria-controls',
-          },
-          {
+            constraints: [
+              'set',
+            ],
             name: 'list',
           },
           {
@@ -98,9 +89,6 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'text',
           },
         ],
-        constraints: [
-          'the aria-controls attribute is set to the same value as the list attribute',
-        ],
         name: 'input',
       },
       module: 'HTML',
@@ -109,9 +97,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            name: 'aria-controls',
-          },
-          {
+            constraints: [
+              'set',
+            ],
             name: 'list',
           },
           {
@@ -119,9 +107,6 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'url',
           },
         ],
-        constraints: [
-          'the aria-controls attribute is set to the same value as the list attribute',
-        ],
         name: 'input',
       },
       module: 'HTML',
@@ -130,9 +115,9 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
-            name: 'aria-controls',
-          },
-          {
+            constraints: [
+              'set',
+            ],
             name: 'list',
           },
           {
@@ -140,9 +125,6 @@ const comboboxRole: ARIARoleDefinition = {
             value: 'url',
           },
         ],
-        constraints: [
-          'the aria-controls attribute is set to the same value as the list attribute',
-        ],
         name: 'input',
       },
       module: 'HTML',
@@ -151,14 +133,20 @@ const comboboxRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
+            constraints: [
+              'undefined',
+            ],
             name: 'multiple',
           },
           {
+            constraints: [
+              'undefined',
+            ],
             name: 'size',
           },
         ],
         constraints: [
-          'the multiple attribute and the size attribute do not have a value greater than 1',
+          'the multiple attribute is not set and the size attribute does not have a value greater than 1',
         ],
         name: 'select',
       },

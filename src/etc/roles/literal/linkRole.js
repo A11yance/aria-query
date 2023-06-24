@@ -21,6 +21,9 @@ const linkRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
+            constraints: [
+              'set',
+            ],
             name: 'href',
           },
         ],
@@ -32,6 +35,9 @@ const linkRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
+            constraints: [
+              'set',
+            ],
             name: 'href',
           },
         ],

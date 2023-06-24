@@ -17,15 +17,15 @@ const entriesList = [
   [{"name": "th"}, ["columnheader"]],
   [{"attributes": [{"name": "scope", "value": "col"}], "name": "th"}, ["columnheader"]],
   [{"attributes": [{"name": "scope", "value": "colgroup"}], "name": "th"}, ["columnheader"]],
-  [{"attributes": [{"name": "aria-controls"}, {"name": "list"}, {"name": "type", "value": "email"}], "constraints": ["the aria-controls attribute is set to the same value as the list attribute"], "name": "input"}, ["combobox"]],
-  [{"attributes": [{"name": "aria-controls"}, {"name": "list"}, {"name": "type", "value": "search"}], "constraints": ["the aria-controls attribute is set to the same value as the list attribute"], "name": "input"}, ["combobox"]],
-  [{"attributes": [{"name": "aria-controls"}, {"name": "list"}, {"name": "type", "value": "tel"}], "constraints": ["the aria-controls attribute is set to the same value as the list attribute"], "name": "input"}, ["combobox"]],
-  [{"attributes": [{"name": "aria-controls"}, {"name": "list"}, {"name": "type", "value": "text"}], "constraints": ["the aria-controls attribute is set to the same value as the list attribute"], "name": "input"}, ["combobox"]],
-  [{"attributes": [{"name": "aria-controls"}, {"name": "list"}, {"name": "type", "value": "url"}], "constraints": ["the aria-controls attribute is set to the same value as the list attribute"], "name": "input"}, ["combobox"]],
-  [{"attributes": [{"name": "multiple"}, {"name": "size"}], "constraints": ["the multiple attribute and the size attribute do not have a value greater than 1"], "name": "select"}, ["combobox"]],
+  [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "email"}], "name": "input"}, ["combobox"]],
+  [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "search"}], "name": "input"}, ["combobox"]],
+  [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "tel"}], "name": "input"}, ["combobox"]],
+  [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "text"}], "name": "input"}, ["combobox"]],
+  [{"attributes": [{"constraints": ["set"], "name": "list"}, {"name": "type", "value": "url"}], "name": "input"}, ["combobox"]],
+  [{"attributes": [{"constraints": ["undefined"], "name": "multiple"}, {"constraints": ["undefined"], "name": "size"}], "constraints": ["the multiple attribute is not set and the size attribute does not have a value greater than 1"], "name": "select"}, ["combobox"]],
   [{"name": "aside"}, ["complementary"]],
-  [{"attributes": [{"name": "aria-label"}], "constraints": ["scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "aside"}, ["complementary"]],
-  [{"attributes": [{"name": "aria-labelledby"}], "constraints": ["scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "aside"}, ["complementary"]],
+  [{"attributes": [{"constraints": ["set"], "name": "aria-label"}], "constraints": ["scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "aside"}, ["complementary"]],
+  [{"attributes": [{"constraints": ["set"], "name": "aria-labelledby"}], "constraints": ["scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "aside"}, ["complementary"]],
   [{"constraints": ["scoped to the body element"], "name": "footer"}, ["contentinfo"]],
   [{"name": "dd"}, ["definition"]],
   [{"name": "del"}, ["deletion"]],
@@ -33,9 +33,9 @@ const entriesList = [
   [{"name": "em"}, ["emphasis"]],
   [{"name": "html"}, ["document"]],
   [{"name": "figure"}, ["figure"]],
-  [{"attributes": [{"name": "aria-label"}], "name": "form"}, ["form"]],
-  [{"attributes": [{"name": "aria-labelledby"}], "name": "form"}, ["form"]],
-  [{"attributes": [{"name": "name"}], "name": "form"}, ["form"]],
+  [{"attributes": [{"constraints": ["set"], "name": "aria-label"}], "name": "form"}, ["form"]],
+  [{"attributes": [{"constraints": ["set"], "name": "aria-labelledby"}], "name": "form"}, ["form"]],
+  [{"attributes": [{"constraints": ["set"], "name": "name"}], "name": "form"}, ["form"]],
   [{"name": "a"}, ["generic"]],
   [{"name": "area"}, ["generic"]],
   [{"name": "aside"}, ["generic"]],
@@ -55,7 +55,7 @@ const entriesList = [
   [{"name": "small"}, ["generic"]],
   [{"name": "span"}, ["generic"]],
   [{"name": "u"}, ["generic"]],
-  [{"constraints": ["ancestor table element has grid role"], "name": "td"}, ["gridcell"]],
+  [{"constraints": ["ancestor table element has grid role", "ancestor table element has treegrid role"], "name": "td"}, ["gridcell"]],
   [{"name": "details"}, ["group"]],
   [{"name": "fieldset"}, ["group"]],
   [{"name": "optgroup"}, ["group"]],
@@ -66,17 +66,17 @@ const entriesList = [
   [{"name": "h4"}, ["heading"]],
   [{"name": "h5"}, ["heading"]],
   [{"name": "h6"}, ["heading"]],
-  [{"name": "img"}, ["img"]],
+  [{"attributes": [{"constraints": ["set"], "name": "alt"}], "name": "img"}, ["img"]],
+  [{"attributes": [{"constraints": ["undefined"], "name": "alt"}], "name": "img"}, ["img"]],
   [{"name": "ins"}, ["insertion"]],
-  [{"attributes": [{"name": "href"}], "name": "a"}, ["link"]],
-  [{"attributes": [{"name": "href"}], "name": "area"}, ["link"]],
+  [{"attributes": [{"constraints": ["set"], "name": "href"}], "name": "a"}, ["link"]],
+  [{"attributes": [{"constraints": ["set"], "name": "href"}], "name": "area"}, ["link"]],
   [{"name": "menu"}, ["list"]],
   [{"name": "ol"}, ["list"]],
   [{"name": "ul"}, ["list"]],
-  [{"attributes": [{"name": "size"}, {"name": "multiple"}], "constraints": ["the size attribute value is greater than 1"], "name": "select"}, ["listbox"]],
-  [{"attributes": [{"name": "size"}], "constraints": ["the size attribute value is greater than 1"], "name": "select"}, ["listbox"]],
-  [{"attributes": [{"name": "multiple"}], "constraints": ["the multiple attribute value is greater than 1"], "name": "select"}, ["listbox"]],
-  [{"attributes": [{"name": "aria-multiselectable", "value": "true"}], "constraints": ["the datalist selection model allows multiple option elements to be selected at a time"], "name": "datalist"}, ["listbox"]],
+  [{"attributes": [{"constraints": [">1"], "name": "size"}], "constraints": ["the size attribute value is greater than 1"], "name": "select"}, ["listbox"]],
+  [{"attributes": [{"name": "multiple"}], "name": "select"}, ["listbox"]],
+  [{"name": "datalist"}, ["listbox"]],
   [{"attributes": [{"name": "aria-multiselectable", "value": "false"}], "name": "datalist"}, ["listbox"]],
   [{"constraints": ["direct descendant of ol", "direct descendant of ul", "direct descendant of menu"], "name": "li"}, ["listitem"]],
   [{"name": "main"}, ["main"]],
@@ -90,8 +90,8 @@ const entriesList = [
   [{"name": "progress"}, ["progressbar"]],
   [{"attributes": [{"name": "aria-valuemax"}, {"name": "aria-valuemin", "value": 0}, {"name": "aria-valuenow"}], "constraints": ["the progress bar is determinate"],"name": "progress"}, ["progressbar"]],
   [{"attributes": [{"name": "type", "value": "radio"}], "name": "input"}, ["radio"]],
-  [{"attributes": [{"name": "aria-label"}], "name": "section"}, ["region"]],
-  [{"attributes": [{"name": "aria-labelledby"}], "name": "section"}, ["region"]],
+  [{"attributes": [{"constraints": ["set"], "name": "aria-label"}], "name": "section"}, ["region"]],
+  [{"attributes": [{"constraints": ["set"], "name": "aria-labelledby"}], "name": "section"}, ["region"]],
   [{"name": "tr"}, ["row"]],
   [{"name": "tbody"}, ["rowgroup"]],
   [{"constraints": ["ancestor table element has table role"], "name": "td"}, ["cell"]],
@@ -99,7 +99,7 @@ const entriesList = [
   [{"name": "thead"}, ["rowgroup"]],
   [{"attributes": [{"name": "scope", "value": "row"}], "name": "th"}, ["rowheader"]],
   [{"attributes": [{"name": "scope", "value": "rowgroup"}], "name": "th"}, ["rowheader"]],
-  [{"attributes": [{"name": "list"}, {"name": "type", "value": "search"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["searchbox"]],
+  [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "search"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["searchbox"]],
   [{"attributes": [{"name": "aria-label"}], "name": "section"}, ["section"]],
   [{"attributes": [{"name": "aria-labelledby"}], "name": "section"}, ["section"]],
   [{"name": "hr"}, ["separator"]],
@@ -113,11 +113,11 @@ const entriesList = [
   [{"name": "table"}, ["table"]],
   [{"name": "dfn"}, ["term"]],
   [{"name": "dt"}, ["term"]],
-  [{"constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
-  [{"attributes": [{"name": "type", "value": "email"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
-  [{"attributes": [{"name": "type", "value": "tel"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
-  [{"attributes": [{"name": "type", "value": "text"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
-  [{"attributes": [{"name": "type", "value": "url"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
+  [{"attributes": [{"constraints": ["undefined"], "name": "type"}, {"constraints": ["undefined"], "name": "list"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
+  [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "email"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
+  [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "tel"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
+  [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "text"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
+  [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "url"}], "constraints": ["the list attribute is not set"], "name": "input"}, ["textbox"]],
   [{"name": "textarea"}, ["textbox"]],
   [{"name": "time"}, ["time"]],
 ];
@@ -158,7 +158,7 @@ describe('elementRoleMap API', function () {
   it('get()', function () {
     expect(elementRoleMap.get({
       attributes: [
-        { name: 'href' }
+        { constraints: ["set"], name: 'href' }
       ],
       name: 'a'
     })).toEqual(
@@ -184,7 +184,7 @@ describe('elementRoleMap API', function () {
   it('has()', function () {
     expect(elementRoleMap.has({
       attributes: [
-        { name: 'href' }
+        { constraints: ["set"], name: 'href' }
       ],
       name: 'a'
     })).toEqual(true);
@@ -230,7 +230,7 @@ describe('elementRolesMap', function () {
     });
     describe('spread operator', function () {
       it('should have a specific length', function () {
-        expect([...elementRoleMap].length).toEqual(118);
+        expect([...elementRoleMap].length).toEqual(113);
       });
       test.each([...elementRoleMap])('Testing element: %o', (obj, roles) => {
         expect(entriesList).toEqual(

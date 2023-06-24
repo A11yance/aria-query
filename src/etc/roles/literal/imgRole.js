@@ -14,6 +14,28 @@ const imgRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        attributes: [
+          {
+            constraints: [
+              'set',
+            ],
+            name: 'alt',
+          },
+        ],
+        name: 'img',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
+        attributes: [
+          {
+            constraints: [
+              'undefined',
+            ],
+            name: 'alt',
+          },
+        ],
         name: 'img',
       },
       module: 'HTML',

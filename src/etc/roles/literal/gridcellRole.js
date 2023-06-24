@@ -26,6 +26,7 @@ const gridcellRole: ARIARoleDefinition = {
       concept: {
         constraints: [
           'ancestor table element has grid role',
+          'ancestor table element has treegrid role',
         ],
         name: 'td',
       },
