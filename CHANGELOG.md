@@ -235,6 +235,8 @@ type TAriaQueryMap<E, K, V> = {
   
   ## 5.2.0
 
+  [Update] The 5.2.x minor version contains breaking changes and should be skipped.
+  
   Commit f7f6120 contains a substantial audit and update of the project to match the ARIA spec. Testing coverage was substantially improved. It really locks down the project's output.
 
   - e2e3eff docs: update README to WAI-ARIA 1.2 spec (#499)
@@ -247,4 +249,10 @@ type TAriaQueryMap<E, K, V> = {
 ## 5.2.1
 
   - c995082 Run npm i to update package-lock.json
-  
+
+## 5.3.0
+
+Reverts some API data shape changes from 5.2.x. Also reverts some changes to the representation of the ARIA spec.
+
+  - fda2c97 fix: amend breaking changes and reinstate constraints (#515)
+  - f9f9ea6 Add prepublishOnly step to package.json (#506)
