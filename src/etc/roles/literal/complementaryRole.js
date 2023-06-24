@@ -22,6 +22,9 @@ const complementaryRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
+            constraints: [
+              'set',
+            ],
             name: 'aria-label',
           },
         ],
@@ -37,6 +40,9 @@ const complementaryRole: ARIARoleDefinition = {
       concept: {
         attributes: [
           {
+            constraints: [
+              'set',
+            ],
             name: 'aria-labelledby',
           },
         ],
