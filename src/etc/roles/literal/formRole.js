@@ -14,42 +14,6 @@ const formRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
-        attributes: [
-          {
-            constraints: [
-              'set',
-            ],
-            name: 'aria-label',
-          },
-        ],
-        name: 'form',
-      },
-      module: 'HTML',
-    },
-    {
-      concept: {
-        attributes: [
-          {
-            constraints: [
-              'set',
-            ],
-            name: 'aria-labelledby',
-          },
-        ],
-        name: 'form',
-      },
-      module: 'HTML',
-    },
-    {
-      concept: {
-        attributes: [
-          {
-            constraints: [
-              'set',
-            ],
-            name: 'name',
-          },
-        ],
         name: 'form',
       },
       module: 'HTML',
