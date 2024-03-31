@@ -62,6 +62,7 @@ const entriesList = [
   ["strong", [{"name": "strong"}]],
   ["subscript", [{"name": "sub"}]],
   ["superscript", [{"name": "sup"}]],
+  ["graphics-document", [{"name": "svg"}]],
   ["switch", [{"attributes": [{"name": "aria-checked"}], "name": "button"}]],
   ["table", [{"name": "table"}]],
   ["term", [{"name": "dfn"}, {"name": "dt"}]],
@@ -72,7 +73,7 @@ const entriesList = [
 test('roleElementMap API', (t) => {
   const predicate = (role, [r]) => role === r;
 
-  testIteration(t, roleElementMap, entriesList, 55, predicate);
+  testIteration(t, roleElementMap, entriesList, 56, predicate);
 
   testForEach(t, roleElementMap, entriesList, predicate);
 

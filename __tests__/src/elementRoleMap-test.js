@@ -115,6 +115,7 @@ const entriesList = [
   [{"name": "strong"}, ["strong"]],
   [{"name": "sub"}, ["subscript"]],
   [{"name": "sup"}, ["superscript"]],
+  [{"name": "svg"}, ["graphics-document"]],
   [{"attributes": [{"name": "aria-checked"}], "name": "button"}, ["switch"]],
   [{"name": "table"}, ["table"]],
   [{"name": "dfn"}, ["term"]],
@@ -131,7 +132,7 @@ const entriesList = [
 test('elementRoleMap API', (t) => {
   const predicate = (obj, [o]) => deepEqual(o, obj);
 
-  testIteration(t, elementRoleMap, entriesList, 112, predicate);
+  testIteration(t, elementRoleMap, entriesList, 113, predicate);
 
   testForEach(t, elementRoleMap, entriesList, predicate);
 

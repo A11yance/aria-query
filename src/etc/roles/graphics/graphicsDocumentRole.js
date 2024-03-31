@@ -36,6 +36,12 @@ const graphicsDocumentRole: ARIARoleDefinition = {
         name: 'article',
       },
     },
+    {
+      concept: {
+        name: 'svg',
+      },
+      module: 'HTML',
+    },
   ],
   requireContextRole: [],
   requiredContextRole: [],
