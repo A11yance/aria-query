@@ -3217,6 +3217,12 @@
         "concept": {
           "name": "article"
         }
+      },
+      {
+        "concept": {
+          "name": "svg"
+        },
+        "module": "HTML"
       }
     ],
     "requiredContextRole": [],

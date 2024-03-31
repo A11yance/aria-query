@@ -109,6 +109,7 @@ const entriesList = [
   [{"name": "strong"}, ["strong"]],
   [{"name": "sub"}, ["subscript"]],
   [{"name": "sup"}, ["superscript"]],
+  [{"name": "svg"}, ["graphics-document"]],
   [{"attributes": [{"name": "aria-checked"}], "name": "button"}, ["switch"]],
   [{"name": "table"}, ["table"]],
   [{"name": "dfn"}, ["term"]],
@@ -230,7 +231,7 @@ describe('elementRolesMap', function () {
     });
     describe('spread operator', function () {
       it('should have a specific length', function () {
-        expect([...elementRoleMap].length).toEqual(112);
+        expect([...elementRoleMap].length).toEqual(113);
       });
       test.each([...elementRoleMap])('Testing element: %o', (obj, roles) => {
         expect(entriesList).toEqual(
