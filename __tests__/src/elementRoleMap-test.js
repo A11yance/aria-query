@@ -52,11 +52,13 @@ const entriesList = [
   [{"name": "div"}, ["generic"]],
   [{"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "footer"}, ["generic"]],
   [{"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "header"}, ["generic"]],
-  [{"name": "hgroup"}, ["generic"]],
+  [{"name": "hgroup"}, ["group"]],
   [{"name": "i"}, ["generic"]],
   [{"name": "pre"}, ["generic"]],
   [{"name": "q"}, ["generic"]],
+  [{"name": "s"}, ["deletion"]],
   [{"name": "samp"}, ["generic"]],
+  [{"name": "search"}, ["search"]],
   [{"name": "section"}, ["generic"]],
   [{"name": "small"}, ["generic"]],
   [{"name": "span"}, ["generic"]],
@@ -132,7 +134,7 @@ const entriesList = [
 test('elementRoleMap API', (t) => {
   const predicate = (obj, [o]) => deepEqual(o, obj);
 
-  testIteration(t, elementRoleMap, entriesList, 113, predicate);
+  testIteration(t, elementRoleMap, entriesList, 115, predicate);
 
   testForEach(t, elementRoleMap, entriesList, predicate);
 

@@ -22,16 +22,16 @@ const entriesList = [
   ["complementary", [{"constraints": ["scoped to the body element", "scoped to the main element"], "name": "aside"}, {"attributes": [{"constraints": ["set"], "name": "aria-label"}], "constraints": ["scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "aside"}, {"attributes": [{"constraints": ["set"], "name": "aria-labelledby"}], "constraints": ["scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "aside"}]],
   ["contentinfo", [{"constraints": ["scoped to the body element"], "name": "footer"}]],
   ["definition", [{"name": "dd"}]],
-  ["deletion", [{"name": "del"}]],
+  ["deletion", [{"name": "del"}, {"name": "s"}]],
   ["dialog", [{"name": "dialog"}]],
   ["document", [{"name": "html"}]],
   ["emphasis", [{"name": "em"}]],
   ["figure", [{"name": "figure"}]],
   ["form", [{"attributes": [{"constraints": ["set"], "name": "aria-label"}], "name": "form"}, {"attributes": [{"constraints": ["set"], "name": "aria-labelledby"}], "name": "form"}, {"attributes": [{"constraints": ["set"], "name": "name"}], "name": "form"}]],
-  ["generic", [{"name": "a"}, {"name": "area"}, {"name": "aside"}, {"name": "b"}, {"name": "bdo"}, {"name": "body"}, {"name": "data"}, {"name": "div"}, {"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "footer"}, {"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "header"}, {"name": "hgroup"}, {"name": "i"}, {"name": "pre"}, {"name": "q"}, {"name": "samp"}, {"name": "section"}, {"name": "small"}, {"name": "span"}, {"name": "u"}]],
+  ["generic", [{"name": "a"}, {"name": "area"}, {"name": "aside"}, {"name": "b"}, {"name": "bdo"}, {"name": "body"}, {"name": "data"}, {"name": "div"}, {"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "footer"}, {"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "header"}, {"name": "i"}, {"name": "pre"}, {"name": "q"}, {"name": "samp"}, {"name": "section"}, {"name": "small"}, {"name": "span"}, {"name": "u"}]],
   ["grid", [{"attributes": [{"name": "role", "value": "grid"}], "name": "table"}]],
   ["gridcell", [{"constraints": ["ancestor table element has grid role", "ancestor table element has treegrid role"], "name": "td"}]],
-  ["group", [{"name": "details"}, {"name": "fieldset"}, {"name": "optgroup"}, {"name": "address"}]],
+  ["group", [{"name": "address"}, {"name": "details"}, {"name": "fieldset"}, {"name": "hgroup"}, {"name": "optgroup"}]],
   ["heading", [{"name": "h1"}, {"name": "h2"}, {"name": "h3"}, {"name": "h4"}, {"name": "h5"}, {"name": "h6"}]],
   ["img", [{"attributes": [{"constraints": ["set"], "name": "alt"}], "name": "img"}, {"attributes": [{"constraints": ["undefined"], "name": "alt"}], "name": "img"}]],
   ["insertion", [{"name": "ins"}]],
@@ -54,6 +54,7 @@ const entriesList = [
   ["rowgroup", [{"name": "tbody"}, {"name": "tfoot"}, {"name": "thead"}]],
   ["rowheader", [{"attributes": [{"name": "scope", "value": "row"}], "name": "th"}, {"attributes": [{"name": "scope", "value": "rowgroup"}], "name": "th"}]],
   ["section", [{"attributes": [{"name": "aria-label"}], "name": "section"}, {"attributes": [{"name": "aria-labelledby"}], "name": "section"}]],
+  ["search", [{"name": "search"}]],
   ["searchbox", [{"attributes": [{"constraints": ["undefined"], "name": "list"}, {"name": "type", "value": "search"}], "constraints": ["the list attribute is not set"], "name": "input"}]],
   ["separator", [{"name": "hr"}]],
   ["slider", [{"attributes": [{"name": "type", "value": "range"}], "name": "input"}]],
@@ -73,7 +74,7 @@ const entriesList = [
 test('roleElementMap API', (t) => {
   const predicate = (role, [r]) => role === r;
 
-  testIteration(t, roleElementMap, entriesList, 56, predicate);
+  testIteration(t, roleElementMap, entriesList, 57, predicate);
 
   testForEach(t, roleElementMap, entriesList, predicate);
 

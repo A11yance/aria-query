@@ -988,6 +988,12 @@
           "name": "del"
         },
         "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "s"
+        },
+        "module": "HTML"
       }
     ],
     "requiredContextRole": [],
@@ -3111,12 +3117,6 @@
       },
       {
         "concept": {
-          "name": "hgroup"
-        },
-        "module": "HTML"
-      },
-      {
-        "concept": {
           "name": "i"
         },
         "module": "HTML"
@@ -3449,6 +3449,12 @@
     "relatedConcepts": [
       {
         "concept": {
+          "name": "address"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
           "name": "details"
         },
         "module": "HTML"
@@ -3461,13 +3467,13 @@
       },
       {
         "concept": {
-          "name": "optgroup"
+          "name": "hgroup"
         },
         "module": "HTML"
       },
       {
         "concept": {
-          "name": "address"
+          "name": "optgroup"
         },
         "module": "HTML"
       }
@@ -5174,7 +5180,14 @@
       "aria-relevant",
       "aria-roledescription"
     ],
-    "relatedConcepts": [],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "name": "search"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
