@@ -145,6 +145,8 @@ type ARIADPubRole =
   | 'doc-noteref'
   | 'doc-notice'
   | 'doc-pagebreak'
+  | 'doc-pagefooter'
+  | 'doc-pageheader'
   | 'doc-pagelist'
   | 'doc-part'
   | 'doc-preface'

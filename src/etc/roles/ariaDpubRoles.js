@@ -31,6 +31,8 @@ import docIntroductionRole from './dpub/docIntroductionRole';
 import docNoterefRole from './dpub/docNoterefRole';
 import docNoticeRole from './dpub/docNoticeRole';
 import docPagebreakRole from './dpub/docPagebreakRole';
+import docPagefooterRole from './dpub/docPagefooterRole';
+import docPageheaderRole from './dpub/docPageheaderRole';
 import docPagelistRole from './dpub/docPagelistRole';
 import docPartRole from './dpub/docPartRole';
 import docPrefaceRole from './dpub/docPrefaceRole';
@@ -72,6 +74,8 @@ const ariaDpubRoles: RoleDefinitions = [
   ['doc-noteref', docNoterefRole],
   ['doc-notice', docNoticeRole],
   ['doc-pagebreak', docPagebreakRole],
+  ['doc-pagefooter', docPagefooterRole],
+  ['doc-pageheader', docPageheaderRole],
   ['doc-pagelist', docPagelistRole],
   ['doc-part', docPartRole],
   ['doc-preface', docPrefaceRole],

@@ -128,6 +128,8 @@ const entriesList = [
   ["doc-noteref", expect.any(Object)],
   ["doc-notice", expect.any(Object)],
   ["doc-pagebreak", expect.any(Object)],
+  ["doc-pagefooter", expect.any(Object)],
+  ["doc-pageheader", expect.any(Object)],
   ["doc-pagelist", expect.any(Object)],
   ["doc-part", expect.any(Object)],
   ["doc-preface", expect.any(Object)],
@@ -218,7 +220,7 @@ describe('rolesMap', function () {
     });
     describe('spread operator', function () {
       it('should have a specific length', function () {
-        expect([...rolesMap].length).toEqual(137);
+        expect([...rolesMap].length).toEqual(139);
       });
       test.each([...rolesMap])('Testing element: %o', (obj, roles) => {
         expect(entriesList).toEqual(
