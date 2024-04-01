@@ -87,12 +87,6 @@ const genericRole: ARIARoleDefinition = {
     },
     {
       concept: {
-        name: 'hgroup',
-      },
-      module: 'HTML',
-    },
-    {
-      concept: {
         name: 'i',
       },
       module: 'HTML',

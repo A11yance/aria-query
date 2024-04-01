@@ -46,11 +46,13 @@ const entriesList = [
   [{"name": "div"}, ["generic"]],
   [{"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "footer"}, ["generic"]],
   [{"constraints": ["scoped to the main element", "scoped to a sectioning content element", "scoped to a sectioning root element other than body"], "name": "header"}, ["generic"]],
-  [{"name": "hgroup"}, ["generic"]],
+  [{"name": "hgroup"}, ["group"]],
   [{"name": "i"}, ["generic"]],
   [{"name": "pre"}, ["generic"]],
   [{"name": "q"}, ["generic"]],
+  [{"name": "s"}, ["deletion"]],
   [{"name": "samp"}, ["generic"]],
+  [{"name": "search"}, ["search"]],
   [{"name": "section"}, ["generic"]],
   [{"name": "small"}, ["generic"]],
   [{"name": "span"}, ["generic"]],
@@ -230,7 +232,7 @@ describe('elementRolesMap', function () {
     });
     describe('spread operator', function () {
       it('should have a specific length', function () {
-        expect([...elementRoleMap].length).toEqual(112);
+        expect([...elementRoleMap].length).toEqual(114);
       });
       test.each([...elementRoleMap])('Testing element: %o', (obj, roles) => {
         expect(entriesList).toEqual(

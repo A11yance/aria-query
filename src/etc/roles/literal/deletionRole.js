@@ -21,6 +21,12 @@ const deletionRole: ARIARoleDefinition = {
       },
       module: 'HTML',
     },
+    {
+      concept: {
+        name: 's',
+      },
+      module: 'HTML',
+    },
   ],
   requireContextRole: [],
   requiredContextRole: [],

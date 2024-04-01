@@ -17,6 +17,12 @@ const groupRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        name: 'address',
+      },
+      module: 'HTML',
+    },
+    {
+      concept: {
         name: 'details',
       },
       module: 'HTML',
@@ -29,13 +35,13 @@ const groupRole: ARIARoleDefinition = {
     },
     {
       concept: {
-        name: 'optgroup',
+        name: 'hgroup',
       },
       module: 'HTML',
     },
     {
       concept: {
-        name: 'address',
+        name: 'optgroup',
       },
       module: 'HTML',
     },
