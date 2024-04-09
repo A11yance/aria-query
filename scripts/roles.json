@@ -4482,14 +4482,43 @@
     "abstract": false,
     "accessibleNameRequired": false,
     "childrenPresentational": false,
-    "nameFrom": [],
-    "prohibitedProps": [],
-    "props": [],
-    "relatedConcepts": [],
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-label", "aria-labelledby"],
+    "props": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "name": "alt",
+              "value": ""
+            }
+          ],
+          "name": "img"
+        },
+        "module": "HTML"
+      }
+    ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
     "requiredProps": [],
-    "superClass": []
+    "superClass": ["structure"]
   },
   "note": {
     "abstract": false,

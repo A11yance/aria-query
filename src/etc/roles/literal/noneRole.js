@@ -6,15 +6,38 @@ const noneRole: ARIARoleDefinition = {
   accessibleNameRequired: false,
   baseConcepts: [],
   childrenPresentational: false,
-  nameFrom: [],
-  prohibitedProps: [],
+  nameFrom: [
+    'prohibited',
+  ],
+  prohibitedProps: [
+    'aria-label',
+    'aria-labelledby',
+  ],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        attributes: [
+          {
+            name: 'alt',
+            value: '',
+          },
+        ],
+        name: 'img',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
   requiredProps: {},
-  superClass: [],
+  superClass: [
+    [
+      'roletype',
+      'structure',
+    ],
+  ],
 };
 
 export default noneRole;
