@@ -775,6 +775,43 @@
     "requiredProps": [],
     "superClass": ["widget"]
   },
+  "comment": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["author", "contents"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-braillelabel",
+      "aria-brailleroledescription",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-description",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-level",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-posinset",
+      "aria-relevant",
+      "aria-roledescription",
+      "aria-setsize"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["article"]
+  },
   "complementary": {
     "abstract": false,
     "accessibleNameRequired": false,
@@ -3552,6 +3589,71 @@
     "requiredProps": [["aria-level", "2"]],
     "superClass": ["sectionhead"]
   },
+  "image": {
+    "abstract": false,
+    "accessibleNameRequired": true,
+    "childrenPresentational": true,
+    "nameFrom": ["author"],
+    "prohibitedProps": [],
+    "props": [
+      "aria-atomic",
+      "aria-braillelabel",
+      "aria-brailleroledescription",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-description",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["set"],
+              "name": "alt"
+            }
+          ],
+          "name": "img"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "attributes": [
+            {
+              "constraints": ["undefined"],
+              "name": "alt"
+            }
+          ],
+          "name": "img"
+        },
+        "module": "HTML"
+      },
+      {
+        "concept": {
+          "name": "imggroup"
+        },
+        "module": "DTB"
+      }
+    ],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
   "img": {
     "abstract": false,
     "accessibleNameRequired": true,
@@ -3560,10 +3662,13 @@
     "prohibitedProps": [],
     "props": [
       "aria-atomic",
+      "aria-braillelabel",
+      "aria-brailleroledescription",
       "aria-busy",
       "aria-controls",
       "aria-current",
       "aria-describedby",
+      "aria-description",
       "aria-details",
       "aria-dropeffect",
       "aria-flowto",
@@ -5659,6 +5764,37 @@
     ],
     "requiredContextRole": [],
     "requiredOwnedElements": [],
+    "requiredProps": [],
+    "superClass": ["section"]
+  },
+  "suggestion": {
+    "abstract": false,
+    "accessibleNameRequired": false,
+    "childrenPresentational": false,
+    "nameFrom": ["prohibited"],
+    "prohibitedProps": ["aria-braillelabel", "aria-label", "aria-labelledby"],
+    "props": [
+      "aria-atomic",
+      "aria-brailleroledescription",
+      "aria-busy",
+      "aria-controls",
+      "aria-current",
+      "aria-describedby",
+      "aria-description",
+      "aria-details",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-hidden",
+      "aria-keyshortcuts",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant",
+      "aria-roledescription"
+    ],
+    "relatedConcepts": [],
+    "requiredContextRole": [],
+    "requiredOwnedElements": [["insertion"], ["deletion"]],
     "requiredProps": [],
     "superClass": ["section"]
   },
