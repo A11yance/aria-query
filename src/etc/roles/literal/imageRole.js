@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const imgRole: ARIARoleDefinition = {
+const imageRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: true,
   baseConcepts: [],
@@ -64,4 +64,4 @@ const imgRole: ARIARoleDefinition = {
   ],
 };
 
-export default imgRole;
+export default imageRole;
