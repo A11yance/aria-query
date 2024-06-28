@@ -10,6 +10,7 @@ const insertionRole: ARIARoleDefinition = {
     'prohibited',
   ],
   prohibitedProps: [
+    'aria-braillelabel',
     'aria-label',
     'aria-labelledby',
   ],

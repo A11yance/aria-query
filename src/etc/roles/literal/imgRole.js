@@ -10,11 +10,7 @@ const imgRole: ARIARoleDefinition = {
     'author',
   ],
   prohibitedProps: [],
-  props: {
-    'aria-braillelabel': null,
-    'aria-brailleroledescription': null,
-    'aria-description': null,
-  },
+  props: {},
   relatedConcepts: [
     {
       concept: {
