@@ -10,10 +10,13 @@ const roletypeRole: ARIARoleDefinition = {
   prohibitedProps: [],
   props: {
     'aria-atomic': null,
+    'aria-braillelabel': null,
+    'aria-brailleroledescription': null,
     'aria-busy': null,
     'aria-controls': null,
     'aria-current': null,
     'aria-describedby': null,
+    'aria-description': null,
     'aria-details': null,
     'aria-dropeffect': null,
     'aria-flowto': null,

@@ -10,6 +10,7 @@ const emphasisRole: ARIARoleDefinition = {
     'prohibited',
   ],
   prohibitedProps: [
+    'aria-braillelabel',
     'aria-label',
     'aria-labelledby',
   ],

@@ -12,9 +12,6 @@ const commentRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
-    'aria-braillelabel': null,
-    'aria-brailleroledescription': null,
-    'aria-description': null,
     'aria-level': null,
   },
   relatedConcepts: [],

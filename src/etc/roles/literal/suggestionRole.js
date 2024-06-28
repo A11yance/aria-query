@@ -14,10 +14,7 @@ const suggestionRole: ARIARoleDefinition = {
     'aria-label',
     'aria-labelledby',
   ],
-  props: {
-    'aria-brailleroledescription': null,
-    'aria-description': null,
-  },
+  props: {},
   relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],

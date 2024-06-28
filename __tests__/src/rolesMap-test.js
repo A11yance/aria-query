@@ -16,6 +16,7 @@ const entriesList = [
   ["code", expect.any(Object)],
   ["columnheader", expect.any(Object)],
   ["combobox", expect.any(Object)],
+  ["comment", expect.any(Object)],
   ["command", expect.any(Object)],
   ["complementary", expect.any(Object)],
   ["composite", expect.any(Object)],
@@ -34,6 +35,7 @@ const entriesList = [
   ["gridcell", expect.any(Object)],
   ["group", expect.any(Object)],
   ["heading", expect.any(Object)],
+  ["image", expect.any(Object)],
   ["img", expect.any(Object)],
   ["input", expect.any(Object)],
   ["insertion", expect.any(Object)],
@@ -81,6 +83,7 @@ const entriesList = [
   ["strong", expect.any(Object)],
   ["structure", expect.any(Object)],
   ["subscript", expect.any(Object)],
+  ["suggestion", expect.any(Object)],
   ["superscript", expect.any(Object)],
   ["switch", expect.any(Object)],
   ["tab", expect.any(Object)],
@@ -220,7 +223,7 @@ describe('rolesMap', function () {
     });
     describe('spread operator', function () {
       it('should have a specific length', function () {
-        expect([...rolesMap].length).toEqual(139);
+        expect([...rolesMap].length).toEqual(142);
       });
       test.each([...rolesMap])('Testing element: %o', (obj, roles) => {
         expect(entriesList).toEqual(

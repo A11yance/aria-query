@@ -11,9 +11,6 @@ const docPagefooterRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {
-    'aria-braillelabel': null,
-    'aria-brailleroledescription': null,
-    'aria-description': null,
     'aria-disabled': null,
     'aria-errormessage': null,
     'aria-haspopup': null,

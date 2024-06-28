@@ -10,6 +10,7 @@ const paragraphRole: ARIARoleDefinition = {
     'prohibited',
   ],
   prohibitedProps: [
+    'aria-braillelabel',
     'aria-label',
     'aria-labelledby',
   ],
