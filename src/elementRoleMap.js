@@ -24,25 +24,7 @@ for (let i = 0; i < keys.length; i++) {
       if (relation.module === 'HTML') {
         const concept = relation.concept;
         if (concept) {
-          const elementRoleRelation: ?ElementARIARoleRelationTuple = elementRoles.find(relation => dequal(relation, concept));
-          let roles: RoleSet;
-          
-          if (elementRoleRelation) {
-            roles = elementRoleRelation[1];
-          } else {
-            roles = [];
-          }
-          let isUnique = true;
-          for (let i = 0; i < roles.length; i++) {
-            if (roles[i] === key) {
-              isUnique = false;
-              break;
-            }
-          }
-          if (isUnique) {
-            roles.push(key);
-          }
-          elementRoles.push([concept, roles]);
+          elementRoles.push([concept, [key]]);
         }
       }
     }
