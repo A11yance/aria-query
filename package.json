@@ -66,8 +66,5 @@
     "not dead",
     "not op_mini all",
     "ie 11"
-  ],
-  "dependencies": {
-    "dequal": "^2.0.3"
-  }
+  ]
 }

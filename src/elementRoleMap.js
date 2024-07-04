@@ -2,7 +2,6 @@
  * @flow
  */
 
-import { dequal } from 'dequal/lite';
 import iterationDecorator from "./util/iterationDecorator";
 import rolesMap from './rolesMap';
 
@@ -24,25 +23,7 @@ for (let i = 0; i < keys.length; i++) {
       if (relation.module === 'HTML') {
         const concept = relation.concept;
         if (concept) {
-          const elementRoleRelation: ?ElementARIARoleRelationTuple = elementRoles.find(relation => dequal(relation, concept));
-          let roles: RoleSet;
-          
-          if (elementRoleRelation) {
-            roles = elementRoleRelation[1];
-          } else {
-            roles = [];
-          }
-          let isUnique = true;
-          for (let i = 0; i < roles.length; i++) {
-            if (roles[i] === key) {
-              isUnique = false;
-              break;
-            }
-          }
-          if (isUnique) {
-            roles.push(key);
-          }
-          elementRoles.push([concept, roles]);
+          elementRoles.push([concept, [key]]);
         }
       }
     }
@@ -67,7 +48,7 @@ const elementRoleMap: TAriaQueryMap<
   },
   get: function (key: ARIARoleRelationConcept): ?RoleSet {
     const item = elementRoles.find(tuple => (
-      key.name === tuple[0].name && dequal(key.attributes, tuple[0].attributes)
+      key.name === tuple[0].name && ariaRoleRelationConceptAttributeEquals(key.attributes, tuple[0].attributes)
     ));
     return item && item[1];
   },
@@ -81,6 +62,54 @@ const elementRoleMap: TAriaQueryMap<
     return elementRoles.map(([, values]) => values);
   },
 };
+
+function ariaRoleRelationConceptAttributeEquals(
+  a?: Array<ARIARoleRelationConceptAttribute>,
+  b?: Array<ARIARoleRelationConceptAttribute>,
+): boolean {
+
+  if (a === undefined && b !== undefined) {
+    return false;
+  }
+
+  if (a !== undefined && b === undefined) {
+    return false;
+  }
+
+  if (a !== undefined && b !== undefined) {
+    if (a.length !== b.length) {
+      return false;
+    }
+
+    for (let i = 0; i < a.length; i++) {
+      if (a[i].name !== b[i].name || a[i].value !== b[i].value) {
+        return false;
+      }
+
+      if (a[i].constraints === undefined && b[i].constraints !== undefined) {
+        return false;
+      }
+
+      if (a[i].constraints !== undefined && b[i].constraints === undefined) {
+        return false
+      }
+
+      if (a[i].constraints !== undefined && b[i].constraints !== undefined) {
+        if (a[i].constraints.length !== b[i].constraints.length) {
+          return false;
+        }
+
+        for (let j = 0; j < a[i].constraints.length; j++) {
+          if (a[i].constraints[j] !== b[i].constraints[j]) {
+            return false;
+          }
+        }
+      }
+    }
+  }
+
+  return true;
+}
 
 export default (
   iterationDecorator(
