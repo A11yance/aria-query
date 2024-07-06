@@ -14,6 +14,10 @@ const complementaryRole: ARIARoleDefinition = {
   relatedConcepts: [
     {
       concept: {
+        constraints: [
+          'scoped to the body element',
+          'scoped to the main element',
+        ],
         name: 'aside',
       },
       module: 'HTML',
