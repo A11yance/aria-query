@@ -23,7 +23,27 @@ for (let i = 0; i < keys.length; i++) {
       if (relation.module === 'HTML') {
         const concept = relation.concept;
         if (concept) {
-          elementRoles.push([concept, [key]]);
+          const elementRoleRelation: ?ElementARIARoleRelationTuple = elementRoles.find(relation => ariaRoleRelationConceptEquals(relation[0], concept));
+          let roles: RoleSet;
+
+          if (elementRoleRelation) {
+            roles = elementRoleRelation[1];
+          } else {
+            roles = [];
+          }
+          let isUnique = true;
+          for (let i = 0; i < roles.length; i++) {
+            if (roles[i] === key) {
+              isUnique = false;
+              break;
+            }
+          }
+          if (isUnique) {
+            roles.push(key);
+          }
+          if (!elementRoleRelation) {
+            elementRoles.push([concept, roles]);
+          }
         }
       }
     }
@@ -62,6 +82,38 @@ const elementRoleMap: TAriaQueryMap<
     return elementRoles.map(([, values]) => values);
   },
 };
+
+function ariaRoleRelationConceptEquals(a: ARIARoleRelationConcept, b: ARIARoleRelationConcept): boolean {
+  return (
+    a.name === b.name &&
+    ariaRoleRelationConstraintsEquals(a.constraints, b.constraints) &&
+    ariaRoleRelationConceptAttributeEquals(a.attributes, b.attributes)
+  )
+}
+
+function ariaRoleRelationConstraintsEquals(a?: ARIARoleRelationConcept['constraints'], b?: ARIARoleRelationConcept['constraints']): boolean {
+  if (a === undefined && b !== undefined) {
+    return false;
+  }
+
+  if (a !== undefined && b === undefined) {
+    return false;
+  }
+
+  if (a !== undefined && b !== undefined) {
+    if (a.length !== b.length) {
+      return false;
+    }
+
+    for (let i = 0; i < a.length; i++) {
+      if (a[i] !== b[i]) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
 
 function ariaRoleRelationConceptAttributeEquals(
   a?: Array<ARIARoleRelationConceptAttribute>,
