@@ -40,6 +40,7 @@ const entriesList = [
   ["option", [{"name": "option"}]],
   ["paragraph", [{"name": "p"}]],
   ["presentation", [{"attributes": [{"name": "alt", "value": ""}], "name": "img"}]],
+  ["none", [{"attributes": [{"name": "alt", "value": ""}], "name": "img"}]],
   ["progressbar", [{"name": "progress"}]],
   ["radio", [{"attributes": [{"name": "type", "value": "radio"}], "name": "input"}]],
   ["region", [{"attributes": [{"constraints": ["set"], "name": "aria-label"}], "name": "section"}, {"attributes": [{"constraints": ["set"], "name": "aria-labelledby"}], "name": "section"}]],
@@ -146,7 +147,7 @@ describe('roleElementMap', function () {
     });
     describe('spread operator', function () {
       it('should have a specific length', function () {
-        expect([...roleElementMap].length).toEqual(55);
+        expect([...roleElementMap].length).toEqual(56);
       });
       test.each([...roleElementMap])('Testing element: %o', (obj, roles) => {
         expect(entriesList).toEqual(
