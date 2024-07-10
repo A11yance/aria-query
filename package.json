@@ -7,11 +7,12 @@
     "lib"
   ],
   "scripts": {
-    "build": "rimraf lib && babel src --out-dir lib",
-    "flow": "flow",
+    "prepack": "npm run build",
+    "prebuild": "rimraf lib",
+    "build": "babel src --out-dir lib",
     "lint": "eslint --ext=js,mjs .",
     "prepublishOnly": "npm run build",
-    "pretest": "npm run lint && npm run flow",
+    "pretest": "npm run lint && flow",
     "test": "npm run jest",
     "test:ci": "npm run jest -- --ci --runInBand",
     "jest": "jest --coverage __tests__/**/*",
