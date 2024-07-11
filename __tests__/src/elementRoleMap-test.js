@@ -1,4 +1,7 @@
-import expect from 'expect';
+import test from 'tape';
+import deepEqual from 'deep-equal-json';
+import inspect from 'object-inspect';
+
 import elementRoleMap from '../../src/elementRoleMap';
 
 const entriesList = [
@@ -122,20 +125,36 @@ const entriesList = [
   [{"name": "time"}, ["time"]],
 ];
 
-describe('elementRoleMap API', function () {
-  describe('entries()', function () {
-    test.each(elementRoleMap.entries())('Testing element: %o', (obj, roles) => {
-      expect(entriesList).toEqual(
-        expect.arrayContaining([[obj, roles]]),
-      );
+test('elementRoleMap API', async (t) => {
+  t.test('iteration', async (st) => {
+    st.notEqual(elementRoleMap[Symbol.iterator], undefined, 'has an iterator defined');
+    st.equal([...elementRoleMap].length, 112, 'has a specific length');
+
+    st.test('supports the spread operator', async (s2t) => {
+      [...elementRoleMap].forEach(([obj, roles]) => {
+        const found = entriesList.find(([o]) => deepEqual(o, obj));
+
+        s2t.ok(found, `spread has element: ${inspect(obj)}`);
+        s2t.deepEqual(roles, found[1], `for-of has object elements`);
+      });
     });
-    test.each([...elementRoleMap.entries()])('Testing element: %o', (obj, roles) => {
-      expect(entriesList).toEqual(
-        expect.arrayContaining([[obj, roles]]),
-      );
+
+    st.test('supports the for..of pattern', async (s2t) => {
+      const output = [];
+      for (const [key, value] of elementRoleMap) {
+        output.push([key, value]);
+      }
+
+      output.forEach(([obj, roles]) => {
+        const found = entriesList.find(([o]) => deepEqual(o, obj));
+
+        s2t.ok(found, `for-of has element: ${inspect(obj)}`);
+        s2t.deepEqual(roles, found[1], `for-of has object elements`);
+      });
     });
   });
-  describe('forEach()', function () {
+
+  t.test('forEach()', async (st) => {
     const output = [];
     let context;
     elementRoleMap.forEach((value, key, map) => {
@@ -144,110 +163,88 @@ describe('elementRoleMap API', function () {
         context = map;
       }
     });
-    test.each(output)('Testing element: %o', (obj, roles) => {
-      expect(entriesList).toEqual(
-        expect.arrayContaining([[obj, roles]]),
-      );
-    });
-    test.each(context)('Testing element: %o', (obj, roles) => {
-      expect(entriesList).toEqual(
-        expect.arrayContaining([[obj, roles]]),
-      );
-    });
-  });
-  it('get()', function () {
-    expect(elementRoleMap.get({
-      attributes: [
-        { constraints: ["set"], name: 'href' }
-      ],
-      name: 'a'
-    })).toEqual(
-      expect.arrayContaining(["link"]),
-    );
-    expect(elementRoleMap.get({
-      "attributes": [
-        {
-          "name": "type",
-          "value": "radio"
-        }
-      ], "name": "input"
-    })).toEqual(
-      expect.arrayContaining(["radio"]),
-    );
-    expect(elementRoleMap.get({
-      attributes: {
-        name: 'fake attribute',
-      },
-      name: 'fake element',
-    })).toBeUndefined();
-  });
-  it('has()', function () {
-    expect(elementRoleMap.has({
-      attributes: [
-        { constraints: ["set"], name: 'href' }
-      ],
-      name: 'a'
-    })).toEqual(true);
-    expect(elementRoleMap.has({
-      attributes: {
-        name: 'fake attribute',
-      },
-      name: 'fake element',
-    })).toEqual(false);
-  });
-  describe('keys()', function () {
-    const entriesKeys = entriesList.map(entry => entry[0]);
-    test.each(elementRoleMap.keys())('Testing key: %o', (key) => {
-      expect(entriesKeys).toEqual(
-        expect.arrayContaining([key]),
-      );
-    });
-    test.each([...elementRoleMap.keys()])('Testing key: %o', (key) => {
-      expect(entriesKeys).toEqual(
-        expect.arrayContaining([key]),
-      );
-    });
-  });
-  describe('values()', function () {
-    const entriesValues = entriesList.map(entry => entry[1]);
-    test.each(elementRoleMap.values().map(value => [value]))('Testing value: %o', (value) => {
-      expect(entriesValues).toEqual(
-        expect.arrayContaining([value]),
-      );
-    });
-    test.each([...elementRoleMap.values()].map(value => [value]))('Testing value: %o', (value) => {
-      expect(entriesValues).toEqual(
-        expect.arrayContaining([value]),
-      );
-    });
-  });
-});
 
-describe('elementRolesMap', function () {
-  describe('iteration', function () {
-    it('should have an iterator defined', function () {
-      expect(elementRoleMap[Symbol.iterator]).not.toBeUndefined();
+    for (let i = 0; i < output.length; i++) {
+      const [obj, roles] = output[i];
+      const found = entriesList.find(([o]) => deepEqual(o, obj));
+      
+      st.ok(found, `\`forEach\` has element: ${inspect(obj)}`);
+      st.deepEqual(roles, found[1], `\`forEach\` has object elements`);
+    }
+  });
+  
+  t.test('get()', async (st) => {
+    st.ok(
+      elementRoleMap.get({
+        attributes: [
+          { constraints: ["set"], name: 'href' }
+        ],
+        name: 'a'
+      }).some(x => x.includes('link')),
+    );
+
+    st.ok(
+      elementRoleMap.get({
+        "attributes": [
+          {
+            "name": "type",
+            "value": "radio"
+          }
+        ], "name": "input"
+      }).some(x => x.includes('radio')),
+    );
+
+    st.equal(
+      elementRoleMap.get({
+        attributes: {
+          name: 'fake attribute',
+        },
+        name: 'fake element',
+      }),
+      undefined,
+    );
+  });
+
+  t.test('has()', async (st) => {
+    st.equal(
+      elementRoleMap.has({
+        attributes: [
+          { constraints: ["set"], name: 'href' }
+        ],
+        name: 'a'
+      }),
+      true,
+    );
+
+    st.equal(
+      elementRoleMap.has({
+        attributes: {
+          name: 'fake attribute',
+        },
+        name: 'fake element',
+      }),
+      false,
+    );
+  });
+
+  t.test('keys(), iteration', async (st) => {
+    const entriesKeys = entriesList.map(entry => entry[0]);
+    for (const obj of elementRoleMap.keys()) {
+      st.ok(entriesKeys.find((k) => deepEqual(k, obj)), `for-of has key: ${inspect(obj)}`);
+    }
+
+    [...elementRoleMap.keys()].forEach((obj) => {
+        st.ok(entriesKeys.find((k) => deepEqual(k, obj)), `spread has key: ${inspect(obj)}`);
     });
-    describe('spread operator', function () {
-      it('should have a specific length', function () {
-        expect([...elementRoleMap].length).toEqual(112);
-      });
-      test.each([...elementRoleMap])('Testing element: %o', (obj, roles) => {
-        expect(entriesList).toEqual(
-          expect.arrayContaining([[obj, roles]]),
-        );
-      });
-    });
-    describe('for..of pattern', function () {
-      const output = [];
-      for (const [key, value] of elementRoleMap) {
-        output.push([key, value]);
-      }
-      test.each(output)('Testing element: %o', (obj, roles) => {
-        expect(entriesList).toEqual(
-          expect.arrayContaining([[obj, roles]]),
-        );
-      });
+  });
+
+  t.test('values(), iteration', async (st) => {
+    for (const values of elementRoleMap.values()) {
+      st.ok(entriesList.some(([, x]) => deepEqual(x, values)), `for-of has object values: ${inspect(values)}`);
+    }
+
+    [...elementRoleMap.values()].forEach((values) => {
+      st.ok(entriesList.some(([, x]) => deepEqual(x, values)), `spread has object values: ${inspect(values)}`);
     });
   });
 });

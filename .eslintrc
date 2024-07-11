@@ -35,10 +35,8 @@
       ],
       "extends": [
         "eslint:recommended",
-        "plugin:jest/recommended"
       ],
       "env": {
-        "jest": true,
         "node": true
       }
     }

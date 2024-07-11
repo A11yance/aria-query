@@ -1,10 +1,11 @@
-/* eslint-env mocha */
-import expect from 'expect';
-import iterationDecorator from '../../../src/util/iterationDecorator';
+import test from 'tape';
+import values from 'object.values';
+import mockProperty from 'mock-property';
 
-describe('iterationDecorator', function () {
-  describe('should add a Symbol.iterator property to a collection', function () {
-    it('should return the values when iterated', function () {
+import iterationDecorator from 'aria-query/src/util/iterationDecorator';
+
+test('iterationDecorator', (t) => {
+  t.test('adds a Symbol.iterator property to a collection', async (st) => {
       // const collection = {a: 'apple', b: 'banana', c: 'cantaloupe'};
       const collection = {
         'a': 'apple',
@@ -12,50 +13,33 @@ describe('iterationDecorator', function () {
         'c': 'cantaloupe',
       };
       const arr = ['apple', 'banana', 'cantaloupe'];
-      const iter = iterationDecorator(collection, Object.values(collection));
-      expect([...iter]).toEqual(expect.arrayContaining(arr));
-    });
+      const iter = iterationDecorator(collection, values(collection));
+      st.deepEqual([...iter], arr, 'returns the values when iterated');
   });
-  describe('when Symbol is not defined in the global space', function () {
-    beforeEach(function () {
-      global.originalSymbol = global.Symbol
-      global.originalSymbolIterator = global.Symbol.iterator;
-      global.Symbol = undefined;
-    });
-    it('should not add a Symbol.iterator property to a collection', function () {
-      const collection = {
-        'a': 'apple',
-        'b': 'banana',
-        'c': 'cantaloupe',
-      };
-      const iter = iterationDecorator(collection, []);
-      expect(iter[global.originalSymbolIterator]).not.toBeDefined();
-    });
-    afterEach(function () {
-      global.Symbol = global.originalSymbol;
-      global.originalSymbol = undefined;
-      global.originalSymbolIterator = undefined;
-    });
+
+  t.test('when Symbol is not defined in the global space', async (st) => {
+    const originalSymbolIterator = typeof Symbol === 'function' ? Symbol.iterator : null;
+    st.teardown(mockProperty(global, 'Symbol', { value: undefined }));
+
+    const collection = {
+      'a': 'apple',
+      'b': 'banana',
+      'c': 'cantaloupe',
+    };
+    const iter = iterationDecorator(collection, []);
+    st.equal(iter[originalSymbolIterator], undefined, 'does not add a Symbol.iterator property to a collection');
   });
-  describe('when Symbol.iterator is not defined in the global space', function () {
-    beforeEach(function () {
-      global.originalSymbol = global.Symbol
-      global.originalSymbolIterator = global.Symbol.iterator;
-      global.Symbol = function () {};
-    });
-    it('should not add a Symbol.iterator property to a collection', function () {
-      const collection = {
-        'a': 'apple',
-        'b': 'banana',
-        'c': 'cantaloupe',
-      };
-      const iter = iterationDecorator(collection, []);
-      expect(iter[global.originalSymbolIterator]).not.toBeDefined();
-    });
-    afterEach(function () {
-      global.Symbol = global.originalSymbol;
-      global.originalSymbol = undefined;
-      global.originalSymbolIterator = undefined;
-    });
+
+  t.test('when Symbol.iterator is not defined in the global space', async (st) => {
+    const originalSymbolIterator = typeof Symbol === 'function' ? Symbol.iterator : null;
+    st.teardown(mockProperty(global, 'Symbol', { value: function () {} }));
+
+    const collection = {
+      'a': 'apple',
+      'b': 'banana',
+      'c': 'cantaloupe',
+    };
+    const iter = iterationDecorator(collection, []);
+    st.equal(iter[originalSymbolIterator], undefined, 'does not add a Symbol.iterator property to a collection');
   });
 });

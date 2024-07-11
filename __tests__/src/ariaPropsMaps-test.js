@@ -1,4 +1,7 @@
-import expect from 'expect';
+import test from 'tape';
+import deepEqual from 'deep-equal-json';
+import inspect from 'object-inspect';
+
 import ariaPropsMap from '../../src/ariaPropsMap';
 import rolesMap from '../../src/rolesMap';
 
@@ -56,20 +59,36 @@ const entriesList = [
   ['aria-valuetext', {'type': 'string'}],
 ];
 
-describe('ariaPropsMap API', function () {
-  describe('entries()', function () {
-    test.each(ariaPropsMap.entries())('Testing prop: %s', (obj, roles) => {
-      expect(entriesList).toEqual(
-        expect.arrayContaining([[obj, roles]]),
-      );
+test('ariaPropsMap API', async (t) => {
+  t.test('iteration', async (st) => {
+    st.notEqual(ariaPropsMap[Symbol.iterator], undefined, 'has an iterator defined');
+    st.equal([...ariaPropsMap].length, 51, 'has a specific length');
+
+    st.test('supports the spread operator', async (s2t) => {
+      [...ariaPropsMap].forEach(([obj, roles]) => {
+        const found = entriesList.find(([o]) => deepEqual(o, obj));
+
+        s2t.ok(found, `spread has element: ${inspect(obj)}`);
+        s2t.deepEqual(roles, found[1], `for-of has object elements`);
+      });
     });
-    test.each([...ariaPropsMap.entries()])('Testing prop: %s', (obj, roles) => {
-      expect(entriesList).toEqual(
-        expect.arrayContaining([[obj, roles]]),
-      );
+
+    st.test('supports the for..of pattern', async (s2t) => {
+      const output = [];
+      for (const [key, value] of ariaPropsMap) {
+        output.push([key, value]);
+      }
+
+      output.forEach(([obj, roles]) => {
+        const found = entriesList.find(([o]) => deepEqual(o, obj));
+
+        s2t.ok(found, `for-of has element: ${inspect(obj)}`);
+        s2t.deepEqual(roles, found[1], `for-of has object elements`);
+      });
     });
   });
-  describe('forEach()', function () {
+
+  t.test('forEach()', async (st) => {
     const output = [];
     let context;
     ariaPropsMap.forEach((value, key, map) => {
@@ -78,81 +97,48 @@ describe('ariaPropsMap API', function () {
         context = map;
       }
     });
-    test.each(output)('Testing prop: %s', (obj, roles) => {
-      expect(entriesList).toEqual(
-        expect.arrayContaining([[obj, roles]]),
-      );
-    });
-    test.each(context)('Testing prop: %s', (obj, roles) => {
-      expect(entriesList).toEqual(
-        expect.arrayContaining([[obj, roles]]),
-      );
-    });
-  });
-  it('get()', function () {
-    expect(ariaPropsMap.get('aria-label')).toBeDefined();
-    expect(ariaPropsMap.get('fake prop')).toBeUndefined();
-  });
-  it('has()', function () {
-    expect(ariaPropsMap.has('aria-label')).toEqual(true);
-    expect(ariaPropsMap.has('fake prop')).toEqual(false);
-  });
-  describe('keys()', function () {
-    const entriesKeys = entriesList.map(entry => entry[0]);
-    test.each(ariaPropsMap.keys())('Testing key: %o', (key) => {
-      expect(entriesKeys).toEqual(
-        expect.arrayContaining([key]),
-      );
-    });
-    test.each([...ariaPropsMap.keys()])('Testing key: %o', (key) => {
-      expect(entriesKeys).toEqual(
-        expect.arrayContaining([key]),
-      );
-    });
-  });
-  describe('values()', function () {
-    const entriesValues = entriesList.map(entry => entry[1]);
-    test.each(ariaPropsMap.values())('Testing value: %o', (value) => {
-      expect(entriesValues).toEqual(
-        expect.arrayContaining([value]),
-      );
-    });
-    test.each([...ariaPropsMap.values()])('Testing value: %o', (value) => {
-      expect(entriesValues).toEqual(
-        expect.arrayContaining([value]),
-      );
-    });
-  });
-});
 
-describe('ariaPropsMap', function () {
-  describe('iteration', function () {
-    it('should have an iterator defined', function () {
-      expect(ariaPropsMap[Symbol.iterator]).not.toBeUndefined();
-    });
-    describe('spread operator', function () {
-      it('should have a specific length', function () {
-        expect(ariaPropsMap.entries().length).toEqual(51);
-      });
-      test.each([...ariaPropsMap])('Testing prop: %s', (obj, roles) => {
-        expect(entriesList).toEqual(
-          expect.arrayContaining([[obj, roles]]),
-        );
-      });
-    });
-    describe('for..of pattern', function () {
-      const output = [];
-      for (const [key, value] of ariaPropsMap) {
-        output.push([key, value]);
-      }
-      test.each(output)('Testing prop: %s', (obj, roles) => {
-        expect(entriesList).toEqual(
-          expect.arrayContaining([[obj, roles]]),
-        );
-      });
+    for (let i = 0; i < output.length; i++) {
+      const [obj, roles] = output[i];
+      const found = entriesList.find(([o]) => deepEqual(o, obj));
+      
+      st.ok(found, `\`forEach\` has element: ${inspect(obj)}`);
+      st.deepEqual(roles, found[1], `\`forEach\` has object elements`);
+    }
+  });
+
+  t.test('get()', async (st) => {
+    st.notEqual(ariaPropsMap.get('aria-label'), undefined, 'has a defined prop')
+    st.equal(ariaPropsMap.get('fake prop'), undefined, 'returns undefined for a fake prop');
+  });
+
+  t.test('has()', async (st) => {
+    st.equal(ariaPropsMap.has('aria-label'), true, 'has a defined prop');
+    st.equal(ariaPropsMap.has('fake prop'), false, 'returns false for a fake prop');
+  });
+  
+  t.test('keys(), iteration', async (st) => {
+    const entriesKeys = entriesList.map(entry => entry[0]);
+    for (const obj of ariaPropsMap.keys()) {
+      st.ok(entriesKeys.find((k) => deepEqual(k, obj)), `for-of has key: ${inspect(obj)}`);
+    }
+
+    [...ariaPropsMap.keys()].forEach((obj) => {
+        st.ok(entriesKeys.find((k) => deepEqual(k, obj)), `spread has key: ${inspect(obj)}`);
     });
   });
-  describe('props and role defintions', function () {
+
+  t.test('values(), iteration', async (st) => {
+    for (const values of ariaPropsMap.values()) {
+      st.ok(entriesList.some(([, x]) => deepEqual(x, values)), `for-of has object values: ${inspect(values)}`);
+    }
+
+    [...ariaPropsMap.values()].forEach((values) => {
+      st.ok(entriesList.some(([, x]) => deepEqual(x, values)), `spread has object values: ${inspect(values)}`);
+    });
+  });
+
+  t.test('props and role defintions', async (st) => {
     const usedProps = [];
     for (const roleDefinition of rolesMap.values()) {
       for (const prop of Object.keys(roleDefinition.props)) {
@@ -168,11 +154,9 @@ describe('ariaPropsMap', function () {
         }
       }
     }
-    test.each(ariaPropsMap.entries())(
-      'The prop %s should be used in at least one role definition',
-      (prop) => {
-        expect(usedProps.find(p => p === prop)).toBeDefined();
-      }
-    );
+
+    ariaPropsMap.forEach((value, key) => {
+      st.ok(usedProps.find(p => p === key), `has prop: ${key}`);
+    });
   });
 });
