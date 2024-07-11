@@ -1,8 +1,8 @@
 import test from 'tape';
 import inspect from 'object-inspect';
 
-import rolesMap from '../../src/rolesMap';
-import ariaPropsMap from '../../src/ariaPropsMap';
+import rolesMap from 'aria-query/src/rolesMap';
+import ariaPropsMap from 'aria-query/src/ariaPropsMap';
 
 const entriesList = [
   ["alert", null],

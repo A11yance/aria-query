@@ -8,6 +8,8 @@
 	"branches": 76.06,
 	"exclude": [
 		"coverage",
-		"test"
+		"__tests-built__",
+		"test",
+		"scripts"
 	]
 }

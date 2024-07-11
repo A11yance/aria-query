@@ -2,7 +2,7 @@ import test from 'tape';
 import inspect from 'object-inspect';
 import deepEqual from 'deep-equal-json';
 
-import roleElementMap from '../../src/roleElementMap';
+import roleElementMap from 'aria-query/src/roleElementMap';
 
 const entriesList = [
   ["article", [{"name": "article"}]],

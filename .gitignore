@@ -5,3 +5,4 @@ docs/
 
 coverage/
 .nyc_output/
+__tests-built__/

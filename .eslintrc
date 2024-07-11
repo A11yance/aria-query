@@ -19,6 +19,7 @@
     ".nyc_output/",
     "flow-typed/",
     "flow",
+    "__tests-built__/",
   ],
   "overrides": [
     {

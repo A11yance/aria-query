@@ -2,7 +2,7 @@ import test from 'tape';
 import deepEqual from 'deep-equal-json';
 import inspect from 'object-inspect';
 
-import domMap from '../../src/domMap';
+import domMap from 'aria-query/src/domMap';
 
 const entriesList = [
   ["a", {"reserved": false}],

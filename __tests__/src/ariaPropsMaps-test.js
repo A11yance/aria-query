@@ -2,8 +2,8 @@ import test from 'tape';
 import deepEqual from 'deep-equal-json';
 import inspect from 'object-inspect';
 
-import ariaPropsMap from '../../src/ariaPropsMap';
-import rolesMap from '../../src/rolesMap';
+import ariaPropsMap from 'aria-query/src/ariaPropsMap';
+import rolesMap from 'aria-query/src/rolesMap';
 
 const entriesList = [
   ['aria-activedescendant', {'type': 'id'}],
