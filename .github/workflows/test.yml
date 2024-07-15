@@ -1,80 +1,54 @@
 name: CI
 on:
-  push:
-    branches:
-      - main
-      - "!dependabot/**"
-  pull_request:
-  workflow_dispatch:
+  [push, pull_request, workflow_dispatch]
+
 jobs:
-  jest:
-    name: Jest (Node v${{ matrix.node }})
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        node: [14, 16, 17]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Load Node version ${{ matrix.node }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node }}
-          cache: npm
-      - name: Npm Install
-        run: npm ci
-      - name: Run Jest
-        run: npm run test:ci
-      - name: Run Coveralls
-        uses: coverallsapp/github-action@v2
-        if: matrix.node == '16'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./reports/lcov.info
+  tests:
+    uses: ljharb/actions/.github/workflows/node.yml@a840bfaa7e24d260a9f451baa97ca172fdb327af
+    with:
+      range: '>= 0.8'
+      type: majors
+      build-command: npm run build:tests
+      build-output-dir: __tests-built__,lib
+      command: npm run tests-built
+
   flow:
     name: Flow type checking
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Load Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: ljharb/actions/node/install@a840bfaa7e24d260a9f451baa97ca172fdb327af
         with:
-          cache: npm
-      - name: Npm Install
-        run: npm ci
+          use-npm-ci: true
       - name: Flow type check
-        run: npm run flow
+        run: npx flow
+
   eslint:
-    name: ESLint (Node v${{ matrix.node }})
+    name: ESLint
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [16]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Load Node version ${{ matrix.node }}
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: ljharb/actions/node/install@a840bfaa7e24d260a9f451baa97ca172fdb327af
         with:
-          node-version: ${{ matrix.node }}
-          cache: npm
-      - name: Npm Install
-        run: npm ci
+          use-npm-ci: true
       - name: Run ESLint
         run: npm run lint
+
   diff-breakUpAriaJSON:
     name: Compare JSON to src output
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Load Node version
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: ljharb/actions/node/install@a840bfaa7e24d260a9f451baa97ca172fdb327af
         with:
-          cache: npm
-      - name: Npm Install
-        run: npm ci
+          use-npm-ci: true
       - name: Run diff check for the breakUpAriaJSON script
         run: node scripts/breakUpAriaJSON.js && git diff --exit-code -- src
+
+  finisher:
+    name: all checks
+    needs: [tests, flow, eslint, diff-breakUpAriaJSON]
+    runs-on: ubuntu-latest
+    steps:
+      - run: true
+

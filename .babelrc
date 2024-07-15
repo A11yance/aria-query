@@ -1,13 +1,31 @@
 {
   "presets": [
-    [
-      "@babel/preset-env", {
-        "useBuiltIns": false
-      }
-    ],
+    "@babel/preset-env",
     "@babel/preset-flow"
   ],
   "plugins": [
-    "@babel/plugin-transform-flow-strip-types"
-  ]
+    "@babel/plugin-transform-flow-strip-types",
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        ["module-resolver", {
+          "root": ["./__tests__"],
+          "alias": {
+            "^aria-query/src/(.*)": "./lib/\\1",
+          }
+        }]
+      ]
+    },
+    "development": {
+      "plugins": [
+        ["module-resolver", {
+          "root": ["./src"],
+          "alias": {
+            "^aria-query/src/(.*)": "./src/\\1",
+          }
+        }]
+      ]
+    },
+  }
 }

@@ -10,6 +10,17 @@
   "plugins": [
     "flowtype"
   ],
+  "ignorePatterns": [
+    "lib/",
+    "node_modules/",
+    "reports/",
+    "node_modules.nosync/",
+    "coverage/",
+    ".nyc_output/",
+    "flow-typed/",
+    "flow",
+    "__tests-built__/",
+  ],
   "overrides": [
     {
       "files": [
@@ -25,10 +36,8 @@
       ],
       "extends": [
         "eslint:recommended",
-        "plugin:jest/recommended"
       ],
       "env": {
-        "jest": true,
         "node": true
       }
     }

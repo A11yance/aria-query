@@ -2,3 +2,7 @@ node_modules/
 lib/
 reports/
 docs/
+
+coverage/
+.nyc_output/
+__tests-built__/
