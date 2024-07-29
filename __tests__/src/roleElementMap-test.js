@@ -26,6 +26,7 @@ const entriesList = [
   ["gridcell", [{"constraints": ["ancestor table element has grid role", "ancestor table element has treegrid role"], "name": "td"}]],
   ["group", [{"name": "details"}, {"name": "fieldset"}, {"name": "optgroup"}, {"name": "address"}]],
   ["heading", [{"name": "h1"}, {"name": "h2"}, {"name": "h3"}, {"name": "h4"}, {"name": "h5"}, {"name": "h6"}]],
+  ["image", [{"attributes": [{"constraints": ["set"], "name": "alt"}], "name": "img"}, {"attributes": [{"constraints": ["undefined"], "name": "alt"}], "name": "img"}]],
   ["img", [{"attributes": [{"constraints": ["set"], "name": "alt"}], "name": "img"}, {"attributes": [{"constraints": ["undefined"], "name": "alt"}], "name": "img"}]],
   ["insertion", [{"name": "ins"}]],
   ["link", [{"attributes": [{"constraints": ["set"], "name": "href"}], "name": "a"}, {"attributes": [{"constraints": ["set"], "name": "href"}], "name": "area"}]],
@@ -37,6 +38,7 @@ const entriesList = [
   ["math", [{"name": "math"}]],
   ["meter", [{"name": "meter"}]],
   ["navigation", [{"name": "nav"}]],
+  ["none", [{"attributes": [{"name": "alt", "value": ""}], "name": "img"}]],
   ["option", [{"name": "option"}]],
   ["paragraph", [{"name": "p"}]],
   ["presentation", [{"attributes": [{"name": "alt", "value": ""}], "name": "img"}]],
@@ -146,7 +148,7 @@ describe('roleElementMap', function () {
     });
     describe('spread operator', function () {
       it('should have a specific length', function () {
-        expect([...roleElementMap].length).toEqual(55);
+        expect([...roleElementMap].length).toEqual(57);
       });
       test.each([...roleElementMap])('Testing element: %o', (obj, roles) => {
         expect(entriesList).toEqual(

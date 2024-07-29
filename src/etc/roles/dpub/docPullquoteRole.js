@@ -25,7 +25,9 @@ const docPullquoteRole: ARIARoleDefinition = {
   requiredProps: {},
   superClass: [
     [
-      'none',
+      'roletype',
+      'structure',
+      'section',
     ],
   ],
 };
