@@ -11,7 +11,14 @@ const searchRole: ARIARoleDefinition = {
   ],
   prohibitedProps: [],
   props: {},
-  relatedConcepts: [],
+  relatedConcepts: [
+    {
+      concept: {
+        name: 'search',
+      },
+      module: 'HTML',
+    },
+  ],
   requireContextRole: [],
   requiredContextRole: [],
   requiredOwnedElements: [],
