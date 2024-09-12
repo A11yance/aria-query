@@ -232,11 +232,11 @@ type TAriaQueryMap<E, K, V> = {
   ## 5.1.3
 
   No changes, just trying to get the NPM build to reflect the changes in v5.1.2
-  
+
   ## 5.2.0
 
   [Update] The 5.2.x minor version contains breaking changes and should be skipped.
-  
+
   Commit f7f6120 contains a substantial audit and update of the project to match the ARIA spec. Testing coverage was substantially improved. It really locks down the project's output.
 
   - e2e3eff docs: update README to WAI-ARIA 1.2 spec (#499)
@@ -256,3 +256,12 @@ Reverts some API data shape changes from 5.2.x. Also reverts some changes to the
 
   - fda2c97 fix: amend breaking changes and reinstate constraints (#515)
   - f9f9ea6 Add prepublishOnly step to package.json (#506)
+
+## 5.3.1
+
+Removes the only runtime dependency from the project, and restores/broadens engines compatibility, plus a few bug fixes.
+
+ - Remove dequal from the project (#554)
+ - fix: add missing `doc-pagefooter` and `doc-pageheader` roles (#549)
+ - Fix defect in calling code when building the ElementRoleMap (#555)
+ - fix: add missing constraints for `aside` element to have implicit `complementary` role (#558)

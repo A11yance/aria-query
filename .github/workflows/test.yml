@@ -4,7 +4,7 @@ on:
 
 jobs:
   tests:
-    uses: ljharb/actions/.github/workflows/node.yml@a840bfaa7e24d260a9f451baa97ca172fdb327af
+    uses: ljharb/actions/.github/workflows/node.yml@32a09e8b5346216e84d4cdf4769c70af9903b536
     with:
       range: '>= 0.8'
       type: majors
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ljharb/actions/node/install@a840bfaa7e24d260a9f451baa97ca172fdb327af
+      - uses: ljharb/actions/node/install@32a09e8b5346216e84d4cdf4769c70af9903b536
         with:
           use-npm-ci: true
       - name: Flow type check
@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ljharb/actions/node/install@a840bfaa7e24d260a9f451baa97ca172fdb327af
+      - uses: ljharb/actions/node/install@32a09e8b5346216e84d4cdf4769c70af9903b536
         with:
           use-npm-ci: true
       - name: Run ESLint
@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ljharb/actions/node/install@a840bfaa7e24d260a9f451baa97ca172fdb327af
+      - uses: ljharb/actions/node/install@32a09e8b5346216e84d4cdf4769c70af9903b536
         with:
           use-npm-ci: true
       - name: Run diff check for the breakUpAriaJSON script
