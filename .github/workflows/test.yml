@@ -18,8 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ljharb/actions/node/install@32a09e8b5346216e84d4cdf4769c70af9903b536
-        with:
-          use-npm-ci: true
       - name: Flow type check
         run: npx flow
 
@@ -29,8 +27,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ljharb/actions/node/install@32a09e8b5346216e84d4cdf4769c70af9903b536
-        with:
-          use-npm-ci: true
       - name: Run ESLint
         run: npm run lint
 
@@ -40,8 +36,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ljharb/actions/node/install@32a09e8b5346216e84d4cdf4769c70af9903b536
-        with:
-          use-npm-ci: true
       - name: Run diff check for the breakUpAriaJSON script
         run: node scripts/breakUpAriaJSON.js && git diff --exit-code -- src
 

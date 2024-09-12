@@ -6,3 +6,8 @@ docs/
 coverage/
 .nyc_output/
 __tests-built__/
+
+# Only apps should have lockfiles
+npm-shrinkwrap.json
+package-lock.json
+yarn.lock
