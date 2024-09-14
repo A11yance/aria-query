@@ -15,16 +15,13 @@ const roles: RoleDefinitions = [].concat(
   ariaGraphicsRoles,
 );
 
-roles.forEach(([
-  ,
-  roleDefinition,
-]: RoleDefinitionTuple) => {
+roles.forEach(([, roleDefinition]: RoleDefinitionTuple) => {
   // Conglomerate the properties
   for (let superClassIter of roleDefinition.superClass) {
     for (let superClassName of superClassIter) {
-      const superClassRoleTuple = roles.find(([
+      const superClassRoleTuple = roles.filter(([
         name,
-      ]: RoleDefinitionTuple) => name === superClassName);
+      ]: RoleDefinitionTuple) => name === superClassName)[0];
       if (superClassRoleTuple) {
         const superClassDefinition = superClassRoleTuple[1];
         for (let prop: string of Object.keys(superClassDefinition.props)) {
@@ -32,10 +29,8 @@ roles.forEach(([
             // $FlowIssue Accessing the hasOwnProperty on the Object prototype is fine.
             !Object.prototype.hasOwnProperty.call(roleDefinition.props, prop)
           ) {
-            Object.assign(
-              roleDefinition.props,
-              {[prop]: superClassDefinition.props[prop]},
-            );
+            // $FlowIgnore assigning without an index signature is fine
+            roleDefinition.props[prop] = superClassDefinition.props[prop];
           }
         }
       }
@@ -60,7 +55,7 @@ const rolesMap: TAriaQueryMap<
     }
   },
   get: function (key: ARIARoleDefinitionKey): ?ARIARoleDefinition {
-    const item = roles.find(tuple => (tuple[0] === key) ? true : false);
+    const item = roles.filter(tuple => (tuple[0] === key) ? true : false)[0];
     return item && item[1];
   },
   has: function (key: ARIARoleDefinitionKey): boolean {

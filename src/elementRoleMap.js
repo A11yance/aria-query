@@ -23,7 +23,7 @@ for (let i = 0; i < keys.length; i++) {
       if (relation.module === 'HTML') {
         const concept = relation.concept;
         if (concept) {
-          const elementRoleRelation: ?ElementARIARoleRelationTuple = elementRoles.find(relation => ariaRoleRelationConceptEquals(relation[0], concept));
+          const elementRoleRelation: ?ElementARIARoleRelationTuple = elementRoles.filter(relation => ariaRoleRelationConceptEquals(relation[0], concept))[0];
           let roles: RoleSet;
 
           if (elementRoleRelation) {
@@ -67,9 +67,10 @@ const elementRoleMap: TAriaQueryMap<
     }
   },
   get: function (key: ARIARoleRelationConcept): ?RoleSet {
-    const item = elementRoles.find(tuple => (
-      key.name === tuple[0].name && ariaRoleRelationConceptAttributeEquals(key.attributes, tuple[0].attributes)
-    ));
+    const item = elementRoles.filter(tuple => (
+      key.name === tuple[0].name
+      && ariaRoleRelationConceptAttributeEquals(key.attributes, tuple[0].attributes)
+    ))[0];
     return item && item[1];
   },
   has: function (key: ARIARoleRelationConcept): boolean {

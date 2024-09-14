@@ -244,7 +244,7 @@ const ariaPropsMap: TAriaQueryMap<
     }
   },
   get: function (key: ARIAProperty): ?ARIAPropertyDefinition {
-    const item = properties.find(tuple => (tuple[0] === key) ? true : false);
+    const item = properties.filter(tuple => (tuple[0] === key) ? true : false)[0];
     return item && item[1];
   },
   has: function (key: ARIAProperty): boolean {

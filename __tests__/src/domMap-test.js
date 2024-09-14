@@ -143,7 +143,7 @@ test('domMap API', async (t) => {
 
     st.test('supports the spread operator', async (s2t) => {
       [...domMap].forEach(([obj, roles]) => {
-        const found = entriesList.find(([o]) => deepEqual(o, obj));
+        const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
 
         s2t.ok(found, `spread has element: ${inspect(obj)}`);
         s2t.deepEqual(roles, found[1], `for-of has object elements`);
@@ -157,7 +157,7 @@ test('domMap API', async (t) => {
       }
 
       output.forEach(([obj, roles]) => {
-        const found = entriesList.find(([o]) => deepEqual(o, obj));
+        const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
 
         s2t.ok(found, `for-of has element: ${inspect(obj)}`);
         s2t.deepEqual(roles, found[1], `for-of has object elements`);
@@ -177,7 +177,7 @@ test('domMap API', async (t) => {
 
     for (let i = 0; i < output.length; i++) {
       const [obj, roles] = output[i];
-      const found = entriesList.find(([o]) => deepEqual(o, obj));
+      const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
       
       st.ok(found, `\`forEach\` has element: ${inspect(obj)}`);
       st.deepEqual(roles, found[1], `\`forEach\` has object elements`);
@@ -197,11 +197,11 @@ test('domMap API', async (t) => {
   t.test('keys(), iteration', async (st) => {
     const entriesKeys = entriesList.map(entry => entry[0]);
     for (const obj of domMap.keys()) {
-      st.ok(entriesKeys.find((k) => deepEqual(k, obj)), `for-of has key: ${inspect(obj)}`);
+      st.ok(entriesKeys.filter((k) => deepEqual(k, obj))[0], `for-of has key: ${inspect(obj)}`);
     }
 
     [...domMap.keys()].forEach((obj) => {
-        st.ok(entriesKeys.find((k) => deepEqual(k, obj)), `spread has key: ${inspect(obj)}`);
+        st.ok(entriesKeys.filter((k) => deepEqual(k, obj))[0], `spread has key: ${inspect(obj)}`);
     });
   });
 

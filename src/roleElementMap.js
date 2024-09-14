@@ -51,7 +51,7 @@ const roleElementMap: TAriaQueryMap<
     }
   },
   get: function (key: ARIARoleDefinitionKey): ?ARIARoleRelationConcepts {
-    const item = roleElement.find(tuple => (tuple[0] === key) ? true : false);
+    const item = roleElement.filter(tuple => (tuple[0] === key) ? true : false)[0];
     return item && item[1];
   },
   has: function (key: ARIARoleDefinitionKey): boolean {

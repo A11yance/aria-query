@@ -72,7 +72,7 @@ test('roleElementMap API', async (t) => {
 
     st.test('supports the spread operator', async (s2t) => {
       [...roleElementMap].forEach(([role, elements]) => {
-        const found = entriesList.find(([r]) => r === role);
+        const found = entriesList.filter(([r]) => r === role)[0];
 
         s2t.ok(found, `spread has role: ${role}`);
         s2t.ok(elements && typeof elements === 'object', `spread has object elements`)
@@ -86,7 +86,7 @@ test('roleElementMap API', async (t) => {
       }
 
       output.forEach(([role, elements]) => {
-        const found = entriesList.find(([r]) => r === role);
+        const found = entriesList.filter(([r]) => r === role)[0];
 
         s2t.ok(found, `for-of has role: ${role}`);
         s2t.ok(elements && typeof elements === 'object', `for-of has object elements`)
@@ -107,7 +107,7 @@ test('roleElementMap API', async (t) => {
     for (let i = 0; i < output.length; i++) {
       const [role, elements] = output[i];
       st.ok(
-        entriesList.find(([r]) => r === role),
+        entriesList.filter(([r]) => r === role)[0],
         `\`forEach\` has role: ${role}`
       );
       st.ok(elements && typeof elements === 'object', `\`forEach\` has object elements`)
@@ -138,11 +138,11 @@ test('roleElementMap API', async (t) => {
   t.test('keys(), iteration', async (st) => {
     const entriesKeys = entriesList.map(entry => entry[0]);
     for (const key of roleElementMap.keys()) {
-      st.ok(entriesKeys.find((k) => k === key), `for-of has key: ${key}`);
+      st.ok(entriesKeys.filter((k) => k === key)[0], `for-of has key: ${key}`);
     }
 
     [...roleElementMap.keys()].forEach(([key]) => {
-        st.ok(entriesKeys.find(([k]) => k === key), `spread has key: ${key}`);
+        st.ok(entriesKeys.filter(([k]) => k === key)[0], `spread has key: ${key}`);
     });
   });
 
