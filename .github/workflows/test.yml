@@ -9,7 +9,9 @@ jobs:
       range: '>= 0.8'
       type: majors
       build-command: npm run build:tests
-      build-output-dir: __tests-built__,lib
+      build-output-dir: |
+        __tests-built__
+        lib
       command: npm run tests-built
 
   flow:
