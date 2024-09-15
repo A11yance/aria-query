@@ -1,6 +1,7 @@
 import test from 'tape';
 import inspect from 'object-inspect';
 import deepEqual from 'deep-equal-json';
+import some from 'array.prototype.some';
 
 import roleElementMap from 'aria-query/src/roleElementMap';
 
@@ -65,7 +66,7 @@ const entriesList = [
   ["time", [{"name": "time"}]],
 ];
 
-test('roleElementMap API', async (t) => {
+test('roleElementMap API', (t) => {
   t.test('iteration', async (st) => {
     st.notEqual(roleElementMap[Symbol.iterator], undefined, 'has an iterator defined');
     st.equal([...roleElementMap].length, 55, 'has a specific length');
@@ -114,7 +115,7 @@ test('roleElementMap API', async (t) => {
     }
   });
 
-  t.test('get()', async (st) => {
+  t.test('get()', (st) => {
     const map = roleElementMap.get('button');
 
     [
@@ -124,15 +125,19 @@ test('roleElementMap API', async (t) => {
       {"attributes": [{"name": "type", "value": "submit"}], "name": "input"},
       {"name": "button"}
     ].forEach((element) => {
-      st.ok(map.some((e) => deepEqual(e, element)), `has element: ${inspect(element)}`);
+      st.ok(some(map, (e) => deepEqual(e, element)), `has element: ${inspect(element)}`);
     });
 
     st.equal(roleElementMap.get('fake role'), undefined, 'returns undefined for a fake role');
+
+    st.end();
   });
 
-  t.test('has()', async (st) => {
+  t.test('has()', (st) => {
     st.equal(roleElementMap.has('button'), true, 'has a defined role');
     st.equal(roleElementMap.has('fake role'), false, 'returns false for a fake role');
+
+    st.end();
   });
 
   t.test('keys(), iteration', async (st) => {
@@ -148,11 +153,13 @@ test('roleElementMap API', async (t) => {
 
   t.test('values(), iteration', async (st) => {
     for (const values of roleElementMap.values()) {
-      st.ok(entriesList.some(([, x]) => deepEqual(x, values)), `for-of has object values: ${inspect(values)}`);
+      st.ok(some(entriesList, ([, x]) => deepEqual(x, values)), `for-of has object values: ${inspect(values)}`);
     }
 
     [...roleElementMap.values()].forEach((values) => {
-      st.ok(entriesList.some(([, x]) => deepEqual(x, values)), `spread has object values: ${inspect(values)}`);
+      st.ok(some(entriesList, ([, x]) => deepEqual(x, values)), `spread has object values: ${inspect(values)}`);
     });
   });
+
+  t.end();
 });

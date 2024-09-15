@@ -1,6 +1,7 @@
 import test from 'tape';
 import deepEqual from 'deep-equal-json';
 import inspect from 'object-inspect';
+import some from 'array.prototype.some';
 
 import domMap from 'aria-query/src/domMap';
 
@@ -136,7 +137,7 @@ const entriesList = [
   ["xmp", {"reserved": false}],
 ];
 
-test('domMap API', async (t) => {
+test('domMap API', (t) => {
   t.test('iteration', async (st) => {
     st.notEqual(domMap[Symbol.iterator], undefined, 'has an iterator defined');
     st.equal([...domMap].length, 129, 'has a specific length');
@@ -178,20 +179,24 @@ test('domMap API', async (t) => {
     for (let i = 0; i < output.length; i++) {
       const [obj, roles] = output[i];
       const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
-      
+
       st.ok(found, `\`forEach\` has element: ${inspect(obj)}`);
       st.deepEqual(roles, found[1], `\`forEach\` has object elements`);
     }
   });
 
-  t.test('get()', async (st) => {
+  t.test('get()', (st) => {
     st.notEqual(domMap.get('a'), undefined, 'has a defined element')
     st.equal(domMap.get('fake element'), undefined, 'returns undefined for a fake element');
+
+    st.end();
   });
 
-  t.test('has()', async (st) => {
+  t.test('has()', (st) => {
     st.equal(domMap.has('a'), true, 'has a defined element');
     st.equal(domMap.has('fake element'), false, 'returns false for a fake element');
+
+    st.end();
   });
 
   t.test('keys(), iteration', async (st) => {
@@ -207,11 +212,13 @@ test('domMap API', async (t) => {
 
   t.test('values(), iteration', async (st) => {
     for (const values of domMap.values()) {
-      st.ok(entriesList.some(([, x]) => deepEqual(x, values)), `for-of has object values: ${inspect(values)}`);
+      st.ok(some(entriesList, (([, x]) => deepEqual(x, values)), `for-of has object values: ${inspect(values)}`));
     }
 
     [...domMap.values()].forEach((values) => {
-      st.ok(entriesList.some(([, x]) => deepEqual(x, values)), `spread has object values: ${inspect(values)}`);
+      st.ok(some(entriesList, (([, x]) => deepEqual(x, values)), `spread has object values: ${inspect(values)}`));
     });
   });
+
+  t.end();
 });

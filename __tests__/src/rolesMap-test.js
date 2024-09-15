@@ -146,7 +146,7 @@ const entriesList = [
   ["graphics-symbol", null],
 ];
 
-test('rolesMap API', async (t) => {
+test('rolesMap API', (t) => {
   t.test('iteration', async (st) => {
     st.notEqual(rolesMap[Symbol.iterator], undefined, 'has an iterator defined');
     st.equal([...rolesMap].length, 139, 'has a specific length');
@@ -195,14 +195,18 @@ test('rolesMap API', async (t) => {
     }
   });
 
-  t.test('get()', async (st) => {
+  t.test('get()', (st) => {
     st.notEqual(rolesMap.get('roletype'), undefined, 'has a defined role')
     st.equal(rolesMap.get('fake role'), undefined, 'returns undefined for a fake role');
+
+    st.end();
   });
 
-  t.test('has()', async (st) => {
+  t.test('has()', (st) => {
     st.equal(rolesMap.has('roletype'), true, 'has a defined role');
     st.equal(rolesMap.has('fake role'), false, 'returns false for a fake role');
+
+    st.end();
   });
 
   t.test('keys(), iteration', async (st) => {
@@ -226,21 +230,26 @@ test('rolesMap API', async (t) => {
     });
   });
 
-  t.test('props and ariaPropsMap', async (st) => {
+  t.test('props and ariaPropsMap', (st) => {
     const roles = rolesMap.entries();
 
     for (const [role, definition] of roles) {
       const unknownProps = Object.keys(definition.props).filter(prop => !ariaPropsMap.has(prop));
       st.deepEqual(unknownProps, [], `${role}: no unknown props`);
     }
+
+    st.end();
   });
-  
+
   // dpub-aria
-  t.test('doc-abstract role', async (st) => {
-    const abstract = rolesMap.get('doc-abstract');
-    const { props } = abstract;
+  t.test('doc-abstract role', (st) => {
+    const { props } = rolesMap.get('doc-abstract');
 
     st.notOk('aria-describedat' in props, 'does not have aria-describedat property');
     st.equal(props['aria-details'], null, 'has aria-details property');
+
+    st.end();
   });
+
+  t.end();
 });

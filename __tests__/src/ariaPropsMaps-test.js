@@ -1,6 +1,7 @@
 import test from 'tape';
 import deepEqual from 'deep-equal-json';
 import inspect from 'object-inspect';
+import some from 'array.prototype.some';
 
 import ariaPropsMap from 'aria-query/src/ariaPropsMap';
 import rolesMap from 'aria-query/src/rolesMap';
@@ -59,7 +60,7 @@ const entriesList = [
   ['aria-valuetext', {'type': 'string'}],
 ];
 
-test('ariaPropsMap API', async (t) => {
+test('ariaPropsMap API', (t) => {
   t.test('iteration', async (st) => {
     st.notEqual(ariaPropsMap[Symbol.iterator], undefined, 'has an iterator defined');
     st.equal([...ariaPropsMap].length, 51, 'has a specific length');
@@ -107,14 +108,18 @@ test('ariaPropsMap API', async (t) => {
     }
   });
 
-  t.test('get()', async (st) => {
+  t.test('get()', (st) => {
     st.notEqual(ariaPropsMap.get('aria-label'), undefined, 'has a defined prop')
     st.equal(ariaPropsMap.get('fake prop'), undefined, 'returns undefined for a fake prop');
+
+    st.end();
   });
 
-  t.test('has()', async (st) => {
+  t.test('has()', (st) => {
     st.equal(ariaPropsMap.has('aria-label'), true, 'has a defined prop');
     st.equal(ariaPropsMap.has('fake prop'), false, 'returns false for a fake prop');
+
+    st.end();
   });
   
   t.test('keys(), iteration', async (st) => {
@@ -130,15 +135,15 @@ test('ariaPropsMap API', async (t) => {
 
   t.test('values(), iteration', async (st) => {
     for (const values of ariaPropsMap.values()) {
-      st.ok(entriesList.some(([, x]) => deepEqual(x, values)), `for-of has object values: ${inspect(values)}`);
+      st.ok(some(entriesList, ([, x]) => deepEqual(x, values)), `for-of has object values: ${inspect(values)}`);
     }
 
     [...ariaPropsMap.values()].forEach((values) => {
-      st.ok(entriesList.some(([, x]) => deepEqual(x, values)), `spread has object values: ${inspect(values)}`);
+      st.ok(some(entriesList, ([, x]) => deepEqual(x, values)), `spread has object values: ${inspect(values)}`);
     });
   });
 
-  t.test('props and role defintions', async (st) => {
+  t.test('props and role defintions', (st) => {
     const usedProps = [];
     for (const roleDefinition of rolesMap.values()) {
       for (const prop of Object.keys(roleDefinition.props)) {
@@ -158,5 +163,9 @@ test('ariaPropsMap API', async (t) => {
     ariaPropsMap.forEach((value, key) => {
       st.ok(usedProps.filter(p => p === key)[0], `has prop: ${key}`);
     });
+
+    st.end();
   });
+
+  t.end();
 });
