@@ -265,3 +265,11 @@ Removes the only runtime dependency from the project, and restores/broadens engi
  - fix: add missing `doc-pagefooter` and `doc-pageheader` roles (#549)
  - Fix defect in calling code when building the ElementRoleMap (#555)
  - fix: add missing constraints for `aside` element to have implicit `complementary` role (#558)
+
+## 5.3.2
+
+A bug fix, and a bunch of testing cleanups.
+
+ - [Fix] node < 4 lacks `.find` and `Object.assign`
+ - [meta] create SECURITY.yml and FUNDING.yml
+
