@@ -1,9 +1,10 @@
 import test from 'tape';
 import deepEqual from 'deep-equal-json';
-import inspect from 'object-inspect';
-import some from 'array.prototype.some';
 
 import domMap from 'aria-query/src/domMap';
+
+import testIteration from '../helpers/testIteration';
+import testForEach from '../helpers/testForEach';
 
 const entriesList = [
   ["a", {"reserved": false}],
@@ -138,52 +139,11 @@ const entriesList = [
 ];
 
 test('domMap API', (t) => {
-  t.test('iteration', async (st) => {
-    st.notEqual(domMap[Symbol.iterator], undefined, 'has an iterator defined');
-    st.equal([...domMap].length, 129, 'has a specific length');
+  const predicate = (obj, [o]) => deepEqual(o, obj);
 
-    st.test('supports the spread operator', async (s2t) => {
-      [...domMap].forEach(([obj, roles]) => {
-        const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
+  testIteration(t, domMap, entriesList, 129, predicate);
 
-        s2t.ok(found, `spread has element: ${inspect(obj)}`);
-        s2t.deepEqual(roles, found[1], `for-of has object elements`);
-      });
-    });
-
-    st.test('supports the for..of pattern', async (s2t) => {
-      const output = [];
-      for (const [key, value] of domMap) {
-        output.push([key, value]);
-      }
-
-      output.forEach(([obj, roles]) => {
-        const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
-
-        s2t.ok(found, `for-of has element: ${inspect(obj)}`);
-        s2t.deepEqual(roles, found[1], `for-of has object elements`);
-      });
-    });
-  });
-
-  t.test('forEach()', async (st) => {
-    const output = [];
-    let context;
-    domMap.forEach((value, key, map) => {
-      output.push([key, value]);
-      if (!context) {
-        context = map;
-      }
-    });
-
-    for (let i = 0; i < output.length; i++) {
-      const [obj, roles] = output[i];
-      const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
-
-      st.ok(found, `\`forEach\` has element: ${inspect(obj)}`);
-      st.deepEqual(roles, found[1], `\`forEach\` has object elements`);
-    }
-  });
+  testForEach(t, domMap, entriesList, predicate);
 
   t.test('get()', (st) => {
     st.notEqual(domMap.get('a'), undefined, 'has a defined element')
@@ -197,27 +157,6 @@ test('domMap API', (t) => {
     st.equal(domMap.has('fake element'), false, 'returns false for a fake element');
 
     st.end();
-  });
-
-  t.test('keys(), iteration', async (st) => {
-    const entriesKeys = entriesList.map(entry => entry[0]);
-    for (const obj of domMap.keys()) {
-      st.ok(entriesKeys.filter((k) => deepEqual(k, obj))[0], `for-of has key: ${inspect(obj)}`);
-    }
-
-    [...domMap.keys()].forEach((obj) => {
-        st.ok(entriesKeys.filter((k) => deepEqual(k, obj))[0], `spread has key: ${inspect(obj)}`);
-    });
-  });
-
-  t.test('values(), iteration', async (st) => {
-    for (const values of domMap.values()) {
-      st.ok(some(entriesList, (([, x]) => deepEqual(x, values)), `for-of has object values: ${inspect(values)}`));
-    }
-
-    [...domMap.values()].forEach((values) => {
-      st.ok(some(entriesList, (([, x]) => deepEqual(x, values)), `spread has object values: ${inspect(values)}`));
-    });
   });
 
   t.end();

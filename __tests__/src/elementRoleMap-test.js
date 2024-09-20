@@ -1,9 +1,11 @@
 import test from 'tape';
 import deepEqual from 'deep-equal-json';
-import inspect from 'object-inspect';
 import some from 'array.prototype.some';
 
 import elementRoleMap from 'aria-query/src/elementRoleMap';
+
+import testIteration from '../helpers/testIteration';
+import testForEach from '../helpers/testForEach';
 
 const entriesList = [
   [{"name": "article"}, ["article"]],
@@ -127,55 +129,12 @@ const entriesList = [
 ];
 
 test('elementRoleMap API', (t) => {
-  t.test('iteration', async (st) => {
-    st.notEqual(elementRoleMap[Symbol.iterator], undefined, 'has an iterator defined');
-    st.equal([...elementRoleMap].length, 112, 'has a specific length');
+  const predicate = (obj, [o]) => deepEqual(o, obj);
 
-    st.test('supports the spread operator', async (s2t) => {
-      [...elementRoleMap].forEach(([obj, roles]) => {
-        const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
+  testIteration(t, elementRoleMap, entriesList, 112, predicate);
 
-        s2t.ok(found, `spread has element: ${inspect(obj)}`);
-        s2t.deepEqual(roles, found[1], `for-of has object elements`);
-      });
-    });
+  testForEach(t, elementRoleMap, entriesList, predicate);
 
-    st.test('supports the for..of pattern', async (s2t) => {
-      const output = [];
-      for (const [key, value] of elementRoleMap) {
-        output.push([key, value]);
-      }
-
-      output.forEach(([obj, roles]) => {
-        const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
-
-        s2t.ok(found, `for-of has element: ${inspect(obj)}`);
-        s2t.deepEqual(roles, found[1], `for-of has object elements`);
-      });
-    });
-  });
-
-  t.test('forEach()', (st) => {
-    const output = [];
-    let context;
-    elementRoleMap.forEach((value, key, map) => {
-      output.push([key, value]);
-      if (!context) {
-        context = map;
-      }
-    });
-
-    for (let i = 0; i < output.length; i++) {
-      const [obj, roles] = output[i];
-      const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
-      
-      st.ok(found, `\`forEach\` has element: ${inspect(obj)}`);
-      st.deepEqual(roles, found[1], `\`forEach\` has object elements`);
-    }
-
-    st.end();
-  });
-  
   t.test('get()', (st) => {
     st.ok(some(
       elementRoleMap.get({
@@ -232,31 +191,6 @@ test('elementRoleMap API', (t) => {
       }),
       false,
     );
-
-    st.end();
-  });
-
-  t.test('keys(), iteration', (st) => {
-    const entriesKeys = entriesList.map(entry => entry[0]);
-    for (const obj of elementRoleMap.keys()) {
-      st.ok(entriesKeys.filter((k) => deepEqual(k, obj))[0], `for-of has key: ${inspect(obj)}`);
-    }
-
-    [...elementRoleMap.keys()].forEach((obj) => {
-        st.ok(entriesKeys.filter((k) => deepEqual(k, obj))[0], `spread has key: ${inspect(obj)}`);
-    });
-
-    st.end();
-  });
-
-  t.test('values(), iteration', (st) => {
-    for (const values of elementRoleMap.values()) {
-      st.ok(some(entriesList, (([, x]) => deepEqual(x, values)), `for-of has object values: ${inspect(values)}`));
-    }
-
-    [...elementRoleMap.values()].forEach((values) => {
-      st.ok(some(entriesList, (([, x]) => deepEqual(x, values)), `spread has object values: ${inspect(values)}`));
-    });
 
     st.end();
   });

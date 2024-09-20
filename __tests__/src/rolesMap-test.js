@@ -1,8 +1,10 @@
 import test from 'tape';
-import inspect from 'object-inspect';
 
 import rolesMap from 'aria-query/src/rolesMap';
 import ariaPropsMap from 'aria-query/src/ariaPropsMap';
+
+import testIteration from '../helpers/testIteration';
+import testForEach from '../helpers/testForEach';
 
 const entriesList = [
   ["alert", null],
@@ -147,53 +149,11 @@ const entriesList = [
 ];
 
 test('rolesMap API', (t) => {
-  t.test('iteration', async (st) => {
-    st.notEqual(rolesMap[Symbol.iterator], undefined, 'has an iterator defined');
-    st.equal([...rolesMap].length, 139, 'has a specific length');
+  const predicate = (role, [r]) => role === r;
 
-    st.test('supports the spread operator', async (s2t) => {
-      [...rolesMap].forEach(([role, elements]) => {
-        const found = entriesList.filter(([r]) => r === role)[0];
+  testIteration(t, rolesMap, entriesList, 139, predicate);
 
-        s2t.ok(found, `spread has role: ${role}`);
-        s2t.ok(elements && typeof elements === 'object', `spread has object elements`)
-      });
-    });
-
-    st.test('supports the for..of pattern', async (s2t) => {
-      const output = [];
-      for (const [key, value] of rolesMap) {
-        output.push([key, value]);
-      }
-
-      output.forEach(([role, elements]) => {
-        const found = entriesList.filter(([r]) => r === role)[0];
-
-        s2t.ok(found, `for-of has role: ${role}`);
-        s2t.ok(elements && typeof elements === 'object', `for-of has object elements`)
-      });
-    });
-  });
-
-  t.test('forEach()', async (st) => {
-    const output = [];
-    let context;
-    rolesMap.forEach((value, key, map) => {
-      output.push([key, value]);
-      if (!context) {
-        context = map;
-      }
-    });
-
-    for (let i = 0; i < output.length; i++) {
-      const [role, elements] = output[i];
-      st.ok(
-        entriesList.filter(([r]) => r === role)[0],
-        `\`forEach\` has role: ${role}`
-      );
-      st.ok(elements && typeof elements === 'object', `\`forEach\` has object elements`)
-    }
-  });
+  testForEach(t, rolesMap, entriesList, predicate);
 
   t.test('get()', (st) => {
     st.notEqual(rolesMap.get('roletype'), undefined, 'has a defined role')
@@ -207,27 +167,6 @@ test('rolesMap API', (t) => {
     st.equal(rolesMap.has('fake role'), false, 'returns false for a fake role');
 
     st.end();
-  });
-
-  t.test('keys(), iteration', async (st) => {
-    const entriesKeys = entriesList.map(entry => entry[0]);
-    for (const key of rolesMap.keys()) {
-      st.ok(entriesKeys.filter((k) => k === key)[0], `for-of has key: ${key}`);
-    }
-
-    [...rolesMap.keys()].forEach(([key]) => {
-        st.ok(entriesKeys.filter(([k]) => k === key)[0], `spread has key: ${key}`);
-    });
-  });
-
-  t.test('values(), iteration', async (st) => {
-    for (const values of rolesMap.values()) {
-      st.ok(values && typeof values === 'object', `for-of has object values: ${inspect(values)}`);
-    }
-
-    [...rolesMap.values()].forEach((values) => {
-      st.ok(values && typeof values === 'object', `spread has object values: ${inspect(values)}`);
-    });
   });
 
   t.test('props and ariaPropsMap', (st) => {

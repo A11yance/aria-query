@@ -1,10 +1,11 @@
 import test from 'tape';
 import deepEqual from 'deep-equal-json';
-import inspect from 'object-inspect';
-import some from 'array.prototype.some';
 
 import ariaPropsMap from 'aria-query/src/ariaPropsMap';
 import rolesMap from 'aria-query/src/rolesMap';
+
+import testIteration from '../helpers/testIteration';
+import testForEach from '../helpers/testForEach';
 
 const entriesList = [
   ['aria-activedescendant', {'type': 'id'}],
@@ -61,52 +62,11 @@ const entriesList = [
 ];
 
 test('ariaPropsMap API', (t) => {
-  t.test('iteration', async (st) => {
-    st.notEqual(ariaPropsMap[Symbol.iterator], undefined, 'has an iterator defined');
-    st.equal([...ariaPropsMap].length, 51, 'has a specific length');
+  const predicate = (obj, [o]) => deepEqual(o, obj);
+  
+  testIteration(t, ariaPropsMap, entriesList, 51, predicate);
 
-    st.test('supports the spread operator', async (s2t) => {
-      [...ariaPropsMap].forEach(([obj, roles]) => {
-        const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
-
-        s2t.ok(found, `spread has element: ${inspect(obj)}`);
-        s2t.deepEqual(roles, found[1], `for-of has object elements`);
-      });
-    });
-
-    st.test('supports the for..of pattern', async (s2t) => {
-      const output = [];
-      for (const [key, value] of ariaPropsMap) {
-        output.push([key, value]);
-      }
-
-      output.forEach(([obj, roles]) => {
-        const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
-
-        s2t.ok(found, `for-of has element: ${inspect(obj)}`);
-        s2t.deepEqual(roles, found[1], `for-of has object elements`);
-      });
-    });
-  });
-
-  t.test('forEach()', async (st) => {
-    const output = [];
-    let context;
-    ariaPropsMap.forEach((value, key, map) => {
-      output.push([key, value]);
-      if (!context) {
-        context = map;
-      }
-    });
-
-    for (let i = 0; i < output.length; i++) {
-      const [obj, roles] = output[i];
-      const found = entriesList.filter(([o]) => deepEqual(o, obj))[0];
-      
-      st.ok(found, `\`forEach\` has element: ${inspect(obj)}`);
-      st.deepEqual(roles, found[1], `\`forEach\` has object elements`);
-    }
-  });
+  testForEach(t, ariaPropsMap, entriesList, predicate);
 
   t.test('get()', (st) => {
     st.notEqual(ariaPropsMap.get('aria-label'), undefined, 'has a defined prop')
@@ -120,27 +80,6 @@ test('ariaPropsMap API', (t) => {
     st.equal(ariaPropsMap.has('fake prop'), false, 'returns false for a fake prop');
 
     st.end();
-  });
-  
-  t.test('keys(), iteration', async (st) => {
-    const entriesKeys = entriesList.map(entry => entry[0]);
-    for (const obj of ariaPropsMap.keys()) {
-      st.ok(entriesKeys.filter((k) => deepEqual(k, obj))[0], `for-of has key: ${inspect(obj)}`);
-    }
-
-    [...ariaPropsMap.keys()].forEach((obj) => {
-        st.ok(entriesKeys.filter((k) => deepEqual(k, obj))[0], `spread has key: ${inspect(obj)}`);
-    });
-  });
-
-  t.test('values(), iteration', async (st) => {
-    for (const values of ariaPropsMap.values()) {
-      st.ok(some(entriesList, ([, x]) => deepEqual(x, values)), `for-of has object values: ${inspect(values)}`);
-    }
-
-    [...ariaPropsMap.values()].forEach((values) => {
-      st.ok(some(entriesList, ([, x]) => deepEqual(x, values)), `spread has object values: ${inspect(values)}`);
-    });
   });
 
   t.test('props and role defintions', (st) => {
