@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-const emphasisRole: ARIARoleDefinition = {
+const suggestionRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],
@@ -15,17 +15,17 @@ const emphasisRole: ARIARoleDefinition = {
     'aria-labelledby',
   ],
   props: {},
-  relatedConcepts: [
-    {
-      concept: {
-        name: 'em',
-      },
-      module: 'HTML',
-    },
-  ],
+  relatedConcepts: [],
   requireContextRole: [],
   requiredContextRole: [],
-  requiredOwnedElements: [],
+  requiredOwnedElements: [
+    [
+      'insertion',
+    ],
+    [
+      'deletion',
+    ],
+  ],
   requiredProps: {},
   superClass: [
     [
@@ -36,4 +36,4 @@ const emphasisRole: ARIARoleDefinition = {
   ],
 };
 
-export default emphasisRole;
+export default suggestionRole;

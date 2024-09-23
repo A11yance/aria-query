@@ -1,20 +1,18 @@
 /**
  * @flow
  */
-const docPagefooterRole: ARIARoleDefinition = {
+const commentRole: ARIARoleDefinition = {
   abstract: false,
   accessibleNameRequired: false,
   baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
-    'prohibited',
+    'author',
+    'contents',
   ],
   prohibitedProps: [],
   props: {
-    'aria-disabled': null,
-    'aria-errormessage': null,
-    'aria-haspopup': null,
-    'aria-invalid': null,
+    'aria-level': null,
   },
   relatedConcepts: [],
   requireContextRole: [],
@@ -25,9 +23,10 @@ const docPagefooterRole: ARIARoleDefinition = {
     [
       'roletype',
       'structure',
-      'section',
+      'document',
+      'article',
     ],
   ],
 };
 
-export default docPagefooterRole;
+export default commentRole;

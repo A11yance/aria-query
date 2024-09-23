@@ -7,9 +7,13 @@ const termRole: ARIARoleDefinition = {
   baseConcepts: [],
   childrenPresentational: false,
   nameFrom: [
-    'author',
+    'prohibited',
   ],
-  prohibitedProps: [],
+  prohibitedProps: [
+    'aria-braillelabel',
+    'aria-label',
+    'aria-labelledby',
+  ],
   props: {},
   relatedConcepts: [
     {

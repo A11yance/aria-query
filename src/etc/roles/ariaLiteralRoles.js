@@ -14,6 +14,7 @@ import checkboxRole from './literal/checkboxRole';
 import codeRole from './literal/codeRole';
 import columnheaderRole from './literal/columnheaderRole';
 import comboboxRole from './literal/comboboxRole';
+import commentRole from './literal/commentRole';
 import complementaryRole from './literal/complementaryRole';
 import contentinfoRole from './literal/contentinfoRole';
 import definitionRole from './literal/definitionRole';
@@ -30,6 +31,7 @@ import gridRole from './literal/gridRole';
 import gridcellRole from './literal/gridcellRole';
 import groupRole from './literal/groupRole';
 import headingRole from './literal/headingRole';
+import imageRole from './literal/imageRole';
 import imgRole from './literal/imgRole';
 import insertionRole from './literal/insertionRole';
 import linkRole from './literal/linkRole';
@@ -69,6 +71,7 @@ import spinbuttonRole from './literal/spinbuttonRole';
 import statusRole from './literal/statusRole';
 import strongRole from './literal/strongRole';
 import subscriptRole from './literal/subscriptRole';
+import suggestionRole from './literal/suggestionRole';
 import superscriptRole from './literal/superscriptRole';
 import switchRole from './literal/switchRole';
 import tabRole from './literal/tabRole';
@@ -99,6 +102,7 @@ const ariaLiteralRoles: RoleDefinitions = [
   ['code', codeRole],
   ['columnheader', columnheaderRole],
   ['combobox', comboboxRole],
+  ['comment', commentRole],
   ['complementary', complementaryRole],
   ['contentinfo', contentinfoRole],
   ['definition', definitionRole],
@@ -115,6 +119,7 @@ const ariaLiteralRoles: RoleDefinitions = [
   ['gridcell', gridcellRole],
   ['group', groupRole],
   ['heading', headingRole],
+  ['image', imageRole],
   ['img', imgRole],
   ['insertion', insertionRole],
   ['link', linkRole],
@@ -154,6 +159,7 @@ const ariaLiteralRoles: RoleDefinitions = [
   ['status', statusRole],
   ['strong', strongRole],
   ['subscript', subscriptRole],
+  ['suggestion', suggestionRole],
   ['superscript', superscriptRole],
   ['switch', switchRole],
   ['tab', tabRole],

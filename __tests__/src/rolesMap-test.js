@@ -20,6 +20,7 @@ const entriesList = [
   ["code", null],
   ["columnheader", null],
   ["combobox", null],
+  ["comment", null],
   ["command", null],
   ["complementary", null],
   ["composite", null],
@@ -38,6 +39,7 @@ const entriesList = [
   ["gridcell", null],
   ["group", null],
   ["heading", null],
+  ["image", null],
   ["img", null],
   ["input", null],
   ["insertion", null],
@@ -85,6 +87,7 @@ const entriesList = [
   ["strong", null],
   ["structure", null],
   ["subscript", null],
+  ["suggestion", null],
   ["superscript", null],
   ["switch", null],
   ["tab", null],
@@ -151,7 +154,7 @@ const entriesList = [
 test('rolesMap API', (t) => {
   const predicate = (role, [r]) => role === r;
 
-  testIteration(t, rolesMap, entriesList, 139, predicate);
+  testIteration(t, rolesMap, entriesList, 142, predicate);
 
   testForEach(t, rolesMap, entriesList, predicate);
 
