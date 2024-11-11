@@ -55,7 +55,7 @@
     "nyc": "^10.3.2",
     "object-inspect": "^1.13.2",
     "object.values": "^1.2.0",
-    "rimraf": "^2.7.1",
+    "rimraf": "^6.0.1",
     "tape": "^5.9.0"
   },
   "browserslist": [
